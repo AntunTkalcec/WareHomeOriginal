@@ -15,12 +15,18 @@ WareHome je aplikacija koja se koristi za praćenje količine namirnica i potro�
 
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti i za svaku naznačite ime odgovornog člana tima. Opišite buduću arhitekturu programskog proizvoda. Obratite pozornost da bi arhitektura trebala biti višeslojna s odvojenom (dislociranom) bazom podatka. Također uzmite u obzir da bi svaki član tima treba biti odgovorana za otprilike 3 funkcionalnosti, te da bi opterećenje članova tima trebalo biti ujednačeno. Priložite odgovarajuće dijagrame i skice gdje je to prikladno. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebnba je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+F01 | Prijava i odjava | Za pristup aplikaciji potrebno je da korisnik stvori račun i na njega se prijavi. | Antun Tkalčec 
+F02 | Upis namirnica | Upisivanje imena, količine, optimalne količine i cijene namirnica te dućana gdje se namirnica kupuje. | Antun Tkalčec
+F03 | Pregled i uređivanje popisa namirnica | Pregledavanje, dodavanje ili brisanje namirnica koje su upisane. | Antun Tkalčec
+F04 | Izrada i uređivanje rasporeda odlaska u kupovinu | Upis i izmjena generalnih termina odlaska u kupovinu. | Karlo Habdija
+F05 | Izrada liste za kupovinu | Izrada popisa namirnica koje želimo kupiti, a nisu prethodno upisane ili ih nemamo kod kuće. | Karlo Habdija
+F06 | Pregled i uređivanje liste za kupovinu | Pregledavanje, dodavanje ili brisanje namirnica sa liste za kupovinu. | Karlo Habdija
+F07 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno) | Kristijan Stručić
+F08 | Ispis liste za kupovinu | Aplikacija prije upisanog termina odlaska u trgovinu ili zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristrijan Stručić
+F09 | Povijest potrošnje | Prikaz povijesti kupljenih namirnica u određenom vremenskom razdoblju. | Kristijan Stručić
 
 ## Tehnologije i oprema
 .NET (Visual Studio), GitHub, GitHub Classroom, MS Word, MySQL, Draw.io, Visual Paradigm
