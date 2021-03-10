@@ -1,14 +1,4 @@
-# Inicijalne upute za prijavu projekta iz Programskog inženjerstva
-
-Poštovane kolegice i kolege, 
-
-čestitamo vam jer ste uspješno prijavili svoj projektni tim na kolegiju Programsko inženjerstvo, te je za vas automatski kreiran repozitorij koji ćete koristiti za verzioniranje vašega koda, ali i za pisanje dokumentacije.
-
-Ovaj dokument (README.md) predstavlja **osobnu iskaznicu vašeg projekta**. Vaš prvi zadatak, ukoliko niste odabrali da želite raditi na projektu sa nastavnicima ili u sklopu WBL-a je **prijaviti vlastiti projektni prijedlog** na način da ćete prijavu vašeg projekta, sukladno uputama danim u ovom tekstu, napisati upravo u ovaj dokument, umjesto ovoga teksta.
-
 Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše projektne dokumentacije pogledajte [ovaj link](https://guides.github.com/features/mastering-markdown/).
-
-Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
 
 # WareHome
 
@@ -21,6 +11,8 @@ Karlo Habdija | khabdija@foi.hr | 0016136257 | khabdija
 Kristijan Stručić | kstrucic@foi.hr | 0016137051 | Kristijanstr
 
 ## Opis domene
+WareHome je aplikacija koja se koristi za praćenje količine namirnica i potrošnih stvari koje trenutno imamo kod kuće. U nju korisnik može unijeti koju količinu nekog proizvoda ima doma (npr. Šećera), te nakon što određenu količinu potroši, to upiše u aplikaciju. Iz toga, aplikacija mu prikaže koliko još proizvoda mu je ostalo kod kuće, te prema tome mu prikazati je li potrebno ići u dućan ili ne. Također prikazuje optimalnu količinu namirnice koju korisnik želi imati kod kuće, te predlaže odlazak u trgovinu s obzirom na to koliko namirnica korisniku fali.
+
 Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
 
 ## Specifikacija projekta
