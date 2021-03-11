@@ -26,7 +26,7 @@ F05 | Izrada liste za kupovinu | Izrada popisa namirnica koje želimo kupiti, a 
 F06 | Pregled i uređivanje liste za kupovinu | Pregledavanje, dodavanje ili brisanje namirnica sa liste za kupovinu. | Karlo Habdija
 F07 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno) | Kristijan Stručić
 F08 | Ispis liste za kupovinu | Aplikacija prije upisanog termina odlaska u trgovinu ili zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristrijan Stručić
-F09 | Povijest potrošnje | Prikaz povijesti kupljenih namirnica u određenom vremenskom razdoblju. | Kristijan Stručić
+F09 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti neki bug ili predložiti novu funkcionalnost. | Kristijan Stručić
 
 ## Tehnologije i oprema
 .NET (Visual Studio), GitHub, GitHub Classroom, MS Word, MySQL, Draw.io, Visual Paradigm
