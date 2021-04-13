@@ -24,9 +24,13 @@ F03 | Pregled i uređivanje popisa namirnica | Pregledavanje, dodavanje ili bris
 F04 | Izrada i uređivanje rasporeda odlaska u kupovinu | Upis i izmjena generalnih termina odlaska u kupovinu. | Karlo Habdija
 F05 | Izrada liste za kupovinu | Izrada popisa namirnica koje želimo kupiti, a nisu prethodno upisane ili ih nemamo kod kuće. | Karlo Habdija
 F06 | Pregled i uređivanje liste za kupovinu | Pregledavanje, dodavanje ili brisanje namirnica sa liste za kupovinu. | Karlo Habdija
-F07 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno) | Kristijan Stručić
-F08 | Ispis liste za kupovinu | Aplikacija prije upisanog termina odlaska u trgovinu ili zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristrijan Stručić
-F09 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti neki bug ili predložiti novu funkcionalnost. | Kristijan Stručić
+F07 | Predviđanje potrošnje namirnica | Temeljem potrošnje u posljednjih 6 mjeseci računa se kada će koje namirnice nestati, te na zahtjev korisnika se ispisuje izvješće s navedenim podacima. | Karlo Habdija
+F08 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno) | Kristijan Stručić
+F09 | Ispis liste za kupovinu | Aplikacija prije upisanog termina odlaska u trgovinu ili zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristrijan Stručić
+F10 | Slanje podsjetnika na email | U vrijeme kada je definiran odlazak u kupovinu, korisniku se na email šalje podsjetnik sa popisom svih proizvoda na listi. | Kristijan Stručić
+F11 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti neki bug ili predložiti novu funkcionalnost. | Kristijan Stručić
+F12 | Izrada domaćinstva | ... | Kristijan Stručić
+F13 | Spremanje trenutnog stanja u PDF | ... | Antun Tkalčec
 
 ## Tehnologije i oprema
-.NET (Visual Studio), GitHub, GitHub Classroom, MS Word, MySQL, Draw.io, Visual Paradigm
+.NET (Visual Studio), GitHub, GitHub Classroom, MS Word, MSSQL, Draw.io, Visual Paradigm
