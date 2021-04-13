@@ -29,7 +29,7 @@ F08 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema 
 F09 | Ispis liste za kupovinu | Aplikacija prije upisanog termina odlaska u trgovinu ili zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristrijan Stručić
 F10 | Slanje podsjetnika na email | U vrijeme kada je definiran odlazak u kupovinu, korisniku se na email šalje podsjetnik sa popisom svih proizvoda na listi. | Kristijan Stručić
 F11 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti neki bug ili predložiti novu funkcionalnost. | Kristijan Stručić
-F12 | Izrada domaćinstva | ... | Kristijan Stručić
+F12 | Izrada domaćinstva | Korisnik izrađuje obiteljsko domaćinstvo koje može koristiti više korisnika, te se može registracijom instalirati u više domaćinstva | Kristijan Stručić
 F13 | Spremanje trenutnog stanja u PDF | Korisnik može u PDF spremiti izvješća o trenutnom stanju artikala, kao i statistike korištenja artikala. | Antun Tkalčec
 
 ## Tehnologije i oprema
