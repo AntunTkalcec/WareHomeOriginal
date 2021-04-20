@@ -4,14 +4,14 @@ Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše 
 
 ## Projektni tim
 
-Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
+Ime i prezime | E-mail adresa (FOI) | JMBAG | GitHub korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Antun Tkalčec | atkalcec@foi.hr | 0016136241 | AntunTkalcec
 Karlo Habdija | khabdija@foi.hr | 0016136257 | khabdija
 Kristijan Stručić | kstrucic@foi.hr | 0016137051 | Kristijanstr
 
 ## Opis domene
-WareHome je aplikacija koja se koristi za praćenje količine namirnica i potrošnih stvari koje trenutno korisnik ima kod kuće. U nju korisnik može unijeti koju količinu nekog proizvoda ima doma (npr. Šećera), te nakon što određenu količinu nekog proizvoda potroši, to upiše u aplikaciju. Iz toga, aplikacija mu prikaže koliko još određenog proizvoda mu je ostalo kod kuće. Nadalje, korisnik u aplikaciju može upisati željenu optimalnu količinu određene namirnice, te kada količina te namirnice padne ispod postavljenog praga, aplikacija će korisnika podsjetiti da tu namirnicu mora kupiti sljedeći put kad ide u dućan. Korisnik, također, u aplikaciju može upisati raspored odlaska u dućan, pa će ga aplikacija nekoliko sati prije termina kupovanja namirnica podsjetiti, te izlistati namirnice koje su ispod optimalnog praga. Osim svega toga, korisnik može sam upisivati svoju listu za kupovinu, koja može biti javna ili zaključana iza lozinke.
+WareHome je aplikacija koja se koristi za praćenje količine namirnica i potrošnih stvari koje trenutno korisnik ima kod kuće. U nju korisnik može unijeti koju količinu nekog proizvoda ima kod kuće (npr. Šećera), te nakon što određenu količinu nekog proizvoda potroši, to upiše u aplikaciju. Iz toga, aplikacija mu prikaže koliko još određenog proizvoda mu je ostalo kod kuće. Nadalje, korisnik u aplikaciju može upisati željenu optimalnu količinu određene namirnice, te kada količina te namirnice padne ispod postavljenog praga, aplikacija će korisnika podsjetiti da tu namirnicu mora kupiti sljedeći put kad ide u dućan. Uz to, aplikacija analizira potrošnju određenog proizvoda, te iz toga procjenjuje kada će kojeg proizvoda ponestati. Korisnik, također, u aplikaciju može upisati raspored odlaska u dućan, pa će ga aplikacija na dan odlaska u kupovinu podsjetiti, te izlistati namirnice koje su ispod optimalnog praga. Osim svega toga, korisnik može sam upisivati svoju listu za kupovinu, koja može biti privatna ili dijeljena s domaćinstvom.
 
 
 ## Specifikacija projekta
