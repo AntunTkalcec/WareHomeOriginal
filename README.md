@@ -34,4 +34,4 @@ F13 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti 
 
 
 ## Tehnologije i oprema
-.NET (Visual Studio), GitHub, GitHub Classroom, MS Word, MSSQL, Draw.io, Visual Paradigm
+.NET (Visual Studio), GitHub, GitHub Classroom, MS Office 365, MSSQL, Draw.io, Visual Paradigm
