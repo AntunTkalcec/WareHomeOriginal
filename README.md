@@ -22,12 +22,10 @@ F01 | Prijava i odjava | Za pristup aplikaciji potrebno je da korisnik stvori ra
 F02 | Upis namirnica | Upisivanje imena, količine, optimalne količine i cijene namirnica te dućana gdje se namirnica kupuje. | Antun Tkalčec
 F03 | Pregled i uređivanje popisa namirnica | Pregledavanje, dodavanje ili brisanje namirnica koje su upisane. | Antun Tkalčec
 F04 | Spremanje trenutnog stanja u PDF | Korisnik može u PDF spremiti izvješća o trenutnom stanju artikala, kao i statistike korištenja artikala. | Antun Tkalčec
-
 F05 | Izrada i uređivanje rasporeda odlaska u kupovinu | Upis i izmjena generalnih termina odlaska u kupovinu. | Karlo Habdija
 F06 | Izrada liste za kupovinu | Izrada popisa namirnica koje želimo kupiti, a nisu prethodno upisane ili ih nemamo kod kuće. | Karlo Habdija
 F07 | Pregled i uređivanje liste za kupovinu | Pregledavanje, dodavanje ili brisanje namirnica sa liste za kupovinu. | Karlo Habdija
 F08 | Predviđanje potrošnje namirnica | Temeljem potrošnje u posljednjih 6 mjeseci računa se kada će koje namirnice nestati, te na zahtjev korisnika se ispisuje izvješće s navedenim podacima. | Karlo Habdija
-
 F09 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno) | Kristijan Stručić
 F10 | Ispis liste za kupovinu | Aplikacija prije upisanog termina odlaska u trgovinu ili zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristrijan Stručić
 F11 | Slanje podsjetnika na email | U vrijeme kada je definiran odlazak u kupovinu, korisniku se na email šalje podsjetnik sa popisom svih proizvoda na listi. | Kristijan Stručić
