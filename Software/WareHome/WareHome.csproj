@@ -46,20 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlavnaForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GlavnaForm.Designer.cs">
-      <DependentUpon>GlavnaForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="PrijavaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PrijavaForm.Designer.cs">
       <DependentUpon>PrijavaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlavnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavnaForm.Designer.cs">
+      <DependentUpon>GlavnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Raspored\Dan.cs" />
+    <Compile Include="Models\Raspored\Dozvoljeno.cs" />
+    <Compile Include="Models\Raspored\Minuta.cs" />
+    <Compile Include="Models\Raspored\Ponavljanje.cs" />
+    <Compile Include="Models\Raspored\Raspored.cs" />
+    <Compile Include="Models\Raspored\Sat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RasporedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RasporedForm.Designer.cs">
+      <DependentUpon>RasporedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistracijaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RasporedForm.resx">
+      <DependentUpon>RasporedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistracijaForm.resx">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,5 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

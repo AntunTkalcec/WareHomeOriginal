@@ -16,7 +16,7 @@ namespace WareHome
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GlavnaForm());
+            Application.Run(new PrijavaForm());
         }
     }
 }

@@ -46,16 +46,17 @@ namespace WareHome
             // 
             // prijavaButton
             // 
-            this.prijavaButton.Location = new System.Drawing.Point(27, 274);
+            this.prijavaButton.Location = new System.Drawing.Point(39, 279);
             this.prijavaButton.Name = "prijavaButton";
             this.prijavaButton.Size = new System.Drawing.Size(75, 23);
             this.prijavaButton.TabIndex = 27;
             this.prijavaButton.Text = "Odustani";
             this.prijavaButton.UseVisualStyleBackColor = true;
+            this.prijavaButton.Click += new System.EventHandler(this.prijavaButton_Click);
             // 
             // registracijaButton
             // 
-            this.registracijaButton.Location = new System.Drawing.Point(109, 274);
+            this.registracijaButton.Location = new System.Drawing.Point(121, 279);
             this.registracijaButton.Name = "registracijaButton";
             this.registracijaButton.Size = new System.Drawing.Size(75, 23);
             this.registracijaButton.TabIndex = 26;
@@ -65,7 +66,7 @@ namespace WareHome
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 46);
+            this.label6.Location = new System.Drawing.Point(36, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 24;
@@ -73,14 +74,14 @@ namespace WareHome
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 63);
+            this.textBox2.Location = new System.Drawing.Point(39, 68);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(157, 20);
             this.textBox2.TabIndex = 25;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 103);
+            this.textBox1.Location = new System.Drawing.Point(39, 108);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 20);
             this.textBox1.TabIndex = 29;
@@ -88,7 +89,7 @@ namespace WareHome
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 86);
+            this.label1.Location = new System.Drawing.Point(36, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 28;
@@ -96,7 +97,7 @@ namespace WareHome
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(27, 143);
+            this.textBox3.Location = new System.Drawing.Point(39, 148);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(157, 20);
             this.textBox3.TabIndex = 31;
@@ -104,7 +105,7 @@ namespace WareHome
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 126);
+            this.label2.Location = new System.Drawing.Point(36, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 30;
@@ -112,7 +113,7 @@ namespace WareHome
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(27, 183);
+            this.textBox4.Location = new System.Drawing.Point(39, 188);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(157, 20);
             this.textBox4.TabIndex = 33;
@@ -120,7 +121,7 @@ namespace WareHome
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 166);
+            this.label3.Location = new System.Drawing.Point(36, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 32;
@@ -128,7 +129,7 @@ namespace WareHome
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(27, 223);
+            this.textBox5.Location = new System.Drawing.Point(39, 228);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(157, 20);
             this.textBox5.TabIndex = 35;
@@ -136,7 +137,7 @@ namespace WareHome
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 206);
+            this.label4.Location = new System.Drawing.Point(36, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 34;
@@ -145,7 +146,7 @@ namespace WareHome
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 18);
+            this.label5.Location = new System.Drawing.Point(36, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 13);
             this.label5.TabIndex = 36;
@@ -155,7 +156,7 @@ namespace WareHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(218, 309);
+            this.ClientSize = new System.Drawing.Size(241, 336);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
@@ -171,6 +172,7 @@ namespace WareHome
             this.Controls.Add(this.label6);
             this.Name = "RegistracijaForm";
             this.Text = "WareHome";
+            this.Load += new System.EventHandler(this.RegistracijaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

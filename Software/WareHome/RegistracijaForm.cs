@@ -16,5 +16,15 @@ namespace WareHome
         {
             InitializeComponent();
         }
+
+        private void prijavaButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void RegistracijaForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
