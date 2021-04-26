@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PocetnaForm.cs">
+    <Compile Include="GlavnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PocetnaForm.Designer.cs">
-      <DependentUpon>PocetnaForm.cs</DependentUpon>
+    <Compile Include="GlavnaForm.Designer.cs">
+      <DependentUpon>GlavnaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrijavaForm.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,8 @@
     <Compile Include="RegistracijaForm.Designer.cs">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PocetnaForm.resx">
-      <DependentUpon>PocetnaForm.cs</DependentUpon>
+    <EmbeddedResource Include="GlavnaForm.resx">
+      <DependentUpon>GlavnaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrijavaForm.resx">
       <DependentUpon>PrijavaForm.cs</DependentUpon>

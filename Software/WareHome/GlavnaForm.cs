@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WareHome
 {
-    public partial class PocetnaForm : Form
+    public partial class GlavnaForm : Form
     {
-        public PocetnaForm()
+        public GlavnaForm()
         {
             InitializeComponent();
         }

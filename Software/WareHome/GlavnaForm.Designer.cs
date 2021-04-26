@@ -1,7 +1,7 @@
 ﻿
 namespace WareHome
 {
-    partial class PocetnaForm
+    partial class GlavnaForm
     {
         /// <summary>
         /// Required designer variable.
