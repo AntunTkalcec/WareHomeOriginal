@@ -46,7 +46,7 @@ namespace WareHome
             this.prijavaButton.TabIndex = 20;
             this.prijavaButton.Text = "Prijava";
             this.prijavaButton.UseVisualStyleBackColor = true;
-            this.prijavaButton.Click += new System.EventHandler(this.prijavaButton_Click);
+            this.prijavaButton.Click += new System.EventHandler(this.PrijavaButton_Click);
             // 
             // registracijaButton
             // 
@@ -56,7 +56,7 @@ namespace WareHome
             this.registracijaButton.TabIndex = 19;
             this.registracijaButton.Text = "Registracija";
             this.registracijaButton.UseVisualStyleBackColor = true;
-            this.registracijaButton.Click += new System.EventHandler(this.registracijaButton_Click);
+            this.registracijaButton.Click += new System.EventHandler(this.RegistracijaButton_Click);
             // 
             // passwordTextBox
             // 

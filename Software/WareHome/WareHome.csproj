@@ -112,6 +112,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
+      <Project>{7D8D10EF-2D05-42DC-8909-F38EE4C91071}</Project>
+      <Name>DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHome Logic\WareHome Logic.csproj">
+      <Project>{9D331757-D271-4C3F-BAC7-5420F9B49742}</Project>
+      <Name>WareHome Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
