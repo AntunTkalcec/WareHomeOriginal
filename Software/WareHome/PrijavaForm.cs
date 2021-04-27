@@ -20,7 +20,7 @@ namespace WareHome
 
         private void PrijavaForm_Load(object sender, EventArgs e)
         {
-
+            passwordTextBox.PasswordChar = '*';
         }
 
         private void prijavaButton_Click(object sender, EventArgs e)
