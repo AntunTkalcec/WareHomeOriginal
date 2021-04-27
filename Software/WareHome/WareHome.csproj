@@ -78,6 +78,12 @@
     <Compile Include="RegistracijaForm.Designer.cs">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZaboravljenaLozinkaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaboravljenaLozinkaForm.Designer.cs">
+      <DependentUpon>ZaboravljenaLozinkaForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GlavnaForm.resx">
       <DependentUpon>GlavnaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistracijaForm.resx">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaboravljenaLozinkaForm.resx">
+      <DependentUpon>ZaboravljenaLozinkaForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -37,7 +37,7 @@ namespace WareHome
 
         private bool PrijaviKorisnika()
         {
-            Korisnik korisnik = new Korisnik();
+            Korisnik korisnik;
             Domacinstvo domacinstvo = new Domacinstvo();
             string sql = "SELECT * FROM Korisnik";
             Database.Instance.Connect();
@@ -46,13 +46,8 @@ namespace WareHome
             {
                 if (dataReader["korisnicko_ime"].ToString() == usernameTextBox.Text && dataReader["lozinka"].ToString() == passwordTextBox.Text)
                 {
-                    korisnik.Ime = dataReader["ime"].ToString();
-                    korisnik.Prezime = dataReader["prezime"].ToString();
-                    korisnik.Mail = dataReader["e-mail"].ToString();
-                    korisnik.Lozinka = dataReader["lozinka"].ToString();
-                    korisnik.KorisnickoIme = usernameTextBox.Text;
-                    korisnik.DatumRegistracije = DateTime.Parse(dataReader["datum_registracije"].ToString());
-                    korisnik.DatumZadnjePrijave = DateTime.UtcNow;
+                    korisnik = new Korisnik(dataReader["ime"].ToString(), dataReader["prezime"].ToString(), dataReader["e-mail"].ToString(), dataReader["lozinka"].ToString(),
+                        usernameTextBox.Text, DateTime.Parse(dataReader["datum_registracije"].ToString()), DateTime.UtcNow, null);
                     korisnik.Prijavljen = true;
                     dataReader.Close();
                     UpdateZadnjuPrijavu(korisnik);
@@ -60,10 +55,8 @@ namespace WareHome
                     return true;
                 }
             }
-            if (!korisnik.Prijavljen)
-            {
-                MessageBox.Show("Ne postoji korisnik s upisanom kombinacijom korisničkog imena i lozinke!");
-            }
+
+            MessageBox.Show("Ne postoji korisnik s upisanom kombinacijom korisničkog imena i lozinke!");
             dataReader.Close();
             Database.Instance.Disconnect();
             return false;
@@ -91,6 +84,14 @@ namespace WareHome
         {
             RegistracijaForm Registracija = new RegistracijaForm();
             Registracija.ShowDialog();
+        }
+
+        private void zaboravljenaLozinkaButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            ZaboravljenaLozinkaForm zaboravljenaLozinka = new ZaboravljenaLozinkaForm();
+            zaboravljenaLozinka.ShowDialog();
+            Show();
         }
     }
 }

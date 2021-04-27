@@ -18,9 +18,16 @@ namespace WareHome_Logic
         public Domacinstvo Domacinstvo { get; set; }
         public bool Prijavljen { get; set; }
 
-        public Korisnik()
+        public Korisnik(string ime, string prezime, string mail, string lozinka, string korisnickoIme, DateTime datumRegistracije, DateTime datumZadnjePrijave, Domacinstvo domacinstvo)
         {
-
+            Ime = ime;
+            Prezime = prezime;
+            Mail = mail;
+            Lozinka = lozinka;
+            KorisnickoIme = korisnickoIme;
+            DatumRegistracije = datumRegistracije;
+            DatumZadnjePrijave = datumZadnjePrijave;
+            Domacinstvo = domacinstvo;
         }
     }
 }

@@ -36,6 +36,7 @@ namespace WareHome
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.korimeLabel = new System.Windows.Forms.Label();
             this.opisLabel2 = new System.Windows.Forms.Label();
+            this.zaboravljenaLozinkaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // prijavaButton
@@ -99,11 +100,22 @@ namespace WareHome
             this.opisLabel2.TabIndex = 14;
             this.opisLabel2.Text = "Unesite podatke za prijavu:";
             // 
+            // zaboravljenaLozinkaButton
+            // 
+            this.zaboravljenaLozinkaButton.Location = new System.Drawing.Point(35, 193);
+            this.zaboravljenaLozinkaButton.Name = "zaboravljenaLozinkaButton";
+            this.zaboravljenaLozinkaButton.Size = new System.Drawing.Size(157, 23);
+            this.zaboravljenaLozinkaButton.TabIndex = 21;
+            this.zaboravljenaLozinkaButton.Text = "Zaboravljena lozinka";
+            this.zaboravljenaLozinkaButton.UseVisualStyleBackColor = true;
+            this.zaboravljenaLozinkaButton.Click += new System.EventHandler(this.zaboravljenaLozinkaButton_Click);
+            // 
             // PrijavaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 210);
+            this.ClientSize = new System.Drawing.Size(227, 226);
+            this.Controls.Add(this.zaboravljenaLozinkaButton);
             this.Controls.Add(this.prijavaButton);
             this.Controls.Add(this.registracijaButton);
             this.Controls.Add(this.passwordTextBox);
@@ -128,6 +140,7 @@ namespace WareHome
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label korimeLabel;
         private System.Windows.Forms.Label opisLabel2;
+        private System.Windows.Forms.Button zaboravljenaLozinkaButton;
     }
 }
 
