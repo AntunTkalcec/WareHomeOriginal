@@ -38,7 +38,8 @@ namespace WareHome
 
         private void listeButton_Click(object sender, EventArgs e)
         {
-
+            ListeForm listeForm = new ListeForm();
+            listeForm.ShowDialog();
         }
     }
 }

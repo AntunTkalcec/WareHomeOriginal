@@ -46,6 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaForm.Designer.cs">
+      <DependentUpon>ListaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeForm.Designer.cs">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListaZaKupovinu\NamirniceNaListi.cs" />
+    <Compile Include="NovaListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaListaForm.Designer.cs">
+      <DependentUpon>NovaListaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrijavaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +99,15 @@
     </Compile>
     <EmbeddedResource Include="GlavnaForm.resx">
       <DependentUpon>GlavnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaForm.resx">
+      <DependentUpon>ListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeForm.resx">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaListaForm.resx">
+      <DependentUpon>NovaListaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrijavaForm.resx">
       <DependentUpon>PrijavaForm.cs</DependentUpon>
