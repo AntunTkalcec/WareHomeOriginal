@@ -37,10 +37,6 @@ namespace WareHome
             minutaComboBox.SelectedItem = raspored.OdabranaMinuta;
             ponavljanjeComboBox.DataSource = Dozvoljeno.Ponavljanja;
             ponavljanjeComboBox.SelectedItem = raspored.OdabirPonavljanja;
-
-            satComboBox.Enabled = true;
-            minutaComboBox.Enabled = true;
-            ponavljanjeComboBox.Enabled = true;
         }
 
         private void ProvjeriDan()
@@ -53,7 +49,9 @@ namespace WareHome
             }
             else
             {
-                UcitajRaspored();
+                satComboBox.Enabled = true;
+                minutaComboBox.Enabled = true;
+                ponavljanjeComboBox.Enabled = true;
             }
         }
 

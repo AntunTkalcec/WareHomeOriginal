@@ -14,8 +14,8 @@ namespace WareHome.Models.Raspored
         public Ponavljanje OdabirPonavljanja { get; set; }
         public Raspored()
         {
-            OdabraniDan = Dozvoljeno.Dani[1];
-            OdabraniSat = Dozvoljeno.Sati[10];
+            OdabraniDan = Dozvoljeno.Dani[0];
+            OdabraniSat = Dozvoljeno.Sati[0];
             OdabranaMinuta = Dozvoljeno.Minute[0];
             OdabirPonavljanja = Dozvoljeno.Ponavljanja[0];
         }

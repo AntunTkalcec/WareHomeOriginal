@@ -49,7 +49,7 @@ namespace WareHome
             this.danComboBox.Location = new System.Drawing.Point(79, 12);
             this.danComboBox.Name = "danComboBox";
             this.danComboBox.Size = new System.Drawing.Size(144, 21);
-            this.danComboBox.TabIndex = 1;
+            this.danComboBox.TabIndex = 2;
             this.danComboBox.SelectedIndexChanged += new System.EventHandler(this.danComboBox_SelectedIndexChanged);
             // 
             // ponavljanjeComboBox
@@ -58,7 +58,7 @@ namespace WareHome
             this.ponavljanjeComboBox.Location = new System.Drawing.Point(120, 66);
             this.ponavljanjeComboBox.Name = "ponavljanjeComboBox";
             this.ponavljanjeComboBox.Size = new System.Drawing.Size(50, 21);
-            this.ponavljanjeComboBox.TabIndex = 4;
+            this.ponavljanjeComboBox.TabIndex = 5;
             // 
             // label1
             // 
@@ -74,7 +74,7 @@ namespace WareHome
             this.spremiButton.Location = new System.Drawing.Point(136, 101);
             this.spremiButton.Name = "spremiButton";
             this.spremiButton.Size = new System.Drawing.Size(73, 34);
-            this.spremiButton.TabIndex = 5;
+            this.spremiButton.TabIndex = 1;
             this.spremiButton.Text = "Spremi";
             this.spremiButton.UseVisualStyleBackColor = true;
             this.spremiButton.Click += new System.EventHandler(this.spremiButton_Click);
@@ -140,7 +140,7 @@ namespace WareHome
             this.satComboBox.Location = new System.Drawing.Point(79, 39);
             this.satComboBox.Name = "satComboBox";
             this.satComboBox.Size = new System.Drawing.Size(65, 21);
-            this.satComboBox.TabIndex = 2;
+            this.satComboBox.TabIndex = 3;
             // 
             // minutaComboBox
             // 
@@ -148,7 +148,7 @@ namespace WareHome
             this.minutaComboBox.Location = new System.Drawing.Point(158, 39);
             this.minutaComboBox.Name = "minutaComboBox";
             this.minutaComboBox.Size = new System.Drawing.Size(65, 21);
-            this.minutaComboBox.TabIndex = 3;
+            this.minutaComboBox.TabIndex = 4;
             // 
             // RasporedForm
             // 

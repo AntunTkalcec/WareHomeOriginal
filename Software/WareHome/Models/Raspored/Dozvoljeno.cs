@@ -17,7 +17,7 @@ namespace WareHome.Models.Raspored
             new Dan("Četvrtak"),
             new Dan("Petak"),
             new Dan("Subota"),
-            new Dan("Nedjelja"),
+            new Dan("Nedjelja")
         };
 
         public static List<Sat> Sati = new List<Sat>
