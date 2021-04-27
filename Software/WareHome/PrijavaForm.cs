@@ -27,7 +27,6 @@ namespace WareHome
 
         private void PrijavaButton_Click(object sender, EventArgs e)
         {
-            PrijaviKorisnika();
             if (PrijaviKorisnika())
             {
                 Hide();
@@ -53,8 +52,11 @@ namespace WareHome
                     korisnik.Lozinka = dataReader["lozinka"].ToString();
                     korisnik.KorisnickoIme = usernameTextBox.Text;
                     korisnik.DatumRegistracije = DateTime.Parse(dataReader["datum_registracije"].ToString());
-                    korisnik.DatumZadnjePrijave = DateTime.Now;
+                    korisnik.DatumZadnjePrijave = DateTime.UtcNow;
                     korisnik.Prijavljen = true;
+                    dataReader.Close();
+                    UpdateZadnjuPrijavu(korisnik);
+                    Database.Instance.Disconnect();
                     return true;
                 }
             }
@@ -65,6 +67,12 @@ namespace WareHome
             dataReader.Close();
             Database.Instance.Disconnect();
             return false;
+        }
+
+        private void UpdateZadnjuPrijavu(Korisnik korisnik)
+        {
+            string sql = $"UPDATE Korisnik SET datum_zadnje_prijave = '{korisnik.DatumZadnjePrijave:yyyyMMdd}' WHERE korisnicko_ime = '{korisnik.KorisnickoIme}'";
+            Database.Instance.ExecuteCommand(sql);
         }
 
         private void UpaliGlavnuFormu()

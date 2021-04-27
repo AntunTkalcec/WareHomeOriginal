@@ -18,7 +18,7 @@ namespace WareHome
             InitializeComponent();
         }
 
-        private void PrijavaButton_Click(object sender, EventArgs e)
+        private void OdustaniButton_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -47,7 +47,7 @@ namespace WareHome
             string KorisnickoIme = regKorImeTextBox.Text;
             string Lozinka = regLozinkaTextBox.Text;
             string PotvrdaLozinke = regPotvrdiLozinkuTextBox.Text;
-            DateTime DatumRegistracije = DateTime.Now;
+            DateTime DatumRegistracije = DateTime.UtcNow;
 
             if (Lozinka != PotvrdaLozinke)
             {
@@ -57,13 +57,22 @@ namespace WareHome
             }
             else
             {
-                sql = $"INSERT INTO Korisnik (ime, prezime, [e-mail], lozinka, korisnicko_ime, datum_registracije) " +
-                    $"VALUES ('{Ime}', '{Prezime}', '{Mail}', '{Lozinka}', '{KorisnickoIme}', '{DatumRegistracije}')";
-                Database.Instance.ExecuteCommand(sql);
-                Database.Instance.Disconnect();
-                Uspjeh = true;
-                return Uspjeh;
+                if (Ime != null && Prezime != null && Mail != null && KorisnickoIme != null && Lozinka != null)
+                {
+                    sql = $"INSERT INTO Korisnik (ime, prezime, [e-mail], lozinka, korisnicko_ime, datum_registracije) " +
+                        $"VALUES ('{Ime}', '{Prezime}', '{Mail}', '{Lozinka}', '{KorisnickoIme}', '{DatumRegistracije:yyyyMMdd}')";
+                    Database.Instance.ExecuteCommand(sql);
+                    Uspjeh = true;
+                    Database.Instance.Disconnect();
+                }
+                else
+                {
+                    MessageBox.Show("Ostavili ste nepopunjena polja!");
+                    Database.Instance.Disconnect();
+                    return Uspjeh;
+                }
             }
+            return Uspjeh;
         }
     }
 }
