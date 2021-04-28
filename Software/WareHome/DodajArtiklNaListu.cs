@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace WareHome
 {
-    public partial class NovaListaForm : Form
+    public partial class DodajArtiklNaListu : Form
     {
-        public NovaListaForm()
+        public DodajArtiklNaListu()
         {
             InitializeComponent();
-        }
-
-        private void NovaListaForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void završiButton_Click(object sender, EventArgs e)
-        {
-
-            Close();
         }
 
         private void odustaniButton_Click(object sender, EventArgs e)

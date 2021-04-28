@@ -29,25 +29,25 @@ namespace WareHome
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listeDataGridView = new System.Windows.Forms.DataGridView();
             this.povratakButton = new System.Windows.Forms.Button();
             this.prikažiButton = new System.Windows.Forms.Button();
             this.kreirajButton = new System.Windows.Forms.Button();
             this.obrišiButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // listeDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 361);
-            this.dataGridView1.TabIndex = 0;
+            this.listeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listeDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.listeDataGridView.Name = "listeDataGridView";
+            this.listeDataGridView.Size = new System.Drawing.Size(477, 260);
+            this.listeDataGridView.TabIndex = 0;
             // 
             // povratakButton
             // 
-            this.povratakButton.Location = new System.Drawing.Point(12, 396);
+            this.povratakButton.Location = new System.Drawing.Point(12, 278);
             this.povratakButton.Name = "povratakButton";
             this.povratakButton.Size = new System.Drawing.Size(95, 36);
             this.povratakButton.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace WareHome
             // 
             // prikažiButton
             // 
-            this.prikažiButton.Location = new System.Drawing.Point(693, 396);
+            this.prikažiButton.Location = new System.Drawing.Point(394, 278);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(95, 36);
             this.prikažiButton.TabIndex = 2;
@@ -67,16 +67,17 @@ namespace WareHome
             // 
             // kreirajButton
             // 
-            this.kreirajButton.Location = new System.Drawing.Point(592, 396);
+            this.kreirajButton.Location = new System.Drawing.Point(293, 278);
             this.kreirajButton.Name = "kreirajButton";
             this.kreirajButton.Size = new System.Drawing.Size(95, 36);
             this.kreirajButton.TabIndex = 3;
             this.kreirajButton.Text = "Kreiraj";
             this.kreirajButton.UseVisualStyleBackColor = true;
+            this.kreirajButton.Click += new System.EventHandler(this.kreirajButton_Click);
             // 
             // obrišiButton
             // 
-            this.obrišiButton.Location = new System.Drawing.Point(491, 396);
+            this.obrišiButton.Location = new System.Drawing.Point(192, 278);
             this.obrišiButton.Name = "obrišiButton";
             this.obrišiButton.Size = new System.Drawing.Size(95, 36);
             this.obrišiButton.TabIndex = 4;
@@ -87,22 +88,23 @@ namespace WareHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 444);
+            this.ClientSize = new System.Drawing.Size(516, 334);
             this.Controls.Add(this.obrišiButton);
             this.Controls.Add(this.kreirajButton);
             this.Controls.Add(this.prikažiButton);
             this.Controls.Add(this.povratakButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listeDataGridView);
             this.Name = "ListeForm";
             this.Text = "WareHome";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ListeForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.listeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView listeDataGridView;
         private System.Windows.Forms.Button povratakButton;
         private System.Windows.Forms.Button prikažiButton;
         private System.Windows.Forms.Button kreirajButton;

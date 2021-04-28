@@ -38,7 +38,7 @@ namespace WareHome
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(24, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
@@ -46,40 +46,43 @@ namespace WareHome
             // 
             // odustaniButton
             // 
-            this.odustaniButton.Location = new System.Drawing.Point(16, 42);
+            this.odustaniButton.Location = new System.Drawing.Point(12, 75);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(75, 23);
             this.odustaniButton.TabIndex = 1;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
+            this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 10);
+            this.textBox1.Location = new System.Drawing.Point(67, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
+            this.textBox1.Size = new System.Drawing.Size(143, 20);
             this.textBox1.TabIndex = 2;
             // 
             // završiButton
             // 
-            this.završiButton.Location = new System.Drawing.Point(97, 42);
+            this.završiButton.Location = new System.Drawing.Point(157, 75);
             this.završiButton.Name = "završiButton";
             this.završiButton.Size = new System.Drawing.Size(75, 23);
             this.završiButton.TabIndex = 3;
             this.završiButton.Text = "Završi";
             this.završiButton.UseVisualStyleBackColor = true;
+            this.završiButton.Click += new System.EventHandler(this.završiButton_Click);
             // 
             // NovaListaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 81);
+            this.ClientSize = new System.Drawing.Size(244, 131);
             this.Controls.Add(this.završiButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.odustaniButton);
             this.Controls.Add(this.label1);
             this.Name = "NovaListaForm";
             this.Text = "WareHome";
+            this.Load += new System.EventHandler(this.NovaListaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

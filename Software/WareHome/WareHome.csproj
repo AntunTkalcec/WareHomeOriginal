@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DodajArtiklNaListu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajArtiklNaListu.Designer.cs">
+      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,7 +64,9 @@
     <Compile Include="ListeForm.Designer.cs">
       <DependentUpon>ListeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListaZaKupovinu\ListeZaKupovinu.cs" />
     <Compile Include="Models\ListaZaKupovinu\NamirniceNaListi.cs" />
+    <Compile Include="Models\ListaZaKupovinu\PrikazLista.cs" />
     <Compile Include="NovaListaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +105,9 @@
     <Compile Include="RegistracijaForm.Designer.cs">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DodajArtiklNaListu.resx">
+      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlavnaForm.resx">
       <DependentUpon>GlavnaForm.cs</DependentUpon>
     </EmbeddedResource>
