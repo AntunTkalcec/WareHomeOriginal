@@ -25,6 +25,11 @@ namespace WareHome
 
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
         private void rasporedButton_Click(object sender, EventArgs e)
         {
             RasporedForm rasporedForm = new RasporedForm(glavniRaspored);

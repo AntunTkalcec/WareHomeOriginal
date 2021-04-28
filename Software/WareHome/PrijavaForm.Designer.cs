@@ -32,10 +32,11 @@ namespace WareHome
             this.prijavaButton = new System.Windows.Forms.Button();
             this.registracijaButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lozinkaLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.korimeLabel = new System.Windows.Forms.Label();
+            this.opisLabel2 = new System.Windows.Forms.Label();
+            this.zaboravljenaLozinkaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // prijavaButton
@@ -46,7 +47,7 @@ namespace WareHome
             this.prijavaButton.TabIndex = 20;
             this.prijavaButton.Text = "Prijava";
             this.prijavaButton.UseVisualStyleBackColor = true;
-            this.prijavaButton.Click += new System.EventHandler(this.prijavaButton_Click);
+            this.prijavaButton.Click += new System.EventHandler(this.PrijavaButton_Click);
             // 
             // registracijaButton
             // 
@@ -56,7 +57,7 @@ namespace WareHome
             this.registracijaButton.TabIndex = 19;
             this.registracijaButton.Text = "Registracija";
             this.registracijaButton.UseVisualStyleBackColor = true;
-            this.registracijaButton.Click += new System.EventHandler(this.registracijaButton_Click);
+            this.registracijaButton.Click += new System.EventHandler(this.RegistracijaButton_Click);
             // 
             // passwordTextBox
             // 
@@ -65,14 +66,14 @@ namespace WareHome
             this.passwordTextBox.Size = new System.Drawing.Size(157, 20);
             this.passwordTextBox.TabIndex = 18;
             // 
-            // label3
+            // lozinkaLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Lozinka:";
+            this.lozinkaLabel.AutoSize = true;
+            this.lozinkaLabel.Location = new System.Drawing.Point(32, 99);
+            this.lozinkaLabel.Name = "lozinkaLabel";
+            this.lozinkaLabel.Size = new System.Drawing.Size(47, 13);
+            this.lozinkaLabel.TabIndex = 17;
+            this.lozinkaLabel.Text = "Lozinka:";
             // 
             // usernameTextBox
             // 
@@ -81,36 +82,47 @@ namespace WareHome
             this.usernameTextBox.Size = new System.Drawing.Size(157, 20);
             this.usernameTextBox.TabIndex = 16;
             // 
-            // label2
+            // korimeLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Korisničko ime:";
+            this.korimeLabel.AutoSize = true;
+            this.korimeLabel.Location = new System.Drawing.Point(32, 50);
+            this.korimeLabel.Name = "korimeLabel";
+            this.korimeLabel.Size = new System.Drawing.Size(78, 13);
+            this.korimeLabel.TabIndex = 15;
+            this.korimeLabel.Text = "Korisničko ime:";
             // 
-            // label1
+            // opisLabel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Unesite podatke za prijavu:";
+            this.opisLabel2.AutoSize = true;
+            this.opisLabel2.Location = new System.Drawing.Point(32, 22);
+            this.opisLabel2.Name = "opisLabel2";
+            this.opisLabel2.Size = new System.Drawing.Size(136, 13);
+            this.opisLabel2.TabIndex = 14;
+            this.opisLabel2.Text = "Unesite podatke za prijavu:";
+            // 
+            // zaboravljenaLozinkaButton
+            // 
+            this.zaboravljenaLozinkaButton.Location = new System.Drawing.Point(35, 193);
+            this.zaboravljenaLozinkaButton.Name = "zaboravljenaLozinkaButton";
+            this.zaboravljenaLozinkaButton.Size = new System.Drawing.Size(157, 23);
+            this.zaboravljenaLozinkaButton.TabIndex = 21;
+            this.zaboravljenaLozinkaButton.Text = "Zaboravljena lozinka";
+            this.zaboravljenaLozinkaButton.UseVisualStyleBackColor = true;
+            this.zaboravljenaLozinkaButton.Click += new System.EventHandler(this.zaboravljenaLozinkaButton_Click);
             // 
             // PrijavaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 210);
+            this.ClientSize = new System.Drawing.Size(227, 226);
+            this.Controls.Add(this.zaboravljenaLozinkaButton);
             this.Controls.Add(this.prijavaButton);
             this.Controls.Add(this.registracijaButton);
             this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lozinkaLabel);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.korimeLabel);
+            this.Controls.Add(this.opisLabel2);
             this.Name = "PrijavaForm";
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.PrijavaForm_Load);
@@ -124,10 +136,11 @@ namespace WareHome
         private System.Windows.Forms.Button prijavaButton;
         private System.Windows.Forms.Button registracijaButton;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lozinkaLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label korimeLabel;
+        private System.Windows.Forms.Label opisLabel2;
+        private System.Windows.Forms.Button zaboravljenaLozinkaButton;
     }
 }
 
