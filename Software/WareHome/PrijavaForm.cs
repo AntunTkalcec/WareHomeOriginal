@@ -93,5 +93,10 @@ namespace WareHome
             zaboravljenaLozinka.ShowDialog();
             Show();
         }
+
+        private void exitAppButton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

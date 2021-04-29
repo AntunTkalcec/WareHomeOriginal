@@ -71,5 +71,10 @@ namespace WareHome
                 Close();
             }
         }
+
+        private void exitAppButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
