@@ -44,6 +44,8 @@ namespace WareHome
             this.opisLabel1 = new System.Windows.Forms.Label();
             this.regPotvrdiLozinkuLabel = new System.Windows.Forms.Label();
             this.regPotvrdiLozinkuTextBox = new System.Windows.Forms.TextBox();
+            this.exitAppButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // odustaniButton
@@ -186,11 +188,42 @@ namespace WareHome
             this.regPotvrdiLozinkuTextBox.Size = new System.Drawing.Size(157, 27);
             this.regPotvrdiLozinkuTextBox.TabIndex = 5;
             // 
+            // exitAppButton
+            // 
+            this.exitAppButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.exitAppButton.FlatAppearance.BorderSize = 0;
+            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitAppButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitAppButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.exitAppButton.Location = new System.Drawing.Point(331, 1);
+            this.exitAppButton.Name = "exitAppButton";
+            this.exitAppButton.Size = new System.Drawing.Size(23, 26);
+            this.exitAppButton.TabIndex = 38;
+            this.exitAppButton.Text = "X";
+            this.exitAppButton.UseVisualStyleBackColor = false;
+            this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.minimizeButton.Location = new System.Drawing.Point(302, 1);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(23, 26);
+            this.minimizeButton.TabIndex = 39;
+            this.minimizeButton.Text = "-";
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
             // RegistracijaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(355, 447);
+            this.Controls.Add(this.minimizeButton);
+            this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.regPotvrdiLozinkuTextBox);
             this.Controls.Add(this.regPotvrdiLozinkuLabel);
             this.Controls.Add(this.opisLabel1);
@@ -235,5 +268,7 @@ namespace WareHome
         private System.Windows.Forms.Label opisLabel1;
         private System.Windows.Forms.Label regPotvrdiLozinkuLabel;
         private System.Windows.Forms.TextBox regPotvrdiLozinkuTextBox;
+        private System.Windows.Forms.Button exitAppButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }

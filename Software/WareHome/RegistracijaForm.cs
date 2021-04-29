@@ -74,5 +74,15 @@ namespace WareHome
             }
             return Uspjeh;
         }
+
+        private void exitAppButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

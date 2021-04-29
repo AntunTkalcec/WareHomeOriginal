@@ -39,6 +39,7 @@ namespace WareHome
             this.opisLabel2 = new System.Windows.Forms.Label();
             this.zaboravljenaLozinkaButton = new System.Windows.Forms.Button();
             this.exitAppButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // prijavaButton
@@ -118,13 +119,14 @@ namespace WareHome
             // 
             // zaboravljenaLozinkaButton
             // 
-            this.zaboravljenaLozinkaButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.zaboravljenaLozinkaButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.zaboravljenaLozinkaButton.FlatAppearance.BorderSize = 0;
             this.zaboravljenaLozinkaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.zaboravljenaLozinkaButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zaboravljenaLozinkaButton.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zaboravljenaLozinkaButton.ForeColor = System.Drawing.Color.White;
-            this.zaboravljenaLozinkaButton.Location = new System.Drawing.Point(12, 242);
+            this.zaboravljenaLozinkaButton.Location = new System.Drawing.Point(12, 276);
             this.zaboravljenaLozinkaButton.Name = "zaboravljenaLozinkaButton";
-            this.zaboravljenaLozinkaButton.Size = new System.Drawing.Size(117, 58);
+            this.zaboravljenaLozinkaButton.Size = new System.Drawing.Size(129, 24);
             this.zaboravljenaLozinkaButton.TabIndex = 5;
             this.zaboravljenaLozinkaButton.Text = "Zaboravljena lozinka";
             this.zaboravljenaLozinkaButton.UseVisualStyleBackColor = true;
@@ -132,23 +134,39 @@ namespace WareHome
             // 
             // exitAppButton
             // 
-            this.exitAppButton.BackColor = System.Drawing.Color.Red;
+            this.exitAppButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.exitAppButton.FlatAppearance.BorderSize = 0;
             this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitAppButton.ForeColor = System.Drawing.Color.Black;
-            this.exitAppButton.Location = new System.Drawing.Point(305, 12);
+            this.exitAppButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitAppButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.exitAppButton.Location = new System.Drawing.Point(315, 0);
             this.exitAppButton.Name = "exitAppButton";
-            this.exitAppButton.Size = new System.Drawing.Size(23, 27);
+            this.exitAppButton.Size = new System.Drawing.Size(23, 26);
             this.exitAppButton.TabIndex = 18;
             this.exitAppButton.Text = "X";
             this.exitAppButton.UseVisualStyleBackColor = false;
             this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.minimizeButton.Location = new System.Drawing.Point(283, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(23, 26);
+            this.minimizeButton.TabIndex = 19;
+            this.minimizeButton.Text = "-";
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // PrijavaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(340, 312);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.zaboravljenaLozinkaButton);
             this.Controls.Add(this.prijavaButton);
@@ -182,6 +200,7 @@ namespace WareHome
         private System.Windows.Forms.Label opisLabel2;
         private System.Windows.Forms.Button zaboravljenaLozinkaButton;
         private System.Windows.Forms.Button exitAppButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }
 

@@ -42,9 +42,14 @@ namespace WareHome
             listeForm.Show();
         }
 
-        private void exitAppButton_Click(object sender, EventArgs e)
+        private void exitAppButton_Click_1(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

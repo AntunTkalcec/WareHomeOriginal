@@ -38,7 +38,6 @@ namespace WareHome
             this.pdfButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
             this.warehomeLabel1 = new System.Windows.Forms.Label();
-            this.exitAppButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.popisNamirnicaLabel = new System.Windows.Forms.Label();
             this.glavnaFormPanelBottom = new System.Windows.Forms.Panel();
@@ -49,6 +48,8 @@ namespace WareHome
             this.obrisiNamirnicuButton = new System.Windows.Forms.Button();
             this.promijeniNamirnicuButton = new System.Windows.Forms.Button();
             this.dodajNamirnicuButton = new System.Windows.Forms.Button();
+            this.exitAppButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -179,20 +180,6 @@ namespace WareHome
             this.warehomeLabel1.Text = "WareHome";
             this.warehomeLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // exitAppButton
-            // 
-            this.exitAppButton.BackColor = System.Drawing.Color.Red;
-            this.exitAppButton.FlatAppearance.BorderSize = 0;
-            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitAppButton.ForeColor = System.Drawing.Color.Black;
-            this.exitAppButton.Location = new System.Drawing.Point(1224, 12);
-            this.exitAppButton.Name = "exitAppButton";
-            this.exitAppButton.Size = new System.Drawing.Size(23, 27);
-            this.exitAppButton.TabIndex = 19;
-            this.exitAppButton.Text = "X";
-            this.exitAppButton.UseVisualStyleBackColor = false;
-            this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -313,15 +300,45 @@ namespace WareHome
             this.dodajNamirnicuButton.Text = "Dodaj namirnicu";
             this.dodajNamirnicuButton.UseVisualStyleBackColor = true;
             // 
+            // exitAppButton
+            // 
+            this.exitAppButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.exitAppButton.FlatAppearance.BorderSize = 0;
+            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitAppButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitAppButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.exitAppButton.Location = new System.Drawing.Point(1236, 0);
+            this.exitAppButton.Name = "exitAppButton";
+            this.exitAppButton.Size = new System.Drawing.Size(23, 26);
+            this.exitAppButton.TabIndex = 19;
+            this.exitAppButton.Text = "X";
+            this.exitAppButton.UseVisualStyleBackColor = false;
+            this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click_1);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.minimizeButton.Location = new System.Drawing.Point(1207, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(23, 26);
+            this.minimizeButton.TabIndex = 23;
+            this.minimizeButton.Text = "-";
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
             // GlavnaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1259, 695);
+            this.Controls.Add(this.minimizeButton);
+            this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.glavnaFormPanelBottom);
             this.Controls.Add(this.popisNamirnicaLabel);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.glavnaFormPanelLeft);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -349,7 +366,6 @@ namespace WareHome
         private System.Windows.Forms.Panel glavnaFormPanelLeft;
         private System.Windows.Forms.Panel glavnaFormPanelLeftTop;
         private System.Windows.Forms.Label warehomeLabel1;
-        private System.Windows.Forms.Button exitAppButton;
         private System.Windows.Forms.Button pdfButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label popisNamirnicaLabel;
@@ -363,5 +379,7 @@ namespace WareHome
         private System.Windows.Forms.TextBox brojNamirnicaTextBox;
         private System.Windows.Forms.Button pridruziDomacinstvuButton;
         private System.Windows.Forms.Button izradiDomacinstvoButton;
+        private System.Windows.Forms.Button exitAppButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }

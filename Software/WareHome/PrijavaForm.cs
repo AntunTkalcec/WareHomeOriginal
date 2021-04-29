@@ -88,15 +88,21 @@ namespace WareHome
 
         private void zaboravljenaLozinkaButton_Click(object sender, EventArgs e)
         {
-            Hide();
             ZaboravljenaLozinkaForm zaboravljenaLozinka = new ZaboravljenaLozinkaForm();
+            zaboravljenaLozinka.StartPosition = FormStartPosition.Manual;
+            zaboravljenaLozinka.Left = 450;
+            zaboravljenaLozinka.Top = 500;
             zaboravljenaLozinka.ShowDialog();
-            Show();
         }
 
         private void exitAppButton_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
