@@ -46,5 +46,11 @@
     <Compile Include="Namirnica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
+      <Project>{7D8D10EF-2D05-42DC-8909-F38EE4C91071}</Project>
+      <Name>DatabaseAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

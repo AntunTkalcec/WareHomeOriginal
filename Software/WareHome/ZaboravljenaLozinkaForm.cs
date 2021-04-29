@@ -9,6 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WareHome_Logic;
 
 namespace WareHome
 {
@@ -25,7 +26,7 @@ namespace WareHome
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
+                
                 Database.Instance.Connect();
                 string sql = "SELECT * FROM Korisnik";
                 IDataReader dataReader = Database.Instance.GetDataReader(sql);

@@ -9,8 +9,8 @@ namespace WareHome_Logic
     public class Namirnica
     {
         public string NazivNamirnice { get; set; }
-        public int DostupnaKolicina { get; set; }
-        public int OptimalnaKolicina { get; set; }
+        public string DostupnaKolicina { get; set; }
+        public string OptimalnaKolicina { get; set; }
         public string Cijena { get; set; }
         public string Ducan { get; set; }
         public DateTime DatumKreiranja { get; set; }
@@ -18,7 +18,7 @@ namespace WareHome_Logic
         public string KorisnikKreator { get; set; }
         public Domacinstvo Domacinstvo { get; set; }
 
-        public Namirnica(string nazivNamirnice, int dostupnaKolicina, int optimalnaKolicina, string cijena, string ducan, DateTime datumKreiranja, 
+        public Namirnica(string nazivNamirnice, string dostupnaKolicina, string optimalnaKolicina, string cijena, string ducan, DateTime datumKreiranja, 
             DateTime datumZadnjePromjene, string korisnikKreator, Domacinstvo domacinstvo)
         {
             NazivNamirnice = nazivNamirnice;
