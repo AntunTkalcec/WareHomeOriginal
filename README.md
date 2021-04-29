@@ -32,7 +32,7 @@ F13 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti 
 
 
 ## Tehnologije i oprema
-.NET (Visual Studio), GitHub, GitHub Classroom, MS Office 365, MSSQL, Draw.io, Visual Paradigm, SourceTree
+.NET (Visual Studio), GitHub, GitHub Classroom, MS Office 365, MSSQL, Draw.io, Visual Paradigm, SourceTree, SSMS
   
   
 Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše projektne dokumentacije pogledajte [ovaj link](https://guides.github.com/features/mastering-markdown/).
