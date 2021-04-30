@@ -29,6 +29,7 @@ namespace WareHome
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForm));
             this.rasporedButton = new System.Windows.Forms.Button();
             this.listeButton = new System.Windows.Forms.Button();
             this.odjavaButton = new System.Windows.Forms.Button();
@@ -37,23 +38,24 @@ namespace WareHome
             this.izradiDomacinstvoButton = new System.Windows.Forms.Button();
             this.pdfButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
-            this.warehomeLabel1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.popisNamirnicaLabel = new System.Windows.Forms.Label();
             this.glavnaFormPanelBottom = new System.Windows.Forms.Panel();
-            this.brojNamirnicaTextBox = new System.Windows.Forms.TextBox();
             this.brojNamirnicaLabel = new System.Windows.Forms.Label();
-            this.trenutnoDomacinstvoTextBox = new System.Windows.Forms.TextBox();
             this.trenutnoDomacinstvoLabel = new System.Windows.Forms.Label();
             this.obrisiNamirnicuButton = new System.Windows.Forms.Button();
             this.promijeniNamirnicuButton = new System.Windows.Forms.Button();
             this.dodajNamirnicuButton = new System.Windows.Forms.Button();
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
+            this.trenutnoDomacinstvoLabel2 = new System.Windows.Forms.Label();
+            this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
+            this.warehomePictureBox = new System.Windows.Forms.PictureBox();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.glavnaFormPanelBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // rasporedButton
@@ -160,25 +162,12 @@ namespace WareHome
             // 
             // glavnaFormPanelLeftTop
             // 
-            this.glavnaFormPanelLeftTop.Controls.Add(this.warehomeLabel1);
+            this.glavnaFormPanelLeftTop.Controls.Add(this.warehomePictureBox);
             this.glavnaFormPanelLeftTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.glavnaFormPanelLeftTop.Location = new System.Drawing.Point(0, 0);
             this.glavnaFormPanelLeftTop.Name = "glavnaFormPanelLeftTop";
             this.glavnaFormPanelLeftTop.Size = new System.Drawing.Size(173, 100);
             this.glavnaFormPanelLeftTop.TabIndex = 0;
-            // 
-            // warehomeLabel1
-            // 
-            this.warehomeLabel1.AutoSize = true;
-            this.warehomeLabel1.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warehomeLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.warehomeLabel1.Location = new System.Drawing.Point(3, 28);
-            this.warehomeLabel1.Name = "warehomeLabel1";
-            this.warehomeLabel1.Size = new System.Drawing.Size(160, 33);
-            this.warehomeLabel1.TabIndex = 0;
-            this.warehomeLabel1.Text = "WareHome";
-            this.warehomeLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -200,9 +189,9 @@ namespace WareHome
             // 
             // glavnaFormPanelBottom
             // 
-            this.glavnaFormPanelBottom.Controls.Add(this.brojNamirnicaTextBox);
+            this.glavnaFormPanelBottom.Controls.Add(this.brojNamirnicaLabel2);
+            this.glavnaFormPanelBottom.Controls.Add(this.trenutnoDomacinstvoLabel2);
             this.glavnaFormPanelBottom.Controls.Add(this.brojNamirnicaLabel);
-            this.glavnaFormPanelBottom.Controls.Add(this.trenutnoDomacinstvoTextBox);
             this.glavnaFormPanelBottom.Controls.Add(this.trenutnoDomacinstvoLabel);
             this.glavnaFormPanelBottom.Controls.Add(this.obrisiNamirnicuButton);
             this.glavnaFormPanelBottom.Controls.Add(this.promijeniNamirnicuButton);
@@ -211,19 +200,6 @@ namespace WareHome
             this.glavnaFormPanelBottom.Name = "glavnaFormPanelBottom";
             this.glavnaFormPanelBottom.Size = new System.Drawing.Size(1080, 171);
             this.glavnaFormPanelBottom.TabIndex = 22;
-            // 
-            // brojNamirnicaTextBox
-            // 
-            this.brojNamirnicaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.brojNamirnicaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.brojNamirnicaTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.brojNamirnicaTextBox.ForeColor = System.Drawing.Color.White;
-            this.brojNamirnicaTextBox.Location = new System.Drawing.Point(850, 96);
-            this.brojNamirnicaTextBox.Name = "brojNamirnicaTextBox";
-            this.brojNamirnicaTextBox.ReadOnly = true;
-            this.brojNamirnicaTextBox.Size = new System.Drawing.Size(158, 20);
-            this.brojNamirnicaTextBox.TabIndex = 6;
-            this.brojNamirnicaTextBox.Text = "Test";
             // 
             // brojNamirnicaLabel
             // 
@@ -234,19 +210,6 @@ namespace WareHome
             this.brojNamirnicaLabel.Size = new System.Drawing.Size(123, 21);
             this.brojNamirnicaLabel.TabIndex = 5;
             this.brojNamirnicaLabel.Text = "Broj namirnica:";
-            // 
-            // trenutnoDomacinstvoTextBox
-            // 
-            this.trenutnoDomacinstvoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.trenutnoDomacinstvoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.trenutnoDomacinstvoTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.trenutnoDomacinstvoTextBox.ForeColor = System.Drawing.Color.White;
-            this.trenutnoDomacinstvoTextBox.Location = new System.Drawing.Point(850, 46);
-            this.trenutnoDomacinstvoTextBox.Name = "trenutnoDomacinstvoTextBox";
-            this.trenutnoDomacinstvoTextBox.ReadOnly = true;
-            this.trenutnoDomacinstvoTextBox.Size = new System.Drawing.Size(158, 20);
-            this.trenutnoDomacinstvoTextBox.TabIndex = 4;
-            this.trenutnoDomacinstvoTextBox.Text = "Test";
             // 
             // trenutnoDomacinstvoLabel
             // 
@@ -329,6 +292,38 @@ namespace WareHome
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
+            // trenutnoDomacinstvoLabel2
+            // 
+            this.trenutnoDomacinstvoLabel2.AutoSize = true;
+            this.trenutnoDomacinstvoLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.White;
+            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(856, 42);
+            this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
+            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(41, 21);
+            this.trenutnoDomacinstvoLabel2.TabIndex = 6;
+            this.trenutnoDomacinstvoLabel2.Text = "Test";
+            // 
+            // brojNamirnicaLabel2
+            // 
+            this.brojNamirnicaLabel2.AutoSize = true;
+            this.brojNamirnicaLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.White;
+            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(856, 94);
+            this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
+            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(41, 21);
+            this.brojNamirnicaLabel2.TabIndex = 7;
+            this.brojNamirnicaLabel2.Text = "Test";
+            // 
+            // warehomePictureBox
+            // 
+            this.warehomePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("warehomePictureBox.Image")));
+            this.warehomePictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("warehomePictureBox.InitialImage")));
+            this.warehomePictureBox.Location = new System.Drawing.Point(-15, -72);
+            this.warehomePictureBox.Name = "warehomePictureBox";
+            this.warehomePictureBox.Size = new System.Drawing.Size(201, 135);
+            this.warehomePictureBox.TabIndex = 0;
+            this.warehomePictureBox.TabStop = false;
+            // 
             // GlavnaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -343,16 +338,17 @@ namespace WareHome
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GlavnaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.GlavnaForm_Load);
             this.glavnaFormPanelLeft.ResumeLayout(false);
             this.glavnaFormPanelLeftTop.ResumeLayout(false);
-            this.glavnaFormPanelLeftTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.glavnaFormPanelBottom.ResumeLayout(false);
             this.glavnaFormPanelBottom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,21 +361,21 @@ namespace WareHome
         private System.Windows.Forms.Button odjavaButton;
         private System.Windows.Forms.Panel glavnaFormPanelLeft;
         private System.Windows.Forms.Panel glavnaFormPanelLeftTop;
-        private System.Windows.Forms.Label warehomeLabel1;
         private System.Windows.Forms.Button pdfButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label popisNamirnicaLabel;
         private System.Windows.Forms.Panel glavnaFormPanelBottom;
-        private System.Windows.Forms.TextBox trenutnoDomacinstvoTextBox;
         private System.Windows.Forms.Label trenutnoDomacinstvoLabel;
         private System.Windows.Forms.Button obrisiNamirnicuButton;
         private System.Windows.Forms.Button promijeniNamirnicuButton;
         private System.Windows.Forms.Button dodajNamirnicuButton;
         private System.Windows.Forms.Label brojNamirnicaLabel;
-        private System.Windows.Forms.TextBox brojNamirnicaTextBox;
         private System.Windows.Forms.Button pridruziDomacinstvuButton;
         private System.Windows.Forms.Button izradiDomacinstvoButton;
         private System.Windows.Forms.Button exitAppButton;
         private System.Windows.Forms.Button minimizeButton;
+        private System.Windows.Forms.Label brojNamirnicaLabel2;
+        private System.Windows.Forms.Label trenutnoDomacinstvoLabel2;
+        private System.Windows.Forms.PictureBox warehomePictureBox;
     }
 }

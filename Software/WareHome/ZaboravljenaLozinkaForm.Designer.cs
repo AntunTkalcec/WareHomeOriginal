@@ -29,6 +29,7 @@ namespace WareHome
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZaboravljenaLozinkaForm));
             this.povratiLozinkuButton = new System.Windows.Forms.Button();
             this.opisLabel3 = new System.Windows.Forms.Label();
             this.korimeZaboravljenoTextBox = new System.Windows.Forms.TextBox();
@@ -109,6 +110,7 @@ namespace WareHome
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ZaboravljenaLozinkaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ZaboravljenaLozinka";
