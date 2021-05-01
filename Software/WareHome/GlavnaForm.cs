@@ -8,21 +8,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.Raspored;
+using WareHome_Logic;
 
 namespace WareHome
 {
     public partial class GlavnaForm : Form
     {
-        public GlavnaForm()
+        Korisnik trenutniKorisnik = new Korisnik();
+        public GlavnaForm(Korisnik korisnik)
         {
             InitializeComponent();
+            trenutniKorisnik = korisnik;
         }
 
         Raspored glavniRaspored = new Raspored();
 
+        private void OsvjeziNamirnice()
+        {
+            
+        }
+
+        private void OsvjeziDomacinstvo()
+        {
+            if (trenutniKorisnik.Domacinstvo == null)
+            {
+                MessageBox.Show("Ne pripadate nikakvom domaćinstvu. Molimo, izradite novo domaćinstvo ili se pridružite postojećem.");
+            }
+            else
+            {
+                trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
+            }
+        }
         private void GlavnaForm_Load(object sender, EventArgs e)
         {
-
+            OsvjeziNamirnice();
+            OsvjeziDomacinstvo();
         }
 
         private void rasporedButton_Click(object sender, EventArgs e)

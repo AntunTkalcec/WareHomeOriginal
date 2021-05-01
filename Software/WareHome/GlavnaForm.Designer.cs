@@ -38,9 +38,12 @@ namespace WareHome
             this.izradiDomacinstvoButton = new System.Windows.Forms.Button();
             this.pdfButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
+            this.warehomePictureBox = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.popisNamirnicaLabel = new System.Windows.Forms.Label();
             this.glavnaFormPanelBottom = new System.Windows.Forms.Panel();
+            this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
+            this.trenutnoDomacinstvoLabel2 = new System.Windows.Forms.Label();
             this.brojNamirnicaLabel = new System.Windows.Forms.Label();
             this.trenutnoDomacinstvoLabel = new System.Windows.Forms.Label();
             this.obrisiNamirnicuButton = new System.Windows.Forms.Button();
@@ -48,14 +51,11 @@ namespace WareHome
             this.dodajNamirnicuButton = new System.Windows.Forms.Button();
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
-            this.trenutnoDomacinstvoLabel2 = new System.Windows.Forms.Label();
-            this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
-            this.warehomePictureBox = new System.Windows.Forms.PictureBox();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.glavnaFormPanelBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // rasporedButton
@@ -169,6 +169,16 @@ namespace WareHome
             this.glavnaFormPanelLeftTop.Size = new System.Drawing.Size(173, 100);
             this.glavnaFormPanelLeftTop.TabIndex = 0;
             // 
+            // warehomePictureBox
+            // 
+            this.warehomePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("warehomePictureBox.Image")));
+            this.warehomePictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("warehomePictureBox.InitialImage")));
+            this.warehomePictureBox.Location = new System.Drawing.Point(-15, -72);
+            this.warehomePictureBox.Name = "warehomePictureBox";
+            this.warehomePictureBox.Size = new System.Drawing.Size(201, 135);
+            this.warehomePictureBox.TabIndex = 0;
+            this.warehomePictureBox.TabStop = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -200,6 +210,28 @@ namespace WareHome
             this.glavnaFormPanelBottom.Name = "glavnaFormPanelBottom";
             this.glavnaFormPanelBottom.Size = new System.Drawing.Size(1080, 171);
             this.glavnaFormPanelBottom.TabIndex = 22;
+            // 
+            // brojNamirnicaLabel2
+            // 
+            this.brojNamirnicaLabel2.AutoSize = true;
+            this.brojNamirnicaLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.White;
+            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(856, 94);
+            this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
+            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(42, 21);
+            this.brojNamirnicaLabel2.TabIndex = 7;
+            this.brojNamirnicaLabel2.Text = "N/A";
+            // 
+            // trenutnoDomacinstvoLabel2
+            // 
+            this.trenutnoDomacinstvoLabel2.AutoSize = true;
+            this.trenutnoDomacinstvoLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.White;
+            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(856, 42);
+            this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
+            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(42, 21);
+            this.trenutnoDomacinstvoLabel2.TabIndex = 6;
+            this.trenutnoDomacinstvoLabel2.Text = "N/A";
             // 
             // brojNamirnicaLabel
             // 
@@ -292,38 +324,6 @@ namespace WareHome
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
-            // trenutnoDomacinstvoLabel2
-            // 
-            this.trenutnoDomacinstvoLabel2.AutoSize = true;
-            this.trenutnoDomacinstvoLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.White;
-            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(856, 42);
-            this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
-            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(41, 21);
-            this.trenutnoDomacinstvoLabel2.TabIndex = 6;
-            this.trenutnoDomacinstvoLabel2.Text = "Test";
-            // 
-            // brojNamirnicaLabel2
-            // 
-            this.brojNamirnicaLabel2.AutoSize = true;
-            this.brojNamirnicaLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.White;
-            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(856, 94);
-            this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
-            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(41, 21);
-            this.brojNamirnicaLabel2.TabIndex = 7;
-            this.brojNamirnicaLabel2.Text = "Test";
-            // 
-            // warehomePictureBox
-            // 
-            this.warehomePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("warehomePictureBox.Image")));
-            this.warehomePictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("warehomePictureBox.InitialImage")));
-            this.warehomePictureBox.Location = new System.Drawing.Point(-15, -72);
-            this.warehomePictureBox.Name = "warehomePictureBox";
-            this.warehomePictureBox.Size = new System.Drawing.Size(201, 135);
-            this.warehomePictureBox.TabIndex = 0;
-            this.warehomePictureBox.TabStop = false;
-            // 
             // GlavnaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -345,10 +345,10 @@ namespace WareHome
             this.Load += new System.EventHandler(this.GlavnaForm_Load);
             this.glavnaFormPanelLeft.ResumeLayout(false);
             this.glavnaFormPanelLeftTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.glavnaFormPanelBottom.ResumeLayout(false);
             this.glavnaFormPanelBottom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

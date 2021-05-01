@@ -38,7 +38,6 @@ namespace WareHome
         }
         private bool RegistrirajKorisnika()
         {
-            Database.Instance.Connect();
             bool Uspjeh = false;
             string sql;
             string Ime = regImeTextBox.Text;
@@ -49,30 +48,55 @@ namespace WareHome
             string PotvrdaLozinke = regPotvrdiLozinkuTextBox.Text;
             DateTime DatumRegistracije = DateTime.UtcNow;
 
+            if (!ProvjeriKorisnickoIme(KorisnickoIme))
+            {
+                MessageBox.Show("To korisničko ime je već zauzeto.");
+                return Uspjeh;
+            }
+
             if (Lozinka != PotvrdaLozinke)
             {
                 MessageBox.Show("Polja Lozinka i Potvrdi Lozinku se ne poklapaju!");
-                Database.Instance.Disconnect();
                 return Uspjeh;
             }
             else
             {
-                if (Ime != null && Prezime != null && Mail != null && KorisnickoIme != null && Lozinka != null)
+                if (Ime.Length > 1 && Prezime.Length > 1 && Mail.Length > 1 && KorisnickoIme.Length > 1 && Lozinka.Length > 1)
                 {
+                    Database.Instance.Connect();
                     sql = $"INSERT INTO Korisnik (ime, prezime, [e-mail], lozinka, korisnicko_ime, datum_registracije) " +
                         $"VALUES ('{Ime}', '{Prezime}', '{Mail}', '{Lozinka}', '{KorisnickoIme}', '{DatumRegistracije:yyyyMMdd}')";
                     Database.Instance.ExecuteCommand(sql);
                     Uspjeh = true;
+                    MessageBox.Show("Korisnik registriran.");
                     Database.Instance.Disconnect();
                 }
                 else
                 {
                     MessageBox.Show("Ostavili ste nepopunjena polja!");
-                    Database.Instance.Disconnect();
                     return Uspjeh;
                 }
             }
             return Uspjeh;
+        }
+
+        private bool ProvjeriKorisnickoIme(string korisnickoIme)
+        {
+            string sql = "SELECT korisnicko_ime from Korisnik";
+            Database.Instance.Connect();
+            IDataReader dataReader = Database.Instance.GetDataReader(sql);
+            while (dataReader.Read())
+            {
+                if (dataReader["korisnicko_ime"].ToString() == korisnickoIme)
+                {
+                    dataReader.Close();
+                    Database.Instance.Disconnect();
+                    return false;
+                }
+            }
+            dataReader.Close();
+            Database.Instance.Disconnect();
+            return true;
         }
 
         private void exitAppButton_Click(object sender, EventArgs e)

@@ -27,18 +27,17 @@ namespace WareHome
 
         private void PrijavaButton_Click(object sender, EventArgs e)
         {
-            if (PrijaviKorisnika())
+            Korisnik korisnik = new Korisnik();
+            if (PrijaviKorisnika(korisnik) != null)
             {
                 Hide();
-                UpaliGlavnuFormu();
+                UpaliGlavnuFormu(korisnik);
                 Show();
             }
         }
 
-        private bool PrijaviKorisnika()
+        private Korisnik PrijaviKorisnika(Korisnik korisnik)
         {
-            Korisnik korisnik;
-            Domacinstvo domacinstvo = new Domacinstvo();
             string sql = "SELECT * FROM Korisnik";
             Database.Instance.Connect();
             IDataReader dataReader = Database.Instance.GetDataReader(sql);
@@ -46,20 +45,42 @@ namespace WareHome
             {
                 if (dataReader["korisnicko_ime"].ToString() == usernameTextBox.Text && dataReader["lozinka"].ToString() == passwordTextBox.Text)
                 {
-                    korisnik = new Korisnik(dataReader["ime"].ToString(), dataReader["prezime"].ToString(), dataReader["e-mail"].ToString(), dataReader["lozinka"].ToString(),
-                        usernameTextBox.Text, DateTime.Parse(dataReader["datum_registracije"].ToString()), DateTime.UtcNow, null);
+                    korisnik.Identifikator = int.Parse(dataReader["korisnik_id"].ToString());
+                    korisnik.Ime = dataReader["ime"].ToString();
+                    korisnik.Prezime = dataReader["prezime"].ToString();
+                    korisnik.Mail = dataReader["e-mail"].ToString();
+                    korisnik.Lozinka = dataReader["lozinka"].ToString();
+                    korisnik.KorisnickoIme = dataReader["korisnicko_ime"].ToString();
+                    korisnik.DatumRegistracije = DateTime.Parse(dataReader["datum_registracije"].ToString());
+                    korisnik.DatumZadnjePrijave = DateTime.UtcNow;
                     korisnik.Prijavljen = true;
                     dataReader.Close();
                     UpdateZadnjuPrijavu(korisnik);
+
+                    ProvjeriKorisnikovoDomacinstvo(korisnik);
+
                     Database.Instance.Disconnect();
-                    return true;
+                    return korisnik;
                 }
             }
 
             MessageBox.Show("Ne postoji korisnik s upisanom kombinacijom korisničkog imena i lozinke!");
             dataReader.Close();
             Database.Instance.Disconnect();
-            return false;
+            return null;
+        }
+
+        private void ProvjeriKorisnikovoDomacinstvo(Korisnik korisnik)
+        {
+            string sql = $"SELECT * from Korisnik, Domacinstvo where Korisnik.domacinstvo = Domacinstvo.domacinstvo_id and Korisnik.korisnicko_ime = '{usernameTextBox.Text}'";
+            IDataReader dataReader = Database.Instance.GetDataReader(sql);
+            while (dataReader.Read())
+            {
+                if (int.Parse(dataReader["domacinstvo"].ToString()) != 0)
+                {
+                    korisnik.Domacinstvo = DomacinstvoRepository.DohvatiDomacinstvo(dataReader);
+                }
+            }
         }
 
         private void UpdateZadnjuPrijavu(Korisnik korisnik)
@@ -68,9 +89,9 @@ namespace WareHome
             Database.Instance.ExecuteCommand(sql);
         }
 
-        private void UpaliGlavnuFormu()
+        private void UpaliGlavnuFormu(Korisnik korisnik)
         {
-            GlavnaForm Glavna = new GlavnaForm();
+            GlavnaForm Glavna = new GlavnaForm(korisnik);
             Glavna.ShowDialog();
         }
 

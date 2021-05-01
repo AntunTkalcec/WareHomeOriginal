@@ -42,8 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domacinstvo.cs" />
+    <Compile Include="DomacinstvoRepository.cs" />
+    <Compile Include="Iznimke\WareHomeException.cs" />
     <Compile Include="Korisnik.cs" />
+    <Compile Include="KorisnikRepository.cs" />
     <Compile Include="Namirnica.cs" />
+    <Compile Include="NamirnicaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

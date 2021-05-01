@@ -8,6 +8,7 @@ namespace WareHome_Logic
 {
     public class Korisnik
     {
+        public int Identifikator { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string Mail { get; set; }
@@ -18,16 +19,8 @@ namespace WareHome_Logic
         public Domacinstvo Domacinstvo { get; set; }
         public bool Prijavljen { get; set; }
 
-        public Korisnik(string ime, string prezime, string mail, string lozinka, string korisnickoIme, DateTime datumRegistracije, DateTime datumZadnjePrijave, Domacinstvo domacinstvo)
+        public Korisnik()
         {
-            Ime = ime;
-            Prezime = prezime;
-            Mail = mail;
-            Lozinka = lozinka;
-            KorisnickoIme = korisnickoIme;
-            DatumRegistracije = datumRegistracije;
-            DatumZadnjePrijave = datumZadnjePrijave;
-            Domacinstvo = domacinstvo;
         }
     }
 }
