@@ -33,7 +33,7 @@ namespace WareHome
         {
             if (RegistrirajKorisnika())
             {
-                Hide();
+                Close();
             }
         }
         private bool RegistrirajKorisnika()

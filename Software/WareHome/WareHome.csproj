@@ -52,6 +52,12 @@
     <Compile Include="DodajArtiklNaListu.Designer.cs">
       <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajNamirnicuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajNamirnicuForm.Designer.cs">
+      <DependentUpon>DodajNamirnicuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="Models\Raspored\Raspored.cs" />
     <Compile Include="Models\Raspored\Sat.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="PromijeniNamirnicuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromijeniNamirnicuForm.Designer.cs">
+      <DependentUpon>PromijeniNamirnicuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RasporedForm.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,9 @@
     <Compile Include="ZaboravljenaLozinkaForm.Designer.cs">
       <DependentUpon>ZaboravljenaLozinkaForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DodajNamirnicuForm.resx">
+      <DependentUpon>DodajNamirnicuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlavnaForm.resx">
       <DependentUpon>GlavnaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrijavaForm.resx">
       <DependentUpon>PrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromijeniNamirnicuForm.resx">
+      <DependentUpon>PromijeniNamirnicuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

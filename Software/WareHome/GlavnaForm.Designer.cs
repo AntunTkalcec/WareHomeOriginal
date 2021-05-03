@@ -30,6 +30,7 @@ namespace WareHome
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rasporedButton = new System.Windows.Forms.Button();
             this.listeButton = new System.Windows.Forms.Button();
             this.odjavaButton = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@ namespace WareHome
             this.pdfButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
             this.warehomePictureBox = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.namirniceDGV = new System.Windows.Forms.DataGridView();
             this.popisNamirnicaLabel = new System.Windows.Forms.Label();
             this.glavnaFormPanelBottom = new System.Windows.Forms.Panel();
             this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
@@ -51,10 +52,11 @@ namespace WareHome
             this.dodajNamirnicuButton = new System.Windows.Forms.Button();
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
+            this.nisteDioDomacinstvaLabel = new System.Windows.Forms.Label();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namirniceDGV)).BeginInit();
             this.glavnaFormPanelBottom.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,13 +181,25 @@ namespace WareHome
             this.warehomePictureBox.TabIndex = 0;
             this.warehomePictureBox.TabStop = false;
             // 
-            // dataGridView1
+            // namirniceDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(999, 462);
-            this.dataGridView1.TabIndex = 20;
+            this.namirniceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.namirniceDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.NullValue = "-";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.namirniceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.namirniceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.namirniceDGV.Location = new System.Drawing.Point(207, 39);
+            this.namirniceDGV.Name = "namirniceDGV";
+            this.namirniceDGV.RowHeadersWidth = 5;
+            this.namirniceDGV.Size = new System.Drawing.Size(1170, 479);
+            this.namirniceDGV.TabIndex = 20;
             // 
             // popisNamirnicaLabel
             // 
@@ -208,7 +222,7 @@ namespace WareHome
             this.glavnaFormPanelBottom.Controls.Add(this.dodajNamirnicuButton);
             this.glavnaFormPanelBottom.Location = new System.Drawing.Point(179, 524);
             this.glavnaFormPanelBottom.Name = "glavnaFormPanelBottom";
-            this.glavnaFormPanelBottom.Size = new System.Drawing.Size(1080, 171);
+            this.glavnaFormPanelBottom.Size = new System.Drawing.Size(1231, 171);
             this.glavnaFormPanelBottom.TabIndex = 22;
             // 
             // brojNamirnicaLabel2
@@ -266,6 +280,7 @@ namespace WareHome
             this.obrisiNamirnicuButton.TabIndex = 2;
             this.obrisiNamirnicuButton.Text = "Obriši namirnicu";
             this.obrisiNamirnicuButton.UseVisualStyleBackColor = true;
+            this.obrisiNamirnicuButton.Click += new System.EventHandler(this.obrisiNamirnicuButton_Click);
             // 
             // promijeniNamirnicuButton
             // 
@@ -280,6 +295,7 @@ namespace WareHome
             this.promijeniNamirnicuButton.TabIndex = 1;
             this.promijeniNamirnicuButton.Text = "Promijeni namirnicu";
             this.promijeniNamirnicuButton.UseVisualStyleBackColor = true;
+            this.promijeniNamirnicuButton.Click += new System.EventHandler(this.promijeniNamirnicuButton_Click);
             // 
             // dodajNamirnicuButton
             // 
@@ -294,6 +310,7 @@ namespace WareHome
             this.dodajNamirnicuButton.TabIndex = 0;
             this.dodajNamirnicuButton.Text = "Dodaj namirnicu";
             this.dodajNamirnicuButton.UseVisualStyleBackColor = true;
+            this.dodajNamirnicuButton.Click += new System.EventHandler(this.dodajNamirnicuButton_Click);
             // 
             // exitAppButton
             // 
@@ -302,7 +319,7 @@ namespace WareHome
             this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitAppButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitAppButton.ForeColor = System.Drawing.Color.DarkGray;
-            this.exitAppButton.Location = new System.Drawing.Point(1236, 0);
+            this.exitAppButton.Location = new System.Drawing.Point(1387, 0);
             this.exitAppButton.Name = "exitAppButton";
             this.exitAppButton.Size = new System.Drawing.Size(23, 26);
             this.exitAppButton.TabIndex = 19;
@@ -316,7 +333,7 @@ namespace WareHome
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeButton.ForeColor = System.Drawing.Color.DarkGray;
-            this.minimizeButton.Location = new System.Drawing.Point(1207, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(1358, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(23, 26);
             this.minimizeButton.TabIndex = 23;
@@ -324,16 +341,31 @@ namespace WareHome
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
+            // nisteDioDomacinstvaLabel
+            // 
+            this.nisteDioDomacinstvaLabel.AutoSize = true;
+            this.nisteDioDomacinstvaLabel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.nisteDioDomacinstvaLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nisteDioDomacinstvaLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nisteDioDomacinstvaLabel.ForeColor = System.Drawing.Color.Red;
+            this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(586, 256);
+            this.nisteDioDomacinstvaLabel.Name = "nisteDioDomacinstvaLabel";
+            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(313, 33);
+            this.nisteDioDomacinstvaLabel.TabIndex = 24;
+            this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
+            this.nisteDioDomacinstvaLabel.Visible = false;
+            // 
             // GlavnaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1259, 695);
+            this.ClientSize = new System.Drawing.Size(1410, 695);
+            this.Controls.Add(this.nisteDioDomacinstvaLabel);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.glavnaFormPanelBottom);
             this.Controls.Add(this.popisNamirnicaLabel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.namirniceDGV);
             this.Controls.Add(this.glavnaFormPanelLeft);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -346,7 +378,7 @@ namespace WareHome
             this.glavnaFormPanelLeft.ResumeLayout(false);
             this.glavnaFormPanelLeftTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namirniceDGV)).EndInit();
             this.glavnaFormPanelBottom.ResumeLayout(false);
             this.glavnaFormPanelBottom.PerformLayout();
             this.ResumeLayout(false);
@@ -362,7 +394,7 @@ namespace WareHome
         private System.Windows.Forms.Panel glavnaFormPanelLeft;
         private System.Windows.Forms.Panel glavnaFormPanelLeftTop;
         private System.Windows.Forms.Button pdfButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView namirniceDGV;
         private System.Windows.Forms.Label popisNamirnicaLabel;
         private System.Windows.Forms.Panel glavnaFormPanelBottom;
         private System.Windows.Forms.Label trenutnoDomacinstvoLabel;
@@ -377,5 +409,6 @@ namespace WareHome
         private System.Windows.Forms.Label brojNamirnicaLabel2;
         private System.Windows.Forms.Label trenutnoDomacinstvoLabel2;
         private System.Windows.Forms.PictureBox warehomePictureBox;
+        private System.Windows.Forms.Label nisteDioDomacinstvaLabel;
     }
 }

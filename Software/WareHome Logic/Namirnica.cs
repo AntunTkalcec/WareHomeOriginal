@@ -9,6 +9,7 @@ namespace WareHome_Logic
 {
     public class Namirnica
     {
+        [DisplayName("ID")]
         public int Identifikator { get; set; }
         [DisplayName("Naziv namirnice")]
         public string NazivNamirnice { get; set; }
