@@ -1,0 +1,17 @@
+Za FORMU u njenom Properties:
+AutoScaleMode - None
+BackColor - 41, 44, 51
+Font - Century Gothic, 12pt ; ForeColor - 94, 161, 135
+FormBorderStyle - None
+StartPosition - CenterScreen
+
+Za GUMBOVE u njihovim Properties:
+BackColor - 41, 44, 51
+FlatStyle - Flat
+BorderSize - 0
+Font - Century Gothic, 11.25pt, style=Bold
+ForeColor White
+
+exitAppButton je CRVENI KRIŽIĆ U GORNJEM DESNOM KUTU. Njega samo Ctrl+C sa npr. PrijavaForm na svoju novu formu.
+
+Ostalo se naravno može promijenit po potrebi (npr. zaboravljena lozinka gumb) - ALI PAZITI DA SE NE ISTIČE PREVIŠE NA LOŠ NAČIN!!!
