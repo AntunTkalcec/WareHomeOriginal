@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF06DFFA-4BA7-4D60-8619-EF30B670BB92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WareHome</RootNamespace>
+    <AssemblyName>WareHome</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DodajArtiklNaListu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajArtiklNaListu.Designer.cs">
+      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajNamirnicuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajNamirnicuForm.Designer.cs">
+      <DependentUpon>DodajNamirnicuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaForm.Designer.cs">
+      <DependentUpon>ListaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeForm.Designer.cs">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListaZaKupovinu\ListeZaKupovinu.cs" />
+    <Compile Include="Models\ListaZaKupovinu\NamirniceNaListi.cs" />
+    <Compile Include="Models\ListaZaKupovinu\PrikazLista.cs" />
+    <Compile Include="NovaListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaListaForm.Designer.cs">
+      <DependentUpon>NovaListaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrijavaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrijavaForm.Designer.cs">
+      <DependentUpon>PrijavaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlavnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavnaForm.Designer.cs">
+      <DependentUpon>GlavnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Raspored\Dan.cs" />
+    <Compile Include="Models\Raspored\Dozvoljeno.cs" />
+    <Compile Include="Models\Raspored\Minuta.cs" />
+    <Compile Include="Models\Raspored\Ponavljanje.cs" />
+    <Compile Include="Models\Raspored\Raspored.cs" />
+    <Compile Include="Models\Raspored\Sat.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="PromijeniNamirnicuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromijeniNamirnicuForm.Designer.cs">
+      <DependentUpon>PromijeniNamirnicuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RasporedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RasporedForm.Designer.cs">
+      <DependentUpon>RasporedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistracijaForm.Designer.cs">
+      <DependentUpon>RegistracijaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajArtiklNaListu.resx">
+      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ZaboravljenaLozinkaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaboravljenaLozinkaForm.Designer.cs">
+      <DependentUpon>ZaboravljenaLozinkaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajNamirnicuForm.resx">
+      <DependentUpon>DodajNamirnicuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlavnaForm.resx">
+      <DependentUpon>GlavnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaForm.resx">
+      <DependentUpon>ListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeForm.resx">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaListaForm.resx">
+      <DependentUpon>NovaListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrijavaForm.resx">
+      <DependentUpon>PrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromijeniNamirnicuForm.resx">
+      <DependentUpon>PromijeniNamirnicuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RasporedForm.resx">
+      <DependentUpon>RasporedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistracijaForm.resx">
+      <DependentUpon>RegistracijaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaboravljenaLozinkaForm.resx">
+      <DependentUpon>ZaboravljenaLozinkaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
+      <Project>{7D8D10EF-2D05-42DC-8909-F38EE4C91071}</Project>
+      <Name>DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHome Logic\WareHome Logic.csproj">
+      <Project>{9D331757-D271-4C3F-BAC7-5420F9B49742}</Project>
+      <Name>WareHome Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
