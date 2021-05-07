@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHome", "WareHome.csproj", "{EF06DFFA-4BA7-4D60-8619-EF30B670BB92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHome", "WareHome\WareHome.csproj", "{EF06DFFA-4BA7-4D60-8619-EF30B670BB92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHome Logic", "..\WareHome Logic\WareHome Logic.csproj", "{9D331757-D271-4C3F-BAC7-5420F9B49742}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHome Logic", "WareHome Logic\WareHome Logic.csproj", "{9D331757-D271-4C3F-BAC7-5420F9B49742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAccess", "..\DatabaseAccess\DatabaseAccess.csproj", "{7D8D10EF-2D05-42DC-8909-F38EE4C91071}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAccess", "DatabaseAccess\DatabaseAccess.csproj", "{7D8D10EF-2D05-42DC-8909-F38EE4C91071}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
