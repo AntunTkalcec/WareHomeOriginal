@@ -13,13 +13,15 @@ namespace WareHome
 {
     public partial class ListaForm : Form
     {
-        public ListaForm(string nazivListe)
+        List<NamirnicaNaListi> namirniceNaListi;
+        ListaZaKupovinu odabranaLista;
+        
+        public ListaForm(ListaZaKupovinu odabrana)
         {
             InitializeComponent();
-            nazivLabel.Text = nazivListe;
-        }
-
-        private List<NamirniceNaListi> namirniceNaListi;
+            odabranaLista = odabrana;
+            nazivLabel.Text = odabranaLista.NazivListe;
+        }        
 
         private void povratakButton_Click(object sender, EventArgs e)
         {
@@ -28,12 +30,8 @@ namespace WareHome
 
         private void ListaForm_Load(object sender, EventArgs e)
         {
-            namirniceNaListi = new List<NamirniceNaListi>();
-            namirniceNaListi.Add(new NamirniceNaListi("Kruh", "1", "", "KTC"));
-            namirniceNaListi.Add(new NamirniceNaListi("Mlijeko", "6", "7,99", ""));
-            namirniceNaListi.Add(new NamirniceNaListi("Jack Daniels 10l", "1", "1499", "KTC"));
-            namirniceNaListi.Add(new NamirniceNaListi("Kuhalo za vodu", "", "", ""));
-            namirniceDataGridView.DataSource = namirniceNaListi;
+            namirniceNaListi = new List<NamirnicaNaListi>();
+            namirniceDataGridView.DataSource = ObrišiMeNakonImplementacijeRepozitorija();
         }
 
         private void dodajButton_Click(object sender, EventArgs e)
@@ -45,7 +43,28 @@ namespace WareHome
 
         private void OsvjeziListu()
         {
-            throw new NotImplementedException();
+            namirniceNaListi = null;
+            namirniceNaListi = ObrišiMeNakonImplementacijeRepozitorija();
+            namirniceDataGridView.DataSource = null;
+            namirniceDataGridView.DataSource = namirniceNaListi;
+            namirniceDataGridView.Columns["NazivNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["KoličinaNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["CijenaNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["TrgovinaNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["NazivNamirnice"].HeaderText = "Naziv";
+            namirniceDataGridView.Columns["KoličinaNamirnice"].HeaderText = "Količina";
+            namirniceDataGridView.Columns["CijenaNamirnice"].HeaderText = "Cijena";
+            namirniceDataGridView.Columns["TrgovinaNamirnice"].HeaderText = "Trgovina";
+        }
+
+        private List<NamirnicaNaListi> ObrišiMeNakonImplementacijeRepozitorija()
+        {
+            List<NamirnicaNaListi> namirnicaNaListi = new List<NamirnicaNaListi>();
+            namirnicaNaListi.Add(new NamirnicaNaListi("Kruh", "1", "", "KTC"));
+            namirnicaNaListi.Add(new NamirnicaNaListi("Mlijeko", "6", "7,99", ""));
+            namirnicaNaListi.Add(new NamirnicaNaListi("Jack Daniels 10l", "1", "1499", "KTC"));
+            namirnicaNaListi.Add(new NamirnicaNaListi("Kuhalo za vodu", "", "", ""));
+            return namirnicaNaListi;
         }
     }
 }
