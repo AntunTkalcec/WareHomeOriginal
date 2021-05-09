@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace WareHome.Models.ListaZaKupovinu
 {
-    public class NamirniceNaListi
+    public class NamirnicaNaListi
     {
         public string NazivNamirnice { get; set; }
         public string KoličinaNamirnice { get; set; }
         public string CijenaNamirnice { get; set; }
         public string TrgovinaNamirnice { get; set; }
-        public NamirniceNaListi(string naziv, string kolicina, string cijena, string trgovina)
+        public NamirnicaNaListi(string naziv, string kolicina, string cijena, string trgovina)
         {
             NazivNamirnice = naziv;
             KoličinaNamirnice = kolicina;

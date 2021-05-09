@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace WareHome.Models.ListaZaKupovinu
 {
-    public class ListeZaKupovinu
+    public class ListaZaKupovinu
     {
         public string NazivListe { get; set; }
         public bool PrivatnaLista { get; set; }
         public string LozinkaListe { get; set; }
-        public ListeZaKupovinu(string naziv, bool privatna, string lozinka)
+        public ListaZaKupovinu(string naziv, bool privatna, string lozinka)
         {
             NazivListe = naziv;
             PrivatnaLista = privatna;
