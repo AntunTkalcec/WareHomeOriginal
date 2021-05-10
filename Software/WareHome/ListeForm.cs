@@ -13,11 +13,17 @@ namespace WareHome
 {
     public partial class ListeForm : Form
     {
-        List<ListeZaKupovinu> listeZaKupovinu = new List<ListeZaKupovinu>();
+        List<ListaZaKupovinu> listeZaKupovinu;
 
         public ListeForm()
         {
             InitializeComponent();
+        }
+
+        private void ListeForm_Load(object sender, EventArgs e)
+        {
+            ListaZaKupovinuRepository.IspuniPopisLista();
+            OsvjeziListu();
         }
 
         private void povratakButton_Click(object sender, EventArgs e)
@@ -27,22 +33,17 @@ namespace WareHome
 
         private void prikažiButton_Click(object sender, EventArgs e)
         {
-            ListaForm listaForm = new ListaForm("KTC");
-            listaForm.Show();
-        }
-
-        private void ListeForm_Load(object sender, EventArgs e)
-        {
-            listeZaKupovinu.Add(new ListeZaKupovinu("KTC", false, null));
-            listeZaKupovinu.Add(new ListeZaKupovinu("Zabava u petak", true, "123"));
-
-            List<PrikazLista> prikazLista = new List<PrikazLista>();
-            foreach (var item in listeZaKupovinu)
+            ListaZaKupovinu odabrana = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
+            if (odabrana.PrivatnaLista)
             {
-                prikazLista.Add(new PrikazLista(item.NazivListe, item.PrivatnaLista));
+                LozinkaZaListuForm lozinkaZaListuForm = new LozinkaZaListuForm(odabrana);
+                lozinkaZaListuForm.ShowDialog();
             }
-
-            listeDataGridView.DataSource = prikazLista;
+            else
+            {
+                ListaForm listaForm = new ListaForm(odabrana);
+                listaForm.Show();
+            }
         }
 
         private void kreirajButton_Click(object sender, EventArgs e)
@@ -54,7 +55,23 @@ namespace WareHome
 
         private void OsvjeziListu()
         {
-            throw new NotImplementedException();
+            listeZaKupovinu = null;
+            listeZaKupovinu = ListaZaKupovinuRepository.DohvatiPopisLista();
+            listeDataGridView.DataSource = null;
+            listeDataGridView.DataSource = listeZaKupovinu;
+            listeDataGridView.Columns["LozinkaListe"].Visible = false;
+            listeDataGridView.Columns["PrivatnaLista"].ReadOnly = true;
+            listeDataGridView.Columns["NazivListe"].ReadOnly = true;
+            listeDataGridView.Columns["PrivatnaLista"].HeaderText = "Privatna lista";
+            listeDataGridView.Columns["NazivListe"].HeaderText = "Naziv liste";
+        }
+
+        private void obrišiButton_Click(object sender, EventArgs e)
+        {
+            ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
+            ListaZaKupovinuRepository.UkloniListu(obriši);
+
+            OsvjeziListu();
         }
     }
 }

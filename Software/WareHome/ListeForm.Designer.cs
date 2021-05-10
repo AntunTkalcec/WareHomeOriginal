@@ -40,16 +40,20 @@ namespace WareHome
             // listeDataGridView
             // 
             this.listeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listeDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.listeDataGridView.Location = new System.Drawing.Point(16, 15);
+            this.listeDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.listeDataGridView.Name = "listeDataGridView";
-            this.listeDataGridView.Size = new System.Drawing.Size(477, 260);
+            this.listeDataGridView.RowHeadersWidth = 51;
+            this.listeDataGridView.ShowEditingIcon = false;
+            this.listeDataGridView.Size = new System.Drawing.Size(636, 320);
             this.listeDataGridView.TabIndex = 0;
             // 
             // povratakButton
             // 
-            this.povratakButton.Location = new System.Drawing.Point(12, 278);
+            this.povratakButton.Location = new System.Drawing.Point(16, 342);
+            this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
             this.povratakButton.Name = "povratakButton";
-            this.povratakButton.Size = new System.Drawing.Size(95, 36);
+            this.povratakButton.Size = new System.Drawing.Size(127, 44);
             this.povratakButton.TabIndex = 1;
             this.povratakButton.Text = "Povratak";
             this.povratakButton.UseVisualStyleBackColor = true;
@@ -57,9 +61,10 @@ namespace WareHome
             // 
             // prikažiButton
             // 
-            this.prikažiButton.Location = new System.Drawing.Point(394, 278);
+            this.prikažiButton.Location = new System.Drawing.Point(525, 342);
+            this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
-            this.prikažiButton.Size = new System.Drawing.Size(95, 36);
+            this.prikažiButton.Size = new System.Drawing.Size(127, 44);
             this.prikažiButton.TabIndex = 2;
             this.prikažiButton.Text = "Prikaži";
             this.prikažiButton.UseVisualStyleBackColor = true;
@@ -67,9 +72,10 @@ namespace WareHome
             // 
             // kreirajButton
             // 
-            this.kreirajButton.Location = new System.Drawing.Point(293, 278);
+            this.kreirajButton.Location = new System.Drawing.Point(391, 342);
+            this.kreirajButton.Margin = new System.Windows.Forms.Padding(4);
             this.kreirajButton.Name = "kreirajButton";
-            this.kreirajButton.Size = new System.Drawing.Size(95, 36);
+            this.kreirajButton.Size = new System.Drawing.Size(127, 44);
             this.kreirajButton.TabIndex = 3;
             this.kreirajButton.Text = "Kreiraj";
             this.kreirajButton.UseVisualStyleBackColor = true;
@@ -77,23 +83,26 @@ namespace WareHome
             // 
             // obrišiButton
             // 
-            this.obrišiButton.Location = new System.Drawing.Point(192, 278);
+            this.obrišiButton.Location = new System.Drawing.Point(256, 342);
+            this.obrišiButton.Margin = new System.Windows.Forms.Padding(4);
             this.obrišiButton.Name = "obrišiButton";
-            this.obrišiButton.Size = new System.Drawing.Size(95, 36);
+            this.obrišiButton.Size = new System.Drawing.Size(127, 44);
             this.obrišiButton.TabIndex = 4;
             this.obrišiButton.Text = "Obriši";
             this.obrišiButton.UseVisualStyleBackColor = true;
+            this.obrišiButton.Click += new System.EventHandler(this.obrišiButton_Click);
             // 
             // ListeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 334);
+            this.ClientSize = new System.Drawing.Size(688, 411);
             this.Controls.Add(this.obrišiButton);
             this.Controls.Add(this.kreirajButton);
             this.Controls.Add(this.prikažiButton);
             this.Controls.Add(this.povratakButton);
             this.Controls.Add(this.listeDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListeForm";
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.ListeForm_Load);
