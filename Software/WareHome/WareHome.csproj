@@ -79,6 +79,7 @@
     <Compile Include="Models\ListaZaKupovinu\ListaZaKupovinuRepository.cs" />
     <Compile Include="Models\ListaZaKupovinu\ListaZaKupovinu.cs" />
     <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListi.cs" />
+    <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListiRepository.cs" />
     <Compile Include="NovaListaForm.cs">
       <SubType>Form</SubType>
     </Compile>
