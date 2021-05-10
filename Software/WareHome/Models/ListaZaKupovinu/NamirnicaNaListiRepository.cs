@@ -37,13 +37,11 @@ namespace WareHome.Models.ListaZaKupovinu
 
         public static List<NamirnicaNaListi> DohvatiPopisNamirnica(ListaZaKupovinu odabranaLista)
         {
+            listaZaKupovinu = null;
             listaZaKupovinu = odabranaLista;
-
-            if (PopisNamirnica == null)
-            {
-                IspuniPopis();
-            }
-
+            PopisNamirnica = null;
+            IspuniPopis();
+            
             return PopisNamirnica;
         }
 
