@@ -18,11 +18,30 @@ namespace WareHome
             InitializeComponent();
         }
 
+        ListaZaKupovinu preimenujListu = null;
+        
+        public NovaListaForm(ListaZaKupovinu listaZaKupovinu)
+        {
+            InitializeComponent();
+            preimenujListu = listaZaKupovinu;
+        }
+
         private void NovaListaForm_Load(object sender, EventArgs e)
         {
             privatnaCheckBox.Checked = false;
             lozinkaTextBox.Enabled = false;
             lozinkaTextBox.PasswordChar = '*';
+
+            if (preimenujListu != null)
+            {
+                nazivTextBox.Text = preimenujListu.NazivListe;
+                if (preimenujListu.PrivatnaLista)
+                {
+                    lozinkaTextBox.Enabled = true;
+                    privatnaCheckBox.Checked = true;
+                    lozinkaTextBox.Text = preimenujListu.LozinkaListe;
+                }
+            }
         }
 
         private void završiButton_Click(object sender, EventArgs e)
@@ -41,7 +60,12 @@ namespace WareHome
                 lozinka = null;
             }
 
-            if (naziv != "")
+            if (preimenujListu != null)
+            {
+                PreimenujListu(naziv, privatna, lozinka);
+                Close();
+            }
+            else if (naziv != "")
             {
                 ListaZaKupovinuRepository.DodajListu(naziv, privatna, lozinka);
                 Close();
@@ -49,6 +73,20 @@ namespace WareHome
             else
             {
                 MessageBox.Show("Unesite naziv liste!");
+            }
+        }
+
+        private void PreimenujListu(string naziv, bool privatna, string lozinka)
+        {
+            foreach (var item in ListaZaKupovinuRepository.PopisLista)
+            {
+                if (item.NazivListe == preimenujListu.NazivListe)
+                {
+                    item.NazivListe = naziv;
+                    item.PrivatnaLista = privatna;
+                    item.LozinkaListe = lozinka;
+                    break;
+                }
             }
         }
 
