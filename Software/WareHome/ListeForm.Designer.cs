@@ -65,7 +65,7 @@ namespace WareHome
             this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(127, 44);
-            this.prikažiButton.TabIndex = 2;
+            this.prikažiButton.TabIndex = 4;
             this.prikažiButton.Text = "Prikaži";
             this.prikažiButton.UseVisualStyleBackColor = true;
             this.prikažiButton.Click += new System.EventHandler(this.prikažiButton_Click);
@@ -87,7 +87,7 @@ namespace WareHome
             this.obrišiButton.Margin = new System.Windows.Forms.Padding(4);
             this.obrišiButton.Name = "obrišiButton";
             this.obrišiButton.Size = new System.Drawing.Size(127, 44);
-            this.obrišiButton.TabIndex = 4;
+            this.obrišiButton.TabIndex = 2;
             this.obrišiButton.Text = "Obriši";
             this.obrišiButton.UseVisualStyleBackColor = true;
             this.obrišiButton.Click += new System.EventHandler(this.obrišiButton_Click);

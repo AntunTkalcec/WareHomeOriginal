@@ -55,7 +55,7 @@ namespace WareHome
             this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(100, 28);
-            this.odustaniButton.TabIndex = 1;
+            this.odustaniButton.TabIndex = 5;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
@@ -66,7 +66,7 @@ namespace WareHome
             this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
             this.nazivTextBox.Size = new System.Drawing.Size(189, 22);
-            this.nazivTextBox.TabIndex = 2;
+            this.nazivTextBox.TabIndex = 1;
             // 
             // završiButton
             // 
@@ -74,7 +74,7 @@ namespace WareHome
             this.završiButton.Margin = new System.Windows.Forms.Padding(4);
             this.završiButton.Name = "završiButton";
             this.završiButton.Size = new System.Drawing.Size(100, 28);
-            this.završiButton.TabIndex = 3;
+            this.završiButton.TabIndex = 4;
             this.završiButton.Text = "Završi";
             this.završiButton.UseVisualStyleBackColor = true;
             this.završiButton.Click += new System.EventHandler(this.završiButton_Click);
@@ -85,7 +85,7 @@ namespace WareHome
             this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
             this.lozinkaTextBox.Size = new System.Drawing.Size(189, 22);
-            this.lozinkaTextBox.TabIndex = 5;
+            this.lozinkaTextBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -94,7 +94,7 @@ namespace WareHome
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Lozinka:";
             // 
             // privatnaCheckBox
@@ -103,7 +103,7 @@ namespace WareHome
             this.privatnaCheckBox.Location = new System.Drawing.Point(121, 77);
             this.privatnaCheckBox.Name = "privatnaCheckBox";
             this.privatnaCheckBox.Size = new System.Drawing.Size(18, 17);
-            this.privatnaCheckBox.TabIndex = 6;
+            this.privatnaCheckBox.TabIndex = 2;
             this.privatnaCheckBox.UseVisualStyleBackColor = true;
             this.privatnaCheckBox.CheckedChanged += new System.EventHandler(this.privatnaCheckBox_CheckedChanged);
             // 
@@ -114,7 +114,7 @@ namespace WareHome
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Privatna lista:";
             // 
             // NovaListaForm

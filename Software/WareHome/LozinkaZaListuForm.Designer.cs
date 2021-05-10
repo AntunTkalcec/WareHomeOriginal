@@ -42,7 +42,7 @@ namespace WareHome
             this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
             this.lozinkaTextBox.Size = new System.Drawing.Size(189, 22);
-            this.lozinkaTextBox.TabIndex = 13;
+            this.lozinkaTextBox.TabIndex = 1;
             // 
             // prikažiButton
             // 
@@ -50,7 +50,7 @@ namespace WareHome
             this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(100, 28);
-            this.prikažiButton.TabIndex = 11;
+            this.prikažiButton.TabIndex = 2;
             this.prikažiButton.Text = "Prikaži";
             this.prikažiButton.UseVisualStyleBackColor = true;
             this.prikažiButton.Click += new System.EventHandler(this.prikažiButton_Click);
@@ -61,7 +61,7 @@ namespace WareHome
             this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(100, 28);
-            this.odustaniButton.TabIndex = 9;
+            this.odustaniButton.TabIndex = 3;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
@@ -73,7 +73,7 @@ namespace WareHome
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 17);
-            this.label2.TabIndex = 12;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Unesite lozinku za listu";
             // 
             // label1
@@ -83,7 +83,7 @@ namespace WareHome
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 8;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Naziv";
             // 
             // LozinkaZaListuForm

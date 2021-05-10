@@ -44,7 +44,7 @@ namespace WareHome
             this.preimenujButton.Margin = new System.Windows.Forms.Padding(4);
             this.preimenujButton.Name = "preimenujButton";
             this.preimenujButton.Size = new System.Drawing.Size(127, 28);
-            this.preimenujButton.TabIndex = 9;
+            this.preimenujButton.TabIndex = 4;
             this.preimenujButton.Text = "Promijeni naziv";
             this.preimenujButton.UseVisualStyleBackColor = true;
             this.preimenujButton.Click += new System.EventHandler(this.preimenujButton_Click);
@@ -55,7 +55,7 @@ namespace WareHome
             this.ukloniButton.Margin = new System.Windows.Forms.Padding(4);
             this.ukloniButton.Name = "ukloniButton";
             this.ukloniButton.Size = new System.Drawing.Size(127, 44);
-            this.ukloniButton.TabIndex = 8;
+            this.ukloniButton.TabIndex = 2;
             this.ukloniButton.Text = "Ukloni";
             this.ukloniButton.UseVisualStyleBackColor = true;
             this.ukloniButton.Click += new System.EventHandler(this.ukloniButton_Click);
@@ -66,7 +66,7 @@ namespace WareHome
             this.dodajButton.Margin = new System.Windows.Forms.Padding(4);
             this.dodajButton.Name = "dodajButton";
             this.dodajButton.Size = new System.Drawing.Size(127, 44);
-            this.dodajButton.TabIndex = 7;
+            this.dodajButton.TabIndex = 3;
             this.dodajButton.Text = "Dodaj";
             this.dodajButton.UseVisualStyleBackColor = true;
             this.dodajButton.Click += new System.EventHandler(this.dodajButton_Click);
@@ -77,7 +77,7 @@ namespace WareHome
             this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
             this.povratakButton.Name = "povratakButton";
             this.povratakButton.Size = new System.Drawing.Size(127, 44);
-            this.povratakButton.TabIndex = 6;
+            this.povratakButton.TabIndex = 1;
             this.povratakButton.Text = "Povratak";
             this.povratakButton.UseVisualStyleBackColor = true;
             this.povratakButton.Click += new System.EventHandler(this.povratakButton_Click);
@@ -90,7 +90,7 @@ namespace WareHome
             this.namirniceDataGridView.Name = "namirniceDataGridView";
             this.namirniceDataGridView.RowHeadersWidth = 51;
             this.namirniceDataGridView.Size = new System.Drawing.Size(1035, 412);
-            this.namirniceDataGridView.TabIndex = 5;
+            this.namirniceDataGridView.TabIndex = 0;
             // 
             // nazivLabel
             // 
@@ -100,7 +100,7 @@ namespace WareHome
             this.nazivLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nazivLabel.Name = "nazivLabel";
             this.nazivLabel.Size = new System.Drawing.Size(85, 25);
-            this.nazivLabel.TabIndex = 10;
+            this.nazivLabel.TabIndex = 0;
             this.nazivLabel.Text = "NAZIV";
             // 
             // ListaForm
