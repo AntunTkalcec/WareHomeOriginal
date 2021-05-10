@@ -22,7 +22,6 @@ namespace WareHome
 
         private void ListeForm_Load(object sender, EventArgs e)
         {
-            ListaZaKupovinuRepository.IspuniPopisLista();
             OsvjeziListu();
         }
 
@@ -44,6 +43,7 @@ namespace WareHome
                 ListaForm listaForm = new ListaForm(odabrana);
                 listaForm.Show();
             }
+            OsvjeziListu();
         }
 
         private void kreirajButton_Click(object sender, EventArgs e)
