@@ -70,9 +70,15 @@
     <Compile Include="ListeForm.Designer.cs">
       <DependentUpon>ListeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ListaZaKupovinu\ListeZaKupovinu.cs" />
-    <Compile Include="Models\ListaZaKupovinu\NamirniceNaListi.cs" />
-    <Compile Include="Models\ListaZaKupovinu\PrikazLista.cs" />
+    <Compile Include="LozinkaZaListuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LozinkaZaListuForm.Designer.cs">
+      <DependentUpon>LozinkaZaListuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListaZaKupovinu\ListaZaKupovinuRepository.cs" />
+    <Compile Include="Models\ListaZaKupovinu\ListaZaKupovinu.cs" />
+    <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListi.cs" />
     <Compile Include="NovaListaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListeForm.resx">
       <DependentUpon>ListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LozinkaZaListuForm.resx">
+      <DependentUpon>LozinkaZaListuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaListaForm.resx">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
