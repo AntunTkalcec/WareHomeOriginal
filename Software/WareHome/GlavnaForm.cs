@@ -66,12 +66,13 @@ namespace WareHome
 
         private void odjavaButton_Click(object sender, EventArgs e)
         {
+            trenutniKorisnik = null;
             Close();
         }
 
         private void listeButton_Click(object sender, EventArgs e)
         {
-            ListeForm listeForm = new ListeForm();
+            ListeForm listeForm = new ListeForm(trenutniKorisnik);
             listeForm.Show();
         }
 
