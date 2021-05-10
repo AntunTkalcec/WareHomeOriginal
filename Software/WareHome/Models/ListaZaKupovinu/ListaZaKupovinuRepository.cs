@@ -10,7 +10,7 @@ namespace WareHome.Models.ListaZaKupovinu
     {
         public static List<ListaZaKupovinu> PopisLista;
 
-        public static void IspuniPopisLista()
+        private static void IspuniPopisLista()
         {
             PopisLista = new List<ListaZaKupovinu>();
             PopisLista.Add(new ListaZaKupovinu("KTC", false, null));
@@ -19,6 +19,10 @@ namespace WareHome.Models.ListaZaKupovinu
 
         public static List<ListaZaKupovinu> DohvatiPopisLista()
         {
+            if (PopisLista == null)
+            {
+                IspuniPopisLista();
+            }
             return PopisLista;
         }
 
