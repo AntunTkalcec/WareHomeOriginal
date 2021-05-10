@@ -8,13 +8,15 @@ namespace WareHome.Models.ListaZaKupovinu
 {
     public class NamirnicaNaListi
     {
-        public string ListaNamirnice { get; set; }
+        public int IdNamirnice { get; set; }
+        public int ListaNamirnice { get; set; }
         public string NazivNamirnice { get; set; }
         public string KoličinaNamirnice { get; set; }
         public string CijenaNamirnice { get; set; }
         public string TrgovinaNamirnice { get; set; }
-        public NamirnicaNaListi(string lista, string naziv, string kolicina, string cijena, string trgovina)
+        public NamirnicaNaListi(int id, int lista, string naziv, string kolicina, string cijena, string trgovina)
         {
+            IdNamirnice = id;
             ListaNamirnice = lista;
             NazivNamirnice = naziv;
             KoličinaNamirnice = kolicina;
