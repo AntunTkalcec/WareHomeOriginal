@@ -30,13 +30,12 @@ namespace WareHome
 
         private void ListaForm_Load(object sender, EventArgs e)
         {
-            namirniceNaListi = new List<NamirnicaNaListi>();
-            namirniceDataGridView.DataSource = ObrišiMeNakonImplementacijeRepozitorija();
+            OsvjeziListu();
         }
 
         private void dodajButton_Click(object sender, EventArgs e)
         {
-            DodajArtiklNaListu dodajArtiklNaListu = new DodajArtiklNaListu();
+            DodajArtiklNaListu dodajArtiklNaListu = new DodajArtiklNaListu(odabranaLista);
             dodajArtiklNaListu.ShowDialog();
             OsvjeziListu();
         }
@@ -44,9 +43,10 @@ namespace WareHome
         private void OsvjeziListu()
         {
             namirniceNaListi = null;
-            namirniceNaListi = ObrišiMeNakonImplementacijeRepozitorija();
+            namirniceNaListi = NamirnicaNaListiRepository.DohvatiPopisNamirnica(odabranaLista);
             namirniceDataGridView.DataSource = null;
             namirniceDataGridView.DataSource = namirniceNaListi;
+            namirniceDataGridView.Columns["ListaNamirnice"].Visible = false;
             namirniceDataGridView.Columns["NazivNamirnice"].ReadOnly = true;
             namirniceDataGridView.Columns["KoličinaNamirnice"].ReadOnly = true;
             namirniceDataGridView.Columns["CijenaNamirnice"].ReadOnly = true;
@@ -57,14 +57,18 @@ namespace WareHome
             namirniceDataGridView.Columns["TrgovinaNamirnice"].HeaderText = "Trgovina";
         }
 
-        private List<NamirnicaNaListi> ObrišiMeNakonImplementacijeRepozitorija()
+        private void preimenujButton_Click(object sender, EventArgs e)
         {
-            List<NamirnicaNaListi> namirnicaNaListi = new List<NamirnicaNaListi>();
-            namirnicaNaListi.Add(new NamirnicaNaListi("Kruh", "1", "", "KTC"));
-            namirnicaNaListi.Add(new NamirnicaNaListi("Mlijeko", "6", "7,99", ""));
-            namirnicaNaListi.Add(new NamirnicaNaListi("Jack Daniels 10l", "1", "1499", "KTC"));
-            namirnicaNaListi.Add(new NamirnicaNaListi("Kuhalo za vodu", "", "", ""));
-            return namirnicaNaListi;
+            NovaListaForm novaListaForm = new NovaListaForm(odabranaLista);
+            novaListaForm.ShowDialog();
+            nazivLabel.Text = odabranaLista.NazivListe;
+        }
+
+        private void ukloniButton_Click(object sender, EventArgs e)
+        {
+            NamirnicaNaListi ukloniNamirnicu = namirniceDataGridView.CurrentRow.DataBoundItem as NamirnicaNaListi;
+            NamirnicaNaListiRepository.UkloniNamirnicu(ukloniNamirnicu);
+            OsvjeziListu();
         }
     }
 }
