@@ -20,8 +20,6 @@ namespace WareHome_Logic
                 domacinstvo.Naziv = dataReader["naziv"].ToString();
                 domacinstvo.DatumKreiranja = DateTime.Parse(dataReader["datum_kreiranja"].ToString());
                 domacinstvo.KorisnikKreator = dataReader["korisnik_kreator"].ToString();
-                domacinstvo.OpisRadnje = dataReader["opis_radnje"].ToString();
-                domacinstvo.DatumRadnje = DateTime.Parse(dataReader["datum_radnje"].ToString());
             }
             return domacinstvo;
         }
