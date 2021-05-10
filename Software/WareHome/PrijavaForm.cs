@@ -32,6 +32,8 @@ namespace WareHome
             {
                 Hide();
                 UpaliGlavnuFormu(korisnik);
+                passwordTextBox.Text = "";
+                usernameTextBox.Text = "";
                 Show();
             }
         }
