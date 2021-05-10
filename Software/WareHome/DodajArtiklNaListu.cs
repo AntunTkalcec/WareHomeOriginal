@@ -28,13 +28,11 @@ namespace WareHome
 
         private void dodajButton_Click(object sender, EventArgs e)
         {
-            string nazivListe = odabranaLista.NazivListe;
             string nazivArtikla = nazivTextBox.Text;
             string cijena = cijenaTextBox.Text;
             string količina = kolicinaTextBox.Text;
             string trgovina = trgovinaTextBox.Text;
-            NamirnicaNaListi novaNamirnica = new NamirnicaNaListi(nazivListe, nazivArtikla, cijena, količina, trgovina);
-            NamirnicaNaListiRepository.DodajNamirnicu(novaNamirnica);
+            NamirnicaNaListiRepository.DodajNamirnicu(new NamirnicaNaListi(0, odabranaLista.IdListe, nazivArtikla, cijena, količina, trgovina));
             Close();
         }
     }
