@@ -9,16 +9,18 @@ namespace WareHome.Models.ListaZaKupovinu
 {
     public class ListaZaKupovinu
     {
+        public int IdListe { get; set; }
         public string NazivListe { get; set; }
         public bool PrivatnaLista { get; set; }
         public string LozinkaListe { get; set; }
-        //public string KorisnikKreator { get; set; }
-        public ListaZaKupovinu(string naziv, bool privatna, string lozinka)
+        public int Domacinstvo { get; set; }
+        public ListaZaKupovinu(int id, string naziv, bool privatna, string lozinka, int domacinstvo)
         {
+            IdListe = id;
             NazivListe = naziv;
             PrivatnaLista = privatna;
             LozinkaListe = lozinka;
-            //KorisnikKreator = trenutniKorisnik.KorisnickoIme;
+            Domacinstvo = domacinstvo;
         }
     }
 }
