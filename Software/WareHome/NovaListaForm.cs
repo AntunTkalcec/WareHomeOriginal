@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,7 +63,7 @@ namespace WareHome
 
             if (preimenujListu != null)
             {
-                PreimenujListu(naziv, privatna, lozinka);
+                ListaZaKupovinuRepository.PreimenujListu(preimenujListu, naziv, privatna, lozinka);
                 Close();
             }
             else if (naziv != "")
@@ -73,20 +74,6 @@ namespace WareHome
             else
             {
                 MessageBox.Show("Unesite naziv liste!");
-            }
-        }
-
-        private void PreimenujListu(string naziv, bool privatna, string lozinka)
-        {
-            foreach (var item in ListaZaKupovinuRepository.PopisLista)
-            {
-                if (item.NazivListe == preimenujListu.NazivListe)
-                {
-                    item.NazivListe = naziv;
-                    item.PrivatnaLista = privatna;
-                    item.LozinkaListe = lozinka;
-                    break;
-                }
             }
         }
 
