@@ -46,6 +46,7 @@ namespace WareHome
             namirniceNaListi = NamirnicaNaListiRepository.DohvatiPopisNamirnica(odabranaLista);
             namirniceDataGridView.DataSource = null;
             namirniceDataGridView.DataSource = namirniceNaListi;
+            namirniceDataGridView.Columns["IdNamirnice"].Visible = false;
             namirniceDataGridView.Columns["ListaNamirnice"].Visible = false;
             namirniceDataGridView.Columns["NazivNamirnice"].ReadOnly = true;
             namirniceDataGridView.Columns["KoličinaNamirnice"].ReadOnly = true;
@@ -61,14 +62,21 @@ namespace WareHome
         {
             NovaListaForm novaListaForm = new NovaListaForm(odabranaLista);
             novaListaForm.ShowDialog();
-            nazivLabel.Text = odabranaLista.NazivListe;
+            nazivLabel.Text = ListaZaKupovinuRepository.NoviNaziv;
         }
 
         private void ukloniButton_Click(object sender, EventArgs e)
         {
-            NamirnicaNaListi ukloniNamirnicu = namirniceDataGridView.CurrentRow.DataBoundItem as NamirnicaNaListi;
-            NamirnicaNaListiRepository.UkloniNamirnicu(ukloniNamirnicu);
-            OsvjeziListu();
+            if (namirniceDataGridView.CurrentRow == null)
+            {
+                OsvjeziListu();
+            }
+            else
+            {
+                NamirnicaNaListi ukloniNamirnicu = namirniceDataGridView.CurrentRow.DataBoundItem as NamirnicaNaListi;
+                NamirnicaNaListiRepository.UkloniNamirnicu(ukloniNamirnicu);
+                OsvjeziListu();
+            }
         }
     }
 }
