@@ -34,6 +34,7 @@ namespace WareHome
             this.prikažiButton = new System.Windows.Forms.Button();
             this.kreirajButton = new System.Windows.Forms.Button();
             this.obrišiButton = new System.Windows.Forms.Button();
+            this.nisteDioDomacinstvaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,6 +43,8 @@ namespace WareHome
             this.listeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listeDataGridView.Location = new System.Drawing.Point(12, 12);
             this.listeDataGridView.Name = "listeDataGridView";
+            this.listeDataGridView.RowHeadersWidth = 51;
+            this.listeDataGridView.ShowEditingIcon = false;
             this.listeDataGridView.Size = new System.Drawing.Size(477, 260);
             this.listeDataGridView.TabIndex = 0;
             // 
@@ -60,7 +63,7 @@ namespace WareHome
             this.prikažiButton.Location = new System.Drawing.Point(394, 278);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(95, 36);
-            this.prikažiButton.TabIndex = 2;
+            this.prikažiButton.TabIndex = 4;
             this.prikažiButton.Text = "Prikaži";
             this.prikažiButton.UseVisualStyleBackColor = true;
             this.prikažiButton.Click += new System.EventHandler(this.prikažiButton_Click);
@@ -80,15 +83,31 @@ namespace WareHome
             this.obrišiButton.Location = new System.Drawing.Point(192, 278);
             this.obrišiButton.Name = "obrišiButton";
             this.obrišiButton.Size = new System.Drawing.Size(95, 36);
-            this.obrišiButton.TabIndex = 4;
+            this.obrišiButton.TabIndex = 2;
             this.obrišiButton.Text = "Obriši";
             this.obrišiButton.UseVisualStyleBackColor = true;
+            this.obrišiButton.Click += new System.EventHandler(this.obrišiButton_Click);
+            // 
+            // nisteDioDomacinstvaLabel
+            // 
+            this.nisteDioDomacinstvaLabel.AutoSize = true;
+            this.nisteDioDomacinstvaLabel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.nisteDioDomacinstvaLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nisteDioDomacinstvaLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nisteDioDomacinstvaLabel.ForeColor = System.Drawing.Color.Red;
+            this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(95, 130);
+            this.nisteDioDomacinstvaLabel.Name = "nisteDioDomacinstvaLabel";
+            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(313, 33);
+            this.nisteDioDomacinstvaLabel.TabIndex = 25;
+            this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
+            this.nisteDioDomacinstvaLabel.Visible = false;
             // 
             // ListeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 334);
+            this.Controls.Add(this.nisteDioDomacinstvaLabel);
             this.Controls.Add(this.obrišiButton);
             this.Controls.Add(this.kreirajButton);
             this.Controls.Add(this.prikažiButton);
@@ -99,6 +118,7 @@ namespace WareHome
             this.Load += new System.EventHandler(this.ListeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listeDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +129,6 @@ namespace WareHome
         private System.Windows.Forms.Button prikažiButton;
         private System.Windows.Forms.Button kreirajButton;
         private System.Windows.Forms.Button obrišiButton;
+        private System.Windows.Forms.Label nisteDioDomacinstvaLabel;
     }
 }
