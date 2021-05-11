@@ -15,14 +15,13 @@ namespace WareHome
 {
     public partial class GlavnaForm : Form
     {
-        Korisnik trenutniKorisnik = new Korisnik();
+        static Korisnik trenutniKorisnik;
+
         public GlavnaForm(Korisnik korisnik)
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
         }
-
-        Raspored glavniRaspored = new Raspored();
 
         private void OsvjeziNamirnice()
         {
@@ -60,18 +59,19 @@ namespace WareHome
 
         private void rasporedButton_Click(object sender, EventArgs e)
         {
-            RasporedForm rasporedForm = new RasporedForm(glavniRaspored);
+            RasporedForm rasporedForm = new RasporedForm(trenutniKorisnik);
             rasporedForm.ShowDialog();
         }
 
         private void odjavaButton_Click(object sender, EventArgs e)
         {
+            trenutniKorisnik = null;
             Close();
         }
 
         private void listeButton_Click(object sender, EventArgs e)
         {
-            ListeForm listeForm = new ListeForm();
+            ListeForm listeForm = new ListeForm(trenutniKorisnik);
             listeForm.Show();
         }
 
