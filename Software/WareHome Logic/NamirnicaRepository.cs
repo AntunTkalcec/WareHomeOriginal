@@ -21,7 +21,7 @@ namespace WareHome_Logic
                 namirnica.DostupnaKolicina = float.Parse(dataReader["dostupna_kolicina"].ToString());
                 namirnica.OptimalnaKolicina = float.Parse(dataReader["optimalna_kolicina"].ToString());
                 namirnica.MjernaJedinica = dataReader["mjerna_jedinica"].ToString();
-                namirnica.Cijena = float.Parse(dataReader["cijena"].ToString());
+                namirnica.Cijena = dataReader["cijena"].ToString();
                 namirnica.Ducan = dataReader["ducan"].ToString();
                 namirnica.DatumZadnjePromjene = DateTime.Parse(dataReader["datum_zadnje_promjene"].ToString());
                 namirnica.Domacinstvo = domacinstvo;
@@ -49,16 +49,16 @@ namespace WareHome_Logic
             if (namirnica.Identifikator == 0)
             {
                 sql = $"INSERT INTO Namirnica (naziv_namirnice, dostupna_kolicina, optimalna_kolicina, mjerna_jedinica, " +
-                    $"cijena, ducan, datum_kreiranja, datum_zadnje_promjene, korisnik_kreator, domacinstvo_id) VALUES " +
-                    $"('{namirnica.NazivNamirnice}', '{namirnica.DostupnaKolicina}', '{namirnica.OptimalnaKolicina}', " +
-                    $"'{namirnica.MjernaJedinica}', '{namirnica.Cijena}', '{namirnica.Ducan}', '{namirnica.DatumKreiranja:yyyyMMdd}', '{namirnica.DatumZadnjePromjene:yyyyMMdd}', " +
-                    $"'{namirnica.KorisnikKreator}', '{namirnica.Domacinstvo.Identifikator}')";
+                    $"cijena, ducan, datum_zadnje_promjene, domacinstvo_id) VALUES " +
+                    $"(N'{namirnica.NazivNamirnice}', '{namirnica.DostupnaKolicina}', '{namirnica.OptimalnaKolicina}', " +
+                    $"'{namirnica.MjernaJedinica}', '{namirnica.Cijena}', N'{namirnica.Ducan}', '{namirnica.DatumZadnjePromjene:yyyyMMdd}', " +
+                    $"'{namirnica.Domacinstvo.Identifikator}')";
             }
             else
             {
-                sql = $"UPDATE Namirnica SET naziv_namirnice = '{namirnica.NazivNamirnice}', dostupna_kolicina = '{namirnica.DostupnaKolicina}', optimalna_kolicina = '{namirnica.OptimalnaKolicina}', " +
-                    $"mjerna_jedinica = '{namirnica.MjernaJedinica}', cijena = '{namirnica.Cijena}', ducan = '{namirnica.Ducan}', datum_kreiranja = '{namirnica.DatumKreiranja:yyyyMMdd}', " +
-                    $"datum_zadnje_promjene = '{namirnica.DatumZadnjePromjene:yyyyMMdd}', korisnik_kreator = '{namirnica.KorisnikKreator}', domacinstvo_id = '{namirnica.Domacinstvo.Identifikator}' " +
+                sql = $"UPDATE Namirnica SET naziv_namirnice = N'{namirnica.NazivNamirnice}', dostupna_kolicina = '{namirnica.DostupnaKolicina}', optimalna_kolicina = '{namirnica.OptimalnaKolicina}', " +
+                    $"mjerna_jedinica = '{namirnica.MjernaJedinica}', cijena = '{namirnica.Cijena}', ducan = N'{namirnica.Ducan}', " +
+                    $"datum_zadnje_promjene = '{namirnica.DatumZadnjePromjene:yyyyMMdd}', domacinstvo_id = '{namirnica.Domacinstvo.Identifikator}' " +
                     $"WHERE namirnica_id = {namirnica.Identifikator}";
             }
             return Database.Instance.ExecuteCommand(sql);

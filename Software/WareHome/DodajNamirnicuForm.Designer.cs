@@ -122,6 +122,7 @@ namespace WareHome
             // 
             // mjernaJedinicaComboBox
             // 
+            this.mjernaJedinicaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mjernaJedinicaComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mjernaJedinicaComboBox.ForeColor = System.Drawing.Color.Black;
             this.mjernaJedinicaComboBox.FormattingEnabled = true;
@@ -133,7 +134,6 @@ namespace WareHome
             this.mjernaJedinicaComboBox.Name = "mjernaJedinicaComboBox";
             this.mjernaJedinicaComboBox.Size = new System.Drawing.Size(212, 31);
             this.mjernaJedinicaComboBox.TabIndex = 3;
-            this.mjernaJedinicaComboBox.Text = "odaberite...";
             // 
             // cijenaLabel
             // 

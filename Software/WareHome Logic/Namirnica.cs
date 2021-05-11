@@ -19,16 +19,12 @@ namespace WareHome_Logic
         public float OptimalnaKolicina { get; set; }
         [DisplayName("Mjerna jedinica")]
         public string MjernaJedinica { get; set; }
-        [DisplayName("Cijena namirnice")]
-        public float Cijena { get; set; }
-        [DisplayName("Dućan za kupiti")]
+        [DisplayName("Cijena")]
+        public string Cijena { get; set; }
+        [DisplayName("Dućan")]
         public string Ducan { get; set; }
-        [DisplayName("Namirnica kreirana")]
-        public DateTime DatumKreiranja { get; set; }
-        [DisplayName("Namirnica zadnje promijenjena")]
+        [DisplayName("Zadnja promjena")]
         public DateTime DatumZadnjePromjene { get; set; }
-        [DisplayName("Kreator namirnice")]
-        public string KorisnikKreator { get; set; }
         [DisplayName("Domaćinstvo")]
         public Domacinstvo Domacinstvo { get; set; }
 
