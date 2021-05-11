@@ -13,13 +13,15 @@ namespace WareHome
 {
     public partial class ListaForm : Form
     {
-        public ListaForm(string nazivListe)
+        List<NamirnicaNaListi> namirniceNaListi;
+        ListaZaKupovinu odabranaLista;
+        
+        public ListaForm(ListaZaKupovinu odabrana)
         {
             InitializeComponent();
-            nazivLabel.Text = nazivListe;
-        }
-
-        private List<NamirniceNaListi> namirniceNaListi;
+            odabranaLista = odabrana;
+            nazivLabel.Text = odabranaLista.NazivListe;
+        }        
 
         private void povratakButton_Click(object sender, EventArgs e)
         {
@@ -28,24 +30,53 @@ namespace WareHome
 
         private void ListaForm_Load(object sender, EventArgs e)
         {
-            namirniceNaListi = new List<NamirniceNaListi>();
-            namirniceNaListi.Add(new NamirniceNaListi("Kruh", "1", "", "KTC"));
-            namirniceNaListi.Add(new NamirniceNaListi("Mlijeko", "6", "7,99", ""));
-            namirniceNaListi.Add(new NamirniceNaListi("Jack Daniels 10l", "1", "1499", "KTC"));
-            namirniceNaListi.Add(new NamirniceNaListi("Kuhalo za vodu", "", "", ""));
-            namirniceDataGridView.DataSource = namirniceNaListi;
+            OsvjeziListu();
         }
 
         private void dodajButton_Click(object sender, EventArgs e)
         {
-            DodajArtiklNaListu dodajArtiklNaListu = new DodajArtiklNaListu();
+            DodajArtiklNaListu dodajArtiklNaListu = new DodajArtiklNaListu(odabranaLista);
             dodajArtiklNaListu.ShowDialog();
             OsvjeziListu();
         }
 
         private void OsvjeziListu()
         {
-            throw new NotImplementedException();
+            namirniceNaListi = null;
+            namirniceNaListi = NamirnicaNaListiRepository.DohvatiPopisNamirnica(odabranaLista);
+            namirniceDataGridView.DataSource = null;
+            namirniceDataGridView.DataSource = namirniceNaListi;
+            namirniceDataGridView.Columns["IdNamirnice"].Visible = false;
+            namirniceDataGridView.Columns["ListaNamirnice"].Visible = false;
+            namirniceDataGridView.Columns["NazivNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["KoličinaNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["CijenaNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["TrgovinaNamirnice"].ReadOnly = true;
+            namirniceDataGridView.Columns["NazivNamirnice"].HeaderText = "Naziv";
+            namirniceDataGridView.Columns["KoličinaNamirnice"].HeaderText = "Količina";
+            namirniceDataGridView.Columns["CijenaNamirnice"].HeaderText = "Cijena";
+            namirniceDataGridView.Columns["TrgovinaNamirnice"].HeaderText = "Trgovina";
+        }
+
+        private void preimenujButton_Click(object sender, EventArgs e)
+        {
+            NovaListaForm novaListaForm = new NovaListaForm(odabranaLista);
+            novaListaForm.ShowDialog();
+            nazivLabel.Text = ListaZaKupovinuRepository.NoviNaziv;
+        }
+
+        private void ukloniButton_Click(object sender, EventArgs e)
+        {
+            if (namirniceDataGridView.CurrentRow == null)
+            {
+                OsvjeziListu();
+            }
+            else
+            {
+                NamirnicaNaListi ukloniNamirnicu = namirniceDataGridView.CurrentRow.DataBoundItem as NamirnicaNaListi;
+                NamirnicaNaListiRepository.UkloniNamirnicu(ukloniNamirnicu);
+                OsvjeziListu();
+            }
         }
     }
 }
