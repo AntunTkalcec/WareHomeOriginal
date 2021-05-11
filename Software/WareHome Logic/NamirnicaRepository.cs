@@ -23,9 +23,7 @@ namespace WareHome_Logic
                 namirnica.MjernaJedinica = dataReader["mjerna_jedinica"].ToString();
                 namirnica.Cijena = float.Parse(dataReader["cijena"].ToString());
                 namirnica.Ducan = dataReader["ducan"].ToString();
-                namirnica.DatumKreiranja = DateTime.Parse(dataReader["datum_kreiranja"].ToString());
                 namirnica.DatumZadnjePromjene = DateTime.Parse(dataReader["datum_zadnje_promjene"].ToString());
-                namirnica.KorisnikKreator = dataReader["korisnik_kreator"].ToString();
                 namirnica.Domacinstvo = domacinstvo;
             }
             return namirnica;
