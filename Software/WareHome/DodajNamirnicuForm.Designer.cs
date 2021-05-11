@@ -58,7 +58,7 @@ namespace WareHome
             this.nazivNamirniceLabel.AutoSize = true;
             this.nazivNamirniceLabel.Location = new System.Drawing.Point(12, 44);
             this.nazivNamirniceLabel.Name = "nazivNamirniceLabel";
-            this.nazivNamirniceLabel.Size = new System.Drawing.Size(170, 23);
+            this.nazivNamirniceLabel.Size = new System.Drawing.Size(138, 21);
             this.nazivNamirniceLabel.TabIndex = 0;
             this.nazivNamirniceLabel.Text = "Naziv namirnice:";
             // 
@@ -66,7 +66,7 @@ namespace WareHome
             // 
             this.nazivNamirniceTextBox.Location = new System.Drawing.Point(16, 68);
             this.nazivNamirniceTextBox.Name = "nazivNamirniceTextBox";
-            this.nazivNamirniceTextBox.Size = new System.Drawing.Size(212, 32);
+            this.nazivNamirniceTextBox.Size = new System.Drawing.Size(212, 27);
             this.nazivNamirniceTextBox.TabIndex = 0;
             // 
             // dodavanjeNamirniceLabel
@@ -75,7 +75,7 @@ namespace WareHome
             this.dodavanjeNamirniceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dodavanjeNamirniceLabel.Location = new System.Drawing.Point(163, 9);
             this.dodavanjeNamirniceLabel.Name = "dodavanjeNamirniceLabel";
-            this.dodavanjeNamirniceLabel.Size = new System.Drawing.Size(221, 23);
+            this.dodavanjeNamirniceLabel.Size = new System.Drawing.Size(180, 19);
             this.dodavanjeNamirniceLabel.TabIndex = 2;
             this.dodavanjeNamirniceLabel.Text = "Dodavanje namirnice";
             // 
@@ -84,7 +84,7 @@ namespace WareHome
             this.dostupnaKolicinaLabel.AutoSize = true;
             this.dostupnaKolicinaLabel.Location = new System.Drawing.Point(12, 98);
             this.dostupnaKolicinaLabel.Name = "dostupnaKolicinaLabel";
-            this.dostupnaKolicinaLabel.Size = new System.Drawing.Size(189, 23);
+            this.dostupnaKolicinaLabel.Size = new System.Drawing.Size(153, 21);
             this.dostupnaKolicinaLabel.TabIndex = 3;
             this.dostupnaKolicinaLabel.Text = "Dostupna količina:";
             // 
@@ -92,7 +92,7 @@ namespace WareHome
             // 
             this.dostupnaKolicinaTextBox.Location = new System.Drawing.Point(16, 122);
             this.dostupnaKolicinaTextBox.Name = "dostupnaKolicinaTextBox";
-            this.dostupnaKolicinaTextBox.Size = new System.Drawing.Size(212, 32);
+            this.dostupnaKolicinaTextBox.Size = new System.Drawing.Size(212, 27);
             this.dostupnaKolicinaTextBox.TabIndex = 1;
             // 
             // optimalnaKolicinaLabel
@@ -100,7 +100,7 @@ namespace WareHome
             this.optimalnaKolicinaLabel.AutoSize = true;
             this.optimalnaKolicinaLabel.Location = new System.Drawing.Point(12, 152);
             this.optimalnaKolicinaLabel.Name = "optimalnaKolicinaLabel";
-            this.optimalnaKolicinaLabel.Size = new System.Drawing.Size(199, 23);
+            this.optimalnaKolicinaLabel.Size = new System.Drawing.Size(161, 21);
             this.optimalnaKolicinaLabel.TabIndex = 5;
             this.optimalnaKolicinaLabel.Text = "Optimalna količina:";
             // 
@@ -108,7 +108,7 @@ namespace WareHome
             // 
             this.optimalnaKolicinaTextBox.Location = new System.Drawing.Point(16, 176);
             this.optimalnaKolicinaTextBox.Name = "optimalnaKolicinaTextBox";
-            this.optimalnaKolicinaTextBox.Size = new System.Drawing.Size(212, 32);
+            this.optimalnaKolicinaTextBox.Size = new System.Drawing.Size(212, 27);
             this.optimalnaKolicinaTextBox.TabIndex = 2;
             // 
             // mjernaJedinicaLabel
@@ -116,12 +116,13 @@ namespace WareHome
             this.mjernaJedinicaLabel.AutoSize = true;
             this.mjernaJedinicaLabel.Location = new System.Drawing.Point(12, 206);
             this.mjernaJedinicaLabel.Name = "mjernaJedinicaLabel";
-            this.mjernaJedinicaLabel.Size = new System.Drawing.Size(161, 23);
+            this.mjernaJedinicaLabel.Size = new System.Drawing.Size(133, 21);
             this.mjernaJedinicaLabel.TabIndex = 7;
             this.mjernaJedinicaLabel.Text = "Mjerna jedinica:";
             // 
             // mjernaJedinicaComboBox
             // 
+            this.mjernaJedinicaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mjernaJedinicaComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mjernaJedinicaComboBox.ForeColor = System.Drawing.Color.Black;
             this.mjernaJedinicaComboBox.FormattingEnabled = true;
@@ -131,16 +132,15 @@ namespace WareHome
             "l"});
             this.mjernaJedinicaComboBox.Location = new System.Drawing.Point(16, 230);
             this.mjernaJedinicaComboBox.Name = "mjernaJedinicaComboBox";
-            this.mjernaJedinicaComboBox.Size = new System.Drawing.Size(212, 31);
+            this.mjernaJedinicaComboBox.Size = new System.Drawing.Size(212, 27);
             this.mjernaJedinicaComboBox.TabIndex = 3;
-            this.mjernaJedinicaComboBox.Text = "odaberite...";
             // 
             // cijenaLabel
             // 
             this.cijenaLabel.AutoSize = true;
             this.cijenaLabel.Location = new System.Drawing.Point(12, 262);
             this.cijenaLabel.Name = "cijenaLabel";
-            this.cijenaLabel.Size = new System.Drawing.Size(134, 23);
+            this.cijenaLabel.Size = new System.Drawing.Size(110, 21);
             this.cijenaLabel.TabIndex = 9;
             this.cijenaLabel.Text = "Cijena (HRK):";
             // 
@@ -148,7 +148,7 @@ namespace WareHome
             // 
             this.cijenaTextBox.Location = new System.Drawing.Point(16, 287);
             this.cijenaTextBox.Name = "cijenaTextBox";
-            this.cijenaTextBox.Size = new System.Drawing.Size(212, 32);
+            this.cijenaTextBox.Size = new System.Drawing.Size(212, 27);
             this.cijenaTextBox.TabIndex = 4;
             // 
             // ducanLabel
@@ -156,7 +156,7 @@ namespace WareHome
             this.ducanLabel.AutoSize = true;
             this.ducanLabel.Location = new System.Drawing.Point(12, 317);
             this.ducanLabel.Name = "ducanLabel";
-            this.ducanLabel.Size = new System.Drawing.Size(320, 23);
+            this.ducanLabel.Size = new System.Drawing.Size(260, 21);
             this.ducanLabel.TabIndex = 11;
             this.ducanLabel.Text = "Dućan gdje kupujete namirnicu:";
             // 
@@ -164,7 +164,7 @@ namespace WareHome
             // 
             this.ducanTextBox.Location = new System.Drawing.Point(16, 341);
             this.ducanTextBox.Name = "ducanTextBox";
-            this.ducanTextBox.Size = new System.Drawing.Size(212, 32);
+            this.ducanTextBox.Size = new System.Drawing.Size(212, 27);
             this.ducanTextBox.TabIndex = 5;
             // 
             // minimizeButton
@@ -202,7 +202,7 @@ namespace WareHome
             this.nazivNamirniceLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nazivNamirniceLabel2.Location = new System.Drawing.Point(250, 68);
             this.nazivNamirniceLabel2.Name = "nazivNamirniceLabel2";
-            this.nazivNamirniceLabel2.Size = new System.Drawing.Size(90, 20);
+            this.nazivNamirniceLabel2.Size = new System.Drawing.Size(74, 17);
             this.nazivNamirniceLabel2.TabIndex = 26;
             this.nazivNamirniceLabel2.Text = "*obavezno";
             // 
@@ -212,7 +212,7 @@ namespace WareHome
             this.dostupnaKolicinaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dostupnaKolicinaLabel2.Location = new System.Drawing.Point(250, 122);
             this.dostupnaKolicinaLabel2.Name = "dostupnaKolicinaLabel2";
-            this.dostupnaKolicinaLabel2.Size = new System.Drawing.Size(182, 20);
+            this.dostupnaKolicinaLabel2.Size = new System.Drawing.Size(149, 17);
             this.dostupnaKolicinaLabel2.TabIndex = 27;
             this.dostupnaKolicinaLabel2.Text = "*obavezno,    format 4.5";
             // 
@@ -222,7 +222,7 @@ namespace WareHome
             this.mjernaJedinicaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mjernaJedinicaLabel2.Location = new System.Drawing.Point(250, 230);
             this.mjernaJedinicaLabel2.Name = "mjernaJedinicaLabel2";
-            this.mjernaJedinicaLabel2.Size = new System.Drawing.Size(90, 20);
+            this.mjernaJedinicaLabel2.Size = new System.Drawing.Size(74, 17);
             this.mjernaJedinicaLabel2.TabIndex = 29;
             this.mjernaJedinicaLabel2.Text = "*obavezno";
             // 
@@ -232,7 +232,7 @@ namespace WareHome
             this.optimalnaKolicinaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optimalnaKolicinaLabel2.Location = new System.Drawing.Point(250, 176);
             this.optimalnaKolicinaLabel2.Name = "optimalnaKolicinaLabel2";
-            this.optimalnaKolicinaLabel2.Size = new System.Drawing.Size(182, 20);
+            this.optimalnaKolicinaLabel2.Size = new System.Drawing.Size(149, 17);
             this.optimalnaKolicinaLabel2.TabIndex = 30;
             this.optimalnaKolicinaLabel2.Text = "*obavezno,    format 4.5";
             // 
@@ -242,7 +242,7 @@ namespace WareHome
             this.cijenaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cijenaLabel2.Location = new System.Drawing.Point(250, 287);
             this.cijenaLabel2.Name = "cijenaLabel2";
-            this.cijenaLabel2.Size = new System.Drawing.Size(217, 20);
+            this.cijenaLabel2.Size = new System.Drawing.Size(178, 17);
             this.cijenaLabel2.TabIndex = 31;
             this.cijenaLabel2.Text = "*neobavezno,    format 99.99";
             // 
@@ -252,7 +252,7 @@ namespace WareHome
             this.ducanLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ducanLabel2.Location = new System.Drawing.Point(250, 341);
             this.ducanLabel2.Name = "ducanLabel2";
-            this.ducanLabel2.Size = new System.Drawing.Size(109, 20);
+            this.ducanLabel2.Size = new System.Drawing.Size(89, 17);
             this.ducanLabel2.TabIndex = 32;
             this.ducanLabel2.Text = "*neobavezno";
             // 

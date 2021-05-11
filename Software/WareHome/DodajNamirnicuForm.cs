@@ -33,21 +33,28 @@ namespace WareHome
 
         private void spremiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            Namirnica namirnica = new Namirnica();
-            namirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
-            namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
-            namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
-            namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
-            namirnica.Cijena = float.Parse(cijenaTextBox.Text);
-            namirnica.Ducan = ducanTextBox.Text;
-            namirnica.DatumKreiranja = DateTime.UtcNow;
-            namirnica.DatumZadnjePromjene = DateTime.UtcNow;
-            namirnica.KorisnikKreator = trenutniKorisnik.KorisnickoIme;
-            namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
-            Database.Instance.Connect();
-            NamirnicaRepository.Spremi(namirnica);
-            Database.Instance.Disconnect();
-            Close();
+            if (nazivNamirniceTextBox.Text == null || nazivNamirniceTextBox.Text == "" || dostupnaKolicinaTextBox.Text == null || 
+                dostupnaKolicinaTextBox.Text == "" || optimalnaKolicinaTextBox.Text == null || optimalnaKolicinaTextBox.Text == "" || mjernaJedinicaComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Nisu popunjena sva obavezna polja.");
+
+            }
+            else
+            {
+                Namirnica namirnica = new Namirnica();
+                namirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
+                namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
+                namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
+                namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
+                namirnica.Cijena = cijenaTextBox.Text;
+                namirnica.Ducan = ducanTextBox.Text;
+                namirnica.DatumZadnjePromjene = DateTime.Today;
+                namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
+                Database.Instance.Connect();
+                NamirnicaRepository.Spremi(namirnica);
+                Database.Instance.Disconnect();
+                Close();
+            }
         }
     }
 }

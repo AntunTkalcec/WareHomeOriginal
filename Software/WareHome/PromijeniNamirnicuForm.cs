@@ -42,9 +42,9 @@ namespace WareHome
                 trenutnaNamirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
                 trenutnaNamirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
                 trenutnaNamirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
-                trenutnaNamirnica.Cijena = float.Parse(cijenaTextBox.Text);
+                trenutnaNamirnica.Cijena = cijenaTextBox.Text;
                 trenutnaNamirnica.Ducan = ducanTextBox.Text;
-                trenutnaNamirnica.DatumZadnjePromjene = DateTime.UtcNow;
+                trenutnaNamirnica.DatumZadnjePromjene = DateTime.Today;
                 Database.Instance.Connect();
                 NamirnicaRepository.Spremi(trenutnaNamirnica);
                 Database.Instance.Disconnect();
