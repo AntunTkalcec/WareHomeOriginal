@@ -116,11 +116,13 @@ namespace WareHome
         {
             if (namirniceDGV.Rows.Count > 0)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Warehome stanje namirnica.pdf";
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "Warehome stanje namirnica.pdf"
+                };
                 bool greska = false;
-                if (sfd.ShowDialog() == DialogResult.OK)
+                if (sfd.ShowDialog() == DialogResult.Cancel)
                 {
                     try
                     {
@@ -140,13 +142,17 @@ namespace WareHome
                         pdfTable.DefaultCell.Padding = 3;
                         pdfTable.WidthPercentage = 100;
                         pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
-                        BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, false);
-                        iTextSharp.text.Font titlefont = new iTextSharp.text.Font(bf, 14);
-                        iTextSharp.text.Font infofont = new iTextSharp.text.Font(bf, 10);
-                        foreach (DataGridViewColumn column in namirniceDGV.Columns)
+                        string[] headers = new string[]
                         {
-                            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, titlefont));
-                            pdfTable.AddCell(cell);
+                            "ID", "Naziv namirnice", "Dostupna količina", "Optimalna količina", "Mjerna jedinica", "Cijena", "Dućan", "Zadnja promjena", "Domaćinstvo"
+                        };
+                        BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, false);
+                        iTextSharp.text.Font titlefont = new iTextSharp.text.Font(bf, 13);
+                        iTextSharp.text.Font infofont = new iTextSharp.text.Font(bf, 10);
+                        pdfTable.SetWidths(GetHeaderWidths(titlefont, headers));
+                        for (int i = 0; i < headers.Length; ++i)
+                        {
+                            pdfTable.AddCell(new PdfPCell(new Phrase(headers[i], titlefont)));
                         }
                         foreach (DataGridViewRow row in namirniceDGV.Rows)
                         {
@@ -171,7 +177,7 @@ namespace WareHome
                             };
                             Chunk c4 = new Chunk("Statistika korištenja namirnica: \n", FontFactory.GetFont("helvetica", 20, BaseColor.BLACK));
                             c4.SetUnderline(0.5f, -1.5f);
-                            Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                            Document pdfDoc = new Document(PageSize.A4.Rotate());
                             PdfWriter.GetInstance(pdfDoc, stream);
                             pdfDoc.Open();
                             p.Add(p1);
@@ -195,6 +201,25 @@ namespace WareHome
             {
                 MessageBox.Show("Nema podataka u tablici koji bi se mogli spremiti u PDF!");
             }
+        }
+
+        private float[] GetHeaderWidths(iTextSharp.text.Font titlefont, params string[] headers)
+        {
+            var total = 0;
+            var columns = headers.Length;
+            var widths = new int[columns];
+            for (var i = 0; i < columns; ++i)
+            {
+                var w = titlefont.GetCalculatedBaseFont(true).GetWidth(headers[i]);
+                total += w;
+                widths[i] = w;
+            }
+            var rezultat = new float[columns];
+            for (var i = 0; i < columns; ++i)
+            {
+                rezultat[i] = (float)widths[i] / total * 100;
+            }
+            return rezultat;
         }
     }
 }

@@ -37,7 +37,10 @@ namespace WareHome
                 dostupnaKolicinaTextBox.Text == "" || optimalnaKolicinaTextBox.Text == null || optimalnaKolicinaTextBox.Text == "" || mjernaJedinicaComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Nisu popunjena sva obavezna polja.");
-
+            }
+            else if (dostupnaKolicinaTextBox.BackColor == Color.Red || optimalnaKolicinaTextBox.BackColor == Color.Red || cijenaTextBox.BackColor == Color.Red)
+            {
+                MessageBox.Show("Neko od polja nije ispravno popunjeno.");
             }
             else
             {
@@ -54,6 +57,42 @@ namespace WareHome
                 NamirnicaRepository.Spremi(namirnica);
                 Database.Instance.Disconnect();
                 Close();
+            }
+        }
+
+        private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+"))
+            {
+                dostupnaKolicinaTextBox.BackColor = Color.Red;
+            }
+            else
+            {
+                dostupnaKolicinaTextBox.BackColor = Color.White;
+            }
+        }
+
+        private void optimalnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+"))
+            {
+                optimalnaKolicinaTextBox.BackColor = Color.Red;
+            }
+            else
+            {
+                optimalnaKolicinaTextBox.BackColor = Color.White;
+            }
+        }
+
+        private void cijenaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (cijenaTextBox.Text.Contains("-") || cijenaTextBox.Text.Contains(",") || cijenaTextBox.Text.Contains("+"))
+            {
+                cijenaTextBox.BackColor = Color.Red;
+            }
+            else
+            {
+                cijenaTextBox.BackColor = Color.White;
             }
         }
     }

@@ -49,6 +49,8 @@ namespace WareHome
             this.ducanTextBox = new System.Windows.Forms.TextBox();
             this.ducanLabel2 = new System.Windows.Forms.Label();
             this.spremiNamirnicuButton = new System.Windows.Forms.Button();
+            this.exitAppButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mijenjanjeNamirniceLabel
@@ -102,6 +104,7 @@ namespace WareHome
             this.dostupnaKolicinaTextBox.Name = "dostupnaKolicinaTextBox";
             this.dostupnaKolicinaTextBox.Size = new System.Drawing.Size(212, 27);
             this.dostupnaKolicinaTextBox.TabIndex = 2;
+            this.dostupnaKolicinaTextBox.TextChanged += new System.EventHandler(this.dostupnaKolicinaTextBox_TextChanged);
             // 
             // dostupnaKolicinaLabel2
             // 
@@ -128,6 +131,7 @@ namespace WareHome
             this.optimalnaKolicinaTextBox.Name = "optimalnaKolicinaTextBox";
             this.optimalnaKolicinaTextBox.Size = new System.Drawing.Size(212, 27);
             this.optimalnaKolicinaTextBox.TabIndex = 3;
+            this.optimalnaKolicinaTextBox.TextChanged += new System.EventHandler(this.optimalnaKolicinaTextBox_TextChanged);
             // 
             // optimalnaKolicinaLabel2
             // 
@@ -150,6 +154,7 @@ namespace WareHome
             // 
             // mjernaJedinicaComboBox
             // 
+            this.mjernaJedinicaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mjernaJedinicaComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mjernaJedinicaComboBox.ForeColor = System.Drawing.Color.Black;
             this.mjernaJedinicaComboBox.FormattingEnabled = true;
@@ -161,7 +166,6 @@ namespace WareHome
             this.mjernaJedinicaComboBox.Name = "mjernaJedinicaComboBox";
             this.mjernaJedinicaComboBox.Size = new System.Drawing.Size(212, 27);
             this.mjernaJedinicaComboBox.TabIndex = 4;
-            this.mjernaJedinicaComboBox.Text = "odaberite...";
             // 
             // mjernaJedinicaLabel2
             // 
@@ -188,6 +192,7 @@ namespace WareHome
             this.cijenaTextBox.Name = "cijenaTextBox";
             this.cijenaTextBox.Size = new System.Drawing.Size(212, 27);
             this.cijenaTextBox.TabIndex = 5;
+            this.cijenaTextBox.TextChanged += new System.EventHandler(this.cijenaTextBox_TextChanged);
             // 
             // cijenaLabel2
             // 
@@ -240,11 +245,40 @@ namespace WareHome
             this.spremiNamirnicuButton.UseVisualStyleBackColor = true;
             this.spremiNamirnicuButton.Click += new System.EventHandler(this.spremiNamirnicuButton_Click);
             // 
+            // exitAppButton
+            // 
+            this.exitAppButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.exitAppButton.FlatAppearance.BorderSize = 0;
+            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitAppButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitAppButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.exitAppButton.Location = new System.Drawing.Point(482, 2);
+            this.exitAppButton.Name = "exitAppButton";
+            this.exitAppButton.Size = new System.Drawing.Size(23, 26);
+            this.exitAppButton.TabIndex = 43;
+            this.exitAppButton.Text = "X";
+            this.exitAppButton.UseVisualStyleBackColor = false;
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeButton.ForeColor = System.Drawing.Color.DarkGray;
+            this.minimizeButton.Location = new System.Drawing.Point(453, 2);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(23, 26);
+            this.minimizeButton.TabIndex = 42;
+            this.minimizeButton.Text = "-";
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            // 
             // PromijeniNamirnicuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(506, 535);
+            this.Controls.Add(this.exitAppButton);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.spremiNamirnicuButton);
             this.Controls.Add(this.ducanLabel2);
             this.Controls.Add(this.ducanTextBox);
@@ -299,5 +333,7 @@ namespace WareHome
         private System.Windows.Forms.TextBox ducanTextBox;
         private System.Windows.Forms.Label ducanLabel2;
         private System.Windows.Forms.Button spremiNamirnicuButton;
+        private System.Windows.Forms.Button exitAppButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }
