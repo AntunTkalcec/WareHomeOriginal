@@ -162,6 +162,43 @@ namespace WareHome
                                 pdfTable.AddCell(cell1);
                             }
                         }
+                        PdfPTable tableStatistika = new PdfPTable(3);
+                        tableStatistika.DefaultCell.Padding = 3;
+                        tableStatistika.WidthPercentage = 100;
+                        tableStatistika.HorizontalAlignment = Element.ALIGN_CENTER;
+                        string[] headers2 = new string[]
+                        {
+                            "Naziv namirnice", "Potrošnja u zadnjih 7 dana", "Ukupna cijena"
+                        };
+                        string sql = $"SELECT n.naziv_namirnice as Namirnica, sum(d.promjena)*-1 as Suma, n.cijena*sum(d.promjena)*-1 as Cijena from Dogadaj d," +
+                            $"Namirnica n where datum_dogadaja >= dateadd(day, -8, getdate()) and id_namirnice = n.namirnica_id group by naziv_namirnice, cijena";
+                        List<Statistika> statistika = new List<Statistika>();
+                        Statistika stat = new Statistika();
+                        Database.Instance.Connect();
+                        IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                        while (dataReader.Read())
+                        {
+                            stat = new Statistika
+                            {
+                                Namirnica = dataReader["Namirnica"].ToString(),
+                                Suma = float.Parse(dataReader["Suma"].ToString()),
+                                Cijena = float.Parse(dataReader["Cijena"].ToString())
+                            };
+                            statistika.Add(stat);
+                        }
+                        dataReader.Close();
+                        Database.Instance.Disconnect();
+                        tableStatistika.SetWidths(GetHeaderWidths(titlefont, headers2));
+                        for (int i = 0; i < headers2.Length; i++)
+                        {
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(headers2[i], titlefont)));
+                        }
+                        foreach (var item in statistika)
+                        {
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(item.Namirnica, infofont)));
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(item.Suma.ToString(), infofont)));
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(item.Cijena.ToString(), infofont)));
+                        }
                         using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                         {
                             Chunk c1 = new Chunk("Trenutno stanje namirnica: \n", FontFactory.GetFont("dax-black", 20, BaseColor.BLACK));
@@ -187,6 +224,7 @@ namespace WareHome
                             pdfDoc.Add(p2);
                             pdfDoc.Add(c4);
                             pdfDoc.Add(p2);
+                            pdfDoc.Add(tableStatistika);
                             pdfDoc.Close();
                             stream.Close();
                         }
