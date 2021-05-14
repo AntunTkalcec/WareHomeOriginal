@@ -35,15 +35,16 @@ namespace WareHome
             this.povratakButton = new System.Windows.Forms.Button();
             this.namirniceDataGridView = new System.Windows.Forms.DataGridView();
             this.nazivLabel = new System.Windows.Forms.Label();
+            this.ukupnoLabel = new System.Windows.Forms.Label();
+            this.ukupnoTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.namirniceDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // preimenujButton
             // 
-            this.preimenujButton.Location = new System.Drawing.Point(924, 15);
-            this.preimenujButton.Margin = new System.Windows.Forms.Padding(4);
+            this.preimenujButton.Location = new System.Drawing.Point(693, 12);
             this.preimenujButton.Name = "preimenujButton";
-            this.preimenujButton.Size = new System.Drawing.Size(127, 28);
+            this.preimenujButton.Size = new System.Drawing.Size(95, 23);
             this.preimenujButton.TabIndex = 4;
             this.preimenujButton.Text = "Promijeni naziv";
             this.preimenujButton.UseVisualStyleBackColor = true;
@@ -51,10 +52,9 @@ namespace WareHome
             // 
             // ukloniButton
             // 
-            this.ukloniButton.Location = new System.Drawing.Point(789, 491);
-            this.ukloniButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ukloniButton.Location = new System.Drawing.Point(592, 399);
             this.ukloniButton.Name = "ukloniButton";
-            this.ukloniButton.Size = new System.Drawing.Size(127, 44);
+            this.ukloniButton.Size = new System.Drawing.Size(95, 36);
             this.ukloniButton.TabIndex = 2;
             this.ukloniButton.Text = "Ukloni";
             this.ukloniButton.UseVisualStyleBackColor = true;
@@ -62,10 +62,9 @@ namespace WareHome
             // 
             // dodajButton
             // 
-            this.dodajButton.Location = new System.Drawing.Point(924, 491);
-            this.dodajButton.Margin = new System.Windows.Forms.Padding(4);
+            this.dodajButton.Location = new System.Drawing.Point(693, 399);
             this.dodajButton.Name = "dodajButton";
-            this.dodajButton.Size = new System.Drawing.Size(127, 44);
+            this.dodajButton.Size = new System.Drawing.Size(95, 36);
             this.dodajButton.TabIndex = 3;
             this.dodajButton.Text = "Dodaj";
             this.dodajButton.UseVisualStyleBackColor = true;
@@ -73,10 +72,9 @@ namespace WareHome
             // 
             // povratakButton
             // 
-            this.povratakButton.Location = new System.Drawing.Point(16, 491);
-            this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
+            this.povratakButton.Location = new System.Drawing.Point(12, 399);
             this.povratakButton.Name = "povratakButton";
-            this.povratakButton.Size = new System.Drawing.Size(127, 44);
+            this.povratakButton.Size = new System.Drawing.Size(95, 36);
             this.povratakButton.TabIndex = 1;
             this.povratakButton.Text = "Povratak";
             this.povratakButton.UseVisualStyleBackColor = true;
@@ -85,36 +83,55 @@ namespace WareHome
             // namirniceDataGridView
             // 
             this.namirniceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.namirniceDataGridView.Location = new System.Drawing.Point(16, 50);
-            this.namirniceDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.namirniceDataGridView.Location = new System.Drawing.Point(12, 41);
             this.namirniceDataGridView.Name = "namirniceDataGridView";
             this.namirniceDataGridView.RowHeadersWidth = 51;
-            this.namirniceDataGridView.Size = new System.Drawing.Size(1035, 412);
+            this.namirniceDataGridView.Size = new System.Drawing.Size(776, 335);
             this.namirniceDataGridView.TabIndex = 0;
             // 
             // nazivLabel
             // 
             this.nazivLabel.AutoSize = true;
             this.nazivLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazivLabel.Location = new System.Drawing.Point(12, 16);
-            this.nazivLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nazivLabel.Location = new System.Drawing.Point(9, 13);
             this.nazivLabel.Name = "nazivLabel";
-            this.nazivLabel.Size = new System.Drawing.Size(85, 25);
+            this.nazivLabel.Size = new System.Drawing.Size(64, 18);
             this.nazivLabel.TabIndex = 0;
             this.nazivLabel.Text = "NAZIV";
             // 
+            // ukupnoLabel
+            // 
+            this.ukupnoLabel.AutoSize = true;
+            this.ukupnoLabel.Location = new System.Drawing.Point(655, 385);
+            this.ukupnoLabel.Name = "ukupnoLabel";
+            this.ukupnoLabel.Size = new System.Drawing.Size(48, 13);
+            this.ukupnoLabel.TabIndex = 5;
+            this.ukupnoLabel.Text = "Ukupno:";
+            // 
+            // ukupnoTextBox
+            // 
+            this.ukupnoTextBox.Enabled = false;
+            this.ukupnoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ukupnoTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ukupnoTextBox.Location = new System.Drawing.Point(709, 380);
+            this.ukupnoTextBox.Name = "ukupnoTextBox";
+            this.ukupnoTextBox.Size = new System.Drawing.Size(79, 23);
+            this.ukupnoTextBox.TabIndex = 6;
+            this.ukupnoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ListaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 549);
+            this.ClientSize = new System.Drawing.Size(800, 446);
+            this.Controls.Add(this.ukupnoTextBox);
+            this.Controls.Add(this.ukupnoLabel);
             this.Controls.Add(this.nazivLabel);
             this.Controls.Add(this.preimenujButton);
             this.Controls.Add(this.ukloniButton);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.povratakButton);
             this.Controls.Add(this.namirniceDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListaForm";
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.ListaForm_Load);
@@ -132,5 +149,7 @@ namespace WareHome
         private System.Windows.Forms.Button povratakButton;
         private System.Windows.Forms.DataGridView namirniceDataGridView;
         private System.Windows.Forms.Label nazivLabel;
+        private System.Windows.Forms.Label ukupnoLabel;
+        private System.Windows.Forms.TextBox ukupnoTextBox;
     }
 }

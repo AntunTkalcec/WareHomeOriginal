@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.ListaZaKupovinu;
+using WareHome_Logic;
 
 namespace WareHome
 {
@@ -42,20 +44,75 @@ namespace WareHome
 
         private void OsvjeziListu()
         {
-            namirniceNaListi = null;
-            namirniceNaListi = NamirnicaNaListiRepository.DohvatiPopisNamirnica(odabranaLista);
-            namirniceDataGridView.DataSource = null;
-            namirniceDataGridView.DataSource = namirniceNaListi;
+            if (nazivLabel.Text == "[WH] Potrošene namirnice")
+            {
+                nazivLabel.Text = "[WH] Potrošene namirnice - automatska lista";
+                namirniceNaListi = null;
+                namirniceNaListi = DohvatiPotrošeneNamirnice(ListaZaKupovinuRepository.trenutniKorisnik);
+                namirniceDataGridView.DataSource = null;
+                namirniceDataGridView.DataSource = namirniceNaListi;
+                preimenujButton.Visible = false;
+                ukloniButton.Visible = false;
+                dodajButton.Visible = false;
+                ukupnoLabel.Visible = true;
+                ukupnoTextBox.Visible = true;
+
+                decimal ukupno = 0;
+                foreach (var item in namirniceNaListi)
+                {
+                    ukupno += decimal.Parse(item.CijenaNamirnice.ToString()) * decimal.Parse(item.KoličinaNamirnice.ToString());
+                }
+                ukupnoTextBox.Text = ukupno/100 + " kn";
+            }
+            else
+            {
+                nazivLabel.Text = odabranaLista.NazivListe;
+                namirniceNaListi = null;
+                namirniceNaListi = NamirnicaNaListiRepository.DohvatiPopisNamirnica(odabranaLista);
+                namirniceDataGridView.DataSource = null;
+                namirniceDataGridView.DataSource = namirniceNaListi;
+                preimenujButton.Visible = true;
+                ukloniButton.Visible = true;
+                dodajButton.Visible = true;
+                ukupnoLabel.Visible = false;
+                ukupnoTextBox.Visible = false;
+            }
             namirniceDataGridView.Columns["IdNamirnice"].Visible = false;
             namirniceDataGridView.Columns["ListaNamirnice"].Visible = false;
+            
             namirniceDataGridView.Columns["NazivNamirnice"].ReadOnly = true;
             namirniceDataGridView.Columns["KoličinaNamirnice"].ReadOnly = true;
             namirniceDataGridView.Columns["CijenaNamirnice"].ReadOnly = true;
             namirniceDataGridView.Columns["TrgovinaNamirnice"].ReadOnly = true;
+
             namirniceDataGridView.Columns["NazivNamirnice"].HeaderText = "Naziv";
+            namirniceDataGridView.Columns["NazivNamirnice"].Width = 150;
             namirniceDataGridView.Columns["KoličinaNamirnice"].HeaderText = "Količina";
+            namirniceDataGridView.Columns["KoličinaNamirnice"].Width = 100;
             namirniceDataGridView.Columns["CijenaNamirnice"].HeaderText = "Cijena";
+            namirniceDataGridView.Columns["CijenaNamirnice"].Width = 100;
             namirniceDataGridView.Columns["TrgovinaNamirnice"].HeaderText = "Trgovina";
+            namirniceDataGridView.Columns["TrgovinaNamirnice"].Width = 150;
+        }
+
+        private List<NamirnicaNaListi> DohvatiPotrošeneNamirnice(Korisnik trenutniKorisnik)
+        {
+            List<Namirnica> namirnice = null;
+            Database.Instance.Connect();
+            namirnice = NamirnicaRepository.DohvatiNamirnice(trenutniKorisnik.Domacinstvo);
+            Database.Instance.Disconnect();
+            List<NamirnicaNaListi> neoptimalno = null;
+            neoptimalno = new List<NamirnicaNaListi>();
+            foreach (var item in namirnice)
+            {
+                if (item.DostupnaKolicina < item.OptimalnaKolicina)
+                {
+                    float kolicina = item.OptimalnaKolicina - item.DostupnaKolicina;
+                    NamirnicaNaListi potrošena = new NamirnicaNaListi(0, odabranaLista.IdListe, item.NazivNamirnice, kolicina.ToString(), item.Cijena, item.Ducan);
+                    neoptimalno.Add(potrošena);
+                }
+            }
+            return neoptimalno;
         }
 
         private void preimenujButton_Click(object sender, EventArgs e)
