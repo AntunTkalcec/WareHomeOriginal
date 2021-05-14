@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dogadaj.cs" />
+    <Compile Include="DogadajRepository.cs" />
     <Compile Include="Domacinstvo.cs" />
     <Compile Include="DomacinstvoRepository.cs" />
     <Compile Include="Iznimke\WareHomeException.cs" />

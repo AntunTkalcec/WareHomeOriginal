@@ -80,6 +80,8 @@
     <Compile Include="Models\ListaZaKupovinu\ListaZaKupovinu.cs" />
     <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListi.cs" />
     <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListiRepository.cs" />
+    <Compile Include="Models\PredviđanjePotrošnje\PredviđanjePotrošnjeRepository.cs" />
+    <Compile Include="Models\PredviđanjePotrošnje\PredviđenaPotrošnja.cs" />
     <Compile Include="Models\Raspored\RasporedRepository.cs" />
     <Compile Include="NovaListaForm.cs">
       <SubType>Form</SubType>

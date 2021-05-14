@@ -61,7 +61,7 @@ namespace WareHome
                 NamirnicaRepository.Spremi(trenutnaNamirnica);
                 if (novaVrijednost < staraVrijednost)
                 {
-                    Dogadaj.Spremi(trenutnaNamirnica, novaVrijednost - staraVrijednost);
+                    DogadajRepository.Spremi(trenutnaNamirnica, novaVrijednost - staraVrijednost);
                 }
                 Database.Instance.Disconnect();
                 Close();
