@@ -44,12 +44,13 @@ namespace WareHome
 
         private void OsvjeziListu()
         {
+            namirniceNaListi = null;
+            namirniceDataGridView.DataSource = null;
+
             if (nazivLabel.Text == "[WH] Potrošene namirnice")
             {
                 nazivLabel.Text = "[WH] Potrošene namirnice - automatska lista";
-                namirniceNaListi = null;
                 namirniceNaListi = DohvatiPotrošeneNamirnice(ListaZaKupovinuRepository.trenutniKorisnik);
-                namirniceDataGridView.DataSource = null;
                 namirniceDataGridView.DataSource = namirniceNaListi;
                 preimenujButton.Visible = false;
                 ukloniButton.Visible = false;
@@ -60,16 +61,17 @@ namespace WareHome
                 decimal ukupno = 0;
                 foreach (var item in namirniceNaListi)
                 {
-                    ukupno += decimal.Parse(item.CijenaNamirnice.ToString()) * decimal.Parse(item.KoličinaNamirnice.ToString());
+                    if (item.CijenaNamirnice != null && item.KoličinaNamirnice != null)
+                    {
+                        ukupno += decimal.Parse(item.CijenaNamirnice.ToString()) * decimal.Parse(item.KoličinaNamirnice.ToString());
+                    }
                 }
-                ukupnoTextBox.Text = ukupno/100 + " kn";
+                ukupnoTextBox.Text = ukupno / 100 + " kn";
             }
             else
             {
                 nazivLabel.Text = odabranaLista.NazivListe;
-                namirniceNaListi = null;
                 namirniceNaListi = NamirnicaNaListiRepository.DohvatiPopisNamirnica(odabranaLista);
-                namirniceDataGridView.DataSource = null;
                 namirniceDataGridView.DataSource = namirniceNaListi;
                 preimenujButton.Visible = true;
                 ukloniButton.Visible = true;

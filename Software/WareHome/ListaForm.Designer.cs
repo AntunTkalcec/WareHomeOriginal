@@ -102,7 +102,8 @@ namespace WareHome
             // ukupnoLabel
             // 
             this.ukupnoLabel.AutoSize = true;
-            this.ukupnoLabel.Location = new System.Drawing.Point(655, 385);
+            this.ukupnoLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ukupnoLabel.Location = new System.Drawing.Point(639, 411);
             this.ukupnoLabel.Name = "ukupnoLabel";
             this.ukupnoLabel.Size = new System.Drawing.Size(48, 13);
             this.ukupnoLabel.TabIndex = 5;
@@ -110,10 +111,11 @@ namespace WareHome
             // 
             // ukupnoTextBox
             // 
+            this.ukupnoTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ukupnoTextBox.Enabled = false;
             this.ukupnoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ukupnoTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ukupnoTextBox.Location = new System.Drawing.Point(709, 380);
+            this.ukupnoTextBox.Location = new System.Drawing.Point(693, 406);
             this.ukupnoTextBox.Name = "ukupnoTextBox";
             this.ukupnoTextBox.Size = new System.Drawing.Size(79, 23);
             this.ukupnoTextBox.TabIndex = 6;
