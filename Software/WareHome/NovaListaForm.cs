@@ -66,14 +66,14 @@ namespace WareHome
                 ListaZaKupovinuRepository.PreimenujListu(preimenujListu, naziv, privatna, lozinka);
                 Close();
             }
-            else if (naziv != "")
+            else if (naziv != "" && naziv.Length <=30)
             {
                 ListaZaKupovinuRepository.DodajListu(naziv, privatna, lozinka);
                 Close();
             }
             else
             {
-                MessageBox.Show("Unesite naziv liste!");
+                MessageBox.Show("Unesite naziv liste (do 30 znakova)!");
             }
         }
 
