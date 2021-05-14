@@ -1,5 +1,4 @@
-﻿using DatabaseAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace WareHome_Logic
 {
-    public static class Dogadaj
+    public class Dogadaj
     {
-        public static int Spremi(Namirnica namirnica, float promjena)
+        public int Dogadaj_id { get; set; }
+        public int Namirnica_id { get; set; }
+        public float Promjena { get; set; }
+        public DateTime Datum_dogadaja { get; set; }
+        public Dogadaj()
         {
-            string sql = "";
-            if (namirnica.Identifikator != 0)
-            {
-                sql = $"INSERT INTO Dogadaj (id_namirnice, promjena, datum_dogadaja) VALUES ({namirnica.Identifikator}, {promjena}, '{namirnica.DatumZadnjePromjene:yyyyMMdd}')";
-            }
-            return Database.Instance.ExecuteCommand(sql);
+
         }
     }
 }
