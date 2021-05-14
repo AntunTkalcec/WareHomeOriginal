@@ -258,6 +258,7 @@ namespace WareHome
             this.exitAppButton.TabIndex = 43;
             this.exitAppButton.Text = "X";
             this.exitAppButton.UseVisualStyleBackColor = false;
+            this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click);
             // 
             // minimizeButton
             // 
