@@ -69,18 +69,12 @@ namespace WareHome.Models.PredviđanjePotrošnje
                 if (količina != 0)
                 {
                     trajanje = IzračunajTrajanje(ukupnoPotrošeno, posljednjaPromjena);
+                    trajanje = količina/trajanje;
+                    float zaokruzeno = (int)(trajanje);
 
-                    if (trajanje < 0)
+                    if (trajanje - zaokruzeno != 0 && trajanje - zaokruzeno > 0 && trajanje - zaokruzeno < 1)
                     {
-                        trajanje += 1;
-                    }
-
-                    trajanje *= količina;
-
-                    float trajanjeTrunc = float.Parse(decimal.Truncate(decimal.Parse(trajanje.ToString())).ToString());
-                    if ((trajanje-trajanjeTrunc) > 0)
-                    {
-                        trajanje = trajanjeTrunc + 1;
+                        trajanje = zaokruzeno + 1;
                     }
                 }
 
@@ -100,6 +94,10 @@ namespace WareHome.Models.PredviđanjePotrošnje
 
         private static float IzračunajTrajanje(float ukupnoPotrošeno, DateTime posljednjaPromjena)
         {
+            if (ukupnoPotrošeno == 0)
+            {
+                ukupnoPotrošeno++;
+            }
             int brojDana = (int)(DateTime.Today - posljednjaPromjena).TotalDays;
             if (brojDana <= 0)
             {
