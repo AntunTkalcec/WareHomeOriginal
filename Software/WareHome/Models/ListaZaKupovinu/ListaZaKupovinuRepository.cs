@@ -43,6 +43,7 @@ namespace WareHome.Models.ListaZaKupovinu
                     PopisLista.Add(listaZaKupovinu);
                 }
             }
+            Database.Instance.Disconnect();
         }
 
         public static List<ListaZaKupovinu> DohvatiPopisLista(Korisnik korisnik)
