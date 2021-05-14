@@ -259,5 +259,11 @@ namespace WareHome
             }
             return rezultat;
         }
+
+        private void TestiranjeButton_Click(object sender, EventArgs e)
+        {
+            TestiranjeForm testiranje = new TestiranjeForm(trenutniKorisnik);
+            testiranje.ShowDialog();
+        }
     }
 }
