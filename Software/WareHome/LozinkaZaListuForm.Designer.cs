@@ -34,14 +34,15 @@ namespace WareHome
             this.odustaniButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.nazivTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lozinkaTextBox
             // 
-            this.lozinkaTextBox.Location = new System.Drawing.Point(16, 82);
+            this.lozinkaTextBox.Location = new System.Drawing.Point(9, 87);
             this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
-            this.lozinkaTextBox.Size = new System.Drawing.Size(189, 22);
+            this.lozinkaTextBox.Size = new System.Drawing.Size(208, 22);
             this.lozinkaTextBox.TabIndex = 1;
             // 
             // prikažiButton
@@ -69,35 +70,48 @@ namespace WareHome
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 9);
+            this.label2.Location = new System.Drawing.Point(6, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 17);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Unesite lozinku za listu";
+            this.label2.Text = "Lozinka:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 44);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Naziv";
+            this.label1.Text = "Naziv liste:";
+            // 
+            // nazivTextBox
+            // 
+            this.nazivTextBox.Enabled = false;
+            this.nazivTextBox.Location = new System.Drawing.Point(9, 30);
+            this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nazivTextBox.Name = "nazivTextBox";
+            this.nazivTextBox.Size = new System.Drawing.Size(208, 22);
+            this.nazivTextBox.TabIndex = 4;
             // 
             // LozinkaZaListuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(232, 187);
+            this.Controls.Add(this.nazivTextBox);
             this.Controls.Add(this.lozinkaTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.prikažiButton);
             this.Controls.Add(this.odustaniButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LozinkaZaListuForm";
-            this.Text = "WareHome";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Autentikacija";
             this.Load += new System.EventHandler(this.LozinkaZaListuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,5 +125,6 @@ namespace WareHome
         private System.Windows.Forms.Button odustaniButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nazivTextBox;
     }
 }
