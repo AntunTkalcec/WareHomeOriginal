@@ -132,7 +132,7 @@ namespace WareHome
             this.ukupnoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ukupnoLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ukupnoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.ukupnoLabel.Location = new System.Drawing.Point(578, 468);
+            this.ukupnoLabel.Location = new System.Drawing.Point(601, 468);
             this.ukupnoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ukupnoLabel.Name = "ukupnoLabel";
             this.ukupnoLabel.Size = new System.Drawing.Size(91, 23);
@@ -145,7 +145,7 @@ namespace WareHome
             this.ukupnoTextBox.Enabled = false;
             this.ukupnoTextBox.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ukupnoTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.ukupnoTextBox.Location = new System.Drawing.Point(668, 466);
+            this.ukupnoTextBox.Location = new System.Drawing.Point(691, 466);
             this.ukupnoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ukupnoTextBox.Name = "ukupnoTextBox";
             this.ukupnoTextBox.Size = new System.Drawing.Size(104, 30);

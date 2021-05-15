@@ -24,6 +24,7 @@ namespace WareHome
         public NovaListaForm(ListaZaKupovinu listaZaKupovinu)
         {
             InitializeComponent();
+            preimenujListu = null;
             preimenujListu = listaZaKupovinu;
         }
 
@@ -32,9 +33,11 @@ namespace WareHome
             privatnaCheckBox.Checked = false;
             lozinkaTextBox.Enabled = false;
             lozinkaTextBox.PasswordChar = '*';
+            Text = "Nova lista";
 
             if (preimenujListu != null)
             {
+                Text = "Preimenuj listu";
                 nazivTextBox.Text = preimenujListu.NazivListe;
                 if (preimenujListu.PrivatnaLista)
                 {

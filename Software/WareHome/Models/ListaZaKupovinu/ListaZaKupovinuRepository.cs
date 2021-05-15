@@ -14,6 +14,7 @@ namespace WareHome.Models.ListaZaKupovinu
         public static List<ListaZaKupovinu> PopisLista;
         public static Korisnik trenutniKorisnik;
         public static string NoviNaziv;
+        public static bool NoviNazivSpremljen;
 
         private static void IspuniPopisLista()
         { 
@@ -113,6 +114,7 @@ namespace WareHome.Models.ListaZaKupovinu
             PopisLista = null;
             IspuniPopisLista();
             NoviNaziv = naziv;
+            NoviNazivSpremljen = true;
         }
     }
 }

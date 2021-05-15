@@ -23,7 +23,7 @@ namespace WareHome
             InitializeComponent();
             odabranaLista = odabrana;
             nazivLabel.Text = odabranaLista.NazivListe;
-            Text = odabranaLista.NazivListe;
+            Text = "Lista za kupovinu - " + odabranaLista.NazivListe;
         }        
 
         private void povratakButton_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace WareHome
 
             if (nazivLabel.Text == "[WH] Potrošene namirnice")
             {
-                nazivLabel.Text = "[WH] Potrošene namirnice - automatska lista";
+                nazivLabel.Text = "[WH] Potrošene namirnice (automatska lista)";
                 namirniceNaListi = DohvatiPotrošeneNamirnice(ListaZaKupovinuRepository.trenutniKorisnik);
                 namirniceDataGridView.DataSource = namirniceNaListi;
                 preimenujButton.Visible = false;
@@ -122,7 +122,13 @@ namespace WareHome
         {
             NovaListaForm novaListaForm = new NovaListaForm(odabranaLista);
             novaListaForm.ShowDialog();
-            nazivLabel.Text = ListaZaKupovinuRepository.NoviNaziv;
+            if (ListaZaKupovinuRepository.NoviNazivSpremljen)
+            {
+                odabranaLista.NazivListe = ListaZaKupovinuRepository.NoviNaziv;
+                nazivLabel.Text = ListaZaKupovinuRepository.NoviNaziv;
+            }
+            ListaZaKupovinuRepository.NoviNaziv = null;
+            ListaZaKupovinuRepository.NoviNazivSpremljen = false;
         }
 
         private void ukloniButton_Click(object sender, EventArgs e)
