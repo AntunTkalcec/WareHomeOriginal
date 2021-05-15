@@ -53,6 +53,7 @@ namespace WareHome
                 listeButton.Enabled = false;
                 pdfButton.Enabled = false;
                 rasporedButton.Enabled = false;
+                ispisButton.Enabled = false;
 
                 TestiranjeButton.Enabled = false; //pobrisati nakon uklanjanja TestiranjeForm
             }
@@ -69,6 +70,7 @@ namespace WareHome
                 listeButton.Enabled = true;
                 pdfButton.Enabled = true;
                 rasporedButton.Enabled = true;
+                ispisButton.Enabled = true;
 
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
                 OsvjeziNamirnice();
