@@ -24,6 +24,7 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
         }
 
         private void OsvjeziNamirnice()
@@ -53,7 +54,6 @@ namespace WareHome
                 izradiDomacinstvoButton.Enabled = false;
                 pridruziDomacinstvuButton.Enabled = false;
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
-                korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
                 OsvjeziNamirnice();
             }
         }
