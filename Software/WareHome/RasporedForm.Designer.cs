@@ -46,34 +46,38 @@ namespace WareHome
             // danComboBox
             // 
             this.danComboBox.FormattingEnabled = true;
-            this.danComboBox.Location = new System.Drawing.Point(79, 12);
+            this.danComboBox.Location = new System.Drawing.Point(105, 15);
+            this.danComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.danComboBox.Name = "danComboBox";
-            this.danComboBox.Size = new System.Drawing.Size(144, 21);
+            this.danComboBox.Size = new System.Drawing.Size(191, 24);
             this.danComboBox.TabIndex = 2;
             this.danComboBox.SelectedIndexChanged += new System.EventHandler(this.danComboBox_SelectedIndexChanged);
             // 
             // ponavljanjeComboBox
             // 
             this.ponavljanjeComboBox.FormattingEnabled = true;
-            this.ponavljanjeComboBox.Location = new System.Drawing.Point(120, 66);
+            this.ponavljanjeComboBox.Location = new System.Drawing.Point(160, 81);
+            this.ponavljanjeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ponavljanjeComboBox.Name = "ponavljanjeComboBox";
-            this.ponavljanjeComboBox.Size = new System.Drawing.Size(50, 21);
+            this.ponavljanjeComboBox.Size = new System.Drawing.Size(65, 24);
             this.ponavljanjeComboBox.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(146, 43);
+            this.label1.Location = new System.Drawing.Point(195, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.Size = new System.Drawing.Size(12, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = ":";
             // 
             // spremiButton
             // 
-            this.spremiButton.Location = new System.Drawing.Point(136, 101);
+            this.spremiButton.Location = new System.Drawing.Point(181, 124);
+            this.spremiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.spremiButton.Name = "spremiButton";
-            this.spremiButton.Size = new System.Drawing.Size(73, 34);
+            this.spremiButton.Size = new System.Drawing.Size(97, 42);
             this.spremiButton.TabIndex = 1;
             this.spremiButton.Text = "Spremi";
             this.spremiButton.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@ namespace WareHome
             // 
             // odustaniButton
             // 
-            this.odustaniButton.Location = new System.Drawing.Point(32, 101);
+            this.odustaniButton.Location = new System.Drawing.Point(43, 124);
+            this.odustaniButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.odustaniButton.Name = "odustaniButton";
-            this.odustaniButton.Size = new System.Drawing.Size(73, 34);
+            this.odustaniButton.Size = new System.Drawing.Size(97, 42);
             this.odustaniButton.TabIndex = 6;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
@@ -92,69 +97,76 @@ namespace WareHome
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 15);
+            this.label2.Location = new System.Drawing.Point(57, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dan:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 42);
+            this.label3.Location = new System.Drawing.Point(39, 52);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Vrijeme:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 69);
+            this.label4.Location = new System.Drawing.Point(11, 85);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ponavljanje:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 69);
+            this.label5.Location = new System.Drawing.Point(101, 85);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "svakih";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(176, 69);
+            this.label6.Location = new System.Drawing.Point(235, 85);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(59, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "tjedan/a";
             // 
             // satComboBox
             // 
             this.satComboBox.FormattingEnabled = true;
-            this.satComboBox.Location = new System.Drawing.Point(79, 39);
+            this.satComboBox.Location = new System.Drawing.Point(105, 48);
+            this.satComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.satComboBox.Name = "satComboBox";
-            this.satComboBox.Size = new System.Drawing.Size(65, 21);
+            this.satComboBox.Size = new System.Drawing.Size(85, 24);
             this.satComboBox.TabIndex = 3;
             // 
             // minutaComboBox
             // 
             this.minutaComboBox.FormattingEnabled = true;
-            this.minutaComboBox.Location = new System.Drawing.Point(158, 39);
+            this.minutaComboBox.Location = new System.Drawing.Point(211, 48);
+            this.minutaComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.minutaComboBox.Name = "minutaComboBox";
-            this.minutaComboBox.Size = new System.Drawing.Size(65, 21);
+            this.minutaComboBox.Size = new System.Drawing.Size(85, 24);
             this.minutaComboBox.TabIndex = 4;
             // 
             // RasporedForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 157);
+            this.ClientSize = new System.Drawing.Size(320, 193);
             this.Controls.Add(this.minutaComboBox);
             this.Controls.Add(this.satComboBox);
             this.Controls.Add(this.label6);
@@ -167,8 +179,12 @@ namespace WareHome
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ponavljanjeComboBox);
             this.Controls.Add(this.danComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RasporedForm";
-            this.Text = "WareHome";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Raspored kupovine";
             this.Load += new System.EventHandler(this.RasporedForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
