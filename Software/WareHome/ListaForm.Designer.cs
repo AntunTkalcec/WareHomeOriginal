@@ -46,9 +46,9 @@ namespace WareHome
             this.preimenujButton.FlatAppearance.BorderSize = 0;
             this.preimenujButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.preimenujButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.preimenujButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.preimenujButton.ForeColor = System.Drawing.Color.White;
             this.preimenujButton.Location = new System.Drawing.Point(630, 16);
-            this.preimenujButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.preimenujButton.Margin = new System.Windows.Forms.Padding(4);
             this.preimenujButton.Name = "preimenujButton";
             this.preimenujButton.Size = new System.Drawing.Size(165, 28);
             this.preimenujButton.TabIndex = 4;
@@ -62,9 +62,9 @@ namespace WareHome
             this.ukloniButton.FlatAppearance.BorderSize = 0;
             this.ukloniButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ukloniButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ukloniButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.ukloniButton.ForeColor = System.Drawing.Color.White;
             this.ukloniButton.Location = new System.Drawing.Point(533, 457);
-            this.ukloniButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ukloniButton.Margin = new System.Windows.Forms.Padding(4);
             this.ukloniButton.Name = "ukloniButton";
             this.ukloniButton.Size = new System.Drawing.Size(127, 44);
             this.ukloniButton.TabIndex = 2;
@@ -78,9 +78,9 @@ namespace WareHome
             this.dodajButton.FlatAppearance.BorderSize = 0;
             this.dodajButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dodajButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dodajButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.dodajButton.ForeColor = System.Drawing.Color.White;
             this.dodajButton.Location = new System.Drawing.Point(668, 457);
-            this.dodajButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dodajButton.Margin = new System.Windows.Forms.Padding(4);
             this.dodajButton.Name = "dodajButton";
             this.dodajButton.Size = new System.Drawing.Size(127, 44);
             this.dodajButton.TabIndex = 3;
@@ -94,9 +94,9 @@ namespace WareHome
             this.povratakButton.FlatAppearance.BorderSize = 0;
             this.povratakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.povratakButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.povratakButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.povratakButton.ForeColor = System.Drawing.Color.White;
             this.povratakButton.Location = new System.Drawing.Point(16, 458);
-            this.povratakButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
             this.povratakButton.Name = "povratakButton";
             this.povratakButton.Size = new System.Drawing.Size(127, 44);
             this.povratakButton.TabIndex = 1;
@@ -108,7 +108,7 @@ namespace WareHome
             // 
             this.namirniceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.namirniceDataGridView.Location = new System.Drawing.Point(16, 50);
-            this.namirniceDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.namirniceDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.namirniceDataGridView.Name = "namirniceDataGridView";
             this.namirniceDataGridView.RowHeadersWidth = 25;
             this.namirniceDataGridView.Size = new System.Drawing.Size(779, 400);
@@ -146,7 +146,7 @@ namespace WareHome
             this.ukupnoTextBox.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ukupnoTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.ukupnoTextBox.Location = new System.Drawing.Point(668, 466);
-            this.ukupnoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ukupnoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ukupnoTextBox.Name = "ukupnoTextBox";
             this.ukupnoTextBox.Size = new System.Drawing.Size(104, 30);
             this.ukupnoTextBox.TabIndex = 6;
@@ -168,7 +168,7 @@ namespace WareHome
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListaForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

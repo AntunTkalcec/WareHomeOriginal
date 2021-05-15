@@ -55,7 +55,7 @@ namespace WareHome
             this.povratakButton.FlatAppearance.BorderSize = 0;
             this.povratakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.povratakButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.povratakButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.povratakButton.ForeColor = System.Drawing.Color.White;
             this.povratakButton.Location = new System.Drawing.Point(16, 323);
             this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
             this.povratakButton.Name = "povratakButton";
@@ -70,7 +70,7 @@ namespace WareHome
             this.prikažiButton.FlatAppearance.BorderSize = 0;
             this.prikažiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prikažiButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prikažiButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.prikažiButton.ForeColor = System.Drawing.Color.White;
             this.prikažiButton.Location = new System.Drawing.Point(524, 323);
             this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
@@ -85,7 +85,7 @@ namespace WareHome
             this.kreirajButton.FlatAppearance.BorderSize = 0;
             this.kreirajButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kreirajButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kreirajButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.kreirajButton.ForeColor = System.Drawing.Color.White;
             this.kreirajButton.Location = new System.Drawing.Point(390, 323);
             this.kreirajButton.Margin = new System.Windows.Forms.Padding(4);
             this.kreirajButton.Name = "kreirajButton";
@@ -100,7 +100,7 @@ namespace WareHome
             this.obrišiButton.FlatAppearance.BorderSize = 0;
             this.obrišiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.obrišiButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.obrišiButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.obrišiButton.ForeColor = System.Drawing.Color.White;
             this.obrišiButton.Location = new System.Drawing.Point(255, 323);
             this.obrišiButton.Margin = new System.Windows.Forms.Padding(4);
             this.obrišiButton.Name = "obrišiButton";
