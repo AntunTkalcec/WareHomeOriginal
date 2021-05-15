@@ -75,7 +75,7 @@ namespace WareHome
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(89, 153);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(157, 27);
+            this.passwordTextBox.Size = new System.Drawing.Size(157, 32);
             this.passwordTextBox.TabIndex = 2;
             // 
             // lozinkaLabel
@@ -84,7 +84,7 @@ namespace WareHome
             this.lozinkaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.lozinkaLabel.Location = new System.Drawing.Point(85, 129);
             this.lozinkaLabel.Name = "lozinkaLabel";
-            this.lozinkaLabel.Size = new System.Drawing.Size(70, 21);
+            this.lozinkaLabel.Size = new System.Drawing.Size(85, 23);
             this.lozinkaLabel.TabIndex = 17;
             this.lozinkaLabel.Text = "Lozinka:";
             // 
@@ -92,7 +92,7 @@ namespace WareHome
             // 
             this.usernameTextBox.Location = new System.Drawing.Point(89, 99);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(157, 27);
+            this.usernameTextBox.Size = new System.Drawing.Size(157, 32);
             this.usernameTextBox.TabIndex = 1;
             // 
             // korimeLabel
@@ -101,7 +101,7 @@ namespace WareHome
             this.korimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.korimeLabel.Location = new System.Drawing.Point(85, 75);
             this.korimeLabel.Name = "korimeLabel";
-            this.korimeLabel.Size = new System.Drawing.Size(120, 21);
+            this.korimeLabel.Size = new System.Drawing.Size(149, 23);
             this.korimeLabel.TabIndex = 15;
             this.korimeLabel.Text = "Korisničko ime:";
             // 
@@ -113,7 +113,7 @@ namespace WareHome
             this.opisLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.opisLabel2.Location = new System.Drawing.Point(57, 26);
             this.opisLabel2.Name = "opisLabel2";
-            this.opisLabel2.Size = new System.Drawing.Size(222, 21);
+            this.opisLabel2.Size = new System.Drawing.Size(275, 23);
             this.opisLabel2.TabIndex = 14;
             this.opisLabel2.Text = "Unesite podatke za prijavu:";
             // 
