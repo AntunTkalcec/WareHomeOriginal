@@ -23,6 +23,7 @@ namespace WareHome
             InitializeComponent();
             odabranaLista = odabrana;
             nazivLabel.Text = odabranaLista.NazivListe;
+            Text = odabranaLista.NazivListe;
         }        
 
         private void povratakButton_Click(object sender, EventArgs e)
@@ -88,13 +89,13 @@ namespace WareHome
             namirniceDataGridView.Columns["TrgovinaNamirnice"].ReadOnly = true;
 
             namirniceDataGridView.Columns["NazivNamirnice"].HeaderText = "Naziv";
-            namirniceDataGridView.Columns["NazivNamirnice"].Width = 150;
+            namirniceDataGridView.Columns["NazivNamirnice"].Width = 250;
             namirniceDataGridView.Columns["KoličinaNamirnice"].HeaderText = "Količina";
-            namirniceDataGridView.Columns["KoličinaNamirnice"].Width = 100;
+            namirniceDataGridView.Columns["KoličinaNamirnice"].Width = 125;
             namirniceDataGridView.Columns["CijenaNamirnice"].HeaderText = "Cijena";
-            namirniceDataGridView.Columns["CijenaNamirnice"].Width = 100;
+            namirniceDataGridView.Columns["CijenaNamirnice"].Width = 125;
             namirniceDataGridView.Columns["TrgovinaNamirnice"].HeaderText = "Trgovina";
-            namirniceDataGridView.Columns["TrgovinaNamirnice"].Width = 150;
+            namirniceDataGridView.Columns["TrgovinaNamirnice"].Width = 250;
         }
 
         private List<NamirnicaNaListi> DohvatiPotrošeneNamirnice(Korisnik trenutniKorisnik)
