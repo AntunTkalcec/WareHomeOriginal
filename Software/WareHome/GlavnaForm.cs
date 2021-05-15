@@ -140,12 +140,13 @@ namespace WareHome
 
         private void pdfButton_Click(object sender, EventArgs e)
         {
+            string naziv = $"WH stanje namirnica ({DateTime.Today.Date.ToShortDateString()}).pdf";
             if (namirniceDGV.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog
                 {
                     Filter = "PDF (*.pdf)|*.pdf",
-                    FileName = "Warehome stanje namirnica.pdf"
+                    FileName = naziv.ToString()
                 };
                 bool greska = false;
                 if (sfd.ShowDialog() == DialogResult.Cancel)
