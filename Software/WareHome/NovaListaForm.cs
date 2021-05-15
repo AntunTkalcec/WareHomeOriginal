@@ -61,19 +61,35 @@ namespace WareHome
                 lozinka = null;
             }
 
-            if (preimenujListu != null)
+            if (naziv != "" && naziv.Length <=30 && privatna == false)
             {
-                ListaZaKupovinuRepository.PreimenujListu(preimenujListu, naziv, privatna, lozinka);
-                Close();
+                if (preimenujListu != null)
+                {
+                    ListaZaKupovinuRepository.PreimenujListu(preimenujListu, naziv, privatna, lozinka);
+                    Close();
+                }
+                else
+                {
+                    ListaZaKupovinuRepository.DodajListu(naziv, privatna, lozinka);
+                    Close();
+                }
             }
-            else if (naziv != "" && naziv.Length <=30)
+            else if (naziv != "" && naziv.Length <= 30 && privatna == true && lozinka.Length <= 30)
             {
-                ListaZaKupovinuRepository.DodajListu(naziv, privatna, lozinka);
-                Close();
+                if (preimenujListu != null)
+                {
+                    ListaZaKupovinuRepository.PreimenujListu(preimenujListu, naziv, privatna, lozinka);
+                    Close();
+                }
+                else
+                {
+                    ListaZaKupovinuRepository.DodajListu(naziv, privatna, lozinka);
+                    Close();
+                }
             }
             else
             {
-                MessageBox.Show("Unesite naziv liste (do 30 znakova)!");
+                MessageBox.Show("Provjerite uneseni naziv liste (max. 30 znakova) i lozinku liste (max. 30 znakova)!");
             }
         }
 
