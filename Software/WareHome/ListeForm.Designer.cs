@@ -47,6 +47,7 @@ namespace WareHome
             this.listeDataGridView.ShowEditingIcon = false;
             this.listeDataGridView.Size = new System.Drawing.Size(477, 260);
             this.listeDataGridView.TabIndex = 0;
+            this.listeDataGridView.SelectionChanged += new System.EventHandler(this.listeDataGridView_SelectionChanged);
             // 
             // povratakButton
             // 

@@ -89,6 +89,7 @@ namespace WareHome
             ProvjeriListuZaNeoptimalno(listeZaKupovinu);
             listeDataGridView.DataSource = null;
             listeDataGridView.DataSource = listeZaKupovinu;
+            ProvjeriOznačeniRed();
             listeDataGridView.Columns["LozinkaListe"].Visible = false;
             listeDataGridView.Columns["IdListe"].Visible = false;
             listeDataGridView.Columns["Domacinstvo"].Visible = false;
@@ -131,6 +132,26 @@ namespace WareHome
                 ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
                 ListaZaKupovinuRepository.UkloniListu(obriši);
                 OsvjeziListu();
+            }
+        }
+
+        private void listeDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            ProvjeriOznačeniRed();
+        }
+
+        private void ProvjeriOznačeniRed()
+        {
+            if (listeDataGridView.CurrentRow != null)
+            {
+                if ((listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu).NazivListe == "[WH] Potrošene namirnice")
+                {
+                    obrišiButton.Enabled = false;
+                }
+                else
+                {
+                    obrišiButton.Enabled = true;
+                }
             }
         }
     }
