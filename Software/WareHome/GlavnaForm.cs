@@ -99,16 +99,22 @@ namespace WareHome
 
         private void obrisiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            Database.Instance.Connect();
-            NamirnicaRepository.Obrisi(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
-            Database.Instance.Disconnect();
+            if (namirniceDGV.CurrentRow != null)
+            {
+                Database.Instance.Connect();
+                NamirnicaRepository.Obrisi(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
+                Database.Instance.Disconnect();
+            }
             OsvjeziNamirnice();
         }
 
         private void promijeniNamirnicuButton_Click(object sender, EventArgs e)
         {
-            PromijeniNamirnicuForm promijeniNamirnicuForm = new PromijeniNamirnicuForm(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
-            promijeniNamirnicuForm.ShowDialog();
+            if (namirniceDGV.CurrentRow != null)
+            {
+                PromijeniNamirnicuForm promijeniNamirnicuForm = new PromijeniNamirnicuForm(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
+                promijeniNamirnicuForm.ShowDialog();
+            }
             OsvjeziNamirnice();
         }
 
