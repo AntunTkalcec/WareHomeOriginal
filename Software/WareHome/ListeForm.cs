@@ -69,7 +69,7 @@ namespace WareHome
                 else
                 {
                     ListaForm listaForm = new ListaForm(odabrana);
-                    listaForm.Show();
+                    listaForm.ShowDialog();
                     OsvjeziListu();
                 }
             }
@@ -94,7 +94,8 @@ namespace WareHome
             listeDataGridView.Columns["IdListe"].Visible = false;
             listeDataGridView.Columns["Domacinstvo"].Visible = false;
             listeDataGridView.Columns["PrivatnaLista"].ReadOnly = true;
-            listeDataGridView.Columns["NazivListe"].Width = 180;
+            listeDataGridView.Columns["NazivListe"].Width = 420;
+            listeDataGridView.Columns["PrivatnaLista"].Width = 150;
             listeDataGridView.Columns["NazivListe"].ReadOnly = true;
             listeDataGridView.Columns["PrivatnaLista"].HeaderText = "Privatna lista";
             listeDataGridView.Columns["NazivListe"].HeaderText = "Naziv liste";

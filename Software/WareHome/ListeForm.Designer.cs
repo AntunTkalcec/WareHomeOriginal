@@ -41,19 +41,25 @@ namespace WareHome
             // listeDataGridView
             // 
             this.listeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listeDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.listeDataGridView.Location = new System.Drawing.Point(16, 15);
+            this.listeDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.listeDataGridView.Name = "listeDataGridView";
-            this.listeDataGridView.RowHeadersWidth = 51;
+            this.listeDataGridView.RowHeadersWidth = 25;
             this.listeDataGridView.ShowEditingIcon = false;
-            this.listeDataGridView.Size = new System.Drawing.Size(477, 260);
+            this.listeDataGridView.Size = new System.Drawing.Size(600, 300);
             this.listeDataGridView.TabIndex = 0;
             this.listeDataGridView.SelectionChanged += new System.EventHandler(this.listeDataGridView_SelectionChanged);
             // 
             // povratakButton
             // 
-            this.povratakButton.Location = new System.Drawing.Point(12, 278);
+            this.povratakButton.FlatAppearance.BorderSize = 0;
+            this.povratakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.povratakButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.povratakButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.povratakButton.Location = new System.Drawing.Point(16, 323);
+            this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
             this.povratakButton.Name = "povratakButton";
-            this.povratakButton.Size = new System.Drawing.Size(95, 36);
+            this.povratakButton.Size = new System.Drawing.Size(108, 33);
             this.povratakButton.TabIndex = 1;
             this.povratakButton.Text = "Povratak";
             this.povratakButton.UseVisualStyleBackColor = true;
@@ -61,9 +67,14 @@ namespace WareHome
             // 
             // prikažiButton
             // 
-            this.prikažiButton.Location = new System.Drawing.Point(394, 278);
+            this.prikažiButton.FlatAppearance.BorderSize = 0;
+            this.prikažiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prikažiButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prikažiButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.prikažiButton.Location = new System.Drawing.Point(524, 323);
+            this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
-            this.prikažiButton.Size = new System.Drawing.Size(95, 36);
+            this.prikažiButton.Size = new System.Drawing.Size(92, 33);
             this.prikažiButton.TabIndex = 4;
             this.prikažiButton.Text = "Prikaži";
             this.prikažiButton.UseVisualStyleBackColor = true;
@@ -71,9 +82,14 @@ namespace WareHome
             // 
             // kreirajButton
             // 
-            this.kreirajButton.Location = new System.Drawing.Point(293, 278);
+            this.kreirajButton.FlatAppearance.BorderSize = 0;
+            this.kreirajButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kreirajButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kreirajButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.kreirajButton.Location = new System.Drawing.Point(390, 323);
+            this.kreirajButton.Margin = new System.Windows.Forms.Padding(4);
             this.kreirajButton.Name = "kreirajButton";
-            this.kreirajButton.Size = new System.Drawing.Size(95, 36);
+            this.kreirajButton.Size = new System.Drawing.Size(92, 33);
             this.kreirajButton.TabIndex = 3;
             this.kreirajButton.Text = "Kreiraj";
             this.kreirajButton.UseVisualStyleBackColor = true;
@@ -81,9 +97,14 @@ namespace WareHome
             // 
             // obrišiButton
             // 
-            this.obrišiButton.Location = new System.Drawing.Point(192, 278);
+            this.obrišiButton.FlatAppearance.BorderSize = 0;
+            this.obrišiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.obrišiButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.obrišiButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.obrišiButton.Location = new System.Drawing.Point(255, 323);
+            this.obrišiButton.Margin = new System.Windows.Forms.Padding(4);
             this.obrišiButton.Name = "obrišiButton";
-            this.obrišiButton.Size = new System.Drawing.Size(95, 36);
+            this.obrišiButton.Size = new System.Drawing.Size(92, 33);
             this.obrišiButton.TabIndex = 2;
             this.obrišiButton.Text = "Obriši";
             this.obrišiButton.UseVisualStyleBackColor = true;
@@ -96,26 +117,33 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nisteDioDomacinstvaLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nisteDioDomacinstvaLabel.ForeColor = System.Drawing.Color.Red;
-            this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(95, 130);
+            this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(127, 160);
+            this.nisteDioDomacinstvaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nisteDioDomacinstvaLabel.Name = "nisteDioDomacinstvaLabel";
-            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(313, 33);
+            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(393, 40);
             this.nisteDioDomacinstvaLabel.TabIndex = 25;
             this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
             this.nisteDioDomacinstvaLabel.Visible = false;
             // 
             // ListeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 334);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(636, 373);
             this.Controls.Add(this.nisteDioDomacinstvaLabel);
             this.Controls.Add(this.obrišiButton);
             this.Controls.Add(this.kreirajButton);
             this.Controls.Add(this.prikažiButton);
             this.Controls.Add(this.povratakButton);
             this.Controls.Add(this.listeDataGridView);
+            this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListeForm";
-            this.Text = "WareHome";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Liste za kupovinu";
             this.Load += new System.EventHandler(this.ListeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listeDataGridView)).EndInit();
             this.ResumeLayout(false);
