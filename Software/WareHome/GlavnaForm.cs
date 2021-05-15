@@ -45,14 +45,31 @@ namespace WareHome
             {
                 MessageBox.Show("Ne pripadate nikakvom domaćinstvu. Molimo, izradite novo domaćinstvo ili se pridružite postojećem.");
                 nisteDioDomacinstvaLabel.Visible = true;
+                izradiDomacinstvoButton.Visible = true;
+                pridruziDomacinstvuButton.Visible = true;
                 dodajNamirnicuButton.Enabled = false;
                 promijeniNamirnicuButton.Enabled = false;
                 obrisiNamirnicuButton.Enabled = false;
+                listeButton.Enabled = false;
+                pdfButton.Enabled = false;
+                rasporedButton.Enabled = false;
+
+                TestiranjeButton.Enabled = false; //pobrisati nakon uklanjanja TestiranjeForm
             }
             else
             {
-                izradiDomacinstvoButton.Enabled = false;
-                pridruziDomacinstvuButton.Enabled = false;
+                TestiranjeButton.Enabled = true; //pobrisati nakon uklanjanja TestiranjeForm
+
+                nisteDioDomacinstvaLabel.Visible = false;
+                izradiDomacinstvoButton.Visible = false;
+                pridruziDomacinstvuButton.Visible = false;
+                dodajNamirnicuButton.Enabled = true;
+                promijeniNamirnicuButton.Enabled = true;
+                obrisiNamirnicuButton.Enabled = true;
+                listeButton.Enabled = true;
+                pdfButton.Enabled = true;
+                rasporedButton.Enabled = true;
+
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
                 OsvjeziNamirnice();
             }
