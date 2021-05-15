@@ -53,6 +53,7 @@ namespace WareHome
                 izradiDomacinstvoButton.Enabled = false;
                 pridruziDomacinstvuButton.Enabled = false;
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
+                korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
                 OsvjeziNamirnice();
             }
         }
@@ -77,7 +78,7 @@ namespace WareHome
         private void listeButton_Click(object sender, EventArgs e)
         {
             ListeForm listeForm = new ListeForm(trenutniKorisnik);
-            listeForm.Show();
+            listeForm.ShowDialog();
         }
 
         private void exitAppButton_Click_1(object sender, EventArgs e)
