@@ -40,7 +40,7 @@ namespace WareHome
             // lozinkaTextBox
             // 
             this.lozinkaTextBox.Location = new System.Drawing.Point(9, 87);
-            this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
             this.lozinkaTextBox.Size = new System.Drawing.Size(208, 22);
             this.lozinkaTextBox.TabIndex = 1;
@@ -48,7 +48,7 @@ namespace WareHome
             // prikažiButton
             // 
             this.prikažiButton.Location = new System.Drawing.Point(117, 136);
-            this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
+            this.prikažiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(100, 28);
             this.prikažiButton.TabIndex = 2;
@@ -59,7 +59,7 @@ namespace WareHome
             // odustaniButton
             // 
             this.odustaniButton.Location = new System.Drawing.Point(9, 136);
-            this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
+            this.odustaniButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(100, 28);
             this.odustaniButton.TabIndex = 3;
@@ -91,15 +91,14 @@ namespace WareHome
             // 
             this.nazivTextBox.Enabled = false;
             this.nazivTextBox.Location = new System.Drawing.Point(9, 30);
-            this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nazivTextBox.Name = "nazivTextBox";
             this.nazivTextBox.Size = new System.Drawing.Size(208, 22);
             this.nazivTextBox.TabIndex = 4;
             // 
             // LozinkaZaListuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(232, 187);
             this.Controls.Add(this.nazivTextBox);
             this.Controls.Add(this.lozinkaTextBox);
