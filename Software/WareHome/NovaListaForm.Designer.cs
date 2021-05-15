@@ -130,8 +130,11 @@ namespace WareHome
             this.Controls.Add(this.nazivTextBox);
             this.Controls.Add(this.odustaniButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NovaListaForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.NovaListaForm_Load);
             this.ResumeLayout(false);

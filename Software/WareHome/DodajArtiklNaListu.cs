@@ -32,8 +32,15 @@ namespace WareHome
             string cijena = cijenaTextBox.Text;
             string količina = kolicinaTextBox.Text;
             string trgovina = trgovinaTextBox.Text;
-            NamirnicaNaListiRepository.DodajNamirnicu(new NamirnicaNaListi(0, odabranaLista.IdListe, nazivArtikla, cijena, količina, trgovina));
-            Close();
+            if (nazivArtikla.Length <= 30 && cijena.Length <= 10 && količina.Length <= 10 && trgovina.Length <= 30)
+            {
+                NamirnicaNaListiRepository.DodajNamirnicu(new NamirnicaNaListi(0, odabranaLista.IdListe, nazivArtikla, cijena, količina, trgovina));
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Neispravan unos! Provjerite naziv (max. 30 znakova), količina (max. 10 znakova), cijena (max. 10 znakova) i trgovina (max. 30 znakova).");
+            }
         }
     }
 }

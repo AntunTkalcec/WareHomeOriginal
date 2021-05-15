@@ -24,6 +24,7 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
         }
 
         private void OsvjeziNamirnice()
@@ -44,14 +45,31 @@ namespace WareHome
             {
                 MessageBox.Show("Ne pripadate nikakvom domaćinstvu. Molimo, izradite novo domaćinstvo ili se pridružite postojećem.");
                 nisteDioDomacinstvaLabel.Visible = true;
+                izradiDomacinstvoButton.Visible = true;
+                pridruziDomacinstvuButton.Visible = true;
                 dodajNamirnicuButton.Enabled = false;
                 promijeniNamirnicuButton.Enabled = false;
                 obrisiNamirnicuButton.Enabled = false;
+                listeButton.Enabled = false;
+                pdfButton.Enabled = false;
+                rasporedButton.Enabled = false;
+
+                TestiranjeButton.Enabled = false; //pobrisati nakon uklanjanja TestiranjeForm
             }
             else
             {
-                izradiDomacinstvoButton.Enabled = false;
-                pridruziDomacinstvuButton.Enabled = false;
+                TestiranjeButton.Enabled = true; //pobrisati nakon uklanjanja TestiranjeForm
+
+                nisteDioDomacinstvaLabel.Visible = false;
+                izradiDomacinstvoButton.Visible = false;
+                pridruziDomacinstvuButton.Visible = false;
+                dodajNamirnicuButton.Enabled = true;
+                promijeniNamirnicuButton.Enabled = true;
+                obrisiNamirnicuButton.Enabled = true;
+                listeButton.Enabled = true;
+                pdfButton.Enabled = true;
+                rasporedButton.Enabled = true;
+
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
                 OsvjeziNamirnice();
             }
@@ -77,7 +95,7 @@ namespace WareHome
         private void listeButton_Click(object sender, EventArgs e)
         {
             ListeForm listeForm = new ListeForm(trenutniKorisnik);
-            listeForm.Show();
+            listeForm.ShowDialog();
         }
 
         private void exitAppButton_Click_1(object sender, EventArgs e)
@@ -99,16 +117,22 @@ namespace WareHome
 
         private void obrisiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            Database.Instance.Connect();
-            NamirnicaRepository.Obrisi(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
-            Database.Instance.Disconnect();
+            if (namirniceDGV.CurrentRow != null)
+            {
+                Database.Instance.Connect();
+                NamirnicaRepository.Obrisi(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
+                Database.Instance.Disconnect();
+            }
             OsvjeziNamirnice();
         }
 
         private void promijeniNamirnicuButton_Click(object sender, EventArgs e)
         {
-            PromijeniNamirnicuForm promijeniNamirnicuForm = new PromijeniNamirnicuForm(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
-            promijeniNamirnicuForm.ShowDialog();
+            if (namirniceDGV.CurrentRow != null)
+            {
+                PromijeniNamirnicuForm promijeniNamirnicuForm = new PromijeniNamirnicuForm(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
+                promijeniNamirnicuForm.ShowDialog();
+            }
             OsvjeziNamirnice();
         }
 
@@ -116,11 +140,13 @@ namespace WareHome
         {
             if (namirniceDGV.Rows.Count > 0)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Warehome stanje namirnica.pdf";
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "Warehome stanje namirnica.pdf"
+                };
                 bool greska = false;
-                if (sfd.ShowDialog() == DialogResult.OK)
+                if (sfd.ShowDialog() == DialogResult.Cancel)
                 {
                     try
                     {
@@ -140,13 +166,17 @@ namespace WareHome
                         pdfTable.DefaultCell.Padding = 3;
                         pdfTable.WidthPercentage = 100;
                         pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
-                        BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, false);
-                        iTextSharp.text.Font titlefont = new iTextSharp.text.Font(bf, 14);
-                        iTextSharp.text.Font infofont = new iTextSharp.text.Font(bf, 10);
-                        foreach (DataGridViewColumn column in namirniceDGV.Columns)
+                        string[] headers = new string[]
                         {
-                            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, titlefont));
-                            pdfTable.AddCell(cell);
+                            "ID", "Naziv namirnice", "Dostupna količina", "Optimalna količina", "Mjerna jedinica", "Cijena", "Dućan", "Zadnja promjena", "Domaćinstvo"
+                        };
+                        BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, false);
+                        iTextSharp.text.Font titlefont = new iTextSharp.text.Font(bf, 13);
+                        iTextSharp.text.Font infofont = new iTextSharp.text.Font(bf, 10);
+                        pdfTable.SetWidths(GetHeaderWidths(titlefont, headers));
+                        for (int i = 0; i < headers.Length; ++i)
+                        {
+                            pdfTable.AddCell(new PdfPCell(new Phrase(headers[i], titlefont)));
                         }
                         foreach (DataGridViewRow row in namirniceDGV.Rows)
                         {
@@ -155,6 +185,43 @@ namespace WareHome
                                 PdfPCell cell1 = new PdfPCell(new Phrase(cell.FormattedValue.ToString(), infofont));
                                 pdfTable.AddCell(cell1);
                             }
+                        }
+                        PdfPTable tableStatistika = new PdfPTable(3);
+                        tableStatistika.DefaultCell.Padding = 3;
+                        tableStatistika.WidthPercentage = 100;
+                        tableStatistika.HorizontalAlignment = Element.ALIGN_CENTER;
+                        string[] headers2 = new string[]
+                        {
+                            "Naziv namirnice", "Potrošnja u zadnjih 7 dana", "Ukupna cijena"
+                        };
+                        string sql = $"SELECT n.naziv_namirnice as Namirnica, sum(d.promjena)*-1 as Suma, n.cijena*sum(d.promjena)*-1 as Cijena from Dogadaj d," +
+                            $"Namirnica n where datum_dogadaja >= dateadd(day, -8, getdate()) and id_namirnice = n.namirnica_id group by naziv_namirnice, cijena";
+                        List<Statistika> statistika = new List<Statistika>();
+                        Statistika stat = new Statistika();
+                        Database.Instance.Connect();
+                        IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                        while (dataReader.Read())
+                        {
+                            stat = new Statistika
+                            {
+                                Namirnica = dataReader["Namirnica"].ToString(),
+                                Suma = float.Parse(dataReader["Suma"].ToString()),
+                                Cijena = float.Parse(dataReader["Cijena"].ToString())
+                            };
+                            statistika.Add(stat);
+                        }
+                        dataReader.Close();
+                        Database.Instance.Disconnect();
+                        tableStatistika.SetWidths(GetHeaderWidths(titlefont, headers2));
+                        for (int i = 0; i < headers2.Length; i++)
+                        {
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(headers2[i], titlefont)));
+                        }
+                        foreach (var item in statistika)
+                        {
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(item.Namirnica, infofont)));
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(item.Suma.ToString(), infofont)));
+                            tableStatistika.AddCell(new PdfPCell(new Phrase(item.Cijena.ToString(), infofont)));
                         }
                         using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                         {
@@ -171,7 +238,7 @@ namespace WareHome
                             };
                             Chunk c4 = new Chunk("Statistika korištenja namirnica: \n", FontFactory.GetFont("helvetica", 20, BaseColor.BLACK));
                             c4.SetUnderline(0.5f, -1.5f);
-                            Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                            Document pdfDoc = new Document(PageSize.A4.Rotate());
                             PdfWriter.GetInstance(pdfDoc, stream);
                             pdfDoc.Open();
                             p.Add(p1);
@@ -181,6 +248,7 @@ namespace WareHome
                             pdfDoc.Add(p2);
                             pdfDoc.Add(c4);
                             pdfDoc.Add(p2);
+                            pdfDoc.Add(tableStatistika);
                             pdfDoc.Close();
                             stream.Close();
                         }
@@ -195,6 +263,31 @@ namespace WareHome
             {
                 MessageBox.Show("Nema podataka u tablici koji bi se mogli spremiti u PDF!");
             }
+        }
+
+        private float[] GetHeaderWidths(iTextSharp.text.Font titlefont, params string[] headers)
+        {
+            var total = 0;
+            var columns = headers.Length;
+            var widths = new int[columns];
+            for (var i = 0; i < columns; ++i)
+            {
+                var w = titlefont.GetCalculatedBaseFont(true).GetWidth(headers[i]);
+                total += w;
+                widths[i] = w;
+            }
+            var rezultat = new float[columns];
+            for (var i = 0; i < columns; ++i)
+            {
+                rezultat[i] = (float)widths[i] / total * 100;
+            }
+            return rezultat;
+        }
+
+        private void TestiranjeButton_Click(object sender, EventArgs e)
+        {
+            TestiranjeForm testiranje = new TestiranjeForm(trenutniKorisnik);
+            testiranje.ShowDialog();
         }
     }
 }

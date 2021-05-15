@@ -69,7 +69,7 @@ namespace WareHome
                 else
                 {
                     ListaForm listaForm = new ListaForm(odabrana);
-                    listaForm.Show();
+                    listaForm.ShowDialog();
                     OsvjeziListu();
                 }
             }
@@ -86,12 +86,16 @@ namespace WareHome
         {
             listeZaKupovinu = null;
             listeZaKupovinu = ListaZaKupovinuRepository.DohvatiPopisLista(trenutniKorisnik);
+            ProvjeriListuZaNeoptimalno(listeZaKupovinu);
             listeDataGridView.DataSource = null;
             listeDataGridView.DataSource = listeZaKupovinu;
+            ProvjeriOznačeniRed();
             listeDataGridView.Columns["LozinkaListe"].Visible = false;
             listeDataGridView.Columns["IdListe"].Visible = false;
             listeDataGridView.Columns["Domacinstvo"].Visible = false;
             listeDataGridView.Columns["PrivatnaLista"].ReadOnly = true;
+            listeDataGridView.Columns["NazivListe"].Width = 420;
+            listeDataGridView.Columns["PrivatnaLista"].Width = 150;
             listeDataGridView.Columns["NazivListe"].ReadOnly = true;
             listeDataGridView.Columns["PrivatnaLista"].HeaderText = "Privatna lista";
             listeDataGridView.Columns["NazivListe"].HeaderText = "Naziv liste";
@@ -99,9 +103,28 @@ namespace WareHome
             NamirnicaNaListiRepository.PopisNamirnica = null;
         }
 
+        private void ProvjeriListuZaNeoptimalno(List<ListaZaKupovinu> listeZaKupovinu)
+        {
+            bool postoji = false;
+            string naziv = "[WH] Potrošene namirnice";
+            foreach (var item in listeZaKupovinu)
+            {
+                if (item.NazivListe == naziv)
+                {
+                    postoji = true;
+                }
+            }
+
+            if (!postoji)
+            {
+                ListaZaKupovinuRepository.DodajListu(naziv, postoji, null);
+                OsvjeziListu();
+            }
+        }
+
         private void obrišiButton_Click(object sender, EventArgs e)
         {
-            if (listeDataGridView.CurrentRow == null)
+            if (listeDataGridView.CurrentRow == null || (listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu).NazivListe == "[WH] Potrošene namirnice")
             {
                 OsvjeziListu();
             }                        
@@ -110,6 +133,26 @@ namespace WareHome
                 ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
                 ListaZaKupovinuRepository.UkloniListu(obriši);
                 OsvjeziListu();
+            }
+        }
+
+        private void listeDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            ProvjeriOznačeniRed();
+        }
+
+        private void ProvjeriOznačeniRed()
+        {
+            if (listeDataGridView.CurrentRow != null)
+            {
+                if ((listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu).NazivListe == "[WH] Potrošene namirnice")
+                {
+                    obrišiButton.Enabled = false;
+                }
+                else
+                {
+                    obrišiButton.Enabled = true;
+                }
             }
         }
     }

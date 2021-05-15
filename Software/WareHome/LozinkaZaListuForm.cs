@@ -20,6 +20,8 @@ namespace WareHome
         {
             InitializeComponent();
             odabranaLista = odabrana;
+            this.AcceptButton = prikažiButton;
+            prikažiButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         private void odustaniButton_Click(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace WareHome
         private void LozinkaZaListuForm_Load(object sender, EventArgs e)
         {
             lozinkaTextBox.PasswordChar = '*';
-            label1.Text = odabranaLista.NazivListe;
+            nazivTextBox.Text = odabranaLista.NazivListe;
         }
 
         private void prikažiButton_Click(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace WareHome
             if (odabranaLista.LozinkaListe == lozinkaTextBox.Text)
             {
                 ListaForm listaForm = new ListaForm(odabranaLista);
-                listaForm.Show();
+                listaForm.ShowDialog();
                 Close();
             }
             else

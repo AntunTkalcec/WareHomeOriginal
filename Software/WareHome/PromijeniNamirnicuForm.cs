@@ -20,13 +20,15 @@ namespace WareHome
             InitializeComponent();
             trenutnaNamirnica = namirnica;
         }
-
+        float staraVrijednost = 0;
+        float novaVrijednost = 0;
         private void PromijeniNamirnicuForm_Load(object sender, EventArgs e)
         {
             if (trenutnaNamirnica.Identifikator != 0)
             {
                 nazivNamirniceTextBox.Text = trenutnaNamirnica.NazivNamirnice;
                 dostupnaKolicinaTextBox.Text = trenutnaNamirnica.DostupnaKolicina.ToString();
+                staraVrijednost = trenutnaNamirnica.DostupnaKolicina;
                 optimalnaKolicinaTextBox.Text = trenutnaNamirnica.OptimalnaKolicina.ToString();
                 mjernaJedinicaComboBox.SelectedItem = trenutnaNamirnica.MjernaJedinica.ToString();
                 cijenaTextBox.Text = trenutnaNamirnica.Cijena.ToString();
@@ -36,10 +38,20 @@ namespace WareHome
 
         private void spremiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            if (trenutnaNamirnica.Identifikator != 0)
+            if (nazivNamirniceTextBox.Text == null || nazivNamirniceTextBox.Text == "" || dostupnaKolicinaTextBox.Text == null ||
+                dostupnaKolicinaTextBox.Text == "" || optimalnaKolicinaTextBox.Text == null || optimalnaKolicinaTextBox.Text == "" || mjernaJedinicaComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Nisu popunjena sva obavezna polja.");
+            }
+            else if (dostupnaKolicinaTextBox.BackColor == Color.Red || optimalnaKolicinaTextBox.BackColor == Color.Red || cijenaTextBox.BackColor == Color.Red)
+            {
+                MessageBox.Show("Neko od polja nije ispravno popunjeno.");
+            }
+            else
             {
                 trenutnaNamirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
                 trenutnaNamirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
+                novaVrijednost = trenutnaNamirnica.DostupnaKolicina;
                 trenutnaNamirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
                 trenutnaNamirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
                 trenutnaNamirnica.Cijena = cijenaTextBox.Text;
@@ -47,9 +59,54 @@ namespace WareHome
                 trenutnaNamirnica.DatumZadnjePromjene = DateTime.Today;
                 Database.Instance.Connect();
                 NamirnicaRepository.Spremi(trenutnaNamirnica);
+                if (novaVrijednost < staraVrijednost)
+                {
+                    DogadajRepository.Spremi(trenutnaNamirnica, novaVrijednost - staraVrijednost);
+                }
                 Database.Instance.Disconnect();
                 Close();
-            } 
+            }
+        }
+
+        private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+"))
+            {
+                dostupnaKolicinaTextBox.BackColor = Color.Red;
+            }
+            else
+            {
+                dostupnaKolicinaTextBox.BackColor = Color.White;
+            }
+        }
+
+        private void optimalnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+"))
+            {
+                optimalnaKolicinaTextBox.BackColor = Color.Red;
+            }
+            else
+            {
+                optimalnaKolicinaTextBox.BackColor = Color.White;
+            }
+        }
+
+        private void cijenaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (cijenaTextBox.Text.Contains("-") || cijenaTextBox.Text.Contains(",") || cijenaTextBox.Text.Contains("+"))
+            {
+                cijenaTextBox.BackColor = Color.Red;
+            }
+            else
+            {
+                cijenaTextBox.BackColor = Color.White;
+            }
+        }
+
+        private void exitAppButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

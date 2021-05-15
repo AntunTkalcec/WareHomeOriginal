@@ -18,6 +18,8 @@ namespace WareHome
         public PrijavaForm()
         {
             InitializeComponent();
+            AcceptButton = prijavaButton;
+            prijavaButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         private void PrijavaForm_Load(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace WareHome
                 UpaliGlavnuFormu(korisnik);
                 passwordTextBox.Text = "";
                 usernameTextBox.Text = "";
+                ActiveControl = usernameTextBox;
                 Show();
             }
         }
@@ -103,6 +106,7 @@ namespace WareHome
             UpaliRegistracijskuFormu();
             Show();
         }
+
         private void UpaliRegistracijskuFormu()
         {
             RegistracijaForm Registracija = new RegistracijaForm();

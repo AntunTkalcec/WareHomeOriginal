@@ -36,11 +36,14 @@ namespace WareHome
             this.listeButton = new System.Windows.Forms.Button();
             this.odjavaButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft = new System.Windows.Forms.Panel();
+            this.TestiranjeButton = new System.Windows.Forms.Button();
             this.pridruziDomacinstvuButton = new System.Windows.Forms.Button();
             this.izradiDomacinstvoButton = new System.Windows.Forms.Button();
             this.pdfButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
+            this.korisnikLabel2 = new System.Windows.Forms.Label();
             this.warehomePictureBox = new System.Windows.Forms.PictureBox();
+            this.korisnikLabel1 = new System.Windows.Forms.Label();
             this.namirniceDGV = new System.Windows.Forms.DataGridView();
             this.popisNamirnicaLabel = new System.Windows.Forms.Label();
             this.glavnaFormPanelBottom = new System.Windows.Forms.Panel();
@@ -108,6 +111,7 @@ namespace WareHome
             // 
             // glavnaFormPanelLeft
             // 
+            this.glavnaFormPanelLeft.Controls.Add(this.TestiranjeButton);
             this.glavnaFormPanelLeft.Controls.Add(this.pridruziDomacinstvuButton);
             this.glavnaFormPanelLeft.Controls.Add(this.izradiDomacinstvoButton);
             this.glavnaFormPanelLeft.Controls.Add(this.pdfButton);
@@ -121,6 +125,17 @@ namespace WareHome
             this.glavnaFormPanelLeft.Size = new System.Drawing.Size(173, 695);
             this.glavnaFormPanelLeft.TabIndex = 3;
             // 
+            // TestiranjeButton
+            // 
+            this.TestiranjeButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestiranjeButton.Location = new System.Drawing.Point(0, 445);
+            this.TestiranjeButton.Name = "TestiranjeButton";
+            this.TestiranjeButton.Size = new System.Drawing.Size(173, 53);
+            this.TestiranjeButton.TabIndex = 6;
+            this.TestiranjeButton.Text = "Test predviđanja";
+            this.TestiranjeButton.UseVisualStyleBackColor = true;
+            this.TestiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
+            // 
             // pridruziDomacinstvuButton
             // 
             this.pridruziDomacinstvuButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
@@ -128,7 +143,7 @@ namespace WareHome
             this.pridruziDomacinstvuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pridruziDomacinstvuButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pridruziDomacinstvuButton.ForeColor = System.Drawing.Color.White;
-            this.pridruziDomacinstvuButton.Location = new System.Drawing.Point(0, 153);
+            this.pridruziDomacinstvuButton.Location = new System.Drawing.Point(0, 159);
             this.pridruziDomacinstvuButton.Name = "pridruziDomacinstvuButton";
             this.pridruziDomacinstvuButton.Size = new System.Drawing.Size(173, 50);
             this.pridruziDomacinstvuButton.TabIndex = 5;
@@ -142,7 +157,7 @@ namespace WareHome
             this.izradiDomacinstvoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.izradiDomacinstvoButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.izradiDomacinstvoButton.ForeColor = System.Drawing.Color.White;
-            this.izradiDomacinstvoButton.Location = new System.Drawing.Point(0, 106);
+            this.izradiDomacinstvoButton.Location = new System.Drawing.Point(0, 113);
             this.izradiDomacinstvoButton.Name = "izradiDomacinstvoButton";
             this.izradiDomacinstvoButton.Size = new System.Drawing.Size(173, 40);
             this.izradiDomacinstvoButton.TabIndex = 4;
@@ -166,12 +181,25 @@ namespace WareHome
             // 
             // glavnaFormPanelLeftTop
             // 
+            this.glavnaFormPanelLeftTop.Controls.Add(this.korisnikLabel2);
             this.glavnaFormPanelLeftTop.Controls.Add(this.warehomePictureBox);
+            this.glavnaFormPanelLeftTop.Controls.Add(this.korisnikLabel1);
             this.glavnaFormPanelLeftTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.glavnaFormPanelLeftTop.Location = new System.Drawing.Point(0, 0);
             this.glavnaFormPanelLeftTop.Name = "glavnaFormPanelLeftTop";
-            this.glavnaFormPanelLeftTop.Size = new System.Drawing.Size(173, 100);
+            this.glavnaFormPanelLeftTop.Size = new System.Drawing.Size(173, 107);
             this.glavnaFormPanelLeftTop.TabIndex = 0;
+            // 
+            // korisnikLabel2
+            // 
+            this.korisnikLabel2.AutoSize = true;
+            this.korisnikLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.korisnikLabel2.ForeColor = System.Drawing.Color.White;
+            this.korisnikLabel2.Location = new System.Drawing.Point(23, 87);
+            this.korisnikLabel2.Name = "korisnikLabel2";
+            this.korisnikLabel2.Size = new System.Drawing.Size(49, 23);
+            this.korisnikLabel2.TabIndex = 9;
+            this.korisnikLabel2.Text = "N/A";
             // 
             // warehomePictureBox
             // 
@@ -182,6 +210,16 @@ namespace WareHome
             this.warehomePictureBox.Size = new System.Drawing.Size(201, 135);
             this.warehomePictureBox.TabIndex = 0;
             this.warehomePictureBox.TabStop = false;
+            // 
+            // korisnikLabel1
+            // 
+            this.korisnikLabel1.AutoSize = true;
+            this.korisnikLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.korisnikLabel1.Location = new System.Drawing.Point(3, 66);
+            this.korisnikLabel1.Name = "korisnikLabel1";
+            this.korisnikLabel1.Size = new System.Drawing.Size(82, 23);
+            this.korisnikLabel1.TabIndex = 8;
+            this.korisnikLabel1.Text = "Korisnik:";
             // 
             // namirniceDGV
             // 
@@ -220,7 +258,7 @@ namespace WareHome
             this.popisNamirnicaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.popisNamirnicaLabel.Location = new System.Drawing.Point(203, 12);
             this.popisNamirnicaLabel.Name = "popisNamirnicaLabel";
-            this.popisNamirnicaLabel.Size = new System.Drawing.Size(131, 21);
+            this.popisNamirnicaLabel.Size = new System.Drawing.Size(162, 23);
             this.popisNamirnicaLabel.TabIndex = 21;
             this.popisNamirnicaLabel.Text = "Popis namirnica";
             // 
@@ -245,7 +283,7 @@ namespace WareHome
             this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.White;
             this.brojNamirnicaLabel2.Location = new System.Drawing.Point(856, 94);
             this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
-            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(42, 21);
+            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(49, 23);
             this.brojNamirnicaLabel2.TabIndex = 7;
             this.brojNamirnicaLabel2.Text = "N/A";
             // 
@@ -256,7 +294,7 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.White;
             this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(856, 42);
             this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
-            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(42, 21);
+            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(49, 23);
             this.trenutnoDomacinstvoLabel2.TabIndex = 6;
             this.trenutnoDomacinstvoLabel2.Text = "N/A";
             // 
@@ -266,7 +304,7 @@ namespace WareHome
             this.brojNamirnicaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.brojNamirnicaLabel.Location = new System.Drawing.Point(836, 72);
             this.brojNamirnicaLabel.Name = "brojNamirnicaLabel";
-            this.brojNamirnicaLabel.Size = new System.Drawing.Size(123, 21);
+            this.brojNamirnicaLabel.Size = new System.Drawing.Size(150, 23);
             this.brojNamirnicaLabel.TabIndex = 5;
             this.brojNamirnicaLabel.Text = "Broj namirnica:";
             // 
@@ -276,7 +314,7 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.trenutnoDomacinstvoLabel.Location = new System.Drawing.Point(836, 21);
             this.trenutnoDomacinstvoLabel.Name = "trenutnoDomacinstvoLabel";
-            this.trenutnoDomacinstvoLabel.Size = new System.Drawing.Size(191, 21);
+            this.trenutnoDomacinstvoLabel.Size = new System.Drawing.Size(233, 23);
             this.trenutnoDomacinstvoLabel.TabIndex = 3;
             this.trenutnoDomacinstvoLabel.Text = "Trenutno domaćinstvo:";
             // 
@@ -363,7 +401,7 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.ForeColor = System.Drawing.Color.Red;
             this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(586, 256);
             this.nisteDioDomacinstvaLabel.Name = "nisteDioDomacinstvaLabel";
-            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(313, 33);
+            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(393, 40);
             this.nisteDioDomacinstvaLabel.TabIndex = 24;
             this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
             this.nisteDioDomacinstvaLabel.Visible = false;
@@ -390,6 +428,7 @@ namespace WareHome
             this.Load += new System.EventHandler(this.GlavnaForm_Load);
             this.glavnaFormPanelLeft.ResumeLayout(false);
             this.glavnaFormPanelLeftTop.ResumeLayout(false);
+            this.glavnaFormPanelLeftTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.namirniceDGV)).EndInit();
             this.glavnaFormPanelBottom.ResumeLayout(false);
@@ -410,18 +449,21 @@ namespace WareHome
         private System.Windows.Forms.DataGridView namirniceDGV;
         private System.Windows.Forms.Label popisNamirnicaLabel;
         private System.Windows.Forms.Panel glavnaFormPanelBottom;
-        private System.Windows.Forms.Label trenutnoDomacinstvoLabel;
         private System.Windows.Forms.Button obrisiNamirnicuButton;
         private System.Windows.Forms.Button promijeniNamirnicuButton;
         private System.Windows.Forms.Button dodajNamirnicuButton;
-        private System.Windows.Forms.Label brojNamirnicaLabel;
         private System.Windows.Forms.Button pridruziDomacinstvuButton;
         private System.Windows.Forms.Button izradiDomacinstvoButton;
         private System.Windows.Forms.Button exitAppButton;
         private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.Label brojNamirnicaLabel2;
-        private System.Windows.Forms.Label trenutnoDomacinstvoLabel2;
         private System.Windows.Forms.PictureBox warehomePictureBox;
         private System.Windows.Forms.Label nisteDioDomacinstvaLabel;
+        private System.Windows.Forms.Button TestiranjeButton;
+        private System.Windows.Forms.Label brojNamirnicaLabel2;
+        private System.Windows.Forms.Label trenutnoDomacinstvoLabel2;
+        private System.Windows.Forms.Label brojNamirnicaLabel;
+        private System.Windows.Forms.Label trenutnoDomacinstvoLabel;
+        private System.Windows.Forms.Label korisnikLabel2;
+        private System.Windows.Forms.Label korisnikLabel1;
     }
 }

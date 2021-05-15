@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dogadaj.cs" />
+    <Compile Include="DogadajRepository.cs" />
     <Compile Include="Domacinstvo.cs" />
     <Compile Include="DomacinstvoRepository.cs" />
     <Compile Include="Iznimke\WareHomeException.cs" />
@@ -49,6 +51,7 @@
     <Compile Include="Namirnica.cs" />
     <Compile Include="NamirnicaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistika.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
