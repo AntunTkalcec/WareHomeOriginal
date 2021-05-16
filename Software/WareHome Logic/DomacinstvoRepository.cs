@@ -19,7 +19,6 @@ namespace WareHome_Logic
                 domacinstvo.Identifikator = int.Parse(dataReader["domacinstvo_id"].ToString());
                 domacinstvo.Naziv = dataReader["naziv"].ToString();
                 domacinstvo.DatumKreiranja = DateTime.Parse(dataReader["datum_kreiranja"].ToString());
-                domacinstvo.KorisnikKreator = dataReader["korisnik_kreator"].ToString();
             }
             return domacinstvo;
         }
@@ -29,13 +28,13 @@ namespace WareHome_Logic
             string sql;
             if (domacinstvo.Identifikator == 0)
             {
-                sql = $"INSERT INTO Domacinstvo (naziv, datum_kreiranja, korisnik_kreator, opis_radnje, datum_radnje) VALUES ('{domacinstvo.Naziv}', " +
-                    $"'{domacinstvo.DatumKreiranja:yyyyMMdd}', '{domacinstvo.KorisnikKreator}', '{domacinstvo.OpisRadnje}', '{domacinstvo.DatumRadnje:yyyyMMdd}')";
+                sql = $"INSERT INTO Domacinstvo (naziv, datum_kreiranja) VALUES (N'{domacinstvo.Naziv}', " +
+                    $"'{domacinstvo.DatumKreiranja:yyyyMMdd}')";
             }
             else
             {
-                sql = $"UPDATE Domacinstvo SET naziv = '{domacinstvo.Naziv}', datum_kreiranja = '{domacinstvo.DatumKreiranja:yyyyMMdd}', korisnik_kreator = '{domacinstvo.KorisnikKreator}', " +
-                    $"opis_radnje = '{domacinstvo.OpisRadnje}', datum_radnje = '{domacinstvo.DatumRadnje:yyyyMMdd}' WHERE domacinstvo_id = {domacinstvo.Identifikator}";
+                sql = $"UPDATE Domacinstvo SET naziv = N'{domacinstvo.Naziv}', datum_kreiranja = '{domacinstvo.DatumKreiranja:yyyyMMdd}', " +
+                    $"WHERE domacinstvo_id = {domacinstvo.Identifikator}";
             }
             return Database.Instance.ExecuteCommand(sql);
         }

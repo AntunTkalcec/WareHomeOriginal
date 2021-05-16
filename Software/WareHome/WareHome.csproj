@@ -87,6 +87,12 @@
     <Compile Include="DodajNamirnicuForm.Designer.cs">
       <DependentUpon>DodajNamirnicuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IzradaDomacinstvaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzradaDomacinstvaForm.Designer.cs">
+      <DependentUpon>IzradaDomacinstvaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="NovaListaForm.Designer.cs">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PridruziDomacinstvuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PridruziDomacinstvuForm.Designer.cs">
+      <DependentUpon>PridruziDomacinstvuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrijavaForm.cs">
       <SubType>Form</SubType>
@@ -177,6 +189,9 @@
     <EmbeddedResource Include="GlavnaForm.resx">
       <DependentUpon>GlavnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IzradaDomacinstvaForm.resx">
+      <DependentUpon>IzradaDomacinstvaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaForm.resx">
       <DependentUpon>ListaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovaListaForm.resx">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PridruziDomacinstvuForm.resx">
+      <DependentUpon>PridruziDomacinstvuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrijavaForm.resx">
       <DependentUpon>PrijavaForm.cs</DependentUpon>

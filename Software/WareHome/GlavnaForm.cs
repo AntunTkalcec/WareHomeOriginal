@@ -20,7 +20,6 @@ namespace WareHome
     {
         static Korisnik trenutniKorisnik;
 
-        //kristijanstr push testtttttt
         public GlavnaForm(Korisnik korisnik)
         {
             InitializeComponent();
@@ -313,6 +312,20 @@ namespace WareHome
         private void ispisButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void izradiDomacinstvoButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            IzradaDomacinstvaForm form = new IzradaDomacinstvaForm(trenutniKorisnik);
+            form.ShowDialog();
+        }
+
+        private void pridruziDomacinstvuButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            PridruziDomacinstvuForm form = new PridruziDomacinstvuForm(trenutniKorisnik);
+            form.ShowDialog();
         }
     }
 }

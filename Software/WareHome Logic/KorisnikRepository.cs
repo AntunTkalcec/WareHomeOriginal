@@ -51,14 +51,14 @@ namespace WareHome_Logic
             if (korisnik.Identifikator == 0)
             {
                 sql = $"INSERT INTO Korisnik (Ime, Prezime, [e-mail], lozinka, korisnicko_ime, datum_registracije, datum_zadnje_prijave, domacinstvo_id)" +
-                    $"VALUES ('{korisnik.Ime}', '{korisnik.Prezime}', '{korisnik.Mail}', '{korisnik.Lozinka}', '{korisnik.KorisnickoIme}', '{korisnik.DatumRegistracije:yyyyMMdd}', " +
-                    $"'{korisnik.DatumZadnjePrijave}', '{korisnik.Domacinstvo.Identifikator}')";
+                    $"VALUES (N'{korisnik.Ime}', N'{korisnik.Prezime}', N'{korisnik.Mail}', '{korisnik.Lozinka}', N'{korisnik.KorisnickoIme}', '{korisnik.DatumRegistracije:yyyyMMdd}', " +
+                    $"'{korisnik.DatumZadnjePrijave:yyyyMMdd}', '{korisnik.Domacinstvo.Identifikator}')";
             }
             else
             {
-                sql = $"UPDATE Korisnik SET ime = '{korisnik.Ime}', prezime = '{korisnik.Prezime}', [e-mail] = '{korisnik.Mail}', lozinka = '{korisnik.Lozinka}', " +
-                    $"korisnicko_ime = '{korisnik.KorisnickoIme}', datum_registracije = '{korisnik.DatumRegistracije:yyyyMMdd}', datum_zadnje_prijave = '{korisnik.DatumZadnjePrijave}'," +
-                    $"domacinstvo_id = '{korisnik.Domacinstvo.Identifikator}')";
+                sql = $"UPDATE Korisnik SET ime = N'{korisnik.Ime}', prezime = N'{korisnik.Prezime}', [e-mail] = N'{korisnik.Mail}', lozinka = '{korisnik.Lozinka}', " +
+                    $"korisnicko_ime = N'{korisnik.KorisnickoIme}', datum_registracije = '{korisnik.DatumRegistracije:yyyyMMdd}', datum_zadnje_prijave = '{korisnik.DatumZadnjePrijave:yyyyMMdd}'," +
+                    $"domacinstvo_id = {korisnik.Domacinstvo.Identifikator})";
             }
             return Database.Instance.ExecuteCommand(sql);
         }
