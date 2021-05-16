@@ -130,8 +130,12 @@ namespace WareHome
             }                        
             else
             {
-                ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
-                ListaZaKupovinuRepository.UkloniListu(obriši);
+                var jesteLiSigurni = MessageBox.Show($"Jeste li sigurni da želite obrisati listu *{(listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu).NazivListe}* i sve namirnice koje se na njoj nalaze?", "Potvrda brisanja", MessageBoxButtons.YesNo);
+                if (jesteLiSigurni == DialogResult.Yes)
+                {
+                    ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
+                    ListaZaKupovinuRepository.UkloniListu(obriši);
+                }
                 OsvjeziListu();
             }
         }
