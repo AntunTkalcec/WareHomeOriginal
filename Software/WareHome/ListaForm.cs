@@ -24,6 +24,7 @@ namespace WareHome
             odabranaLista = odabrana;
             nazivLabel.Text = odabranaLista.NazivListe;
             Text = "Lista za kupovinu - " + odabranaLista.NazivListe;
+            CancelButton = povratakButton;
         }        
 
         private void povratakButton_Click(object sender, EventArgs e)
@@ -60,14 +61,27 @@ namespace WareHome
                 ukupnoTextBox.Visible = true;
 
                 decimal ukupno = 0;
+                bool bezAtributa = false;
                 foreach (var item in namirniceNaListi)
                 {
-                    if (item.CijenaNamirnice != null && item.KoličinaNamirnice != null)
+                    if (item.CijenaNamirnice != "" && item.KoličinaNamirnice != "")
                     {
                         ukupno += decimal.Parse(item.CijenaNamirnice.ToString()) * decimal.Parse(item.KoličinaNamirnice.ToString());
                     }
+                    else
+                    {
+                        bezAtributa = true;
+                    }
                 }
-                ukupnoTextBox.Text = ukupno / 100 + " kn";
+
+                if (!bezAtributa)
+                {
+                    ukupnoTextBox.Text = ukupno / 100 + " kn";
+                }
+                else
+                {
+                    ukupnoTextBox.Text = "≈ " + ukupno / 100 + " kn";
+                }
             }
             else
             {
