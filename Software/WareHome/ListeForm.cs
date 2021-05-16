@@ -21,6 +21,7 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            CancelButton = povratakButton;
         }
 
         private void ListeForm_Load(object sender, EventArgs e)
