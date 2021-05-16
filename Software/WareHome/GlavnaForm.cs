@@ -20,6 +20,7 @@ namespace WareHome
     {
         static Korisnik trenutniKorisnik;
 
+        //kristijanstr push testtttttt
         public GlavnaForm(Korisnik korisnik)
         {
             InitializeComponent();
