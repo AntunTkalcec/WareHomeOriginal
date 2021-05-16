@@ -37,6 +37,7 @@ namespace WareHome
             this.label2 = new System.Windows.Forms.Label();
             this.privatnaCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,9 +46,9 @@ namespace WareHome
             this.label1.Location = new System.Drawing.Point(21, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Naziv:";
+            this.label1.Text = "*Naziv:";
             // 
             // odustaniButton
             // 
@@ -117,11 +118,22 @@ namespace WareHome
             this.label3.TabIndex = 0;
             this.label3.Text = "Privatna lista:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(21, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "* obvezno polje";
+            // 
             // NovaListaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 211);
+            this.ClientSize = new System.Drawing.Size(325, 221);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.privatnaCheckBox);
             this.Controls.Add(this.lozinkaTextBox);
@@ -152,5 +164,6 @@ namespace WareHome
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox privatnaCheckBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }
