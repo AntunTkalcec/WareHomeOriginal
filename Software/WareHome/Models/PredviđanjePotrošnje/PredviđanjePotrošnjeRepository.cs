@@ -49,6 +49,7 @@ namespace WareHome.Models.PredviđanjePotrošnje
                 int id = namirnica.Identifikator;
                 string naziv = namirnica.NazivNamirnice;
                 float količina = namirnica.DostupnaKolicina;
+                string mjernaJedinica = namirnica.MjernaJedinica;
                 float ukupnoPotrošeno = 0;
                 DateTime posljednjaPromjena = DateTime.Today;
 
@@ -83,6 +84,7 @@ namespace WareHome.Models.PredviđanjePotrošnje
                     NamirnicaId = id,
                     NamirnicaNaziv = naziv,
                     DostupnaKoličina = količina,
+                    MjernaJedinica = mjernaJedinica,
                     PredviđenoTrajanje = trajanje
                 };
                 predviđenaPotrošnja.Add(novoPredviđanje);
