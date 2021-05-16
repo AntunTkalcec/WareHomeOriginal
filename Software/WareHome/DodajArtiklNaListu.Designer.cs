@@ -39,77 +39,87 @@ namespace WareHome
             this.trgovinaTextBox = new System.Windows.Forms.TextBox();
             this.dodajButton = new System.Windows.Forms.Button();
             this.odustaniButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 16);
+            this.label1.Location = new System.Drawing.Point(15, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Naziv:";
+            this.label1.Text = "*Naziv:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 68);
+            this.label2.Location = new System.Drawing.Point(15, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cijena:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 94);
+            this.label3.Location = new System.Drawing.Point(15, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Trgovina:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 42);
+            this.label4.Location = new System.Drawing.Point(15, 52);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(61, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Količina:";
             // 
             // nazivTextBox
             // 
-            this.nazivTextBox.Location = new System.Drawing.Point(69, 13);
+            this.nazivTextBox.Location = new System.Drawing.Point(92, 16);
+            this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(134, 20);
+            this.nazivTextBox.Size = new System.Drawing.Size(177, 22);
             this.nazivTextBox.TabIndex = 1;
             // 
             // cijenaTextBox
             // 
-            this.cijenaTextBox.Location = new System.Drawing.Point(69, 39);
+            this.cijenaTextBox.Location = new System.Drawing.Point(92, 48);
+            this.cijenaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cijenaTextBox.Name = "cijenaTextBox";
-            this.cijenaTextBox.Size = new System.Drawing.Size(66, 20);
+            this.cijenaTextBox.Size = new System.Drawing.Size(87, 22);
             this.cijenaTextBox.TabIndex = 2;
             // 
             // kolicinaTextBox
             // 
-            this.kolicinaTextBox.Location = new System.Drawing.Point(69, 65);
+            this.kolicinaTextBox.Location = new System.Drawing.Point(92, 80);
+            this.kolicinaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.kolicinaTextBox.Name = "kolicinaTextBox";
-            this.kolicinaTextBox.Size = new System.Drawing.Size(66, 20);
+            this.kolicinaTextBox.Size = new System.Drawing.Size(87, 22);
             this.kolicinaTextBox.TabIndex = 3;
             // 
             // trgovinaTextBox
             // 
-            this.trgovinaTextBox.Location = new System.Drawing.Point(69, 91);
+            this.trgovinaTextBox.Location = new System.Drawing.Point(92, 112);
+            this.trgovinaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.trgovinaTextBox.Name = "trgovinaTextBox";
-            this.trgovinaTextBox.Size = new System.Drawing.Size(134, 20);
+            this.trgovinaTextBox.Size = new System.Drawing.Size(177, 22);
             this.trgovinaTextBox.TabIndex = 4;
             // 
             // dodajButton
             // 
-            this.dodajButton.Location = new System.Drawing.Point(128, 127);
+            this.dodajButton.Location = new System.Drawing.Point(171, 156);
+            this.dodajButton.Margin = new System.Windows.Forms.Padding(4);
             this.dodajButton.Name = "dodajButton";
-            this.dodajButton.Size = new System.Drawing.Size(75, 23);
+            this.dodajButton.Size = new System.Drawing.Size(100, 28);
             this.dodajButton.TabIndex = 5;
             this.dodajButton.Text = "Dodaj";
             this.dodajButton.UseVisualStyleBackColor = true;
@@ -117,19 +127,30 @@ namespace WareHome
             // 
             // odustaniButton
             // 
-            this.odustaniButton.Location = new System.Drawing.Point(14, 127);
+            this.odustaniButton.Location = new System.Drawing.Point(19, 156);
+            this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
-            this.odustaniButton.Size = new System.Drawing.Size(75, 23);
+            this.odustaniButton.Size = new System.Drawing.Size(100, 28);
             this.odustaniButton.TabIndex = 6;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(15, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "* obvezno polje";
+            // 
             // DodajArtiklNaListu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(222, 167);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(296, 215);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.odustaniButton);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.trgovinaTextBox);
@@ -140,7 +161,10 @@ namespace WareHome
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DodajArtiklNaListu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "WareHome";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,5 +183,6 @@ namespace WareHome
         private System.Windows.Forms.TextBox trgovinaTextBox;
         private System.Windows.Forms.Button dodajButton;
         private System.Windows.Forms.Button odustaniButton;
+        private System.Windows.Forms.Label label5;
     }
 }
