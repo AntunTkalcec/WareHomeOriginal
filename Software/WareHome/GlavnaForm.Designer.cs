@@ -30,12 +30,13 @@ namespace WareHome
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rasporedButton = new System.Windows.Forms.Button();
             this.listeButton = new System.Windows.Forms.Button();
             this.odjavaButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft = new System.Windows.Forms.Panel();
+            this.ispisButton = new System.Windows.Forms.Button();
             this.TestiranjeButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
             this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@ namespace WareHome
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.nisteDioDomacinstvaLabel = new System.Windows.Forms.Label();
-            this.ispisButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
@@ -123,6 +123,20 @@ namespace WareHome
             this.glavnaFormPanelLeft.Name = "glavnaFormPanelLeft";
             this.glavnaFormPanelLeft.Size = new System.Drawing.Size(173, 660);
             this.glavnaFormPanelLeft.TabIndex = 3;
+            // 
+            // ispisButton
+            // 
+            this.ispisButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
+            this.ispisButton.FlatAppearance.BorderSize = 0;
+            this.ispisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ispisButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ispisButton.ForeColor = System.Drawing.Color.White;
+            this.ispisButton.Location = new System.Drawing.Point(0, 437);
+            this.ispisButton.Name = "ispisButton";
+            this.ispisButton.Size = new System.Drawing.Size(173, 50);
+            this.ispisButton.TabIndex = 7;
+            this.ispisButton.Text = "Ispis izrađene liste ili predviđanja";
+            this.ispisButton.UseVisualStyleBackColor = true;
             // 
             // TestiranjeButton
             // 
@@ -262,7 +276,7 @@ namespace WareHome
             this.pdfButton.Name = "pdfButton";
             this.pdfButton.Size = new System.Drawing.Size(244, 91);
             this.pdfButton.TabIndex = 3;
-            this.pdfButton.Text = "Spremanje u PDF";
+            this.pdfButton.Text = "Spremi u PDF";
             this.pdfButton.UseVisualStyleBackColor = true;
             this.pdfButton.Click += new System.EventHandler(this.pdfButton_Click);
             // 
@@ -272,24 +286,24 @@ namespace WareHome
             this.namirniceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.namirniceDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.namirniceDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.NullValue = "-";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.namirniceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.NullValue = "-";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.namirniceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.namirniceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.namirniceDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.namirniceDGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.namirniceDGV.Location = new System.Drawing.Point(192, 39);
             this.namirniceDGV.Name = "namirniceDGV";
             this.namirniceDGV.ReadOnly = true;
@@ -406,20 +420,6 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
             this.nisteDioDomacinstvaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nisteDioDomacinstvaLabel.Visible = false;
-            // 
-            // ispisButton
-            // 
-            this.ispisButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
-            this.ispisButton.FlatAppearance.BorderSize = 0;
-            this.ispisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ispisButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ispisButton.ForeColor = System.Drawing.Color.White;
-            this.ispisButton.Location = new System.Drawing.Point(0, 437);
-            this.ispisButton.Name = "ispisButton";
-            this.ispisButton.Size = new System.Drawing.Size(173, 50);
-            this.ispisButton.TabIndex = 7;
-            this.ispisButton.Text = "Ispis izrađene liste ili predviđanja";
-            this.ispisButton.UseVisualStyleBackColor = true;
             // 
             // GlavnaForm
             // 

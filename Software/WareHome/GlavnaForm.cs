@@ -43,7 +43,7 @@ namespace WareHome
         {
             if (trenutniKorisnik.Domacinstvo == null)
             {
-                MessageBox.Show("Niste član domaćinstva! Za korištenje svih funkcija aplikacije, izradite novo domaćinstvo ili se pridružite postojećem.");
+                MessageBox.Show("Niste član domaćinstva! Za korištenje svih funkcija aplikacije, izradite novo domaćinstvo ili se pridružite postojećem.", "Obavijest");
                 nisteDioDomacinstvaLabel.Visible = true;
                 izradiDomacinstvoButton.Visible = true;
                 pridruziDomacinstvuButton.Visible = true;
@@ -55,11 +55,15 @@ namespace WareHome
                 rasporedButton.Enabled = false;
                 ispisButton.Enabled = false;
 
-                TestiranjeButton.Enabled = false; //pobrisati nakon uklanjanja TestiranjeForm tj. implementacije ispisa
+                TestiranjeButton.Visible = false; //forma za testiranje
             }
             else
             {
-                TestiranjeButton.Enabled = true; //pobrisati nakon uklanjanja TestiranjeForm tj. implementacije ispisa
+                TestiranjeButton.Visible = false; 
+                if (trenutniKorisnik.KorisnickoIme == "drugo") //user: drugo | pass: dd\\
+                {
+                    TestiranjeButton.Visible = true;
+                } //forma za testiranje
 
                 nisteDioDomacinstvaLabel.Visible = false;
                 izradiDomacinstvoButton.Visible = false;
