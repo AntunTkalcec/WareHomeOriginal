@@ -144,7 +144,7 @@ namespace WareHome
 
         private void pdfButton_Click(object sender, EventArgs e)
         {
-            string naziv = $"WH stanje namirnica ({DateTime.Today.Date.ToShortDateString()}).pdf";
+            string naziv = $"WareHome stanje namirnica";
             if (namirniceDGV.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog
@@ -202,7 +202,9 @@ namespace WareHome
                             "Naziv namirnice", "Potrošnja u zadnjih 7 dana", "Ukupna cijena"
                         };
                         string sql = $"SELECT n.naziv_namirnice as Namirnica, sum(d.promjena)*-1 as Suma, n.cijena*sum(d.promjena)*-1 as Cijena from Dogadaj d," +
-                            $"Namirnica n where datum_dogadaja >= dateadd(day, -8, getdate()) and id_namirnice = n.namirnica_id group by naziv_namirnice, cijena";
+                            $"Namirnica n where datum_dogadaja >= dateadd(day, -8, getdate()) " +
+                            $"and id_namirnice = n.namirnica_id and n.domacinstvo_id = {trenutniKorisnik.Domacinstvo.Identifikator} " +
+                            $"group by naziv_namirnice, cijena order by cijena desc";
                         List<Statistika> statistika = new List<Statistika>();
                         Statistika stat = new Statistika();
                         Database.Instance.Connect();
@@ -295,6 +297,21 @@ namespace WareHome
         {
             TestiranjeForm testiranje = new TestiranjeForm(trenutniKorisnik);
             testiranje.ShowDialog();
+        }
+
+        private void warehomePictureBox_Click(object sender, EventArgs e)
+        {
+            OsvjeziNamirnice();
+        }
+
+        private void warehomePictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
+        }
+
+        private void ispisButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
