@@ -87,7 +87,7 @@ namespace WareHome
             this.listeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.listeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listeButton.ForeColor = System.Drawing.Color.White;
-            this.listeButton.Location = new System.Drawing.Point(0, 493);
+            this.listeButton.Location = new System.Drawing.Point(0, 437);
             this.listeButton.Name = "listeButton";
             this.listeButton.Size = new System.Drawing.Size(173, 50);
             this.listeButton.TabIndex = 1;
@@ -131,7 +131,7 @@ namespace WareHome
             this.ispisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ispisButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ispisButton.ForeColor = System.Drawing.Color.White;
-            this.ispisButton.Location = new System.Drawing.Point(0, 437);
+            this.ispisButton.Location = new System.Drawing.Point(0, 493);
             this.ispisButton.Name = "ispisButton";
             this.ispisButton.Size = new System.Drawing.Size(173, 50);
             this.ispisButton.TabIndex = 7;
