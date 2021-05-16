@@ -69,7 +69,7 @@ namespace WareHome
                 }
             }
 
-            MessageBox.Show("Ne postoji korisnik s upisanom kombinacijom korisničkog imena i lozinke!");
+            MessageBox.Show("Ne postoji korisnik s upisanom kombinacijom korisničkog imena i lozinke!", "Greška!");
             dataReader.Close();
             Database.Instance.Disconnect();
             return null;
