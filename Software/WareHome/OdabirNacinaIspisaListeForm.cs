@@ -67,7 +67,9 @@ namespace WareHome
                 lista = neoptimalno;
                 lista.Sort(delegate (NamirnicaNaListi x, NamirnicaNaListi y)
                 {
-                    return y.KoličinaNamirnice.CompareTo(x.KoličinaNamirnice);
+                    float kol1 = float.Parse(y.KoličinaNamirnice);
+                    float kol2 = float.Parse(x.KoličinaNamirnice);
+                    return kol1.CompareTo(kol2);
                 });
             }
             else
@@ -230,27 +232,41 @@ namespace WareHome
         {
             namirniceDataGridView.DataSource = null;
             List<NamirnicaNaListi> lista = new List<NamirnicaNaListi>();
-            string sql = $"SELECT *" +
-                $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                $"ORDER BY kolicina_namirniceNaListi ASC";
-            Database.Instance.Connect();
-            IDataReader dataReader = Database.Instance.GetDataReader(sql);
-            while (dataReader.Read())
+            if (odabranaLista.NazivListe == "[WH] Potrošene namirnice")
             {
-                if (dataReader != null)
+                List<NamirnicaNaListi> neoptimalno = DohvatiPotroseneNamirnice();
+                lista = neoptimalno;
+                lista.Sort(delegate (NamirnicaNaListi x, NamirnicaNaListi y)
                 {
-                    int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
-                    string naziv = dataReader["naziv_namirniceNaListi"].ToString();
-                    string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
-                    string cijena = dataReader["cijena_namirniceNaListi"].ToString();
-                    string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
-
-                    NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
-                    lista.Add(namirnica);
-                }
+                    float kol1 = float.Parse(x.KoličinaNamirnice);
+                    float kol2 = float.Parse(y.KoličinaNamirnice);
+                    return kol1.CompareTo(kol2);
+                });
             }
-            dataReader.Close();
-            Database.Instance.Disconnect();
+            else
+            {
+                string sql = $"SELECT *" +
+                    $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
+                    $"ORDER BY kolicina_namirniceNaListi ASC";
+                Database.Instance.Connect();
+                IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                while (dataReader.Read())
+                {
+                    if (dataReader != null)
+                    {
+                        int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
+                        string naziv = dataReader["naziv_namirniceNaListi"].ToString();
+                        string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
+                        string cijena = dataReader["cijena_namirniceNaListi"].ToString();
+                        string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
+
+                        NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
+                        lista.Add(namirnica);
+                    }
+                }
+                dataReader.Close();
+                Database.Instance.Disconnect();
+            }
             namirniceDataGridView.DataSource = lista;
             SpremiUPDF();
             Close();
@@ -260,27 +276,41 @@ namespace WareHome
         {
             namirniceDataGridView.DataSource = null;
             List<NamirnicaNaListi> lista = new List<NamirnicaNaListi>();
-            string sql = $"SELECT *" +
-                $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                $"ORDER BY cijena_namirniceNaListi DESC";
-            Database.Instance.Connect();
-            IDataReader dataReader = Database.Instance.GetDataReader(sql);
-            while (dataReader.Read())
+            if (odabranaLista.NazivListe == "[WH] Potrošene namirnice")
             {
-                if (dataReader != null)
+                List<NamirnicaNaListi> neoptimalno = DohvatiPotroseneNamirnice();
+                lista = neoptimalno;
+                lista.Sort(delegate (NamirnicaNaListi x, NamirnicaNaListi y)
                 {
-                    int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
-                    string naziv = dataReader["naziv_namirniceNaListi"].ToString();
-                    string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
-                    string cijena = dataReader["cijena_namirniceNaListi"].ToString();
-                    string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
-
-                    NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
-                    lista.Add(namirnica);
-                }
+                    float cijena1 = float.Parse(y.CijenaNamirnice);
+                    float cijena2 = float.Parse(x.CijenaNamirnice);
+                    return cijena1.CompareTo(cijena2);
+                });
             }
-            dataReader.Close();
-            Database.Instance.Disconnect();
+            else
+            {
+                string sql = $"SELECT *" +
+                    $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
+                    $"ORDER BY cijena_namirniceNaListi DESC";
+                Database.Instance.Connect();
+                IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                while (dataReader.Read())
+                {
+                    if (dataReader != null)
+                    {
+                        int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
+                        string naziv = dataReader["naziv_namirniceNaListi"].ToString();
+                        string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
+                        string cijena = dataReader["cijena_namirniceNaListi"].ToString();
+                        string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
+
+                        NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
+                        lista.Add(namirnica);
+                    }
+                }
+                dataReader.Close();
+                Database.Instance.Disconnect();
+            }
             namirniceDataGridView.DataSource = lista;
             SpremiUPDF();
             Close();
@@ -290,27 +320,41 @@ namespace WareHome
         {
             namirniceDataGridView.DataSource = null;
             List<NamirnicaNaListi> lista = new List<NamirnicaNaListi>();
-            string sql = $"SELECT *" +
-                $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                $"ORDER BY cijena_namirniceNaListi ASC";
-            Database.Instance.Connect();
-            IDataReader dataReader = Database.Instance.GetDataReader(sql);
-            while (dataReader.Read())
+            if (odabranaLista.NazivListe == "[WH] Potrošene namirnice")
             {
-                if (dataReader != null)
+                List<NamirnicaNaListi> neoptimalno = DohvatiPotroseneNamirnice();
+                lista = neoptimalno;
+                lista.Sort(delegate (NamirnicaNaListi x, NamirnicaNaListi y)
                 {
-                    int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
-                    string naziv = dataReader["naziv_namirniceNaListi"].ToString();
-                    string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
-                    string cijena = dataReader["cijena_namirniceNaListi"].ToString();
-                    string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
-
-                    NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
-                    lista.Add(namirnica);
-                }
+                    float cijena1 = float.Parse(x.CijenaNamirnice);
+                    float cijena2 = float.Parse(y.CijenaNamirnice);
+                    return cijena1.CompareTo(cijena2);
+                });
             }
-            dataReader.Close();
-            Database.Instance.Disconnect();
+            else
+            {
+                string sql = $"SELECT *" +
+                    $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
+                    $"ORDER BY cijena_namirniceNaListi ASC";
+                Database.Instance.Connect();
+                IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                while (dataReader.Read())
+                {
+                    if (dataReader != null)
+                    {
+                        int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
+                        string naziv = dataReader["naziv_namirniceNaListi"].ToString();
+                        string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
+                        string cijena = dataReader["cijena_namirniceNaListi"].ToString();
+                        string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
+
+                        NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
+                        lista.Add(namirnica);
+                    }
+                }
+                dataReader.Close();
+                Database.Instance.Disconnect();
+            }
             namirniceDataGridView.DataSource = lista;
             SpremiUPDF();
             Close();
@@ -320,27 +364,39 @@ namespace WareHome
         {
             namirniceDataGridView.DataSource = null;
             List<NamirnicaNaListi> lista = new List<NamirnicaNaListi>();
-            string sql = $"SELECT *" +
-                $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                $"ORDER BY trgovina_namirniceNaListi DESC";
-            Database.Instance.Connect();
-            IDataReader dataReader = Database.Instance.GetDataReader(sql);
-            while (dataReader.Read())
+            if (odabranaLista.NazivListe == "[WH] Potrošene namirnice")
             {
-                if (dataReader != null)
+                List<NamirnicaNaListi> neoptimalno = DohvatiPotroseneNamirnice();
+                lista = neoptimalno;
+                lista.Sort(delegate (NamirnicaNaListi x, NamirnicaNaListi y)
                 {
-                    int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
-                    string naziv = dataReader["naziv_namirniceNaListi"].ToString();
-                    string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
-                    string cijena = dataReader["cijena_namirniceNaListi"].ToString();
-                    string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
-
-                    NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
-                    lista.Add(namirnica);
-                }
+                    return y.TrgovinaNamirnice.CompareTo(x.TrgovinaNamirnice);
+                });
             }
-            dataReader.Close();
-            Database.Instance.Disconnect();
+            else
+            {
+                string sql = $"SELECT *" +
+                    $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
+                    $"ORDER BY trgovina_namirniceNaListi DESC";
+                Database.Instance.Connect();
+                IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                while (dataReader.Read())
+                {
+                    if (dataReader != null)
+                    {
+                        int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
+                        string naziv = dataReader["naziv_namirniceNaListi"].ToString();
+                        string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
+                        string cijena = dataReader["cijena_namirniceNaListi"].ToString();
+                        string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
+
+                        NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
+                        lista.Add(namirnica);
+                    }
+                }
+                dataReader.Close();
+                Database.Instance.Disconnect();
+            }
             namirniceDataGridView.DataSource = lista;
             SpremiUPDF();
             Close();
@@ -350,28 +406,39 @@ namespace WareHome
         {
             namirniceDataGridView.DataSource = null;
             List<NamirnicaNaListi> lista = new List<NamirnicaNaListi>();
-
-            string sql = $"SELECT *" +
-                $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                $"ORDER BY trgovina_namirniceNaListi ASC";
-            Database.Instance.Connect();
-            IDataReader dataReader = Database.Instance.GetDataReader(sql);
-            while (dataReader.Read())
+            if (odabranaLista.NazivListe == "[WH] Potrošene namirnice")
             {
-                if (dataReader != null)
+                List<NamirnicaNaListi> neoptimalno = DohvatiPotroseneNamirnice();
+                lista = neoptimalno;
+                lista.Sort(delegate (NamirnicaNaListi x, NamirnicaNaListi y)
                 {
-                    int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
-                    string naziv = dataReader["naziv_namirniceNaListi"].ToString();
-                    string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
-                    string cijena = dataReader["cijena_namirniceNaListi"].ToString();
-                    string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
-
-                    NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
-                    lista.Add(namirnica);
-                }
+                    return x.TrgovinaNamirnice.CompareTo(y.TrgovinaNamirnice);
+                });
             }
-            dataReader.Close();
-            Database.Instance.Disconnect();
+            else
+            {
+                string sql = $"SELECT *" +
+                    $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
+                    $"ORDER BY trgovina_namirniceNaListi ASC";
+                Database.Instance.Connect();
+                IDataReader dataReader = Database.Instance.GetDataReader(sql);
+                while (dataReader.Read())
+                {
+                    if (dataReader != null)
+                    {
+                        int id = int.Parse(dataReader["namirnicaNaListi_id"].ToString());
+                        string naziv = dataReader["naziv_namirniceNaListi"].ToString();
+                        string kolicina = dataReader["kolicina_namirniceNaListi"].ToString();
+                        string cijena = dataReader["cijena_namirniceNaListi"].ToString();
+                        string trgovina = dataReader["trgovina_namirniceNaListi"].ToString();
+
+                        NamirnicaNaListi namirnica = new NamirnicaNaListi(id, odabranaLista.IdListe, naziv, kolicina, cijena, trgovina);
+                        lista.Add(namirnica);
+                    }
+                }
+                dataReader.Close();
+                Database.Instance.Disconnect();
+            }
             namirniceDataGridView.DataSource = lista;
             SpremiUPDF();
             Close();
