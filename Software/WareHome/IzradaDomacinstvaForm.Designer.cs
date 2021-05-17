@@ -42,11 +42,12 @@ namespace WareHome
             this.domacinstvoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.domacinstvoLabel.AutoSize = true;
+            this.domacinstvoLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domacinstvoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.domacinstvoLabel.Location = new System.Drawing.Point(87, 28);
+            this.domacinstvoLabel.Location = new System.Drawing.Point(70, 40);
             this.domacinstvoLabel.Name = "domacinstvoLabel";
-            this.domacinstvoLabel.Size = new System.Drawing.Size(168, 21);
-            this.domacinstvoLabel.TabIndex = 26;
+            this.domacinstvoLabel.Size = new System.Drawing.Size(196, 23);
+            this.domacinstvoLabel.TabIndex = 0;
             this.domacinstvoLabel.Text = "Izrada domaćinstva";
             // 
             // domacinstvoNazivLabel
@@ -55,15 +56,15 @@ namespace WareHome
             | System.Windows.Forms.AnchorStyles.Left)));
             this.domacinstvoNazivLabel.AutoSize = true;
             this.domacinstvoNazivLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.domacinstvoNazivLabel.Location = new System.Drawing.Point(90, 121);
+            this.domacinstvoNazivLabel.Location = new System.Drawing.Point(90, 105);
             this.domacinstvoNazivLabel.Name = "domacinstvoNazivLabel";
             this.domacinstvoNazivLabel.Size = new System.Drawing.Size(165, 21);
-            this.domacinstvoNazivLabel.TabIndex = 27;
+            this.domacinstvoNazivLabel.TabIndex = 0;
             this.domacinstvoNazivLabel.Text = "Naziv domaćinstva:";
             // 
             // domacinstvoNazivTextBox
             // 
-            this.domacinstvoNazivTextBox.Location = new System.Drawing.Point(73, 145);
+            this.domacinstvoNazivTextBox.Location = new System.Drawing.Point(75, 135);
             this.domacinstvoNazivTextBox.Name = "domacinstvoNazivTextBox";
             this.domacinstvoNazivTextBox.Size = new System.Drawing.Size(194, 27);
             this.domacinstvoNazivTextBox.TabIndex = 1;
@@ -77,7 +78,7 @@ namespace WareHome
             this.minimizeButton.Location = new System.Drawing.Point(283, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(23, 26);
-            this.minimizeButton.TabIndex = 19;
+            this.minimizeButton.TabIndex = 0;
             this.minimizeButton.Text = "-";
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
@@ -92,7 +93,7 @@ namespace WareHome
             this.exitAppButton.Location = new System.Drawing.Point(315, 0);
             this.exitAppButton.Name = "exitAppButton";
             this.exitAppButton.Size = new System.Drawing.Size(23, 26);
-            this.exitAppButton.TabIndex = 18;
+            this.exitAppButton.TabIndex = 0;
             this.exitAppButton.Text = "X";
             this.exitAppButton.UseVisualStyleBackColor = false;
             this.exitAppButton.Click += new System.EventHandler(this.button2_Click);
@@ -101,13 +102,13 @@ namespace WareHome
             // 
             this.btnPotvrdi.FlatAppearance.BorderSize = 0;
             this.btnPotvrdi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPotvrdi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnPotvrdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPotvrdi.ForeColor = System.Drawing.Color.White;
-            this.btnPotvrdi.Location = new System.Drawing.Point(113, 207);
+            this.btnPotvrdi.Location = new System.Drawing.Point(75, 210);
             this.btnPotvrdi.Name = "btnPotvrdi";
-            this.btnPotvrdi.Size = new System.Drawing.Size(116, 70);
-            this.btnPotvrdi.TabIndex = 28;
-            this.btnPotvrdi.Text = "Potvrdi";
+            this.btnPotvrdi.Size = new System.Drawing.Size(194, 70);
+            this.btnPotvrdi.TabIndex = 2;
+            this.btnPotvrdi.Text = "Izradi domaćinstvo";
             this.btnPotvrdi.UseVisualStyleBackColor = true;
             this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
             // 

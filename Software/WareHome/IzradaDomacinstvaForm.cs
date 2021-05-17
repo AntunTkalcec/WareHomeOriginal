@@ -19,13 +19,16 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            AcceptButton = btnPotvrdi;
+            CancelButton = exitAppButton;
+            ActiveControl = domacinstvoNazivTextBox;
         }
 
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
             if (ProvjeriPostojanje())
             {
-                MessageBox.Show("Već postoji domaćinstvo s tim nazivom.");
+                MessageBox.Show("Već postoji domaćinstvo s tim nazivom!", "Greška!");
             }
             else
             {
@@ -36,9 +39,10 @@ namespace WareHome
                 Database.Instance.Connect();
                 DomacinstvoRepository.Spremi(novoDomacinstvo);
                 Database.Instance.Disconnect();
-                MessageBox.Show("Domaćinstvo izrađeno.");
+                MessageBox.Show("Domaćinstvo izrađeno.", "Obavijest");
                 StaviKorisnikaUDomacinstvo(novoDomacinstvo);
                 Close();
+                DomacinstvoRepository.PridruzivanjeUspješno = true;
                 GlavnaForm form = new GlavnaForm(trenutniKorisnik);
                 form.ShowDialog();
             }
