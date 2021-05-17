@@ -88,7 +88,7 @@ namespace WareHome
             this.listeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.listeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listeButton.ForeColor = System.Drawing.Color.White;
-            this.listeButton.Location = new System.Drawing.Point(0, 446);
+            this.listeButton.Location = new System.Drawing.Point(0, 502);
             this.listeButton.Name = "listeButton";
             this.listeButton.Size = new System.Drawing.Size(173, 50);
             this.listeButton.TabIndex = 1;
@@ -114,7 +114,6 @@ namespace WareHome
             // glavnaFormPanelLeft
             // 
             this.glavnaFormPanelLeft.Controls.Add(this.predviđanjeButton);
-            this.glavnaFormPanelLeft.Controls.Add(this.testiranjeButton);
             this.glavnaFormPanelLeft.Controls.Add(this.glavnaFormPanelLeftTop);
             this.glavnaFormPanelLeft.Controls.Add(this.rasporedButton);
             this.glavnaFormPanelLeft.Controls.Add(this.listeButton);
@@ -132,7 +131,7 @@ namespace WareHome
             this.predviđanjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.predviđanjeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.predviđanjeButton.ForeColor = System.Drawing.Color.White;
-            this.predviđanjeButton.Location = new System.Drawing.Point(0, 502);
+            this.predviđanjeButton.Location = new System.Drawing.Point(0, 446);
             this.predviđanjeButton.Name = "predviđanjeButton";
             this.predviđanjeButton.Size = new System.Drawing.Size(173, 50);
             this.predviđanjeButton.TabIndex = 7;
@@ -144,13 +143,13 @@ namespace WareHome
             // 
             this.testiranjeButton.FlatAppearance.BorderSize = 0;
             this.testiranjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testiranjeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testiranjeButton.ForeColor = System.Drawing.Color.White;
-            this.testiranjeButton.Location = new System.Drawing.Point(0, 387);
+            this.testiranjeButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testiranjeButton.ForeColor = System.Drawing.Color.LimeGreen;
+            this.testiranjeButton.Location = new System.Drawing.Point(1312, 2);
             this.testiranjeButton.Name = "testiranjeButton";
-            this.testiranjeButton.Size = new System.Drawing.Size(173, 53);
+            this.testiranjeButton.Size = new System.Drawing.Size(21, 26);
             this.testiranjeButton.TabIndex = 6;
-            this.testiranjeButton.Text = "Testiranje neimplementiranog";
+            this.testiranjeButton.Text = "!";
             this.testiranjeButton.UseVisualStyleBackColor = true;
             this.testiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
             // 
@@ -451,6 +450,7 @@ namespace WareHome
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1410, 660);
             this.Controls.Add(this.prijavaProblemaButton);
+            this.Controls.Add(this.testiranjeButton);
             this.Controls.Add(this.nisteDioDomacinstvaLabel);
             this.Controls.Add(this.izradiDomacinstvoButton);
             this.Controls.Add(this.pridruziDomacinstvuButton);
