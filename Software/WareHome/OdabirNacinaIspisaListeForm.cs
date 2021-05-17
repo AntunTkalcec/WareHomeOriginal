@@ -27,6 +27,7 @@ namespace WareHome
             odabranaLista = lista;
             Namirnice = namirnice;
             trenutniKorisnik = korisnik;
+            CancelButton = povratakButton;
         }
 
         private void ispisiButton_Click(object sender, EventArgs e)
@@ -54,6 +55,10 @@ namespace WareHome
             else if (premaKoliciniCheckBox.Checked && silaznoCheckBox.Checked)
             {
                 IspisiPremaKoliciniSilazno();
+            }
+            else
+            {
+                MessageBox.Show("Provjerite odabir!", "Greška!");
             }
         }
 
@@ -480,6 +485,11 @@ namespace WareHome
         private void OdabirNacinaIspisaListeForm_Load(object sender, EventArgs e)
         {
             namirniceDataGridView.DataSource = Namirnice;
+        }
+
+        private void povratakButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
