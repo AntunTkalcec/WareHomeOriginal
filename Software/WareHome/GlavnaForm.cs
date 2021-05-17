@@ -75,16 +75,16 @@ namespace WareHome
                 listeButton.Enabled = false;
                 pdfButton.Enabled = false;
                 rasporedButton.Enabled = false;
-                ispisButton.Enabled = false;
+                predviđanjeButton.Enabled = false;
 
-                TestiranjeButton.Visible = false; 
+                testiranjeButton.Visible = false; 
             }
             else
             {
-                TestiranjeButton.Visible = false; 
+                testiranjeButton.Visible = false; 
                 if (trenutniKorisnik.KorisnickoIme == "admin") //user: admin | pass: admin\\
                 {
-                    TestiranjeButton.Visible = true;
+                    testiranjeButton.Visible = true;
                 } 
 
                 nisteDioDomacinstvaLabel.Visible = false;
@@ -96,7 +96,7 @@ namespace WareHome
                 listeButton.Enabled = true;
                 pdfButton.Enabled = true;
                 rasporedButton.Enabled = true;
-                ispisButton.Enabled = true;
+                predviđanjeButton.Enabled = true;
 
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
                 OsvjeziNamirnice();
@@ -328,11 +328,6 @@ namespace WareHome
             Cursor.Current = Cursors.Hand;
         }
 
-        private void ispisButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void izradiDomacinstvoButton_Click(object sender, EventArgs e)
         {
             DomacinstvoRepository.PridruzivanjeUspješno = false;
@@ -359,6 +354,12 @@ namespace WareHome
         {
             PrijavaProblemaForm form = new PrijavaProblemaForm(trenutniKorisnik);
             form.ShowDialog();
+        }
+
+        private void predviđanjeButton_Click(object sender, EventArgs e)
+        {
+            PredviđanjeForm predviđanjeForm = new PredviđanjeForm(trenutniKorisnik);
+            predviđanjeForm.ShowDialog();
         }
     }
 }

@@ -118,6 +118,12 @@
     <Compile Include="OdabirNacinaIspisaListeForm.Designer.cs">
       <DependentUpon>OdabirNacinaIspisaListeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PredviđanjeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PredviđanjeForm.Designer.cs">
+      <DependentUpon>PredviđanjeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PridruziDomacinstvuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OdabirNacinaIspisaListeForm.resx">
       <DependentUpon>OdabirNacinaIspisaListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PredviđanjeForm.resx">
+      <DependentUpon>PredviđanjeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PridruziDomacinstvuForm.resx">
       <DependentUpon>PridruziDomacinstvuForm.cs</DependentUpon>

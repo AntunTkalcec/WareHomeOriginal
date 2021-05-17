@@ -36,8 +36,8 @@ namespace WareHome
             this.listeButton = new System.Windows.Forms.Button();
             this.odjavaButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft = new System.Windows.Forms.Panel();
-            this.ispisButton = new System.Windows.Forms.Button();
-            this.TestiranjeButton = new System.Windows.Forms.Button();
+            this.predviđanjeButton = new System.Windows.Forms.Button();
+            this.testiranjeButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
             this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
             this.korisnikLabel2 = new System.Windows.Forms.Label();
@@ -113,8 +113,8 @@ namespace WareHome
             // 
             // glavnaFormPanelLeft
             // 
-            this.glavnaFormPanelLeft.Controls.Add(this.ispisButton);
-            this.glavnaFormPanelLeft.Controls.Add(this.TestiranjeButton);
+            this.glavnaFormPanelLeft.Controls.Add(this.predviđanjeButton);
+            this.glavnaFormPanelLeft.Controls.Add(this.testiranjeButton);
             this.glavnaFormPanelLeft.Controls.Add(this.glavnaFormPanelLeftTop);
             this.glavnaFormPanelLeft.Controls.Add(this.rasporedButton);
             this.glavnaFormPanelLeft.Controls.Add(this.listeButton);
@@ -125,34 +125,34 @@ namespace WareHome
             this.glavnaFormPanelLeft.Size = new System.Drawing.Size(173, 660);
             this.glavnaFormPanelLeft.TabIndex = 3;
             // 
-            // ispisButton
+            // predviđanjeButton
             // 
-            this.ispisButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
-            this.ispisButton.FlatAppearance.BorderSize = 0;
-            this.ispisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ispisButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ispisButton.ForeColor = System.Drawing.Color.White;
-            this.ispisButton.Location = new System.Drawing.Point(0, 502);
-            this.ispisButton.Name = "ispisButton";
-            this.ispisButton.Size = new System.Drawing.Size(173, 50);
-            this.ispisButton.TabIndex = 7;
-            this.ispisButton.Text = "Ispis izrađene liste ili predviđanja";
-            this.ispisButton.UseVisualStyleBackColor = true;
-            this.ispisButton.Click += new System.EventHandler(this.ispisButton_Click);
+            this.predviđanjeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
+            this.predviđanjeButton.FlatAppearance.BorderSize = 0;
+            this.predviđanjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.predviđanjeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.predviđanjeButton.ForeColor = System.Drawing.Color.White;
+            this.predviđanjeButton.Location = new System.Drawing.Point(0, 502);
+            this.predviđanjeButton.Name = "predviđanjeButton";
+            this.predviđanjeButton.Size = new System.Drawing.Size(173, 50);
+            this.predviđanjeButton.TabIndex = 7;
+            this.predviđanjeButton.Text = "Predviđanje potrošnje namirnica";
+            this.predviđanjeButton.UseVisualStyleBackColor = true;
+            this.predviđanjeButton.Click += new System.EventHandler(this.predviđanjeButton_Click);
             // 
-            // TestiranjeButton
+            // testiranjeButton
             // 
-            this.TestiranjeButton.FlatAppearance.BorderSize = 0;
-            this.TestiranjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TestiranjeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestiranjeButton.ForeColor = System.Drawing.Color.White;
-            this.TestiranjeButton.Location = new System.Drawing.Point(0, 387);
-            this.TestiranjeButton.Name = "TestiranjeButton";
-            this.TestiranjeButton.Size = new System.Drawing.Size(173, 53);
-            this.TestiranjeButton.TabIndex = 6;
-            this.TestiranjeButton.Text = "Testiranje neimplementiranog";
-            this.TestiranjeButton.UseVisualStyleBackColor = true;
-            this.TestiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
+            this.testiranjeButton.FlatAppearance.BorderSize = 0;
+            this.testiranjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testiranjeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testiranjeButton.ForeColor = System.Drawing.Color.White;
+            this.testiranjeButton.Location = new System.Drawing.Point(0, 387);
+            this.testiranjeButton.Name = "testiranjeButton";
+            this.testiranjeButton.Size = new System.Drawing.Size(173, 53);
+            this.testiranjeButton.TabIndex = 6;
+            this.testiranjeButton.Text = "Testiranje neimplementiranog";
+            this.testiranjeButton.UseVisualStyleBackColor = true;
+            this.testiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
             // 
             // glavnaFormPanelLeftTop
             // 
@@ -499,14 +499,14 @@ namespace WareHome
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.PictureBox warehomePictureBox;
         private System.Windows.Forms.Label nisteDioDomacinstvaLabel;
-        private System.Windows.Forms.Button TestiranjeButton;
+        private System.Windows.Forms.Button testiranjeButton;
         private System.Windows.Forms.Label brojNamirnicaLabel2;
         private System.Windows.Forms.Label trenutnoDomacinstvoLabel2;
         private System.Windows.Forms.Label brojNamirnicaLabel;
         private System.Windows.Forms.Label trenutnoDomacinstvoLabel;
         private System.Windows.Forms.Label korisnikLabel2;
         private System.Windows.Forms.Label korisnikLabel1;
-        private System.Windows.Forms.Button ispisButton;
+        private System.Windows.Forms.Button predviđanjeButton;
         private System.Windows.Forms.Button prijavaProblemaButton;
     }
 }
