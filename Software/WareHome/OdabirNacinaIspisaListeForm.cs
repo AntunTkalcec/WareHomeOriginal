@@ -76,7 +76,7 @@ namespace WareHome
             {
                 string sql = $"SELECT *" +
                     $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                    $"ORDER BY kolicina_namirniceNaListi DESC";
+                    $"ORDER BY Try_convert(float, kolicina_namirniceNaListi) DESC";
                 Database.Instance.Connect();
                 IDataReader dataReader = Database.Instance.GetDataReader(sql);
                 while (dataReader.Read())
@@ -247,7 +247,7 @@ namespace WareHome
             {
                 string sql = $"SELECT *" +
                     $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                    $"ORDER BY kolicina_namirniceNaListi ASC";
+                    $"ORDER BY Try_convert(float, kolicina_namirniceNaListi) ASC";
                 Database.Instance.Connect();
                 IDataReader dataReader = Database.Instance.GetDataReader(sql);
                 while (dataReader.Read())
@@ -291,7 +291,7 @@ namespace WareHome
             {
                 string sql = $"SELECT *" +
                     $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                    $"ORDER BY cijena_namirniceNaListi DESC";
+                    $"ORDER BY Try_convert(float, cijena_namirniceNaListi) DESC";
                 Database.Instance.Connect();
                 IDataReader dataReader = Database.Instance.GetDataReader(sql);
                 while (dataReader.Read())
@@ -335,7 +335,7 @@ namespace WareHome
             {
                 string sql = $"SELECT *" +
                     $"FROM Namirnica_na_listi WHERE Namirnica_na_listi.lista_id = {odabranaLista.IdListe} " +
-                    $"ORDER BY cijena_namirniceNaListi ASC";
+                    $"ORDER BY Try_convert(float, cijena_namirniceNaListi) ASC";
                 Database.Instance.Connect();
                 IDataReader dataReader = Database.Instance.GetDataReader(sql);
                 while (dataReader.Read())
