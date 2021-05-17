@@ -39,7 +39,7 @@ namespace WareHome
 
         private void dodajButton_Click(object sender, EventArgs e)
         {
-            DodajArtiklNaListu dodajArtiklNaListu = new DodajArtiklNaListu(odabranaLista);
+            DodajNaListuForm dodajArtiklNaListu = new DodajNaListuForm(odabranaLista);
             dodajArtiklNaListu.ShowDialog();
             OsvjeziListu();
         }
