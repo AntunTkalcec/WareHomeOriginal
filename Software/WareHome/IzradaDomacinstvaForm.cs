@@ -39,12 +39,10 @@ namespace WareHome
                 Database.Instance.Connect();
                 DomacinstvoRepository.Spremi(novoDomacinstvo);
                 Database.Instance.Disconnect();
-                MessageBox.Show("Domaćinstvo izrađeno.", "Obavijest");
                 StaviKorisnikaUDomacinstvo(novoDomacinstvo);
-                Close();
                 DomacinstvoRepository.PridruzivanjeUspješno = true;
-                GlavnaForm form = new GlavnaForm(trenutniKorisnik);
-                form.ShowDialog();
+                MessageBox.Show($"Domaćinstvo {novoDomacinstvo.Naziv} izrađeno!", "Obavijest");
+                Close();
             }
         }
 

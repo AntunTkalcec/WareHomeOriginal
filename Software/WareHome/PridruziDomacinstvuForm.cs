@@ -43,8 +43,6 @@ namespace WareHome
                 DomacinstvoRepository.PridruzivanjeUspješno = true;
                 MessageBox.Show($"Pridruženi ste domaćinstvu {trenutniKorisnik.Domacinstvo.Naziv}!", "Obavijest");
                 Close();
-                GlavnaForm form = new GlavnaForm(trenutniKorisnik);
-                form.ShowDialog();
             }
             else
             {

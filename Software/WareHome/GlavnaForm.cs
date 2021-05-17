@@ -335,8 +335,13 @@ namespace WareHome
 
         private void izradiDomacinstvoButton_Click(object sender, EventArgs e)
         {
+            DomacinstvoRepository.PridruzivanjeUspješno = false;
             IzradaDomacinstvaForm form = new IzradaDomacinstvaForm(trenutniKorisnik);
             form.ShowDialog();
+            if (DomacinstvoRepository.PridruzivanjeUspješno)
+            {
+                OsvjeziDomacinstvo();
+            }
         }
 
         private void pridruziDomacinstvuButton_Click(object sender, EventArgs e)
@@ -346,19 +351,14 @@ namespace WareHome
             form.ShowDialog();
             if (DomacinstvoRepository.PridruzivanjeUspješno)
             {
-                Close();
+                OsvjeziDomacinstvo();
             }
         }
 
         private void btnPrijaviProblem_Click(object sender, EventArgs e)
         {
-            DomacinstvoRepository.PridruzivanjeUspješno = false;
             PrijavaProblemaForm form = new PrijavaProblemaForm(trenutniKorisnik);
             form.ShowDialog();
-            if (DomacinstvoRepository.PridruzivanjeUspješno)
-            {
-                Close();
-            }
         }
     }
 }
