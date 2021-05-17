@@ -24,7 +24,7 @@ F05 | Izrada i uređivanje rasporeda odlaska u kupovinu | Upis i izmjena general
 F06 | Izrada liste za kupovinu | Izrada popisa namirnica koje želimo kupiti, a nisu prethodno upisane ili ih nemamo kod kuće. | Karlo Habdija
 F07 | Pregled i uređivanje liste za kupovinu | Pregledavanje, dodavanje ili brisanje namirnica sa liste za kupovinu. | Karlo Habdija
 F08 | Predviđanje potrošnje namirnica | Temeljem potrošnje u posljednjih 6 mjeseci računa se kada će koje namirnice nestati, te na zahtjev korisnika se ispisuje izvješće s navedenim podacima. | Karlo Habdija
-F09 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno) | Kristijan Stručić
+F09 | Odabir načina ispisa liste za kupovinu | Lista može biti ispisana prema trgovini, cijeni ili količini (uzlazno ili silazno). | Kristijan Stručić
 F10 | Ispis liste za kupovinu | Aplikacija zahtjevom korisnika ispisuje namirnice čija količina je ispod optimalnog praga te namirnice upisane na listu za kupovinu. | Kristijan Stručić
 F11 | Slanje podsjetnika na email | U vrijeme kada je definiran odlazak u kupovinu, korisniku se na email šalje podsjetnik sa popisom svih proizvoda na listi. | Kristijan Stručić
 F12 | Izrada domaćinstva | Korisnik izrađuje obiteljsko domaćinstvo koje može koristiti više korisnika. | Kristijan Stručić
