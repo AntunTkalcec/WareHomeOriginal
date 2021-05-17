@@ -20,6 +20,9 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            AcceptButton = btnPotvrdi;
+            CancelButton = exitAppButton;
+            ActiveControl = domacinstvoNazivTextBox;
         }
 
         private void exitAppButton_Click(object sender, EventArgs e)
@@ -37,14 +40,13 @@ namespace WareHome
             if (ProvjeriPostojanje())
             {
                 StaviKorisnikaUDomacinstvo();
-                MessageBox.Show("Pridruženi ste željenom domaćinstvu.");
+                DomacinstvoRepository.PridruzivanjeUspješno = true;
+                MessageBox.Show($"Pridruženi ste domaćinstvu {trenutniKorisnik.Domacinstvo.Naziv}!", "Obavijest");
                 Close();
-                GlavnaForm form = new GlavnaForm(trenutniKorisnik);
-                form.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Ne postoji domaćinstvo s tim nazivom.");
+                MessageBox.Show("Ne postoji domaćinstvo s unesenim nazivom.", "Greška!");
             }
         }
 

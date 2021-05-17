@@ -10,6 +10,8 @@ namespace WareHome_Logic
 {
     public static class DomacinstvoRepository
     {
+        public static bool PridruzivanjeUspješno;
+
         public static Domacinstvo DohvatiDomacinstvo(IDataReader dataReader)
         {
             Domacinstvo domacinstvo = null;

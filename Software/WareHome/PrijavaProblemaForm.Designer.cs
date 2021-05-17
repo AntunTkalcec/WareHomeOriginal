@@ -29,27 +29,12 @@ namespace WareHome
         /// </summary>
         private void InitializeComponent()
         {
-            this.minimizeButton = new System.Windows.Forms.Button();
             this.exitAppButton = new System.Windows.Forms.Button();
             this.prijavaProblemaLabel = new System.Windows.Forms.Label();
             this.opisProblemaLabel = new System.Windows.Forms.Label();
             this.problemTextBox = new System.Windows.Forms.RichTextBox();
             this.btnPosalji = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizeButton.ForeColor = System.Drawing.Color.DarkGray;
-            this.minimizeButton.Location = new System.Drawing.Point(355, -2);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(23, 26);
-            this.minimizeButton.TabIndex = 25;
-            this.minimizeButton.Text = "-";
-            this.minimizeButton.UseVisualStyleBackColor = true;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // exitAppButton
             // 
@@ -69,9 +54,10 @@ namespace WareHome
             // prijavaProblemaLabel
             // 
             this.prijavaProblemaLabel.AutoSize = true;
-            this.prijavaProblemaLabel.Location = new System.Drawing.Point(134, 32);
+            this.prijavaProblemaLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prijavaProblemaLabel.Location = new System.Drawing.Point(120, 40);
             this.prijavaProblemaLabel.Name = "prijavaProblemaLabel";
-            this.prijavaProblemaLabel.Size = new System.Drawing.Size(142, 21);
+            this.prijavaProblemaLabel.Size = new System.Drawing.Size(171, 23);
             this.prijavaProblemaLabel.TabIndex = 26;
             this.prijavaProblemaLabel.Text = "Prijava problema";
             // 
@@ -114,12 +100,12 @@ namespace WareHome
             this.Controls.Add(this.problemTextBox);
             this.Controls.Add(this.opisProblemaLabel);
             this.Controls.Add(this.prijavaProblemaLabel);
-            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitAppButton);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PrijavaProblemaForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrijavaProblemaForm";
             this.ResumeLayout(false);
@@ -128,8 +114,6 @@ namespace WareHome
         }
 
         #endregion
-
-        private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Button exitAppButton;
         private System.Windows.Forms.Label prijavaProblemaLabel;
         private System.Windows.Forms.Label opisProblemaLabel;

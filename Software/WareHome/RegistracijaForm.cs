@@ -50,13 +50,13 @@ namespace WareHome
 
             if (!ProvjeriKorisnickoIme(KorisnickoIme))
             {
-                MessageBox.Show("To korisničko ime je već zauzeto.");
+                MessageBox.Show("Korisničko ime se već koristi.", "Greška!");
                 return Uspjeh;
             }
 
             if (Lozinka != PotvrdaLozinke)
             {
-                MessageBox.Show("Polja Lozinka i Potvrdi Lozinku se ne poklapaju!");
+                MessageBox.Show("Polja Lozinka i Potvrdi Lozinku se ne poklapaju!", "Greška!");
                 return Uspjeh;
             }
             else
@@ -68,12 +68,12 @@ namespace WareHome
                         $"VALUES ('{Ime}', '{Prezime}', '{Mail}', '{Lozinka}', '{KorisnickoIme}', '{DatumRegistracije:yyyyMMdd}')";
                     Database.Instance.ExecuteCommand(sql);
                     Uspjeh = true;
-                    MessageBox.Show("Korisnik registriran.");
+                    MessageBox.Show("Korisnik registriran.", "Obavijest");
                     Database.Instance.Disconnect();
                 }
                 else
                 {
-                    MessageBox.Show("Ostavili ste nepopunjena polja!");
+                    MessageBox.Show("Ostavili ste nepopunjena polja!", "Greška!");
                     return Uspjeh;
                 }
             }

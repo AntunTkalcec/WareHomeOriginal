@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DodajArtiklNaListu.cs">
+    <Compile Include="DodajNaListuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DodajArtiklNaListu.Designer.cs">
-      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    <Compile Include="DodajNaListuForm.Designer.cs">
+      <DependentUpon>DodajNaListuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DodajNamirnicuForm.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <Compile Include="RegistracijaForm.Designer.cs">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DodajArtiklNaListu.resx">
-      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    <EmbeddedResource Include="DodajNaListuForm.resx">
+      <DependentUpon>DodajNaListuForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="TestiranjeForm.cs">
       <SubType>Form</SubType>

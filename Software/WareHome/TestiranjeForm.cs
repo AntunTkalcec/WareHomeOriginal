@@ -1,10 +1,13 @@
-﻿using System;
+﻿using DatabaseAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.PredviđanjePotrošnje;
@@ -32,28 +35,45 @@ namespace WareHome
         {
             List<PredviđenaPotrošnja> predviđenaPotrošnja = null;
             predviđenaPotrošnja = PredviđanjePotrošnjeRepository.PredvidiPotrošnju(trenutniKorisnik);
-            dataGridView1.DataSource = predviđenaPotrošnja;
+            predvidanjeDataGridView.DataSource = predviđenaPotrošnja;
 
-            dataGridView1.Columns["NamirnicaId"].ReadOnly = true;
-            dataGridView1.Columns["NamirnicaId"].HeaderText = "ID";
-            dataGridView1.Columns["NamirnicaId"].Width = 25;
+            predvidanjeDataGridView.Columns["NamirnicaId"].ReadOnly = true;
+            predvidanjeDataGridView.Columns["NamirnicaId"].HeaderText = "ID";
+            predvidanjeDataGridView.Columns["NamirnicaId"].Width = 25;
 
-            dataGridView1.Columns["NamirnicaNaziv"].ReadOnly = true;
-            dataGridView1.Columns["NamirnicaNaziv"].HeaderText = "Naziv";
-            dataGridView1.Columns["NamirnicaNaziv"].Width = 221;
+            predvidanjeDataGridView.Columns["NamirnicaNaziv"].ReadOnly = true;
+            predvidanjeDataGridView.Columns["NamirnicaNaziv"].HeaderText = "Naziv";
+            predvidanjeDataGridView.Columns["NamirnicaNaziv"].Width = 221;
 
-            dataGridView1.Columns["DostupnaKoličina"].ReadOnly = true;
-            dataGridView1.Columns["DostupnaKoličina"].HeaderText = "Dostupna količina";
-            dataGridView1.Columns["DostupnaKoličina"].Width = 150;
+            predvidanjeDataGridView.Columns["DostupnaKoličina"].ReadOnly = true;
+            predvidanjeDataGridView.Columns["DostupnaKoličina"].HeaderText = "Dostupna količina";
+            predvidanjeDataGridView.Columns["DostupnaKoličina"].Width = 150;
             
-            dataGridView1.Columns["MjernaJedinica"].ReadOnly = true;
-            dataGridView1.Columns["MjernaJedinica"].HeaderText = "Mjerna jedinica";
-            dataGridView1.Columns["MjernaJedinica"].Width = 150;
+            predvidanjeDataGridView.Columns["MjernaJedinica"].ReadOnly = true;
+            predvidanjeDataGridView.Columns["MjernaJedinica"].HeaderText = "Mjerna jedinica";
+            predvidanjeDataGridView.Columns["MjernaJedinica"].Width = 150;
 
-            dataGridView1.Columns["PredviđenoTrajanje"].ReadOnly = true;
-            dataGridView1.Columns["PredviđenoTrajanje"].HeaderText = "Predviđeno trajanje (u danima)";
-            dataGridView1.Columns["PredviđenoTrajanje"].Width = 175;
+            predvidanjeDataGridView.Columns["PredviđenoTrajanje"].ReadOnly = true;
+            predvidanjeDataGridView.Columns["PredviđenoTrajanje"].HeaderText = "Predviđeno trajanje (u danima)";
+            predvidanjeDataGridView.Columns["PredviđenoTrajanje"].Width = 175;
 
+        }
+
+        private void odjavaDomacinstvaButton_Click(object sender, EventArgs e)
+        {
+            string sql = "UPDATE Korisnik SET domacinstvo = null WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+            Database.Instance.Connect();
+            Database.Instance.ExecuteCommand(sql);
+            Database.Instance.Disconnect();
+            trenutniKorisnik.Domacinstvo = null;
+            Close();
+        }
+
+        private void nazivDomacinstvaButton_Click(object sender, EventArgs e)
+        {
+
+            CultureInfo culture = Thread.CurrentThread.CurrentCulture;
+            MessageBox.Show(culture.Name + "\n" + culture.NumberFormat.NumberDecimalSeparator);
         }
     }
 }

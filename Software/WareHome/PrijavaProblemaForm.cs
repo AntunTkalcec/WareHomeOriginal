@@ -19,6 +19,8 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            CancelButton = exitAppButton;
+            ActiveControl = problemTextBox;
         }
 
         private void btnPosalji_Click(object sender, EventArgs e)
@@ -26,7 +28,10 @@ namespace WareHome
             string opis = problemTextBox.Text;
             DateTime datum = DateTime.Today;
             string korisnickoIme = trenutniKorisnik.KorisnickoIme;
-            string email = "Pošiljatelj prijave: " + korisnickoIme + "\n" + "Datum slanja: " + datum.ToShortDateString() + "\n" + opis;
+            string email = "Pošiljatelj prijave: " + korisnickoIme + "\n" 
+                + "Email pošiljatelja: " + trenutniKorisnik.Mail + "\n"  
+                + "Datum slanja: " + datum.ToShortDateString() + "\n" 
+                + opis;
             PosaljiMail(email);
         }
 
@@ -48,7 +53,7 @@ namespace WareHome
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
-                MessageBox.Show("Zahvaljujemo Vam na prijavi problema!");
+                MessageBox.Show("Problem uspješno prijavljen. Hvala Vam!", "Prijava problema");
                 Close();
             }
             catch (Exception ex)
@@ -61,11 +66,6 @@ namespace WareHome
         private void exitAppButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void minimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
     }
 }

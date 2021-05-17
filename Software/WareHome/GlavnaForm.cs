@@ -24,7 +24,12 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
-            korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
+        }
+
+        private void GlavnaForm_Load(object sender, EventArgs e)
+        {
+            OsvjeziDomacinstvo();
+            OsvjeziNamirnice();
         }
 
         private void OsvjeziNamirnice()
@@ -41,8 +46,25 @@ namespace WareHome
 
         private void OsvjeziDomacinstvo()
         {
+            if (trenutniKorisnik.Ime.Length + trenutniKorisnik.Prezime.Length > 16 && trenutniKorisnik.Ime.Length <= 15)
+            {
+                korisnikLabel2.Text = trenutniKorisnik.Ime + " " + trenutniKorisnik.Prezime.Substring(0, 1) + ".";
+            }
+            else if (trenutniKorisnik.Ime.Length + trenutniKorisnik.Prezime.Length > 16 && trenutniKorisnik.Ime.Length > 15)
+            {
+                korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
+            }
+            else
+            {
+                korisnikLabel2.Text = trenutniKorisnik.Ime + " " + trenutniKorisnik.Prezime;
+            }
+
             if (trenutniKorisnik.Domacinstvo == null)
             {
+                namirniceDGV.DataSource = null;
+                trenutnoDomacinstvoLabel2.Text = "N/A";
+                brojNamirnicaLabel2.Text = "N/A";
+
                 MessageBox.Show("Niste član domaćinstva! Za korištenje svih funkcija aplikacije, izradite novo domaćinstvo ili se pridružite postojećem.", "Obavijest");
                 nisteDioDomacinstvaLabel.Visible = true;
                 izradiDomacinstvoButton.Visible = true;
@@ -55,15 +77,15 @@ namespace WareHome
                 rasporedButton.Enabled = false;
                 ispisButton.Enabled = false;
 
-                TestiranjeButton.Visible = false; //forma za testiranje
+                TestiranjeButton.Visible = false; 
             }
             else
             {
                 TestiranjeButton.Visible = false; 
-                if (trenutniKorisnik.KorisnickoIme == "drugo") //user: drugo | pass: dd\\
+                if (trenutniKorisnik.KorisnickoIme == "admin") //user: admin | pass: admin\\
                 {
                     TestiranjeButton.Visible = true;
-                } //forma za testiranje
+                } 
 
                 nisteDioDomacinstvaLabel.Visible = false;
                 izradiDomacinstvoButton.Visible = false;
@@ -79,11 +101,6 @@ namespace WareHome
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
                 OsvjeziNamirnice();
             }
-        }
-        private void GlavnaForm_Load(object sender, EventArgs e)
-        {
-            OsvjeziDomacinstvo();
-            OsvjeziNamirnice();
         }
 
         private void rasporedButton_Click(object sender, EventArgs e)
@@ -144,7 +161,7 @@ namespace WareHome
 
         private void pdfButton_Click(object sender, EventArgs e)
         {
-            string naziv = $"WareHome stanje namirnica";
+            string naziv = "WareHome stanje namirnica ("+DateTime.Today.Date.Day + "." + DateTime.Today.Date.Month + "." + DateTime.Today.Date.Year + ".)";
             if (namirniceDGV.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog
@@ -297,6 +314,8 @@ namespace WareHome
         {
             TestiranjeForm testiranje = new TestiranjeForm(trenutniKorisnik);
             testiranje.ShowDialog();
+            OsvjeziDomacinstvo();
+            OsvjeziNamirnice();
         }
 
         private void warehomePictureBox_Click(object sender, EventArgs e)
@@ -316,16 +335,24 @@ namespace WareHome
 
         private void izradiDomacinstvoButton_Click(object sender, EventArgs e)
         {
-            Close();
+            DomacinstvoRepository.PridruzivanjeUspješno = false;
             IzradaDomacinstvaForm form = new IzradaDomacinstvaForm(trenutniKorisnik);
             form.ShowDialog();
+            if (DomacinstvoRepository.PridruzivanjeUspješno)
+            {
+                OsvjeziDomacinstvo();
+            }
         }
 
         private void pridruziDomacinstvuButton_Click(object sender, EventArgs e)
         {
-            Close();
+            DomacinstvoRepository.PridruzivanjeUspješno = false;
             PridruziDomacinstvuForm form = new PridruziDomacinstvuForm(trenutniKorisnik);
             form.ShowDialog();
+            if (DomacinstvoRepository.PridruzivanjeUspješno)
+            {
+                OsvjeziDomacinstvo();
+            }
         }
 
         private void btnPrijaviProblem_Click(object sender, EventArgs e)
