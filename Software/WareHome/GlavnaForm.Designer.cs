@@ -46,6 +46,7 @@ namespace WareHome
             this.warehomePictureBox = new System.Windows.Forms.PictureBox();
             this.korisnikLabel1 = new System.Windows.Forms.Label();
             this.trenutnoDomacinstvoLabel = new System.Windows.Forms.Label();
+            this.prijavaProblemaButton = new System.Windows.Forms.Button();
             this.pridruziDomacinstvuButton = new System.Windows.Forms.Button();
             this.izradiDomacinstvoButton = new System.Windows.Forms.Button();
             this.pdfButton = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@ namespace WareHome
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.nisteDioDomacinstvaLabel = new System.Windows.Forms.Label();
-            this.btnPrijaviProblem = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
@@ -73,7 +73,7 @@ namespace WareHome
             this.rasporedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rasporedButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rasporedButton.ForeColor = System.Drawing.Color.White;
-            this.rasporedButton.Location = new System.Drawing.Point(0, 549);
+            this.rasporedButton.Location = new System.Drawing.Point(0, 558);
             this.rasporedButton.Name = "rasporedButton";
             this.rasporedButton.Size = new System.Drawing.Size(173, 52);
             this.rasporedButton.TabIndex = 0;
@@ -88,7 +88,7 @@ namespace WareHome
             this.listeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.listeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listeButton.ForeColor = System.Drawing.Color.White;
-            this.listeButton.Location = new System.Drawing.Point(0, 437);
+            this.listeButton.Location = new System.Drawing.Point(0, 446);
             this.listeButton.Name = "listeButton";
             this.listeButton.Size = new System.Drawing.Size(173, 50);
             this.listeButton.TabIndex = 1;
@@ -113,7 +113,6 @@ namespace WareHome
             // 
             // glavnaFormPanelLeft
             // 
-            this.glavnaFormPanelLeft.Controls.Add(this.btnPrijaviProblem);
             this.glavnaFormPanelLeft.Controls.Add(this.ispisButton);
             this.glavnaFormPanelLeft.Controls.Add(this.TestiranjeButton);
             this.glavnaFormPanelLeft.Controls.Add(this.glavnaFormPanelLeftTop);
@@ -133,7 +132,7 @@ namespace WareHome
             this.ispisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ispisButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ispisButton.ForeColor = System.Drawing.Color.White;
-            this.ispisButton.Location = new System.Drawing.Point(0, 493);
+            this.ispisButton.Location = new System.Drawing.Point(0, 502);
             this.ispisButton.Name = "ispisButton";
             this.ispisButton.Size = new System.Drawing.Size(173, 50);
             this.ispisButton.TabIndex = 7;
@@ -143,12 +142,15 @@ namespace WareHome
             // 
             // TestiranjeButton
             // 
-            this.TestiranjeButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestiranjeButton.Location = new System.Drawing.Point(0, 378);
+            this.TestiranjeButton.FlatAppearance.BorderSize = 0;
+            this.TestiranjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestiranjeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestiranjeButton.ForeColor = System.Drawing.Color.White;
+            this.TestiranjeButton.Location = new System.Drawing.Point(0, 387);
             this.TestiranjeButton.Name = "TestiranjeButton";
             this.TestiranjeButton.Size = new System.Drawing.Size(173, 53);
             this.TestiranjeButton.TabIndex = 6;
-            this.TestiranjeButton.Text = "Test predviđanja";
+            this.TestiranjeButton.Text = "Testiranje neimplementiranog";
             this.TestiranjeButton.UseVisualStyleBackColor = true;
             this.TestiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
             // 
@@ -241,6 +243,21 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel.Size = new System.Drawing.Size(118, 21);
             this.trenutnoDomacinstvoLabel.TabIndex = 3;
             this.trenutnoDomacinstvoLabel.Text = "Domaćinstvo:";
+            // 
+            // prijavaProblemaButton
+            // 
+            this.prijavaProblemaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
+            this.prijavaProblemaButton.FlatAppearance.BorderSize = 0;
+            this.prijavaProblemaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prijavaProblemaButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prijavaProblemaButton.ForeColor = System.Drawing.Color.Red;
+            this.prijavaProblemaButton.Location = new System.Drawing.Point(1332, 2);
+            this.prijavaProblemaButton.Name = "prijavaProblemaButton";
+            this.prijavaProblemaButton.Size = new System.Drawing.Size(25, 24);
+            this.prijavaProblemaButton.TabIndex = 8;
+            this.prijavaProblemaButton.Text = "?";
+            this.prijavaProblemaButton.UseVisualStyleBackColor = true;
+            this.prijavaProblemaButton.Click += new System.EventHandler(this.btnPrijaviProblem_Click);
             // 
             // pridruziDomacinstvuButton
             // 
@@ -428,26 +445,12 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nisteDioDomacinstvaLabel.Visible = false;
             // 
-            // btnPrijaviProblem
-            // 
-            this.btnPrijaviProblem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
-            this.btnPrijaviProblem.FlatAppearance.BorderSize = 0;
-            this.btnPrijaviProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrijaviProblem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrijaviProblem.ForeColor = System.Drawing.Color.White;
-            this.btnPrijaviProblem.Location = new System.Drawing.Point(0, 262);
-            this.btnPrijaviProblem.Name = "btnPrijaviProblem";
-            this.btnPrijaviProblem.Size = new System.Drawing.Size(173, 50);
-            this.btnPrijaviProblem.TabIndex = 8;
-            this.btnPrijaviProblem.Text = "Prijava problema";
-            this.btnPrijaviProblem.UseVisualStyleBackColor = true;
-            this.btnPrijaviProblem.Click += new System.EventHandler(this.btnPrijaviProblem_Click);
-            // 
             // GlavnaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1410, 660);
+            this.Controls.Add(this.prijavaProblemaButton);
             this.Controls.Add(this.nisteDioDomacinstvaLabel);
             this.Controls.Add(this.izradiDomacinstvoButton);
             this.Controls.Add(this.pridruziDomacinstvuButton);
@@ -504,6 +507,6 @@ namespace WareHome
         private System.Windows.Forms.Label korisnikLabel2;
         private System.Windows.Forms.Label korisnikLabel1;
         private System.Windows.Forms.Button ispisButton;
-        private System.Windows.Forms.Button btnPrijaviProblem;
+        private System.Windows.Forms.Button prijavaProblemaButton;
     }
 }
