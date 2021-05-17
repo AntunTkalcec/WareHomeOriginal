@@ -112,6 +112,12 @@
     <Compile Include="NovaListaForm.Designer.cs">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OdabirNacinaIspisaListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdabirNacinaIspisaListeForm.Designer.cs">
+      <DependentUpon>OdabirNacinaIspisaListeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PridruziDomacinstvuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovaListaForm.resx">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdabirNacinaIspisaListeForm.resx">
+      <DependentUpon>OdabirNacinaIspisaListeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PridruziDomacinstvuForm.resx">
       <DependentUpon>PridruziDomacinstvuForm.cs</DependentUpon>

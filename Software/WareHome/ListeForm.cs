@@ -63,13 +63,13 @@ namespace WareHome
 
                 if (odabrana.PrivatnaLista)
                 {
-                    LozinkaZaListuForm lozinkaZaListuForm = new LozinkaZaListuForm(odabrana);
+                    LozinkaZaListuForm lozinkaZaListuForm = new LozinkaZaListuForm(odabrana, trenutniKorisnik);
                     lozinkaZaListuForm.ShowDialog();
                     OsvjeziListu();
                 }
                 else
                 {
-                    ListaForm listaForm = new ListaForm(odabrana);
+                    ListaForm listaForm = new ListaForm(odabrana, trenutniKorisnik);
                     listaForm.ShowDialog();
                     OsvjeziListu();
                 }

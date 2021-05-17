@@ -1,9 +1,12 @@
 ﻿using DatabaseAccess;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +20,13 @@ namespace WareHome
     {
         List<NamirnicaNaListi> namirniceNaListi;
         ListaZaKupovinu odabranaLista;
+        Korisnik trenutniKorisnik;
         
-        public ListaForm(ListaZaKupovinu odabrana)
+        public ListaForm(ListaZaKupovinu odabrana, Korisnik korisnik)
         {
             InitializeComponent();
             odabranaLista = odabrana;
+            trenutniKorisnik = korisnik;
             nazivLabel.Text = odabranaLista.NazivListe;
             Text = "Lista za kupovinu - " + odabranaLista.NazivListe;
             CancelButton = povratakButton;
@@ -157,6 +162,12 @@ namespace WareHome
                 NamirnicaNaListiRepository.UkloniNamirnicu(ukloniNamirnicu);
                 OsvjeziListu();
             }
+        }
+
+        private void ispisButton_Click(object sender, EventArgs e)
+        {
+            OdabirNacinaIspisaListeForm form = new OdabirNacinaIspisaListeForm(odabranaLista, namirniceNaListi, trenutniKorisnik);
+            form.ShowDialog();
         }
     }
 }

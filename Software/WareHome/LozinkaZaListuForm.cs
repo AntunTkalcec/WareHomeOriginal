@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.ListaZaKupovinu;
+using WareHome_Logic;
 
 namespace WareHome
 {
@@ -15,11 +16,13 @@ namespace WareHome
     {
         ListaZaKupovinu odabranaLista;
         int pokusaji = 3;
+        Korisnik trenutniKorisnik;
 
-        public LozinkaZaListuForm(ListaZaKupovinu odabrana)
+        public LozinkaZaListuForm(ListaZaKupovinu odabrana, Korisnik korisnik)
         {
             InitializeComponent();
             odabranaLista = odabrana;
+            trenutniKorisnik = korisnik;
             this.AcceptButton = prikažiButton;
             prikažiButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
@@ -39,7 +42,7 @@ namespace WareHome
         {
             if (odabranaLista.LozinkaListe == lozinkaTextBox.Text)
             {
-                ListaForm listaForm = new ListaForm(odabranaLista);
+                ListaForm listaForm = new ListaForm(odabranaLista, trenutniKorisnik);
                 listaForm.ShowDialog();
                 Close();
             }
