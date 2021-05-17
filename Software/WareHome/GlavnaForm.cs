@@ -161,7 +161,7 @@ namespace WareHome
 
         private void pdfButton_Click(object sender, EventArgs e)
         {
-            string naziv = $"WareHome stanje namirnica";
+            string naziv = "WareHome stanje namirnica - ("+DateTime.Today.Date.Day + "." + DateTime.Today.Date.Month + "." + DateTime.Today.Date.Year + ".)";
             if (namirniceDGV.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog
