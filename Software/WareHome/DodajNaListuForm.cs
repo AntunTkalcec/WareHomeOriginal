@@ -11,11 +11,11 @@ using WareHome.Models.ListaZaKupovinu;
 
 namespace WareHome
 {
-    public partial class DodajArtiklNaListu : Form
+    public partial class DodajNaListuForm : Form
     {
         public ListaZaKupovinu odabranaLista;
 
-        public DodajArtiklNaListu(ListaZaKupovinu odabrana)
+        public DodajNaListuForm(ListaZaKupovinu odabrana)
         {
             InitializeComponent();
             odabranaLista = odabrana;

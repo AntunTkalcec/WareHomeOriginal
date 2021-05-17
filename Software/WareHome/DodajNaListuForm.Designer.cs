@@ -1,7 +1,7 @@
 ﻿
 namespace WareHome
 {
-    partial class DodajArtiklNaListu
+    partial class DodajNaListuForm
     {
         /// <summary>
         /// Required designer variable.
