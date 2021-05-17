@@ -58,6 +58,7 @@ namespace WareHome
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.nisteDioDomacinstvaLabel = new System.Windows.Forms.Label();
+            this.btnPrijaviProblem = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft.SuspendLayout();
             this.glavnaFormPanelLeftTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warehomePictureBox)).BeginInit();
@@ -112,6 +113,7 @@ namespace WareHome
             // 
             // glavnaFormPanelLeft
             // 
+            this.glavnaFormPanelLeft.Controls.Add(this.btnPrijaviProblem);
             this.glavnaFormPanelLeft.Controls.Add(this.ispisButton);
             this.glavnaFormPanelLeft.Controls.Add(this.TestiranjeButton);
             this.glavnaFormPanelLeft.Controls.Add(this.glavnaFormPanelLeftTop);
@@ -426,6 +428,21 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nisteDioDomacinstvaLabel.Visible = false;
             // 
+            // btnPrijaviProblem
+            // 
+            this.btnPrijaviProblem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(95)))), ((int)(((byte)(109)))));
+            this.btnPrijaviProblem.FlatAppearance.BorderSize = 0;
+            this.btnPrijaviProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrijaviProblem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrijaviProblem.ForeColor = System.Drawing.Color.White;
+            this.btnPrijaviProblem.Location = new System.Drawing.Point(0, 262);
+            this.btnPrijaviProblem.Name = "btnPrijaviProblem";
+            this.btnPrijaviProblem.Size = new System.Drawing.Size(173, 50);
+            this.btnPrijaviProblem.TabIndex = 8;
+            this.btnPrijaviProblem.Text = "Prijava problema";
+            this.btnPrijaviProblem.UseVisualStyleBackColor = true;
+            this.btnPrijaviProblem.Click += new System.EventHandler(this.btnPrijaviProblem_Click);
+            // 
             // GlavnaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -487,5 +504,6 @@ namespace WareHome
         private System.Windows.Forms.Label korisnikLabel2;
         private System.Windows.Forms.Label korisnikLabel1;
         private System.Windows.Forms.Button ispisButton;
+        private System.Windows.Forms.Button btnPrijaviProblem;
     }
 }

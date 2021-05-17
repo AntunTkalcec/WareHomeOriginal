@@ -148,6 +148,12 @@
     <Compile Include="Models\Raspored\Ponavljanje.cs" />
     <Compile Include="Models\Raspored\Raspored.cs" />
     <Compile Include="Models\Raspored\Sat.cs" />
+    <Compile Include="PrijavaProblemaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrijavaProblemaForm.Designer.cs">
+      <DependentUpon>PrijavaProblemaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="PromijeniNamirnicuForm.cs">
       <SubType>Form</SubType>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrijavaForm.resx">
       <DependentUpon>PrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrijavaProblemaForm.resx">
+      <DependentUpon>PrijavaProblemaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromijeniNamirnicuForm.resx">
       <DependentUpon>PromijeniNamirnicuForm.cs</DependentUpon>

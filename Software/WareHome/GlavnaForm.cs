@@ -327,5 +327,11 @@ namespace WareHome
             PridruziDomacinstvuForm form = new PridruziDomacinstvuForm(trenutniKorisnik);
             form.ShowDialog();
         }
+
+        private void btnPrijaviProblem_Click(object sender, EventArgs e)
+        {
+            PrijavaProblemaForm form = new PrijavaProblemaForm(trenutniKorisnik);
+            form.ShowDialog();
+        }
     }
 }
