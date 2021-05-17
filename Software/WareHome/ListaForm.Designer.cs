@@ -122,7 +122,7 @@ namespace WareHome
             this.nazivLabel.Location = new System.Drawing.Point(13, 12);
             this.nazivLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nazivLabel.Name = "nazivLabel";
-            this.nazivLabel.Size = new System.Drawing.Size(99, 34);
+            this.nazivLabel.Size = new System.Drawing.Size(76, 26);
             this.nazivLabel.TabIndex = 0;
             this.nazivLabel.Text = "NAZIV";
             // 
@@ -135,7 +135,7 @@ namespace WareHome
             this.ukupnoLabel.Location = new System.Drawing.Point(601, 468);
             this.ukupnoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ukupnoLabel.Name = "ukupnoLabel";
-            this.ukupnoLabel.Size = new System.Drawing.Size(91, 23);
+            this.ukupnoLabel.Size = new System.Drawing.Size(73, 19);
             this.ukupnoLabel.TabIndex = 5;
             this.ukupnoLabel.Text = "Ukupno:";
             // 
@@ -148,7 +148,7 @@ namespace WareHome
             this.ukupnoTextBox.Location = new System.Drawing.Point(691, 466);
             this.ukupnoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ukupnoTextBox.Name = "ukupnoTextBox";
-            this.ukupnoTextBox.Size = new System.Drawing.Size(104, 30);
+            this.ukupnoTextBox.Size = new System.Drawing.Size(104, 25);
             this.ukupnoTextBox.TabIndex = 6;
             this.ukupnoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

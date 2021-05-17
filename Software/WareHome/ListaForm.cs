@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.ListaZaKupovinu;
@@ -74,13 +76,25 @@ namespace WareHome
                     }
                 }
 
-                if (!bezAtributa)
+                CultureInfo culture = Thread.CurrentThread.CurrentCulture;
+                string ispisUkupnog;
+
+                if (culture.NumberFormat.NumberDecimalSeparator == ",")
                 {
-                    ukupnoTextBox.Text = ukupno / 100 + " kn";
+                    ispisUkupnog = (ukupno / 100).ToString() + " kn";
                 }
                 else
                 {
-                    ukupnoTextBox.Text = "≈ " + ukupno / 100 + " kn";
+                    ispisUkupnog = ukupno.ToString() + " kn";
+                }
+
+                if (!bezAtributa)
+                {
+                    ukupnoTextBox.Text = ispisUkupnog;
+                }
+                else
+                {
+                    ukupnoTextBox.Text = "≈ " + ispisUkupnog;
                 }
             }
             else

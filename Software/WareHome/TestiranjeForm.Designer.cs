@@ -70,8 +70,9 @@ namespace WareHome
             this.nazivDomacinstvaButton.Name = "nazivDomacinstvaButton";
             this.nazivDomacinstvaButton.Size = new System.Drawing.Size(112, 39);
             this.nazivDomacinstvaButton.TabIndex = 3;
-            this.nazivDomacinstvaButton.Text = "Promijeni naziv domaćinstva";
+            this.nazivDomacinstvaButton.Text = "TESTER";
             this.nazivDomacinstvaButton.UseVisualStyleBackColor = true;
+            this.nazivDomacinstvaButton.Click += new System.EventHandler(this.nazivDomacinstvaButton_Click);
             // 
             // TestiranjeForm
             // 

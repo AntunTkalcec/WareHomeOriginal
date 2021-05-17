@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.PredviđanjePotrošnje;
@@ -65,6 +67,13 @@ namespace WareHome
             Database.Instance.Disconnect();
             trenutniKorisnik.Domacinstvo = null;
             Close();
+        }
+
+        private void nazivDomacinstvaButton_Click(object sender, EventArgs e)
+        {
+
+            CultureInfo culture = Thread.CurrentThread.CurrentCulture;
+            MessageBox.Show(culture.Name + "\n" + culture.NumberFormat.NumberDecimalSeparator);
         }
     }
 }
