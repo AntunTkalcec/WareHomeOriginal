@@ -113,6 +113,7 @@ namespace WareHome
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PredviđanjeForm";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Predviđanje potrošnje";
             this.Load += new System.EventHandler(this.PredviđanjeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.predvidanjeDataGridView)).EndInit();
