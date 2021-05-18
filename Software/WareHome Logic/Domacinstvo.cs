@@ -13,9 +13,6 @@ namespace WareHome_Logic
         [DisplayName("Naziv domaćinstva")]
         public string Naziv { get; set; }
         public DateTime DatumKreiranja { get; set; }
-        public string KorisnikKreator { get; set; }
-        public string OpisRadnje { get; set; }
-        public DateTime DatumRadnje { get; set; }
         
         public Domacinstvo ()
         {

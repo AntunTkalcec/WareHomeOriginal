@@ -304,6 +304,7 @@ namespace WareHome
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PromijeniNamirnicuForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PromijeniNamirnicuForm";
             this.Load += new System.EventHandler(this.PromijeniNamirnicuForm_Load);

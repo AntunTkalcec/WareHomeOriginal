@@ -21,6 +21,7 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            CancelButton = odustaniButton;
         }
 
         private void RasporedForm_Load(object sender, EventArgs e)

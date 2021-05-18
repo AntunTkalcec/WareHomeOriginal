@@ -17,6 +17,8 @@ namespace WareHome
         public NovaListaForm()
         {
             InitializeComponent();
+            AcceptButton = završiButton;
+            CancelButton = odustaniButton;
         }
 
         ListaZaKupovinu preimenujListu = null;
@@ -24,6 +26,7 @@ namespace WareHome
         public NovaListaForm(ListaZaKupovinu listaZaKupovinu)
         {
             InitializeComponent();
+            preimenujListu = null;
             preimenujListu = listaZaKupovinu;
         }
 
@@ -32,9 +35,13 @@ namespace WareHome
             privatnaCheckBox.Checked = false;
             lozinkaTextBox.Enabled = false;
             lozinkaTextBox.PasswordChar = '*';
+            Text = "Nova lista";
+            završiButton.Text = "Kreiraj";
 
             if (preimenujListu != null)
             {
+                Text = "Preimenuj listu";
+                završiButton.Text = "Završi";
                 nazivTextBox.Text = preimenujListu.NazivListe;
                 if (preimenujListu.PrivatnaLista)
                 {
@@ -89,7 +96,7 @@ namespace WareHome
             }
             else
             {
-                MessageBox.Show("Provjerite uneseni naziv liste (max. 30 znakova) i lozinku liste (max. 30 znakova)!");
+                MessageBox.Show("Provjerite uneseni naziv liste (max. 30 znakova) i lozinku liste (max. 30 znakova)!", "Greška!");
             }
         }
 

@@ -32,6 +32,7 @@ namespace WareHome.Models.ListaZaKupovinu
                     PopisNamirnica.Add(namirnica);
                 }
             }
+            dataReader.Close();
             Database.Instance.Disconnect();
         }
 

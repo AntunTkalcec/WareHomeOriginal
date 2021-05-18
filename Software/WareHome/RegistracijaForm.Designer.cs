@@ -42,11 +42,11 @@ namespace WareHome
             this.korimeLabel = new System.Windows.Forms.Label();
             this.regLozinkaTextBox = new System.Windows.Forms.TextBox();
             this.lozinkaLabel = new System.Windows.Forms.Label();
-            this.opisLabel1 = new System.Windows.Forms.Label();
             this.regPotvrdiLozinkuLabel = new System.Windows.Forms.Label();
             this.regPotvrdiLozinkuTextBox = new System.Windows.Forms.TextBox();
             this.exitAppButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
+            this.opisLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // odustaniButton
@@ -55,7 +55,7 @@ namespace WareHome
             this.odustaniButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.odustaniButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.odustaniButton.ForeColor = System.Drawing.Color.White;
-            this.odustaniButton.Location = new System.Drawing.Point(12, 391);
+            this.odustaniButton.Location = new System.Drawing.Point(12, 410);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(117, 46);
             this.odustaniButton.TabIndex = 7;
@@ -69,7 +69,7 @@ namespace WareHome
             this.registracijaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registracijaButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.registracijaButton.ForeColor = System.Drawing.Color.White;
-            this.registracijaButton.Location = new System.Drawing.Point(226, 391);
+            this.registracijaButton.Location = new System.Drawing.Point(226, 410);
             this.registracijaButton.Name = "registracijaButton";
             this.registracijaButton.Size = new System.Drawing.Size(117, 46);
             this.registracijaButton.TabIndex = 6;
@@ -81,7 +81,7 @@ namespace WareHome
             // 
             this.imeLabel.AutoSize = true;
             this.imeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.imeLabel.Location = new System.Drawing.Point(95, 45);
+            this.imeLabel.Location = new System.Drawing.Point(95, 64);
             this.imeLabel.Name = "imeLabel";
             this.imeLabel.Size = new System.Drawing.Size(44, 21);
             this.imeLabel.TabIndex = 24;
@@ -89,14 +89,14 @@ namespace WareHome
             // 
             // regImeTextBox
             // 
-            this.regImeTextBox.Location = new System.Drawing.Point(99, 69);
+            this.regImeTextBox.Location = new System.Drawing.Point(99, 88);
             this.regImeTextBox.Name = "regImeTextBox";
             this.regImeTextBox.Size = new System.Drawing.Size(157, 27);
             this.regImeTextBox.TabIndex = 0;
             // 
             // regPrezimeTextBox
             // 
-            this.regPrezimeTextBox.Location = new System.Drawing.Point(99, 123);
+            this.regPrezimeTextBox.Location = new System.Drawing.Point(99, 142);
             this.regPrezimeTextBox.Name = "regPrezimeTextBox";
             this.regPrezimeTextBox.Size = new System.Drawing.Size(157, 27);
             this.regPrezimeTextBox.TabIndex = 1;
@@ -105,7 +105,7 @@ namespace WareHome
             // 
             this.prezimeLabel.AutoSize = true;
             this.prezimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.prezimeLabel.Location = new System.Drawing.Point(95, 99);
+            this.prezimeLabel.Location = new System.Drawing.Point(95, 118);
             this.prezimeLabel.Name = "prezimeLabel";
             this.prezimeLabel.Size = new System.Drawing.Size(73, 21);
             this.prezimeLabel.TabIndex = 28;
@@ -113,7 +113,7 @@ namespace WareHome
             // 
             // regMailTextBox
             // 
-            this.regMailTextBox.Location = new System.Drawing.Point(99, 177);
+            this.regMailTextBox.Location = new System.Drawing.Point(99, 196);
             this.regMailTextBox.Name = "regMailTextBox";
             this.regMailTextBox.Size = new System.Drawing.Size(157, 27);
             this.regMailTextBox.TabIndex = 2;
@@ -122,7 +122,7 @@ namespace WareHome
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.emailLabel.Location = new System.Drawing.Point(95, 153);
+            this.emailLabel.Location = new System.Drawing.Point(95, 172);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(55, 21);
             this.emailLabel.TabIndex = 30;
@@ -130,7 +130,7 @@ namespace WareHome
             // 
             // regKorImeTextBox
             // 
-            this.regKorImeTextBox.Location = new System.Drawing.Point(99, 231);
+            this.regKorImeTextBox.Location = new System.Drawing.Point(99, 250);
             this.regKorImeTextBox.Name = "regKorImeTextBox";
             this.regKorImeTextBox.Size = new System.Drawing.Size(157, 27);
             this.regKorImeTextBox.TabIndex = 3;
@@ -139,7 +139,7 @@ namespace WareHome
             // 
             this.korimeLabel.AutoSize = true;
             this.korimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.korimeLabel.Location = new System.Drawing.Point(95, 207);
+            this.korimeLabel.Location = new System.Drawing.Point(95, 226);
             this.korimeLabel.Name = "korimeLabel";
             this.korimeLabel.Size = new System.Drawing.Size(120, 21);
             this.korimeLabel.TabIndex = 32;
@@ -147,7 +147,7 @@ namespace WareHome
             // 
             // regLozinkaTextBox
             // 
-            this.regLozinkaTextBox.Location = new System.Drawing.Point(99, 285);
+            this.regLozinkaTextBox.Location = new System.Drawing.Point(99, 304);
             this.regLozinkaTextBox.Name = "regLozinkaTextBox";
             this.regLozinkaTextBox.Size = new System.Drawing.Size(157, 27);
             this.regLozinkaTextBox.TabIndex = 4;
@@ -156,27 +156,17 @@ namespace WareHome
             // 
             this.lozinkaLabel.AutoSize = true;
             this.lozinkaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.lozinkaLabel.Location = new System.Drawing.Point(95, 261);
+            this.lozinkaLabel.Location = new System.Drawing.Point(95, 280);
             this.lozinkaLabel.Name = "lozinkaLabel";
             this.lozinkaLabel.Size = new System.Drawing.Size(70, 21);
             this.lozinkaLabel.TabIndex = 34;
             this.lozinkaLabel.Text = "Lozinka:";
             // 
-            // opisLabel1
-            // 
-            this.opisLabel1.AutoSize = true;
-            this.opisLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.opisLabel1.Location = new System.Drawing.Point(53, 24);
-            this.opisLabel1.Name = "opisLabel1";
-            this.opisLabel1.Size = new System.Drawing.Size(253, 21);
-            this.opisLabel1.TabIndex = 8;
-            this.opisLabel1.Text = "Unesite podatke za registraciju:";
-            // 
             // regPotvrdiLozinkuLabel
             // 
             this.regPotvrdiLozinkuLabel.AutoSize = true;
             this.regPotvrdiLozinkuLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.regPotvrdiLozinkuLabel.Location = new System.Drawing.Point(95, 315);
+            this.regPotvrdiLozinkuLabel.Location = new System.Drawing.Point(95, 334);
             this.regPotvrdiLozinkuLabel.Name = "regPotvrdiLozinkuLabel";
             this.regPotvrdiLozinkuLabel.Size = new System.Drawing.Size(124, 21);
             this.regPotvrdiLozinkuLabel.TabIndex = 37;
@@ -184,7 +174,7 @@ namespace WareHome
             // 
             // regPotvrdiLozinkuTextBox
             // 
-            this.regPotvrdiLozinkuTextBox.Location = new System.Drawing.Point(99, 339);
+            this.regPotvrdiLozinkuTextBox.Location = new System.Drawing.Point(99, 358);
             this.regPotvrdiLozinkuTextBox.Name = "regPotvrdiLozinkuTextBox";
             this.regPotvrdiLozinkuTextBox.Size = new System.Drawing.Size(157, 27);
             this.regPotvrdiLozinkuTextBox.TabIndex = 5;
@@ -218,16 +208,29 @@ namespace WareHome
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
+            // opisLabel2
+            // 
+            this.opisLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.opisLabel2.AutoSize = true;
+            this.opisLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opisLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.opisLabel2.Location = new System.Drawing.Point(62, 30);
+            this.opisLabel2.Name = "opisLabel2";
+            this.opisLabel2.Size = new System.Drawing.Size(225, 25);
+            this.opisLabel2.TabIndex = 40;
+            this.opisLabel2.Text = "Registracija korisnika";
+            // 
             // RegistracijaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(355, 447);
+            this.ClientSize = new System.Drawing.Size(355, 477);
+            this.Controls.Add(this.opisLabel2);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.regPotvrdiLozinkuTextBox);
             this.Controls.Add(this.regPotvrdiLozinkuLabel);
-            this.Controls.Add(this.opisLabel1);
             this.Controls.Add(this.regLozinkaTextBox);
             this.Controls.Add(this.lozinkaLabel);
             this.Controls.Add(this.regKorImeTextBox);
@@ -267,10 +270,10 @@ namespace WareHome
         private System.Windows.Forms.Label korimeLabel;
         private System.Windows.Forms.TextBox regLozinkaTextBox;
         private System.Windows.Forms.Label lozinkaLabel;
-        private System.Windows.Forms.Label opisLabel1;
         private System.Windows.Forms.Label regPotvrdiLozinkuLabel;
         private System.Windows.Forms.TextBox regPotvrdiLozinkuTextBox;
         private System.Windows.Forms.Button exitAppButton;
         private System.Windows.Forms.Button minimizeButton;
+        private System.Windows.Forms.Label opisLabel2;
     }
 }

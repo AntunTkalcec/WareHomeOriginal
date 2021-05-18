@@ -19,6 +19,8 @@ namespace WareHome
         {
             InitializeComponent();
             trenutnaNamirnica = namirnica;
+            CancelButton = exitAppButton;
+            AcceptButton = spremiNamirnicuButton;
         }
         float staraVrijednost = 0;
         float novaVrijednost = 0;

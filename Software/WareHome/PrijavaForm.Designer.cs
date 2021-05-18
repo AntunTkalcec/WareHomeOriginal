@@ -48,9 +48,9 @@ namespace WareHome
             this.prijavaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prijavaButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prijavaButton.ForeColor = System.Drawing.Color.White;
-            this.prijavaButton.Location = new System.Drawing.Point(198, 186);
+            this.prijavaButton.Location = new System.Drawing.Point(181, 195);
             this.prijavaButton.Name = "prijavaButton";
-            this.prijavaButton.Size = new System.Drawing.Size(68, 50);
+            this.prijavaButton.Size = new System.Drawing.Size(103, 50);
             this.prijavaButton.TabIndex = 3;
             this.prijavaButton.Text = "Prijava";
             this.prijavaButton.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace WareHome
             this.registracijaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registracijaButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registracijaButton.ForeColor = System.Drawing.Color.White;
-            this.registracijaButton.Location = new System.Drawing.Point(61, 186);
+            this.registracijaButton.Location = new System.Drawing.Point(61, 195);
             this.registracijaButton.Name = "registracijaButton";
             this.registracijaButton.Size = new System.Drawing.Size(103, 50);
             this.registracijaButton.TabIndex = 4;
@@ -73,35 +73,35 @@ namespace WareHome
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(89, 153);
+            this.passwordTextBox.Location = new System.Drawing.Point(89, 162);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(157, 32);
+            this.passwordTextBox.Size = new System.Drawing.Size(157, 27);
             this.passwordTextBox.TabIndex = 2;
             // 
             // lozinkaLabel
             // 
             this.lozinkaLabel.AutoSize = true;
             this.lozinkaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.lozinkaLabel.Location = new System.Drawing.Point(85, 129);
+            this.lozinkaLabel.Location = new System.Drawing.Point(85, 138);
             this.lozinkaLabel.Name = "lozinkaLabel";
-            this.lozinkaLabel.Size = new System.Drawing.Size(85, 23);
+            this.lozinkaLabel.Size = new System.Drawing.Size(70, 21);
             this.lozinkaLabel.TabIndex = 17;
             this.lozinkaLabel.Text = "Lozinka:";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(89, 99);
+            this.usernameTextBox.Location = new System.Drawing.Point(89, 108);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(157, 32);
+            this.usernameTextBox.Size = new System.Drawing.Size(157, 27);
             this.usernameTextBox.TabIndex = 1;
             // 
             // korimeLabel
             // 
             this.korimeLabel.AutoSize = true;
             this.korimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.korimeLabel.Location = new System.Drawing.Point(85, 75);
+            this.korimeLabel.Location = new System.Drawing.Point(85, 84);
             this.korimeLabel.Name = "korimeLabel";
-            this.korimeLabel.Size = new System.Drawing.Size(149, 23);
+            this.korimeLabel.Size = new System.Drawing.Size(120, 21);
             this.korimeLabel.TabIndex = 15;
             this.korimeLabel.Text = "Korisničko ime:";
             // 
@@ -110,12 +110,13 @@ namespace WareHome
             this.opisLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.opisLabel2.AutoSize = true;
+            this.opisLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opisLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.opisLabel2.Location = new System.Drawing.Point(57, 26);
+            this.opisLabel2.Location = new System.Drawing.Point(79, 40);
             this.opisLabel2.Name = "opisLabel2";
-            this.opisLabel2.Size = new System.Drawing.Size(275, 23);
+            this.opisLabel2.Size = new System.Drawing.Size(177, 25);
             this.opisLabel2.TabIndex = 14;
-            this.opisLabel2.Text = "Unesite podatke za prijavu:";
+            this.opisLabel2.Text = "Prijava korisnika";
             // 
             // zaboravljenaLozinkaButton
             // 

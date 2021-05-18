@@ -37,6 +37,7 @@ namespace WareHome
             this.nazivLabel = new System.Windows.Forms.Label();
             this.ukupnoLabel = new System.Windows.Forms.Label();
             this.ukupnoTextBox = new System.Windows.Forms.TextBox();
+            this.ispisButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.namirniceDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +123,7 @@ namespace WareHome
             this.nazivLabel.Location = new System.Drawing.Point(13, 12);
             this.nazivLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nazivLabel.Name = "nazivLabel";
-            this.nazivLabel.Size = new System.Drawing.Size(99, 34);
+            this.nazivLabel.Size = new System.Drawing.Size(76, 26);
             this.nazivLabel.TabIndex = 0;
             this.nazivLabel.Text = "NAZIV";
             // 
@@ -132,10 +133,10 @@ namespace WareHome
             this.ukupnoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ukupnoLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ukupnoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.ukupnoLabel.Location = new System.Drawing.Point(578, 468);
+            this.ukupnoLabel.Location = new System.Drawing.Point(601, 468);
             this.ukupnoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ukupnoLabel.Name = "ukupnoLabel";
-            this.ukupnoLabel.Size = new System.Drawing.Size(91, 23);
+            this.ukupnoLabel.Size = new System.Drawing.Size(73, 19);
             this.ukupnoLabel.TabIndex = 5;
             this.ukupnoLabel.Text = "Ukupno:";
             // 
@@ -145,18 +146,33 @@ namespace WareHome
             this.ukupnoTextBox.Enabled = false;
             this.ukupnoTextBox.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ukupnoTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.ukupnoTextBox.Location = new System.Drawing.Point(668, 466);
+            this.ukupnoTextBox.Location = new System.Drawing.Point(691, 466);
             this.ukupnoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ukupnoTextBox.Name = "ukupnoTextBox";
-            this.ukupnoTextBox.Size = new System.Drawing.Size(104, 30);
+            this.ukupnoTextBox.Size = new System.Drawing.Size(104, 25);
             this.ukupnoTextBox.TabIndex = 6;
             this.ukupnoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ispisButton
+            // 
+            this.ispisButton.FlatAppearance.BorderSize = 0;
+            this.ispisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ispisButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.ispisButton.ForeColor = System.Drawing.Color.White;
+            this.ispisButton.Location = new System.Drawing.Point(150, 460);
+            this.ispisButton.Name = "ispisButton";
+            this.ispisButton.Size = new System.Drawing.Size(86, 38);
+            this.ispisButton.TabIndex = 7;
+            this.ispisButton.Text = "Ispis";
+            this.ispisButton.UseVisualStyleBackColor = true;
+            this.ispisButton.Click += new System.EventHandler(this.ispisButton_Click);
             // 
             // ListaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(816, 514);
+            this.Controls.Add(this.ispisButton);
             this.Controls.Add(this.ukupnoTextBox);
             this.Controls.Add(this.ukupnoLabel);
             this.Controls.Add(this.nazivLabel);
@@ -190,5 +206,6 @@ namespace WareHome
         private System.Windows.Forms.Label nazivLabel;
         private System.Windows.Forms.Label ukupnoLabel;
         private System.Windows.Forms.TextBox ukupnoTextBox;
+        private System.Windows.Forms.Button ispisButton;
     }
 }

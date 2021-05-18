@@ -12,6 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Antun\Desktop\PI\PROJEKT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,17 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DodajArtiklNaListu.cs">
+    <Compile Include="DodajNaListuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DodajArtiklNaListu.Designer.cs">
-      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    <Compile Include="DodajNaListuForm.Designer.cs">
+      <DependentUpon>DodajNaListuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DodajNamirnicuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DodajNamirnicuForm.Designer.cs">
       <DependentUpon>DodajNamirnicuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzradaDomacinstvaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzradaDomacinstvaForm.Designer.cs">
+      <DependentUpon>IzradaDomacinstvaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +112,24 @@
     <Compile Include="NovaListaForm.Designer.cs">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OdabirNacinaIspisaListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdabirNacinaIspisaListeForm.Designer.cs">
+      <DependentUpon>OdabirNacinaIspisaListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PredviđanjeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PredviđanjeForm.Designer.cs">
+      <DependentUpon>PredviđanjeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PridruziDomacinstvuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PridruziDomacinstvuForm.Designer.cs">
+      <DependentUpon>PridruziDomacinstvuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrijavaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +148,12 @@
     <Compile Include="Models\Raspored\Ponavljanje.cs" />
     <Compile Include="Models\Raspored\Raspored.cs" />
     <Compile Include="Models\Raspored\Sat.cs" />
+    <Compile Include="PrijavaProblemaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrijavaProblemaForm.Designer.cs">
+      <DependentUpon>PrijavaProblemaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="PromijeniNamirnicuForm.cs">
       <SubType>Form</SubType>
@@ -127,8 +174,8 @@
     <Compile Include="RegistracijaForm.Designer.cs">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DodajArtiklNaListu.resx">
-      <DependentUpon>DodajArtiklNaListu.cs</DependentUpon>
+    <EmbeddedResource Include="DodajNaListuForm.resx">
+      <DependentUpon>DodajNaListuForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="TestiranjeForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +195,9 @@
     <EmbeddedResource Include="GlavnaForm.resx">
       <DependentUpon>GlavnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IzradaDomacinstvaForm.resx">
+      <DependentUpon>IzradaDomacinstvaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaForm.resx">
       <DependentUpon>ListaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +210,20 @@
     <EmbeddedResource Include="NovaListaForm.resx">
       <DependentUpon>NovaListaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OdabirNacinaIspisaListeForm.resx">
+      <DependentUpon>OdabirNacinaIspisaListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PredviđanjeForm.resx">
+      <DependentUpon>PredviđanjeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PridruziDomacinstvuForm.resx">
+      <DependentUpon>PridruziDomacinstvuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrijavaForm.resx">
       <DependentUpon>PrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrijavaProblemaForm.resx">
+      <DependentUpon>PrijavaProblemaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromijeniNamirnicuForm.resx">
       <DependentUpon>PromijeniNamirnicuForm.cs</DependentUpon>
@@ -220,6 +282,18 @@
     <PackageReference Include="iTextSharp">
       <Version>5.5.13.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

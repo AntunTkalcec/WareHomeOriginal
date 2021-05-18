@@ -37,21 +37,22 @@ namespace WareHome
             this.label2 = new System.Windows.Forms.Label();
             this.privatnaCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 42);
+            this.label1.Location = new System.Drawing.Point(21, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Naziv:";
+            this.label1.Text = "*Naziv:";
             // 
             // odustaniButton
             // 
-            this.odustaniButton.Location = new System.Drawing.Point(13, 162);
+            this.odustaniButton.Location = new System.Drawing.Point(24, 154);
             this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(100, 28);
@@ -62,7 +63,7 @@ namespace WareHome
             // 
             // nazivTextBox
             // 
-            this.nazivTextBox.Location = new System.Drawing.Point(89, 39);
+            this.nazivTextBox.Location = new System.Drawing.Point(89, 31);
             this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
             this.nazivTextBox.Size = new System.Drawing.Size(189, 22);
@@ -70,7 +71,7 @@ namespace WareHome
             // 
             // završiButton
             // 
-            this.završiButton.Location = new System.Drawing.Point(212, 162);
+            this.završiButton.Location = new System.Drawing.Point(178, 154);
             this.završiButton.Margin = new System.Windows.Forms.Padding(4);
             this.završiButton.Name = "završiButton";
             this.završiButton.Size = new System.Drawing.Size(100, 28);
@@ -81,7 +82,7 @@ namespace WareHome
             // 
             // lozinkaTextBox
             // 
-            this.lozinkaTextBox.Location = new System.Drawing.Point(89, 109);
+            this.lozinkaTextBox.Location = new System.Drawing.Point(89, 101);
             this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
             this.lozinkaTextBox.Size = new System.Drawing.Size(189, 22);
@@ -90,7 +91,7 @@ namespace WareHome
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 112);
+            this.label2.Location = new System.Drawing.Point(21, 104);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
@@ -100,7 +101,7 @@ namespace WareHome
             // privatnaCheckBox
             // 
             this.privatnaCheckBox.AutoSize = true;
-            this.privatnaCheckBox.Location = new System.Drawing.Point(121, 77);
+            this.privatnaCheckBox.Location = new System.Drawing.Point(121, 69);
             this.privatnaCheckBox.Name = "privatnaCheckBox";
             this.privatnaCheckBox.Size = new System.Drawing.Size(18, 17);
             this.privatnaCheckBox.TabIndex = 2;
@@ -110,18 +111,29 @@ namespace WareHome
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 77);
+            this.label3.Location = new System.Drawing.Point(21, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Privatna lista:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(21, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "* obvezno polje";
+            // 
             // NovaListaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 211);
+            this.ClientSize = new System.Drawing.Size(305, 221);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.privatnaCheckBox);
             this.Controls.Add(this.lozinkaTextBox);
@@ -152,5 +164,6 @@ namespace WareHome
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox privatnaCheckBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

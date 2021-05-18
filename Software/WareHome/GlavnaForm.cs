@@ -24,7 +24,12 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
-            korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
+        }
+
+        private void GlavnaForm_Load(object sender, EventArgs e)
+        {
+            OsvjeziDomacinstvo();
+            OsvjeziNamirnice();
         }
 
         private void OsvjeziNamirnice()
@@ -41,9 +46,26 @@ namespace WareHome
 
         private void OsvjeziDomacinstvo()
         {
+            if (trenutniKorisnik.Ime.Length + trenutniKorisnik.Prezime.Length > 16 && trenutniKorisnik.Ime.Length <= 15)
+            {
+                korisnikLabel2.Text = trenutniKorisnik.Ime + " " + trenutniKorisnik.Prezime.Substring(0, 1) + ".";
+            }
+            else if (trenutniKorisnik.Ime.Length + trenutniKorisnik.Prezime.Length > 16 && trenutniKorisnik.Ime.Length > 15)
+            {
+                korisnikLabel2.Text = trenutniKorisnik.KorisnickoIme;
+            }
+            else
+            {
+                korisnikLabel2.Text = trenutniKorisnik.Ime + " " + trenutniKorisnik.Prezime;
+            }
+
             if (trenutniKorisnik.Domacinstvo == null)
             {
-                MessageBox.Show("Ne pripadate nikakvom domaćinstvu. Molimo, izradite novo domaćinstvo ili se pridružite postojećem.");
+                namirniceDGV.DataSource = null;
+                trenutnoDomacinstvoLabel2.Text = "N/A";
+                brojNamirnicaLabel2.Text = "N/A";
+
+                MessageBox.Show("Niste član domaćinstva! Za korištenje svih funkcija aplikacije, izradite novo domaćinstvo ili se pridružite postojećem.", "Obavijest");
                 nisteDioDomacinstvaLabel.Visible = true;
                 izradiDomacinstvoButton.Visible = true;
                 pridruziDomacinstvuButton.Visible = true;
@@ -53,12 +75,17 @@ namespace WareHome
                 listeButton.Enabled = false;
                 pdfButton.Enabled = false;
                 rasporedButton.Enabled = false;
+                predviđanjeButton.Enabled = false;
 
-                TestiranjeButton.Enabled = false; //pobrisati nakon uklanjanja TestiranjeForm
+                testiranjeButton.Visible = false; 
             }
             else
             {
-                TestiranjeButton.Enabled = true; //pobrisati nakon uklanjanja TestiranjeForm
+                testiranjeButton.Visible = false; 
+                if (trenutniKorisnik.KorisnickoIme == "admin" || trenutniKorisnik.Identifikator == 2) //user: admin | pass: admin\\
+                {
+                    testiranjeButton.Visible = true;
+                } 
 
                 nisteDioDomacinstvaLabel.Visible = false;
                 izradiDomacinstvoButton.Visible = false;
@@ -69,15 +96,11 @@ namespace WareHome
                 listeButton.Enabled = true;
                 pdfButton.Enabled = true;
                 rasporedButton.Enabled = true;
+                predviđanjeButton.Enabled = true;
 
                 trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
                 OsvjeziNamirnice();
             }
-        }
-        private void GlavnaForm_Load(object sender, EventArgs e)
-        {
-            OsvjeziDomacinstvo();
-            OsvjeziNamirnice();
         }
 
         private void rasporedButton_Click(object sender, EventArgs e)
@@ -117,7 +140,7 @@ namespace WareHome
 
         private void obrisiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            if (namirniceDGV.CurrentRow != null)
+            if ((namirniceDGV.CurrentRow.DataBoundItem as Namirnica) != null)
             {
                 Database.Instance.Connect();
                 NamirnicaRepository.Obrisi(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
@@ -128,7 +151,7 @@ namespace WareHome
 
         private void promijeniNamirnicuButton_Click(object sender, EventArgs e)
         {
-            if (namirniceDGV.CurrentRow != null)
+            if ((namirniceDGV.CurrentRow.DataBoundItem as Namirnica) != null)
             {
                 PromijeniNamirnicuForm promijeniNamirnicuForm = new PromijeniNamirnicuForm(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
                 promijeniNamirnicuForm.ShowDialog();
@@ -138,12 +161,13 @@ namespace WareHome
 
         private void pdfButton_Click(object sender, EventArgs e)
         {
+            string naziv = "WareHome stanje namirnica ("+DateTime.Today.Date.Day + "." + DateTime.Today.Date.Month + "." + DateTime.Today.Date.Year + ".)";
             if (namirniceDGV.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog
                 {
                     Filter = "PDF (*.pdf)|*.pdf",
-                    FileName = "Warehome stanje namirnica.pdf"
+                    FileName = naziv.ToString()
                 };
                 bool greska = false;
                 if (sfd.ShowDialog() == DialogResult.Cancel)
@@ -195,7 +219,9 @@ namespace WareHome
                             "Naziv namirnice", "Potrošnja u zadnjih 7 dana", "Ukupna cijena"
                         };
                         string sql = $"SELECT n.naziv_namirnice as Namirnica, sum(d.promjena)*-1 as Suma, n.cijena*sum(d.promjena)*-1 as Cijena from Dogadaj d," +
-                            $"Namirnica n where datum_dogadaja >= dateadd(day, -8, getdate()) and id_namirnice = n.namirnica_id group by naziv_namirnice, cijena";
+                            $"Namirnica n where datum_dogadaja >= dateadd(day, -8, getdate()) " +
+                            $"and id_namirnice = n.namirnica_id and n.domacinstvo_id = {trenutniKorisnik.Domacinstvo.Identifikator} " +
+                            $"group by naziv_namirnice, cijena order by cijena desc";
                         List<Statistika> statistika = new List<Statistika>();
                         Statistika stat = new Statistika();
                         Database.Instance.Connect();
@@ -288,6 +314,52 @@ namespace WareHome
         {
             TestiranjeForm testiranje = new TestiranjeForm(trenutniKorisnik);
             testiranje.ShowDialog();
+            OsvjeziDomacinstvo();
+            OsvjeziNamirnice();
+        }
+
+        private void warehomePictureBox_Click(object sender, EventArgs e)
+        {
+            OsvjeziNamirnice();
+        }
+
+        private void warehomePictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
+        }
+
+        private void izradiDomacinstvoButton_Click(object sender, EventArgs e)
+        {
+            DomacinstvoRepository.PridruzivanjeUspješno = false;
+            IzradaDomacinstvaForm form = new IzradaDomacinstvaForm(trenutniKorisnik);
+            form.ShowDialog();
+            if (DomacinstvoRepository.PridruzivanjeUspješno)
+            {
+                OsvjeziDomacinstvo();
+            }
+        }
+
+        private void pridruziDomacinstvuButton_Click(object sender, EventArgs e)
+        {
+            DomacinstvoRepository.PridruzivanjeUspješno = false;
+            PridruziDomacinstvuForm form = new PridruziDomacinstvuForm(trenutniKorisnik);
+            form.ShowDialog();
+            if (DomacinstvoRepository.PridruzivanjeUspješno)
+            {
+                OsvjeziDomacinstvo();
+            }
+        }
+
+        private void btnPrijaviProblem_Click(object sender, EventArgs e)
+        {
+            PrijavaProblemaForm form = new PrijavaProblemaForm(trenutniKorisnik);
+            form.ShowDialog();
+        }
+
+        private void predviđanjeButton_Click(object sender, EventArgs e)
+        {
+            PredviđanjeForm predviđanjeForm = new PredviđanjeForm(trenutniKorisnik);
+            predviđanjeForm.ShowDialog();
         }
     }
 }

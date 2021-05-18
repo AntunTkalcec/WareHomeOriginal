@@ -11,6 +11,7 @@ namespace WareHome.Models.PredviđanjePotrošnje
         public int NamirnicaId { get; set; }
         public string NamirnicaNaziv { get; set; }
         public float DostupnaKoličina { get; set; }
+        public string MjernaJedinica { get; set; }
         public float PredviđenoTrajanje { get; set; }
         public PredviđenaPotrošnja()
         {

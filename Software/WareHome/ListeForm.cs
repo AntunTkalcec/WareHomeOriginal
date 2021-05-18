@@ -21,6 +21,7 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            CancelButton = povratakButton;
         }
 
         private void ListeForm_Load(object sender, EventArgs e)
@@ -62,13 +63,13 @@ namespace WareHome
 
                 if (odabrana.PrivatnaLista)
                 {
-                    LozinkaZaListuForm lozinkaZaListuForm = new LozinkaZaListuForm(odabrana);
+                    LozinkaZaListuForm lozinkaZaListuForm = new LozinkaZaListuForm(odabrana, trenutniKorisnik);
                     lozinkaZaListuForm.ShowDialog();
                     OsvjeziListu();
                 }
                 else
                 {
-                    ListaForm listaForm = new ListaForm(odabrana);
+                    ListaForm listaForm = new ListaForm(odabrana, trenutniKorisnik);
                     listaForm.ShowDialog();
                     OsvjeziListu();
                 }
@@ -130,8 +131,12 @@ namespace WareHome
             }                        
             else
             {
-                ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
-                ListaZaKupovinuRepository.UkloniListu(obriši);
+                var jesteLiSigurni = MessageBox.Show($"Jeste li sigurni da želite obrisati listu *{(listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu).NazivListe}* i sve namirnice koje se na njoj nalaze?", "Potvrda brisanja", MessageBoxButtons.YesNo);
+                if (jesteLiSigurni == DialogResult.Yes)
+                {
+                    ListaZaKupovinu obriši = listeDataGridView.CurrentRow.DataBoundItem as ListaZaKupovinu;
+                    ListaZaKupovinuRepository.UkloniListu(obriši);
+                }
                 OsvjeziListu();
             }
         }

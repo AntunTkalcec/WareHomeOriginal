@@ -19,6 +19,8 @@ namespace WareHome
         {
             InitializeComponent();
             trenutniKorisnik = korisnik;
+            CancelButton = exitAppButton;
+            AcceptButton = spremiNamirnicuButton;
         }
 
         private void exitAppButton_Click(object sender, EventArgs e)
