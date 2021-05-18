@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WareHome.Models.ListaZaKupovinu;
 using WareHome.Models.PredviđanjePotrošnje;
 using WareHome_Logic;
 
