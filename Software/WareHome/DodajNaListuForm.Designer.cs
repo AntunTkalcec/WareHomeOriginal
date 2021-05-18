@@ -48,7 +48,7 @@ namespace WareHome
             this.label1.Location = new System.Drawing.Point(15, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "*Naziv:";
             // 
@@ -58,7 +58,7 @@ namespace WareHome
             this.label2.Location = new System.Drawing.Point(15, 84);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 17);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cijena:";
             // 
@@ -68,7 +68,7 @@ namespace WareHome
             this.label3.Location = new System.Drawing.Point(15, 116);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 17);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Trgovina:";
             // 
@@ -78,7 +78,7 @@ namespace WareHome
             this.label4.Location = new System.Drawing.Point(15, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Količina:";
             // 
@@ -87,7 +87,7 @@ namespace WareHome
             this.nazivTextBox.Location = new System.Drawing.Point(92, 16);
             this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(177, 22);
+            this.nazivTextBox.Size = new System.Drawing.Size(177, 20);
             this.nazivTextBox.TabIndex = 1;
             // 
             // cijenaTextBox
@@ -95,7 +95,7 @@ namespace WareHome
             this.cijenaTextBox.Location = new System.Drawing.Point(92, 48);
             this.cijenaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cijenaTextBox.Name = "cijenaTextBox";
-            this.cijenaTextBox.Size = new System.Drawing.Size(87, 22);
+            this.cijenaTextBox.Size = new System.Drawing.Size(87, 20);
             this.cijenaTextBox.TabIndex = 2;
             // 
             // kolicinaTextBox
@@ -103,7 +103,7 @@ namespace WareHome
             this.kolicinaTextBox.Location = new System.Drawing.Point(92, 80);
             this.kolicinaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.kolicinaTextBox.Name = "kolicinaTextBox";
-            this.kolicinaTextBox.Size = new System.Drawing.Size(87, 22);
+            this.kolicinaTextBox.Size = new System.Drawing.Size(87, 20);
             this.kolicinaTextBox.TabIndex = 3;
             // 
             // trgovinaTextBox
@@ -111,7 +111,7 @@ namespace WareHome
             this.trgovinaTextBox.Location = new System.Drawing.Point(92, 112);
             this.trgovinaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.trgovinaTextBox.Name = "trgovinaTextBox";
-            this.trgovinaTextBox.Size = new System.Drawing.Size(177, 22);
+            this.trgovinaTextBox.Size = new System.Drawing.Size(177, 20);
             this.trgovinaTextBox.TabIndex = 4;
             // 
             // dodajButton
@@ -142,11 +142,11 @@ namespace WareHome
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(15, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 17);
+            this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "* obvezno polje";
             // 
-            // DodajArtiklNaListu
+            // DodajNaListuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(296, 215);
@@ -163,7 +163,8 @@ namespace WareHome
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "DodajArtiklNaListu";
+            this.Name = "DodajNaListuForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "WareHome";
             this.ResumeLayout(false);
