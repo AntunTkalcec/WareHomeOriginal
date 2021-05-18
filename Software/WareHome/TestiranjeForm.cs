@@ -180,10 +180,14 @@ namespace WareHome
             {
                 string naziv = reader["korisnicko_ime"].ToString();
                 string mail = reader["e-mail"].ToString();
+                string id = reader["korisnik_id"].ToString();
                 if (naziv == postavkeKorisnickoImeTextBox.Text || mail == postavkeMailTextBox.Text)
                 {
-                    postoji = true;
-                    break;
+                    if (id != trenutniKorisnik.Identifikator.ToString())
+                    {
+                        postoji = true;
+                        break;
+                    }
                 }
             }
             reader.Close();
