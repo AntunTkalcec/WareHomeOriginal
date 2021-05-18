@@ -249,7 +249,7 @@ namespace WareHome
             this.prijavaProblemaButton.FlatAppearance.BorderSize = 0;
             this.prijavaProblemaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prijavaProblemaButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prijavaProblemaButton.ForeColor = System.Drawing.Color.Red;
+            this.prijavaProblemaButton.ForeColor = System.Drawing.Color.LightCoral;
             this.prijavaProblemaButton.Location = new System.Drawing.Point(1332, 2);
             this.prijavaProblemaButton.Name = "prijavaProblemaButton";
             this.prijavaProblemaButton.Size = new System.Drawing.Size(25, 24);
