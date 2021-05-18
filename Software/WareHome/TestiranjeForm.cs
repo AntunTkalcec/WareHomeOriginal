@@ -19,6 +19,7 @@ namespace WareHome
     {
         Korisnik trenutniKorisnik;
         List<Korisnik> ukucani;
+        int brojacZaBrisanje = 0;
 
         public TestiranjeForm(Korisnik korisnik)
         {
@@ -37,6 +38,7 @@ namespace WareHome
         {
             OsvjeziPodatkeDomacinstvo();
             OsvjeziPodatkeKorisnik();
+            obrišiRačunButton.Visible = false;
             //postavkeLozinkaTextBox.PasswordChar = '*';
         }
 
@@ -116,11 +118,7 @@ namespace WareHome
 
         private void odjavaDomacinstvaButton_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE Korisnik SET domacinstvo = null WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
-            Database.Instance.Connect();
-            Database.Instance.ExecuteCommand(sql);
-            Database.Instance.Disconnect();
-            trenutniKorisnik.Domacinstvo = null;
+            OdjaviKorisnikaIzDomaćinstva();
             Close();
         }
         
@@ -136,8 +134,10 @@ namespace WareHome
                 if (naziv == nazivDomacinstvaTextBox.Text)
                 {
                     postoji = true;
+                    break;
                 }
             }
+            reader.Close();
             Database.Instance.Disconnect();
             if (!postoji)
             {
@@ -155,12 +155,6 @@ namespace WareHome
             OsvjeziPodatkeDomacinstvo();
         }
 
-        private void tester1Button_Click_1(object sender, EventArgs e)
-        {
-            CultureInfo culture = Thread.CurrentThread.CurrentCulture;
-            MessageBox.Show(culture.Name + "\n" + culture.NumberFormat.NumberDecimalSeparator);
-        }
-
         private void povratakButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -168,12 +162,92 @@ namespace WareHome
 
         private void postavkePoništiButton_Click(object sender, EventArgs e)
         {
+            brojacZaBrisanje++;
             OsvjeziPodatkeKorisnik();
+            if (brojacZaBrisanje >= 3)
+            {
+                obrišiRačunButton.Visible = true;
+            }
         }
 
         private void postavkeSpremiButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pomalo, bit će.", "Greška!");
+            string provjera = "SELECT * FROM Korisnik";
+            bool postoji = false;
+            Database.Instance.Connect();
+            IDataReader reader = Database.Instance.GetDataReader(provjera);
+            while (reader.Read())
+            {
+                string naziv = reader["korisnicko_ime"].ToString();
+                string mail = reader["e-mail"].ToString();
+                if (naziv == postavkeKorisnickoImeTextBox.Text || mail == postavkeMailTextBox.Text)
+                {
+                    postoji = true;
+                    break;
+                }
+            }
+            reader.Close();
+            Database.Instance.Disconnect();
+            if (!postoji)
+            {
+                string sql = $"UPDATE Korisnik SET ime = '{postavkeImeTextBox.Text}', prezime = '{postavkePrezimeTextBox.Text}', [e-mail] = '{postavkeMailTextBox.Text}', lozinka = '{postavkeLozinkaTextBox.Text}', korisnicko_ime = '{postavkeKorisnickoImeTextBox.Text}' WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+                IzvršiNaredbu(sql);
+                trenutniKorisnik.Ime = postavkeImeTextBox.Text;
+                trenutniKorisnik.Prezime = postavkePrezimeTextBox.Text;
+                trenutniKorisnik.Mail = postavkeMailTextBox.Text;
+                trenutniKorisnik.Lozinka = postavkeLozinkaTextBox.Text;
+                trenutniKorisnik.KorisnickoIme = postavkeKorisnickoImeTextBox.Text;
+                OsvjeziPodatkeDomacinstvo();
+                OsvjeziPodatkeKorisnik();
+                MessageBox.Show("Promjene uspješno spremljene!", "Obavijest");
+            }
+            else
+            {
+                MessageBox.Show("Već postoji korisnik s unesenim korisničkim imenom i/ili emailom!", "Greška!");
+            }
+        }
+
+        private void obrišiRačunButton_Click(object sender, EventArgs e)
+        {
+            var jesteLiSigurni = MessageBox.Show($"Jeste li sigurni da želite obrisati svoj WareHome korisnički račun?\nUkoliko odaberete *Yes*, sve vezano za Vaš račun trajno je izgubljeno!", "Potvrda brisanja", MessageBoxButtons.YesNo);
+            if (jesteLiSigurni == DialogResult.Yes)
+            {
+                ObrišiRačun();
+            }
+        }
+
+        private void IzvršiNaredbu(string sql)
+        {
+            Database.Instance.Connect();
+            Database.Instance.ExecuteCommand(sql);
+            Database.Instance.Disconnect();
+        }
+
+        private void OdjaviKorisnikaIzDomaćinstva()
+        {
+            if (trenutniKorisnik.Domacinstvo != null)
+            {
+                string sql = "UPDATE Korisnik SET domacinstvo = null WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+                IzvršiNaredbu(sql);
+                trenutniKorisnik.Domacinstvo = null;
+            }
+            else
+            {
+                MessageBox.Show("Ne pripadate domaćinstvu!");
+            }
+        }
+
+        private void ObrišiRačun()
+        {
+            MessageBox.Show("Brisanje radi, ali je stavljeno u komentar kako ne bi slučajno došlo do brisanja računa prilikom testiranja ostalih funkcionalnosti.");
+
+            /*
+            string sql = "DELETE FROM Korisnik WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+            OdjaviKorisnikaIzDomaćinstva();
+            //IzvršiNaredbu(sql);            
+            MessageBox.Show("Korisnički račun uspješno obrisan.\nKlikom na *OK* ugasit će se aplikacija.", "Obavijest");
+            Environment.Exit(0);
+            */
         }
     }
 }
