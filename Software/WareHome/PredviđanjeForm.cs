@@ -14,7 +14,9 @@ namespace WareHome
 {
     public partial class PredviđanjeForm : Form
     {
-        static Korisnik trenutniKorisnik;
+        Korisnik trenutniKorisnik;
+        List<PredviđenaPotrošnja> predviđenaPotrošnja;
+
         public PredviđanjeForm(Korisnik korisnik)
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace WareHome
 
         private void PredviđanjeForm_Load(object sender, EventArgs e)
         {
-            List<PredviđenaPotrošnja> predviđenaPotrošnja = null;
+            predviđenaPotrošnja = null;
             predviđenaPotrošnja = PredviđanjePotrošnjeRepository.PredvidiPotrošnju(trenutniKorisnik);
             predvidanjeDataGridView.DataSource = predviđenaPotrošnja;
 
@@ -61,9 +63,9 @@ namespace WareHome
             Close();
         }
 
-        private void ispisButton_Click(object sender, EventArgs e)
+        private void ispisiButton_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

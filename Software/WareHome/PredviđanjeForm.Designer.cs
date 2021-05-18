@@ -73,6 +73,7 @@ namespace WareHome
             this.ispisiButton.TabIndex = 10;
             this.ispisiButton.Text = "Ispiši";
             this.ispisiButton.UseVisualStyleBackColor = true;
+            this.ispisiButton.Click += new System.EventHandler(this.ispisiButton_Click);
             // 
             // nazivLabel
             // 
