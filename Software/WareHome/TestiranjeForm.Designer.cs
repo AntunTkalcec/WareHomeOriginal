@@ -33,6 +33,10 @@ namespace WareHome
             this.tester1Button = new System.Windows.Forms.Button();
             this.preimenovanjeDomacinstvaButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.brojNamirnicaLabel2 = new System.Windows.Forms.TextBox();
+            this.brojUkucanaLabel2 = new System.Windows.Forms.TextBox();
+            this.trenutnoDomacinstvoLabel2 = new System.Windows.Forms.TextBox();
+            this.korisnikLabel2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ukućaniDataGridView = new System.Windows.Forms.DataGridView();
             this.nazivDomacinstvaTextBox = new System.Windows.Forms.TextBox();
@@ -42,23 +46,19 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel = new System.Windows.Forms.Label();
             this.korisnikLabel1 = new System.Windows.Forms.Label();
             this.povratakButton = new System.Windows.Forms.Button();
-            this.korisnikLabel2 = new System.Windows.Forms.TextBox();
-            this.trenutnoDomacinstvoLabel2 = new System.Windows.Forms.TextBox();
-            this.brojUkucanaLabel2 = new System.Windows.Forms.TextBox();
-            this.brojNamirnicaLabel2 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.postavkeImeTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.postavkePrezimeTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.postavkeMailTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.postavkeKorisnickoImeTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.postavkeLozinkaTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.postavkePoništiButton = new System.Windows.Forms.Button();
             this.postavkeSpremiButton = new System.Windows.Forms.Button();
+            this.postavkeLozinkaTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.postavkeKorisnickoImeTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.postavkeMailTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.postavkePrezimeTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.postavkeImeTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ukućaniDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -119,6 +119,46 @@ namespace WareHome
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Postavke domaćinstva";
+            // 
+            // brojNamirnicaLabel2
+            // 
+            this.brojNamirnicaLabel2.Enabled = false;
+            this.brojNamirnicaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(327, 36);
+            this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
+            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(100, 20);
+            this.brojNamirnicaLabel2.TabIndex = 19;
+            // 
+            // brojUkucanaLabel2
+            // 
+            this.brojUkucanaLabel2.Enabled = false;
+            this.brojUkucanaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojUkucanaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.brojUkucanaLabel2.Location = new System.Drawing.Point(221, 36);
+            this.brojUkucanaLabel2.Name = "brojUkucanaLabel2";
+            this.brojUkucanaLabel2.Size = new System.Drawing.Size(100, 20);
+            this.brojUkucanaLabel2.TabIndex = 18;
+            // 
+            // trenutnoDomacinstvoLabel2
+            // 
+            this.trenutnoDomacinstvoLabel2.Enabled = false;
+            this.trenutnoDomacinstvoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.Black;
+            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(115, 36);
+            this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
+            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(100, 20);
+            this.trenutnoDomacinstvoLabel2.TabIndex = 17;
+            // 
+            // korisnikLabel2
+            // 
+            this.korisnikLabel2.Enabled = false;
+            this.korisnikLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.korisnikLabel2.ForeColor = System.Drawing.Color.Black;
+            this.korisnikLabel2.Location = new System.Drawing.Point(9, 36);
+            this.korisnikLabel2.Name = "korisnikLabel2";
+            this.korisnikLabel2.Size = new System.Drawing.Size(100, 20);
+            this.korisnikLabel2.TabIndex = 16;
             // 
             // label1
             // 
@@ -201,7 +241,7 @@ namespace WareHome
             // 
             this.povratakButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.povratakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.povratakButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.povratakButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.povratakButton.ForeColor = System.Drawing.Color.White;
             this.povratakButton.Location = new System.Drawing.Point(12, 322);
             this.povratakButton.Margin = new System.Windows.Forms.Padding(4);
@@ -211,46 +251,6 @@ namespace WareHome
             this.povratakButton.Text = "Povratak";
             this.povratakButton.UseVisualStyleBackColor = false;
             this.povratakButton.Click += new System.EventHandler(this.povratakButton_Click);
-            // 
-            // korisnikLabel2
-            // 
-            this.korisnikLabel2.Enabled = false;
-            this.korisnikLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.korisnikLabel2.ForeColor = System.Drawing.Color.Black;
-            this.korisnikLabel2.Location = new System.Drawing.Point(9, 36);
-            this.korisnikLabel2.Name = "korisnikLabel2";
-            this.korisnikLabel2.Size = new System.Drawing.Size(100, 20);
-            this.korisnikLabel2.TabIndex = 16;
-            // 
-            // trenutnoDomacinstvoLabel2
-            // 
-            this.trenutnoDomacinstvoLabel2.Enabled = false;
-            this.trenutnoDomacinstvoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.Black;
-            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(115, 36);
-            this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
-            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(100, 20);
-            this.trenutnoDomacinstvoLabel2.TabIndex = 17;
-            // 
-            // brojUkucanaLabel2
-            // 
-            this.brojUkucanaLabel2.Enabled = false;
-            this.brojUkucanaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brojUkucanaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.brojUkucanaLabel2.Location = new System.Drawing.Point(221, 36);
-            this.brojUkucanaLabel2.Name = "brojUkucanaLabel2";
-            this.brojUkucanaLabel2.Size = new System.Drawing.Size(100, 20);
-            this.brojUkucanaLabel2.TabIndex = 18;
-            // 
-            // brojNamirnicaLabel2
-            // 
-            this.brojNamirnicaLabel2.Enabled = false;
-            this.brojNamirnicaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(327, 36);
-            this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
-            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(100, 20);
-            this.brojNamirnicaLabel2.TabIndex = 19;
             // 
             // groupBox2
             // 
@@ -273,81 +273,28 @@ namespace WareHome
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Postavke korisničkog računa";
             // 
-            // postavkeImeTextBox
+            // postavkePoništiButton
             // 
-            this.postavkeImeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postavkeImeTextBox.ForeColor = System.Drawing.Color.Black;
-            this.postavkeImeTextBox.Location = new System.Drawing.Point(6, 43);
-            this.postavkeImeTextBox.Name = "postavkeImeTextBox";
-            this.postavkeImeTextBox.Size = new System.Drawing.Size(162, 20);
-            this.postavkeImeTextBox.TabIndex = 21;
+            this.postavkePoništiButton.Location = new System.Drawing.Point(6, 259);
+            this.postavkePoništiButton.Name = "postavkePoništiButton";
+            this.postavkePoništiButton.Size = new System.Drawing.Size(87, 38);
+            this.postavkePoništiButton.TabIndex = 21;
+            this.postavkePoništiButton.Text = "Poništi promjene";
+            this.postavkePoništiButton.UseVisualStyleBackColor = true;
+            this.postavkePoništiButton.Click += new System.EventHandler(this.postavkePoništiButton_Click);
             // 
-            // label3
+            // postavkeSpremiButton
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.label3.Location = new System.Drawing.Point(3, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Ime:";
-            // 
-            // postavkePrezimeTextBox
-            // 
-            this.postavkePrezimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postavkePrezimeTextBox.ForeColor = System.Drawing.Color.Black;
-            this.postavkePrezimeTextBox.Location = new System.Drawing.Point(6, 86);
-            this.postavkePrezimeTextBox.Name = "postavkePrezimeTextBox";
-            this.postavkePrezimeTextBox.Size = new System.Drawing.Size(162, 20);
-            this.postavkePrezimeTextBox.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.label4.Location = new System.Drawing.Point(3, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Prezime:";
-            // 
-            // postavkeMailTextBox
-            // 
-            this.postavkeMailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postavkeMailTextBox.ForeColor = System.Drawing.Color.Black;
-            this.postavkeMailTextBox.Location = new System.Drawing.Point(6, 129);
-            this.postavkeMailTextBox.Name = "postavkeMailTextBox";
-            this.postavkeMailTextBox.Size = new System.Drawing.Size(162, 20);
-            this.postavkeMailTextBox.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.label5.Location = new System.Drawing.Point(3, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Mail adresa:";
-            // 
-            // postavkeKorisnickoImeTextBox
-            // 
-            this.postavkeKorisnickoImeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postavkeKorisnickoImeTextBox.ForeColor = System.Drawing.Color.Black;
-            this.postavkeKorisnickoImeTextBox.Location = new System.Drawing.Point(6, 172);
-            this.postavkeKorisnickoImeTextBox.Name = "postavkeKorisnickoImeTextBox";
-            this.postavkeKorisnickoImeTextBox.Size = new System.Drawing.Size(162, 20);
-            this.postavkeKorisnickoImeTextBox.TabIndex = 27;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.label6.Location = new System.Drawing.Point(3, 152);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Korisničko ime:";
+            this.postavkeSpremiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.postavkeSpremiButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postavkeSpremiButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.postavkeSpremiButton.Location = new System.Drawing.Point(94, 258);
+            this.postavkeSpremiButton.Name = "postavkeSpremiButton";
+            this.postavkeSpremiButton.Size = new System.Drawing.Size(87, 39);
+            this.postavkeSpremiButton.TabIndex = 20;
+            this.postavkeSpremiButton.Text = "Spremi promjene";
+            this.postavkeSpremiButton.UseVisualStyleBackColor = false;
+            this.postavkeSpremiButton.Click += new System.EventHandler(this.postavkeSpremiButton_Click);
             // 
             // postavkeLozinkaTextBox
             // 
@@ -368,28 +315,81 @@ namespace WareHome
             this.label7.TabIndex = 28;
             this.label7.Text = "Lozinka:";
             // 
-            // postavkePoništiButton
+            // postavkeKorisnickoImeTextBox
             // 
-            this.postavkePoništiButton.Location = new System.Drawing.Point(6, 259);
-            this.postavkePoništiButton.Name = "postavkePoništiButton";
-            this.postavkePoništiButton.Size = new System.Drawing.Size(87, 38);
-            this.postavkePoništiButton.TabIndex = 21;
-            this.postavkePoništiButton.Text = "Poništi unos";
-            this.postavkePoništiButton.UseVisualStyleBackColor = true;
-            this.postavkePoništiButton.Click += new System.EventHandler(this.postavkePoništiButton_Click);
+            this.postavkeKorisnickoImeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postavkeKorisnickoImeTextBox.ForeColor = System.Drawing.Color.Black;
+            this.postavkeKorisnickoImeTextBox.Location = new System.Drawing.Point(6, 172);
+            this.postavkeKorisnickoImeTextBox.Name = "postavkeKorisnickoImeTextBox";
+            this.postavkeKorisnickoImeTextBox.Size = new System.Drawing.Size(162, 20);
+            this.postavkeKorisnickoImeTextBox.TabIndex = 27;
             // 
-            // postavkeSpremiButton
+            // label6
             // 
-            this.postavkeSpremiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.postavkeSpremiButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postavkeSpremiButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.postavkeSpremiButton.Location = new System.Drawing.Point(94, 258);
-            this.postavkeSpremiButton.Name = "postavkeSpremiButton";
-            this.postavkeSpremiButton.Size = new System.Drawing.Size(87, 39);
-            this.postavkeSpremiButton.TabIndex = 20;
-            this.postavkeSpremiButton.Text = "Spremi";
-            this.postavkeSpremiButton.UseVisualStyleBackColor = false;
-            this.postavkeSpremiButton.Click += new System.EventHandler(this.postavkeSpremiButton_Click);
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.label6.Location = new System.Drawing.Point(3, 152);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Korisničko ime:";
+            // 
+            // postavkeMailTextBox
+            // 
+            this.postavkeMailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postavkeMailTextBox.ForeColor = System.Drawing.Color.Black;
+            this.postavkeMailTextBox.Location = new System.Drawing.Point(6, 129);
+            this.postavkeMailTextBox.Name = "postavkeMailTextBox";
+            this.postavkeMailTextBox.Size = new System.Drawing.Size(162, 20);
+            this.postavkeMailTextBox.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.label5.Location = new System.Drawing.Point(3, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Mail adresa:";
+            // 
+            // postavkePrezimeTextBox
+            // 
+            this.postavkePrezimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postavkePrezimeTextBox.ForeColor = System.Drawing.Color.Black;
+            this.postavkePrezimeTextBox.Location = new System.Drawing.Point(6, 86);
+            this.postavkePrezimeTextBox.Name = "postavkePrezimeTextBox";
+            this.postavkePrezimeTextBox.Size = new System.Drawing.Size(162, 20);
+            this.postavkePrezimeTextBox.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.label4.Location = new System.Drawing.Point(3, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Prezime:";
+            // 
+            // postavkeImeTextBox
+            // 
+            this.postavkeImeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postavkeImeTextBox.ForeColor = System.Drawing.Color.Black;
+            this.postavkeImeTextBox.Location = new System.Drawing.Point(6, 43);
+            this.postavkeImeTextBox.Name = "postavkeImeTextBox";
+            this.postavkeImeTextBox.Size = new System.Drawing.Size(162, 20);
+            this.postavkeImeTextBox.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
+            this.label3.Location = new System.Drawing.Point(3, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Ime:";
             // 
             // TestiranjeForm
             // 
@@ -403,7 +403,7 @@ namespace WareHome
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "TestiranjeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Testiranje neimplementiranihi funkcija";
+            this.Text = "Testiranje neimplementiranih funkcija";
             this.Load += new System.EventHandler(this.TestiranjeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
