@@ -30,14 +30,13 @@ namespace WareHome
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rasporedButton = new System.Windows.Forms.Button();
             this.listeButton = new System.Windows.Forms.Button();
             this.odjavaButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeft = new System.Windows.Forms.Panel();
             this.predviđanjeButton = new System.Windows.Forms.Button();
-            this.testiranjeButton = new System.Windows.Forms.Button();
             this.glavnaFormPanelLeftTop = new System.Windows.Forms.Panel();
             this.brojNamirnicaLabel2 = new System.Windows.Forms.Label();
             this.korisnikLabel2 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@ namespace WareHome
             this.warehomePictureBox = new System.Windows.Forms.PictureBox();
             this.korisnikLabel1 = new System.Windows.Forms.Label();
             this.trenutnoDomacinstvoLabel = new System.Windows.Forms.Label();
+            this.testiranjeButton = new System.Windows.Forms.Button();
             this.prijavaProblemaButton = new System.Windows.Forms.Button();
             this.pridruziDomacinstvuButton = new System.Windows.Forms.Button();
             this.izradiDomacinstvoButton = new System.Windows.Forms.Button();
@@ -76,7 +76,7 @@ namespace WareHome
             this.rasporedButton.Location = new System.Drawing.Point(0, 558);
             this.rasporedButton.Name = "rasporedButton";
             this.rasporedButton.Size = new System.Drawing.Size(173, 52);
-            this.rasporedButton.TabIndex = 0;
+            this.rasporedButton.TabIndex = 3;
             this.rasporedButton.Text = "Raspored odlaska u kupovinu";
             this.rasporedButton.UseVisualStyleBackColor = true;
             this.rasporedButton.Click += new System.EventHandler(this.rasporedButton_Click);
@@ -91,7 +91,7 @@ namespace WareHome
             this.listeButton.Location = new System.Drawing.Point(0, 502);
             this.listeButton.Name = "listeButton";
             this.listeButton.Size = new System.Drawing.Size(173, 50);
-            this.listeButton.TabIndex = 1;
+            this.listeButton.TabIndex = 2;
             this.listeButton.Text = "Liste za kupovinu";
             this.listeButton.UseVisualStyleBackColor = true;
             this.listeButton.Click += new System.EventHandler(this.listeButton_Click);
@@ -106,7 +106,7 @@ namespace WareHome
             this.odjavaButton.Location = new System.Drawing.Point(0, 616);
             this.odjavaButton.Name = "odjavaButton";
             this.odjavaButton.Size = new System.Drawing.Size(173, 36);
-            this.odjavaButton.TabIndex = 2;
+            this.odjavaButton.TabIndex = 4;
             this.odjavaButton.Text = "Odjava";
             this.odjavaButton.UseVisualStyleBackColor = true;
             this.odjavaButton.Click += new System.EventHandler(this.odjavaButton_Click);
@@ -134,24 +134,10 @@ namespace WareHome
             this.predviđanjeButton.Location = new System.Drawing.Point(0, 446);
             this.predviđanjeButton.Name = "predviđanjeButton";
             this.predviđanjeButton.Size = new System.Drawing.Size(173, 50);
-            this.predviđanjeButton.TabIndex = 7;
+            this.predviđanjeButton.TabIndex = 1;
             this.predviđanjeButton.Text = "Predviđanje potrošnje namirnica";
             this.predviđanjeButton.UseVisualStyleBackColor = true;
             this.predviđanjeButton.Click += new System.EventHandler(this.predviđanjeButton_Click);
-            // 
-            // testiranjeButton
-            // 
-            this.testiranjeButton.FlatAppearance.BorderSize = 0;
-            this.testiranjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testiranjeButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testiranjeButton.ForeColor = System.Drawing.Color.LimeGreen;
-            this.testiranjeButton.Location = new System.Drawing.Point(1312, 2);
-            this.testiranjeButton.Name = "testiranjeButton";
-            this.testiranjeButton.Size = new System.Drawing.Size(21, 26);
-            this.testiranjeButton.TabIndex = 6;
-            this.testiranjeButton.Text = "!";
-            this.testiranjeButton.UseVisualStyleBackColor = true;
-            this.testiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
             // 
             // glavnaFormPanelLeftTop
             // 
@@ -176,7 +162,7 @@ namespace WareHome
             this.brojNamirnicaLabel2.Location = new System.Drawing.Point(12, 205);
             this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
             this.brojNamirnicaLabel2.Size = new System.Drawing.Size(42, 21);
-            this.brojNamirnicaLabel2.TabIndex = 7;
+            this.brojNamirnicaLabel2.TabIndex = 0;
             this.brojNamirnicaLabel2.Text = "N/A";
             // 
             // korisnikLabel2
@@ -187,7 +173,7 @@ namespace WareHome
             this.korisnikLabel2.Location = new System.Drawing.Point(12, 89);
             this.korisnikLabel2.Name = "korisnikLabel2";
             this.korisnikLabel2.Size = new System.Drawing.Size(42, 21);
-            this.korisnikLabel2.TabIndex = 9;
+            this.korisnikLabel2.TabIndex = 0;
             this.korisnikLabel2.Text = "N/A";
             // 
             // brojNamirnicaLabel
@@ -197,7 +183,7 @@ namespace WareHome
             this.brojNamirnicaLabel.Location = new System.Drawing.Point(3, 181);
             this.brojNamirnicaLabel.Name = "brojNamirnicaLabel";
             this.brojNamirnicaLabel.Size = new System.Drawing.Size(123, 21);
-            this.brojNamirnicaLabel.TabIndex = 5;
+            this.brojNamirnicaLabel.TabIndex = 0;
             this.brojNamirnicaLabel.Text = "Broj namirnica:";
             // 
             // trenutnoDomacinstvoLabel2
@@ -208,7 +194,7 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(12, 147);
             this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
             this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(42, 21);
-            this.trenutnoDomacinstvoLabel2.TabIndex = 6;
+            this.trenutnoDomacinstvoLabel2.TabIndex = 0;
             this.trenutnoDomacinstvoLabel2.Text = "N/A";
             // 
             // warehomePictureBox
@@ -230,7 +216,7 @@ namespace WareHome
             this.korisnikLabel1.Location = new System.Drawing.Point(3, 66);
             this.korisnikLabel1.Name = "korisnikLabel1";
             this.korisnikLabel1.Size = new System.Drawing.Size(68, 21);
-            this.korisnikLabel1.TabIndex = 8;
+            this.korisnikLabel1.TabIndex = 0;
             this.korisnikLabel1.Text = "Korisnik:";
             // 
             // trenutnoDomacinstvoLabel
@@ -240,8 +226,22 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel.Location = new System.Drawing.Point(3, 124);
             this.trenutnoDomacinstvoLabel.Name = "trenutnoDomacinstvoLabel";
             this.trenutnoDomacinstvoLabel.Size = new System.Drawing.Size(118, 21);
-            this.trenutnoDomacinstvoLabel.TabIndex = 3;
+            this.trenutnoDomacinstvoLabel.TabIndex = 0;
             this.trenutnoDomacinstvoLabel.Text = "Domaćinstvo:";
+            // 
+            // testiranjeButton
+            // 
+            this.testiranjeButton.FlatAppearance.BorderSize = 0;
+            this.testiranjeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testiranjeButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testiranjeButton.ForeColor = System.Drawing.Color.LimeGreen;
+            this.testiranjeButton.Location = new System.Drawing.Point(1312, 2);
+            this.testiranjeButton.Name = "testiranjeButton";
+            this.testiranjeButton.Size = new System.Drawing.Size(21, 26);
+            this.testiranjeButton.TabIndex = 0;
+            this.testiranjeButton.Text = "!";
+            this.testiranjeButton.UseVisualStyleBackColor = true;
+            this.testiranjeButton.Click += new System.EventHandler(this.TestiranjeButton_Click);
             // 
             // prijavaProblemaButton
             // 
@@ -253,7 +253,7 @@ namespace WareHome
             this.prijavaProblemaButton.Location = new System.Drawing.Point(1332, 2);
             this.prijavaProblemaButton.Name = "prijavaProblemaButton";
             this.prijavaProblemaButton.Size = new System.Drawing.Size(25, 24);
-            this.prijavaProblemaButton.TabIndex = 8;
+            this.prijavaProblemaButton.TabIndex = 4;
             this.prijavaProblemaButton.Text = "?";
             this.prijavaProblemaButton.UseVisualStyleBackColor = true;
             this.prijavaProblemaButton.Click += new System.EventHandler(this.btnPrijaviProblem_Click);
@@ -268,7 +268,7 @@ namespace WareHome
             this.pridruziDomacinstvuButton.Location = new System.Drawing.Point(800, 299);
             this.pridruziDomacinstvuButton.Name = "pridruziDomacinstvuButton";
             this.pridruziDomacinstvuButton.Size = new System.Drawing.Size(195, 62);
-            this.pridruziDomacinstvuButton.TabIndex = 5;
+            this.pridruziDomacinstvuButton.TabIndex = 2;
             this.pridruziDomacinstvuButton.Text = "Pridruži se domaćinstvu";
             this.pridruziDomacinstvuButton.UseVisualStyleBackColor = true;
             this.pridruziDomacinstvuButton.Click += new System.EventHandler(this.pridruziDomacinstvuButton_Click);
@@ -283,7 +283,7 @@ namespace WareHome
             this.izradiDomacinstvoButton.Location = new System.Drawing.Point(563, 299);
             this.izradiDomacinstvoButton.Name = "izradiDomacinstvoButton";
             this.izradiDomacinstvoButton.Size = new System.Drawing.Size(195, 62);
-            this.izradiDomacinstvoButton.TabIndex = 4;
+            this.izradiDomacinstvoButton.TabIndex = 1;
             this.izradiDomacinstvoButton.Text = "Izradi domaćinstvo";
             this.izradiDomacinstvoButton.UseVisualStyleBackColor = true;
             this.izradiDomacinstvoButton.Click += new System.EventHandler(this.izradiDomacinstvoButton_Click);
@@ -309,30 +309,30 @@ namespace WareHome
             this.namirniceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.namirniceDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.namirniceDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.NullValue = "-";
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.namirniceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.namirniceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.namirniceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.namirniceDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.namirniceDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.namirniceDGV.Location = new System.Drawing.Point(192, 39);
             this.namirniceDGV.Name = "namirniceDGV";
             this.namirniceDGV.ReadOnly = true;
             this.namirniceDGV.RowHeadersWidth = 5;
             this.namirniceDGV.Size = new System.Drawing.Size(1189, 510);
-            this.namirniceDGV.TabIndex = 20;
+            this.namirniceDGV.TabIndex = 10;
             // 
             // popisNamirnicaLabel
             // 
@@ -341,7 +341,7 @@ namespace WareHome
             this.popisNamirnicaLabel.Location = new System.Drawing.Point(188, 9);
             this.popisNamirnicaLabel.Name = "popisNamirnicaLabel";
             this.popisNamirnicaLabel.Size = new System.Drawing.Size(131, 21);
-            this.popisNamirnicaLabel.TabIndex = 21;
+            this.popisNamirnicaLabel.TabIndex = 0;
             this.popisNamirnicaLabel.Text = "Popis namirnica";
             // 
             // glavnaFormPanelBottom
@@ -353,7 +353,7 @@ namespace WareHome
             this.glavnaFormPanelBottom.Location = new System.Drawing.Point(179, 555);
             this.glavnaFormPanelBottom.Name = "glavnaFormPanelBottom";
             this.glavnaFormPanelBottom.Size = new System.Drawing.Size(1231, 105);
-            this.glavnaFormPanelBottom.TabIndex = 22;
+            this.glavnaFormPanelBottom.TabIndex = 1;
             // 
             // obrisiNamirnicuButton
             // 
@@ -365,7 +365,7 @@ namespace WareHome
             this.obrisiNamirnicuButton.Location = new System.Drawing.Point(513, 3);
             this.obrisiNamirnicuButton.Name = "obrisiNamirnicuButton";
             this.obrisiNamirnicuButton.Size = new System.Drawing.Size(244, 94);
-            this.obrisiNamirnicuButton.TabIndex = 2;
+            this.obrisiNamirnicuButton.TabIndex = 3;
             this.obrisiNamirnicuButton.Text = "Obriši namirnicu";
             this.obrisiNamirnicuButton.UseVisualStyleBackColor = true;
             this.obrisiNamirnicuButton.Click += new System.EventHandler(this.obrisiNamirnicuButton_Click);
@@ -380,7 +380,7 @@ namespace WareHome
             this.promijeniNamirnicuButton.Location = new System.Drawing.Point(263, 3);
             this.promijeniNamirnicuButton.Name = "promijeniNamirnicuButton";
             this.promijeniNamirnicuButton.Size = new System.Drawing.Size(244, 94);
-            this.promijeniNamirnicuButton.TabIndex = 1;
+            this.promijeniNamirnicuButton.TabIndex = 2;
             this.promijeniNamirnicuButton.Text = "Promijeni namirnicu";
             this.promijeniNamirnicuButton.UseVisualStyleBackColor = true;
             this.promijeniNamirnicuButton.Click += new System.EventHandler(this.promijeniNamirnicuButton_Click);
@@ -395,7 +395,7 @@ namespace WareHome
             this.dodajNamirnicuButton.Location = new System.Drawing.Point(13, 3);
             this.dodajNamirnicuButton.Name = "dodajNamirnicuButton";
             this.dodajNamirnicuButton.Size = new System.Drawing.Size(244, 94);
-            this.dodajNamirnicuButton.TabIndex = 0;
+            this.dodajNamirnicuButton.TabIndex = 1;
             this.dodajNamirnicuButton.Text = "Dodaj namirnicu";
             this.dodajNamirnicuButton.UseVisualStyleBackColor = true;
             this.dodajNamirnicuButton.Click += new System.EventHandler(this.dodajNamirnicuButton_Click);
@@ -410,7 +410,7 @@ namespace WareHome
             this.exitAppButton.Location = new System.Drawing.Point(1387, 0);
             this.exitAppButton.Name = "exitAppButton";
             this.exitAppButton.Size = new System.Drawing.Size(23, 26);
-            this.exitAppButton.TabIndex = 19;
+            this.exitAppButton.TabIndex = 6;
             this.exitAppButton.Text = "X";
             this.exitAppButton.UseVisualStyleBackColor = false;
             this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click_1);
@@ -424,7 +424,7 @@ namespace WareHome
             this.minimizeButton.Location = new System.Drawing.Point(1358, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(23, 26);
-            this.minimizeButton.TabIndex = 23;
+            this.minimizeButton.TabIndex = 5;
             this.minimizeButton.Text = "-";
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
@@ -439,7 +439,7 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(603, 241);
             this.nisteDioDomacinstvaLabel.Name = "nisteDioDomacinstvaLabel";
             this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(347, 38);
-            this.nisteDioDomacinstvaLabel.TabIndex = 24;
+            this.nisteDioDomacinstvaLabel.TabIndex = 0;
             this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
             this.nisteDioDomacinstvaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nisteDioDomacinstvaLabel.Visible = false;
