@@ -46,7 +46,7 @@ namespace WareHome
             this.opisLabel.AutoSize = true;
             this.opisLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold);
             this.opisLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.opisLabel.Location = new System.Drawing.Point(8, 20);
+            this.opisLabel.Location = new System.Drawing.Point(8, 18);
             this.opisLabel.Name = "opisLabel";
             this.opisLabel.Size = new System.Drawing.Size(265, 26);
             this.opisLabel.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace WareHome
             // silaznoCheckBox
             // 
             this.silaznoCheckBox.AutoSize = true;
-            this.silaznoCheckBox.Location = new System.Drawing.Point(13, 97);
+            this.silaznoCheckBox.Location = new System.Drawing.Point(12, 97);
             this.silaznoCheckBox.Name = "silaznoCheckBox";
             this.silaznoCheckBox.Size = new System.Drawing.Size(76, 24);
             this.silaznoCheckBox.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace WareHome
             // premaTrgoviniCheckBox
             // 
             this.premaTrgoviniCheckBox.AutoSize = true;
-            this.premaTrgoviniCheckBox.Location = new System.Drawing.Point(12, 164);
+            this.premaTrgoviniCheckBox.Location = new System.Drawing.Point(12, 214);
             this.premaTrgoviniCheckBox.Name = "premaTrgoviniCheckBox";
             this.premaTrgoviniCheckBox.Size = new System.Drawing.Size(134, 24);
             this.premaTrgoviniCheckBox.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace WareHome
             // premaCijeniCheckBox
             // 
             this.premaCijeniCheckBox.AutoSize = true;
-            this.premaCijeniCheckBox.Location = new System.Drawing.Point(13, 194);
+            this.premaCijeniCheckBox.Location = new System.Drawing.Point(12, 154);
             this.premaCijeniCheckBox.Name = "premaCijeniCheckBox";
             this.premaCijeniCheckBox.Size = new System.Drawing.Size(117, 24);
             this.premaCijeniCheckBox.TabIndex = 4;
@@ -88,7 +88,7 @@ namespace WareHome
             // premaKoliciniCheckBox
             // 
             this.premaKoliciniCheckBox.AutoSize = true;
-            this.premaKoliciniCheckBox.Location = new System.Drawing.Point(13, 225);
+            this.premaKoliciniCheckBox.Location = new System.Drawing.Point(12, 184);
             this.premaKoliciniCheckBox.Name = "premaKoliciniCheckBox";
             this.premaKoliciniCheckBox.Size = new System.Drawing.Size(128, 24);
             this.premaKoliciniCheckBox.TabIndex = 5;
@@ -124,7 +124,7 @@ namespace WareHome
             // 
             this.uzlaznoCheckBox.AutoSize = true;
             this.uzlaznoCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.uzlaznoCheckBox.Location = new System.Drawing.Point(13, 67);
+            this.uzlaznoCheckBox.Location = new System.Drawing.Point(12, 67);
             this.uzlaznoCheckBox.Name = "uzlaznoCheckBox";
             this.uzlaznoCheckBox.Size = new System.Drawing.Size(83, 24);
             this.uzlaznoCheckBox.TabIndex = 1;

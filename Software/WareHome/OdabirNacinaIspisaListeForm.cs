@@ -27,6 +27,9 @@ namespace WareHome
             odabranaLista = lista;
             Namirnice = namirnice;
             trenutniKorisnik = korisnik;
+            uzlaznoCheckBox.Checked = true;
+            premaCijeniCheckBox.Checked = true;
+            AcceptButton = ispisiButton;
             CancelButton = povratakButton;
         }
 
