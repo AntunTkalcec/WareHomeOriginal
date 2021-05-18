@@ -149,7 +149,7 @@ namespace WareHome
                     catch (IOException)
                     {
                         greska = true;
-                        MessageBox.Show("Dogodila se greška.");
+                        MessageBox.Show("Dogodila se greška!", "Greška!");
                     }
                 }
                 if (!greska)
@@ -207,13 +207,13 @@ namespace WareHome
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Greška: " + ex.Message);
+                        MessageBox.Show("Greška: " + ex.Message, "Greška!");
                     }
                 }
             }
             else
             {
-                MessageBox.Show($"Nema podataka u tablici koji bi se mogli spremiti u PDF! \n Broj columna u DGVu: {namirniceDataGridView.Columns.Count}");
+                MessageBox.Show($"Nema podataka u tablici koji bi se mogli spremiti u PDF! \n Broj stupaca u DGV-u: {namirniceDataGridView.Columns.Count}", "Greška!");
             }
         }
 
