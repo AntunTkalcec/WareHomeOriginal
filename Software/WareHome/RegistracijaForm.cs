@@ -16,6 +16,7 @@ namespace WareHome
         public RegistracijaForm()
         {
             InitializeComponent();
+            AcceptButton = registracijaButton;
         }
 
         private void OdustaniButton_Click(object sender, EventArgs e)
