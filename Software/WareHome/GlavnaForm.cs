@@ -140,7 +140,7 @@ namespace WareHome
 
         private void obrisiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            if (namirniceDGV.CurrentRow != null)
+            if ((namirniceDGV.CurrentRow.DataBoundItem as Namirnica) != null)
             {
                 Database.Instance.Connect();
                 NamirnicaRepository.Obrisi(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
@@ -151,7 +151,7 @@ namespace WareHome
 
         private void promijeniNamirnicuButton_Click(object sender, EventArgs e)
         {
-            if (namirniceDGV.CurrentRow != null)
+            if ((namirniceDGV.CurrentRow.DataBoundItem as Namirnica) != null)
             {
                 PromijeniNamirnicuForm promijeniNamirnicuForm = new PromijeniNamirnicuForm(namirniceDGV.CurrentRow.DataBoundItem as Namirnica);
                 promijeniNamirnicuForm.ShowDialog();
