@@ -19,6 +19,7 @@ namespace WareHome
         {
             InitializeComponent();
             UpišiKorisnika(korisnik);
+            AcceptButton = ispisiButton;
             CancelButton = povratakButton;
         }
 
