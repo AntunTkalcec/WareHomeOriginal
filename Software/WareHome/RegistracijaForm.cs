@@ -49,9 +49,9 @@ namespace WareHome
             string PotvrdaLozinke = regPotvrdiLozinkuTextBox.Text;
             DateTime DatumRegistracije = DateTime.UtcNow;
 
-            if (!ProvjeriKorisnickoIme(KorisnickoIme))
+            if (!ProvjeriKorisnickoIme(KorisnickoIme, Mail))
             {
-                MessageBox.Show("Korisničko ime se već koristi.", "Greška!");
+                MessageBox.Show("Već postoji korisnik s unesenim korisničkim imenom i/ili emailom!", "Greška!");
                 return Uspjeh;
             }
 
@@ -81,14 +81,14 @@ namespace WareHome
             return Uspjeh;
         }
 
-        private bool ProvjeriKorisnickoIme(string korisnickoIme)
+        private bool ProvjeriKorisnickoIme(string korisnickoIme, string email)
         {
-            string sql = "SELECT korisnicko_ime from Korisnik";
+            string sql = "SELECT * from Korisnik";
             Database.Instance.Connect();
             IDataReader dataReader = Database.Instance.GetDataReader(sql);
             while (dataReader.Read())
             {
-                if (dataReader["korisnicko_ime"].ToString() == korisnickoIme)
+                if (dataReader["korisnicko_ime"].ToString() == korisnickoIme || dataReader["e-mail"].ToString() == email)
                 {
                     dataReader.Close();
                     Database.Instance.Disconnect();
