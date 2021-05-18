@@ -64,7 +64,7 @@ namespace WareHome
             // opisProblemaLabel
             // 
             this.opisProblemaLabel.AutoSize = true;
-            this.opisProblemaLabel.Location = new System.Drawing.Point(58, 86);
+            this.opisProblemaLabel.Location = new System.Drawing.Point(57, 81);
             this.opisProblemaLabel.Name = "opisProblemaLabel";
             this.opisProblemaLabel.Size = new System.Drawing.Size(295, 21);
             this.opisProblemaLabel.TabIndex = 27;
@@ -72,7 +72,7 @@ namespace WareHome
             // 
             // problemTextBox
             // 
-            this.problemTextBox.Location = new System.Drawing.Point(26, 126);
+            this.problemTextBox.Location = new System.Drawing.Point(26, 115);
             this.problemTextBox.Name = "problemTextBox";
             this.problemTextBox.Size = new System.Drawing.Size(352, 237);
             this.problemTextBox.TabIndex = 1;
@@ -82,6 +82,7 @@ namespace WareHome
             // 
             this.btnPosalji.FlatAppearance.BorderSize = 0;
             this.btnPosalji.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPosalji.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPosalji.ForeColor = System.Drawing.Color.White;
             this.btnPosalji.Location = new System.Drawing.Point(129, 370);
             this.btnPosalji.Name = "btnPosalji";
