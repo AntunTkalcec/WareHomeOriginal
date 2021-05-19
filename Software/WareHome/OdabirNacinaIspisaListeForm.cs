@@ -19,13 +19,13 @@ namespace WareHome
     public partial class OdabirNacinaIspisaListeForm : Form
     {
         ListaZaKupovinu odabranaLista;
-        List<NamirnicaNaListi> Namirnice;
+        List<NamirnicaNaListi> namirnice;
         Korisnik trenutniKorisnik;
         public OdabirNacinaIspisaListeForm(ListaZaKupovinu lista, List<NamirnicaNaListi> namirnice, Korisnik korisnik)
         {
             InitializeComponent();
             odabranaLista = lista;
-            Namirnice = namirnice;
+            this.namirnice = namirnice;
             trenutniKorisnik = korisnik;
             uzlaznoCheckBox.Checked = true;
             premaCijeniCheckBox.Checked = true;
@@ -487,7 +487,7 @@ namespace WareHome
 
         private void OdabirNacinaIspisaListeForm_Load(object sender, EventArgs e)
         {
-            namirniceDataGridView.DataSource = Namirnice;
+            namirniceDataGridView.DataSource = namirnice;
         }
 
         private void povratakButton_Click(object sender, EventArgs e)

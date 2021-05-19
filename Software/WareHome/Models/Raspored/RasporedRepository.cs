@@ -12,22 +12,22 @@ namespace WareHome.Models.Raspored
     public static class RasporedRepository
     {
         static Korisnik trenutniKorisnik;
-        public static Raspored korisnikovRaspored;
+        public static Raspored KorisnikovRaspored;
 
         public static Raspored DohvatiRaspored(Korisnik korisnik)
         {
             trenutniKorisnik = null;
             trenutniKorisnik = korisnik;
-            korisnikovRaspored = null;
-            korisnikovRaspored = DohvatiRasporedZaKorisnika();
+            KorisnikovRaspored = null;
+            KorisnikovRaspored = DohvatiRasporedZaKorisnika();
 
-            if (korisnikovRaspored == null)
+            if (KorisnikovRaspored == null)
             {
                 IzradiNoviRaspored();
-                korisnikovRaspored = DohvatiRasporedZaKorisnika();
+                KorisnikovRaspored = DohvatiRasporedZaKorisnika();
             }
 
-            return korisnikovRaspored;
+            return KorisnikovRaspored;
         }
 
         private static void IzradiNoviRaspored()
@@ -68,11 +68,11 @@ namespace WareHome.Models.Raspored
                     OdabranaMinuta = new Minuta(minuta),
                     OdabirPonavljanja = new Ponavljanje(ponavljanje)
                 };
-                korisnikovRaspored = dohvaćeniRaspored;
+                KorisnikovRaspored = dohvaćeniRaspored;
             }
             Database.Instance.Disconnect();
 
-            return korisnikovRaspored;
+            return KorisnikovRaspored;
         }
     }
 }
