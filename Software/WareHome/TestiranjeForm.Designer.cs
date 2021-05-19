@@ -88,7 +88,7 @@ namespace WareHome
             this.preimenovanjeDomacinstvaButton.Name = "preimenovanjeDomacinstvaButton";
             this.preimenovanjeDomacinstvaButton.Size = new System.Drawing.Size(112, 39);
             this.preimenovanjeDomacinstvaButton.TabIndex = 4;
-            this.preimenovanjeDomacinstvaButton.Text = "Promjeni naziv domaćinstva";
+            this.preimenovanjeDomacinstvaButton.Text = "Promijeni naziv domaćinstva";
             this.preimenovanjeDomacinstvaButton.UseVisualStyleBackColor = false;
             this.preimenovanjeDomacinstvaButton.Click += new System.EventHandler(this.preimenovanjeDomacinstvaButton_Click);
             // 
@@ -120,9 +120,9 @@ namespace WareHome
             this.brojNamirnicaLabel2.Enabled = false;
             this.brojNamirnicaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brojNamirnicaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(327, 36);
+            this.brojNamirnicaLabel2.Location = new System.Drawing.Point(354, 36);
             this.brojNamirnicaLabel2.Name = "brojNamirnicaLabel2";
-            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(100, 20);
+            this.brojNamirnicaLabel2.Size = new System.Drawing.Size(73, 20);
             this.brojNamirnicaLabel2.TabIndex = 19;
             // 
             // brojUkucanaLabel2
@@ -130,9 +130,9 @@ namespace WareHome
             this.brojUkucanaLabel2.Enabled = false;
             this.brojUkucanaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brojUkucanaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.brojUkucanaLabel2.Location = new System.Drawing.Point(221, 36);
+            this.brojUkucanaLabel2.Location = new System.Drawing.Point(278, 36);
             this.brojUkucanaLabel2.Name = "brojUkucanaLabel2";
-            this.brojUkucanaLabel2.Size = new System.Drawing.Size(100, 20);
+            this.brojUkucanaLabel2.Size = new System.Drawing.Size(70, 20);
             this.brojUkucanaLabel2.TabIndex = 18;
             // 
             // trenutnoDomacinstvoLabel2
@@ -140,9 +140,9 @@ namespace WareHome
             this.trenutnoDomacinstvoLabel2.Enabled = false;
             this.trenutnoDomacinstvoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trenutnoDomacinstvoLabel2.ForeColor = System.Drawing.Color.Black;
-            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(115, 36);
+            this.trenutnoDomacinstvoLabel2.Location = new System.Drawing.Point(141, 36);
             this.trenutnoDomacinstvoLabel2.Name = "trenutnoDomacinstvoLabel2";
-            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(100, 20);
+            this.trenutnoDomacinstvoLabel2.Size = new System.Drawing.Size(131, 20);
             this.trenutnoDomacinstvoLabel2.TabIndex = 17;
             // 
             // korisnikLabel2
@@ -152,7 +152,7 @@ namespace WareHome
             this.korisnikLabel2.ForeColor = System.Drawing.Color.Black;
             this.korisnikLabel2.Location = new System.Drawing.Point(9, 36);
             this.korisnikLabel2.Name = "korisnikLabel2";
-            this.korisnikLabel2.Size = new System.Drawing.Size(100, 20);
+            this.korisnikLabel2.Size = new System.Drawing.Size(126, 20);
             this.korisnikLabel2.TabIndex = 16;
             // 
             // label1
@@ -187,7 +187,7 @@ namespace WareHome
             // 
             this.brojNamirnicaLabel1.AutoSize = true;
             this.brojNamirnicaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.brojNamirnicaLabel1.Location = new System.Drawing.Point(324, 17);
+            this.brojNamirnicaLabel1.Location = new System.Drawing.Point(351, 17);
             this.brojNamirnicaLabel1.Name = "brojNamirnicaLabel1";
             this.brojNamirnicaLabel1.Size = new System.Drawing.Size(76, 13);
             this.brojNamirnicaLabel1.TabIndex = 13;
@@ -206,7 +206,7 @@ namespace WareHome
             // 
             this.brojUkucanaLabel1.AutoSize = true;
             this.brojUkucanaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.brojUkucanaLabel1.Location = new System.Drawing.Point(218, 16);
+            this.brojUkucanaLabel1.Location = new System.Drawing.Point(275, 16);
             this.brojUkucanaLabel1.Name = "brojUkucanaLabel1";
             this.brojUkucanaLabel1.Size = new System.Drawing.Size(73, 13);
             this.brojUkucanaLabel1.TabIndex = 8;
@@ -216,7 +216,7 @@ namespace WareHome
             // 
             this.trenutnoDomacinstvoLabel.AutoSize = true;
             this.trenutnoDomacinstvoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(161)))), ((int)(((byte)(135)))));
-            this.trenutnoDomacinstvoLabel.Location = new System.Drawing.Point(112, 16);
+            this.trenutnoDomacinstvoLabel.Location = new System.Drawing.Point(138, 16);
             this.trenutnoDomacinstvoLabel.Name = "trenutnoDomacinstvoLabel";
             this.trenutnoDomacinstvoLabel.Size = new System.Drawing.Size(72, 13);
             this.trenutnoDomacinstvoLabel.TabIndex = 11;
