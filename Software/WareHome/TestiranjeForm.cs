@@ -246,11 +246,36 @@ namespace WareHome
             MessageBox.Show("Brisanje radi, ali je stavljeno u komentar kako ne bi slučajno došlo do brisanja računa prilikom testiranja ostalih funkcionalnosti.");
 
             /*
-            string sql = "DELETE FROM Korisnik WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+
+            string provjera = "SELECT * FROM Raspored";
+            bool postoji = false;
+            Database.Instance.Connect();
+            IDataReader reader = Database.Instance.GetDataReader(provjera);
+            while (reader.Read())
+            {
+                string id = reader["korisnik_id"].ToString();
+                if (trenutniKorisnik.Identifikator.ToString() == id)
+                {
+                    postoji = true;
+                    break;
+                }
+            }
+            reader.Close();
+            Database.Instance.Disconnect();
+
             OdjaviKorisnikaIzDomaćinstva();
-            //IzvršiNaredbu(sql);            
+            if (postoji)
+            {
+                //IzvršiNaredbu(step1);
+                string step1 = "DELETE FROM Raspored WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+            }
+            string step2 = "DELETE FROM Korisnik WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+            //IzvršiNaredbu(step2);
+            trenutniKorisnik = null;
+            trenutniKorisnik.Prijavljen = false;
             MessageBox.Show("Korisnički račun uspješno obrisan.\nKlikom na *OK* ugasit će se aplikacija.", "Obavijest");
             Environment.Exit(0);
+
             */
         }
     }

@@ -173,14 +173,14 @@ namespace WareHome
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(816, 514);
             this.Controls.Add(this.ispisButton);
-            this.Controls.Add(this.ukupnoTextBox);
-            this.Controls.Add(this.ukupnoLabel);
             this.Controls.Add(this.nazivLabel);
             this.Controls.Add(this.preimenujButton);
             this.Controls.Add(this.ukloniButton);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.povratakButton);
             this.Controls.Add(this.namirniceDataGridView);
+            this.Controls.Add(this.ukupnoTextBox);
+            this.Controls.Add(this.ukupnoLabel);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
