@@ -166,7 +166,7 @@ namespace WareHome
             this.Name = "DodajNaListuForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "WareHome";
+            this.Text = "Dodaj namirnicu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
