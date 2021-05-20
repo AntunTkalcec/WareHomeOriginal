@@ -142,11 +142,11 @@ namespace WareHome
             if (!postoji)
             {
                 Database.Instance.Connect();
-                string sql = $"UPDATE Domacinstvo SET naziv = '{nazivDomacinstvaTextBox.Text}' WHERE domacinstvo_id = " + trenutniKorisnik.Domacinstvo.Identifikator;
+                string sql = $"UPDATE Domacinstvo SET naziv = N'{nazivDomacinstvaTextBox.Text}' WHERE domacinstvo_id = " + trenutniKorisnik.Domacinstvo.Identifikator;
                 Database.Instance.ExecuteCommand(sql);
                 Database.Instance.Disconnect();
                 trenutniKorisnik.Domacinstvo.Naziv = nazivDomacinstvaTextBox.Text;
-                MessageBox.Show("Domaćinstvo preimenovano!\nUkoliko ste koristili dijakritike (č, ć, ž...), spremit će se slova bez dijakritičkih znakova (c, z...).", "Obavijest");
+                MessageBox.Show("Domaćinstvo preimenovano!", "Obavijest");
             }
             else
             {
@@ -194,7 +194,7 @@ namespace WareHome
             Database.Instance.Disconnect();
             if (!postoji)
             {
-                string sql = $"UPDATE Korisnik SET ime = '{postavkeImeTextBox.Text}', prezime = '{postavkePrezimeTextBox.Text}', [e-mail] = '{postavkeMailTextBox.Text}', lozinka = '{postavkeLozinkaTextBox.Text}', korisnicko_ime = '{postavkeKorisnickoImeTextBox.Text}' WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
+                string sql = $"UPDATE Korisnik SET ime = N'{postavkeImeTextBox.Text}', prezime = N'{postavkePrezimeTextBox.Text}', [e-mail] = '{postavkeMailTextBox.Text}', lozinka = N'{postavkeLozinkaTextBox.Text}', korisnicko_ime = '{postavkeKorisnickoImeTextBox.Text}' WHERE korisnik_id = " + trenutniKorisnik.Identifikator;
                 IzvršiNaredbu(sql);
                 trenutniKorisnik.Ime = postavkeImeTextBox.Text;
                 trenutniKorisnik.Prezime = postavkePrezimeTextBox.Text;
