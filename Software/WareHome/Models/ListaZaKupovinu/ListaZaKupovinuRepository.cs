@@ -76,7 +76,7 @@ namespace WareHome.Models.ListaZaKupovinu
                 }
                 Database.Instance.Connect();
                 string sql = "INSERT INTO Lista_za_kupovinu (naziv_liste, privatna_lista, lozinka_liste, domacinstvo_id) VALUES " +
-                    $"('{naziv}', {privatnaInt}, '{lozinka}', {trenutniKorisnik.Domacinstvo.Identifikator})";
+                    $"(N'{naziv}', {privatnaInt}, N'{lozinka}', {trenutniKorisnik.Domacinstvo.Identifikator})";
                 Database.Instance.ExecuteCommand(sql);
                 Database.Instance.Disconnect();
                 PopisLista = null;

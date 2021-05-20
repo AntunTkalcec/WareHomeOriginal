@@ -41,7 +41,7 @@ namespace WareHome.Models.Raspored
 
         public static void SpremiRaspored(Raspored raspored)
         {
-            string sql = $"UPDATE Raspored SET dan_odlaska = '{raspored.OdabraniDan.DanOdlaska}', sat_odlaska = '{raspored.OdabraniSat.SatOdlaska}', minuta_odlaska = '{raspored.OdabranaMinuta.MinutaOdlaska}', ponavljanje = {raspored.OdabirPonavljanja.UcestalostPonavljanja} where korisnik_id = {trenutniKorisnik.Identifikator}";
+            string sql = $"UPDATE Raspored SET dan_odlaska = N'{raspored.OdabraniDan.DanOdlaska}', sat_odlaska = '{raspored.OdabraniSat.SatOdlaska}', minuta_odlaska = '{raspored.OdabranaMinuta.MinutaOdlaska}', ponavljanje = {raspored.OdabirPonavljanja.UcestalostPonavljanja} where korisnik_id = {trenutniKorisnik.Identifikator}";
             Database.Instance.Connect();
             Database.Instance.ExecuteCommand(sql);
             Database.Instance.Disconnect();
