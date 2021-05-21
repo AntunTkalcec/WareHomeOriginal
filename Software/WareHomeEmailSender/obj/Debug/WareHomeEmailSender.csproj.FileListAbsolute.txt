@@ -1,0 +1,7 @@
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\bin\Debug\WareHomeEmailSender.exe.config
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\bin\Debug\WareHomeEmailSender.exe
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\bin\Debug\WareHomeEmailSender.pdb
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\obj\Debug\WareHomeEmailSender.csprojAssemblyReference.cache
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\obj\Debug\WareHomeEmailSender.csproj.CoreCompileInputs.cache
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\obj\Debug\WareHomeEmailSender.exe
+C:\Users\Antun\Desktop\PI\PROJEKT\Email Sender\WareHomeEmailSender\WareHomeEmailSender\obj\Debug\WareHomeEmailSender.pdb
