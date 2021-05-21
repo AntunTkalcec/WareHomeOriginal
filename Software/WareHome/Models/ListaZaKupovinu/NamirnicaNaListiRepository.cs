@@ -50,7 +50,7 @@ namespace WareHome.Models.ListaZaKupovinu
         {
             Database.Instance.Connect();
             string sql = "INSERT INTO Namirnica_na_listi (lista_id, naziv_namirniceNaListi, kolicina_namirniceNaListi, cijena_namirniceNaListi, trgovina_namirniceNaListi) VALUES " +
-                $"({dodajNamirnicu.ListaNamirnice}, '{dodajNamirnicu.NazivNamirnice}', '{dodajNamirnicu.KoličinaNamirnice}', '{dodajNamirnicu.CijenaNamirnice}', '{dodajNamirnicu.TrgovinaNamirnice}')";
+                $"({dodajNamirnicu.ListaNamirnice}, N'{dodajNamirnicu.NazivNamirnice}', N'{dodajNamirnicu.KoličinaNamirnice}', N'{dodajNamirnicu.CijenaNamirnice}', N'{dodajNamirnicu.TrgovinaNamirnice}')";
             Database.Instance.ExecuteCommand(sql);
             Database.Instance.Disconnect();
             PopisNamirnica = null;
