@@ -43,11 +43,11 @@ namespace WareHome
             if (nazivNamirniceTextBox.Text == null || nazivNamirniceTextBox.Text == "" || dostupnaKolicinaTextBox.Text == null ||
                 dostupnaKolicinaTextBox.Text == "" || optimalnaKolicinaTextBox.Text == null || optimalnaKolicinaTextBox.Text == "" || mjernaJedinicaComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Nisu popunjena sva obavezna polja.");
+                MessageBox.Show("Nisu popunjena sva obavezna polja.", "Greška!");
             }
             else if (dostupnaKolicinaTextBox.BackColor == Color.Red || optimalnaKolicinaTextBox.BackColor == Color.Red || cijenaTextBox.BackColor == Color.Red)
             {
-                MessageBox.Show("Neko od polja nije ispravno popunjeno.");
+                MessageBox.Show("Jedno ili više polja nije ispravno popunjeno.", "Greška!");
             }
             else
             {

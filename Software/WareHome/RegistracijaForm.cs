@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -48,6 +49,13 @@ namespace WareHome
             string Lozinka = regLozinkaTextBox.Text;
             string PotvrdaLozinke = regPotvrdiLozinkuTextBox.Text;
             DateTime DatumRegistracije = DateTime.UtcNow;
+
+            if (!Validate(Mail))
+            {
+                regMailTextBox.BackColor = Color.Red;
+                MessageBox.Show("Krivo upisana e-mail adresa.", "Greška");
+                return Uspjeh;
+            }
 
             if (!ProvjeriKorisnickoIme(KorisnickoIme, Mail))
             {
@@ -108,6 +116,18 @@ namespace WareHome
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private bool Validate(string text)
+        {
+            var regex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+            bool validno = Regex.IsMatch(text, regex, RegexOptions.IgnoreCase);
+            return validno;
+        }
+
+        private void regMailTextBox_TextChanged(object sender, EventArgs e)
+        {
+            regMailTextBox.BackColor = Color.White;
         }
     }
 }

@@ -213,7 +213,7 @@ namespace WareHome
             }
             else
             {
-                MessageBox.Show($"Nema podataka u tablici koji bi se mogli spremiti u PDF! \n Broj stupaca u DGV-u: {namirniceDataGridView.Columns.Count}", "Greška!");
+                MessageBox.Show($"Nema podataka u tablici koji bi se mogli spremiti u PDF! \n", "Greška!");
             }
         }
 

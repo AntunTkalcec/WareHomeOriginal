@@ -48,8 +48,10 @@
     <Compile Include="Iznimke\WareHomeException.cs" />
     <Compile Include="Korisnik.cs" />
     <Compile Include="KorisnikRepository.cs" />
+    <Compile Include="MailDanCombine.cs" />
     <Compile Include="Namirnica.cs" />
     <Compile Include="NamirnicaRepository.cs" />
+    <Compile Include="Podsjetnik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Statistika.cs" />
   </ItemGroup>

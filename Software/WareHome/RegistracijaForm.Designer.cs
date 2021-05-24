@@ -117,6 +117,7 @@ namespace WareHome
             this.regMailTextBox.Name = "regMailTextBox";
             this.regMailTextBox.Size = new System.Drawing.Size(157, 27);
             this.regMailTextBox.TabIndex = 2;
+            this.regMailTextBox.TextChanged += new System.EventHandler(this.regMailTextBox_TextChanged);
             // 
             // emailLabel
             // 

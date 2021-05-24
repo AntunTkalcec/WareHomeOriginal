@@ -32,17 +32,24 @@ namespace WareHome
             }
             else
             {
-                Domacinstvo novoDomacinstvo = new Domacinstvo();
-                novoDomacinstvo.Naziv = domacinstvoNazivTextBox.Text;
-                novoDomacinstvo.DatumKreiranja = DateTime.Today;
+                if (domacinstvoNazivTextBox.Text.Length > 1)
+                {
+                    Domacinstvo novoDomacinstvo = new Domacinstvo();
+                    novoDomacinstvo.Naziv = domacinstvoNazivTextBox.Text;
+                    novoDomacinstvo.DatumKreiranja = DateTime.Today;
 
-                Database.Instance.Connect();
-                DomacinstvoRepository.Spremi(novoDomacinstvo);
-                Database.Instance.Disconnect();
-                StaviKorisnikaUDomacinstvo(novoDomacinstvo);
-                DomacinstvoRepository.PridruzivanjeUspješno = true;
-                MessageBox.Show($"Domaćinstvo {novoDomacinstvo.Naziv} izrađeno!", "Obavijest");
-                Close();
+                    Database.Instance.Connect();
+                    DomacinstvoRepository.Spremi(novoDomacinstvo);
+                    Database.Instance.Disconnect();
+                    StaviKorisnikaUDomacinstvo(novoDomacinstvo);
+                    DomacinstvoRepository.PridruzivanjeUspješno = true;
+                    MessageBox.Show($"Domaćinstvo {novoDomacinstvo.Naziv} izrađeno!", "Obavijest");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Unesite naziv domaćinstva!", "Greška!");
+                }
             }
         }
 
