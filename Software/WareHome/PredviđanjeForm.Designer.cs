@@ -97,8 +97,8 @@ namespace WareHome
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(667, 17);
             this.label1.TabIndex = 13;
-            this.label1.Text = "*Predviđena potrošnja nikad nije sto posto točna već služi isključivo kao pomoć p" +
-    "ri planiranju količina";
+            this.label1.Text = "*Predviđena potrošnja nikad nije u potpunosti točna, već služi isključivo kao pom" +
+    "oć pri planiranju količina";
             // 
             // PredviđanjeForm
             // 
