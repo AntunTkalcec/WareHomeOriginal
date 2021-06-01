@@ -83,7 +83,7 @@ namespace WareHome
             this.nazivLabel.Location = new System.Drawing.Point(7, 9);
             this.nazivLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nazivLabel.Name = "nazivLabel";
-            this.nazivLabel.Size = new System.Drawing.Size(246, 26);
+            this.nazivLabel.Size = new System.Drawing.Size(310, 34);
             this.nazivLabel.TabIndex = 12;
             this.nazivLabel.Text = "Predviđanje potrošnje";
             // 
@@ -95,10 +95,10 @@ namespace WareHome
             this.label1.Location = new System.Drawing.Point(9, 456);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(667, 17);
+            this.label1.Size = new System.Drawing.Size(878, 21);
             this.label1.TabIndex = 13;
-            this.label1.Text = "*Predviđena potrošnja nikad nije sto posto točna već služi isključivo kao pomoć p" +
-    "ri planiranju količina";
+            this.label1.Text = "*Predviđena potrošnja nikad nije u potpunosti točna, već služi isključivo kao pom" +
+    "oć pri planiranju količina";
             // 
             // PredviđanjeForm
             // 
