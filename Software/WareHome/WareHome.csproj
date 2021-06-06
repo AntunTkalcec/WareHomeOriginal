@@ -103,8 +103,6 @@
     <Compile Include="Models\ListaZaKupovinu\ListaZaKupovinu.cs" />
     <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListi.cs" />
     <Compile Include="Models\ListaZaKupovinu\NamirnicaNaListiRepository.cs" />
-    <Compile Include="Models\PredviđanjePotrošnje\PredviđanjePotrošnjeRepository.cs" />
-    <Compile Include="Models\PredviđanjePotrošnje\PredviđenaPotrošnja.cs" />
     <Compile Include="Models\Raspored\RasporedRepository.cs" />
     <Compile Include="NovaListaForm.cs">
       <SubType>Form</SubType>
@@ -266,6 +264,10 @@
     <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
       <Project>{7D8D10EF-2D05-42DC-8909-F38EE4C91071}</Project>
       <Name>DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PredviđanjePotrošnje\PredviđanjePotrošnje.csproj">
+      <Project>{2A9FCE3D-5407-4810-959B-980D47F2B6C2}</Project>
+      <Name>PredviđanjePotrošnje</Name>
     </ProjectReference>
     <ProjectReference Include="..\WareHome Logic\WareHome Logic.csproj">
       <Project>{9D331757-D271-4C3F-BAC7-5420F9B49742}</Project>
