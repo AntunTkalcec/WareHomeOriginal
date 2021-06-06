@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WareHome.Models.PredviđanjePotrošnje
+namespace PredviđanjePotrošnje
 {
     public class PredviđenaPotrošnja
     {
