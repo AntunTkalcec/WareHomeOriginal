@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WareHome_Logic;
 
-namespace WareHome.Models.PredviđanjePotrošnje
+namespace PredviđanjePotrošnje
 {
     public static class PredviđanjePotrošnjeRepository
     {
