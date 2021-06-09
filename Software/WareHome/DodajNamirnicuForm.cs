@@ -46,20 +46,46 @@ namespace WareHome
             }
             else
             {
-                Namirnica namirnica = new Namirnica();
-                namirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
-                namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
-                namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
-                namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
-                namirnica.Cijena = cijenaTextBox.Text;
-                namirnica.Ducan = ducanTextBox.Text;
-                namirnica.DatumZadnjePromjene = DateTime.Today;
-                namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
-                Database.Instance.Connect();
-                NamirnicaRepository.Spremi(namirnica);
-                Database.Instance.Disconnect();
-                Close();
+                if (ProvjeriFormat())
+                {
+                    Namirnica namirnica = new Namirnica();
+                    namirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
+                    namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
+                    namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
+                    namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
+                    namirnica.Cijena = cijenaTextBox.Text;
+                    namirnica.Ducan = ducanTextBox.Text;
+                    namirnica.DatumZadnjePromjene = DateTime.Today;
+                    namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
+                    Database.Instance.Connect();
+                    NamirnicaRepository.Spremi(namirnica);
+                    Database.Instance.Disconnect();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Krivo upisan format dostupne/optimalne količine!", "Greška");
+                }
             }
+        }
+
+        private bool ProvjeriFormat()
+        {
+            foreach (char c in dostupnaKolicinaTextBox.Text)
+            {
+                if (char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            foreach(char c in optimalnaKolicinaTextBox.Text)
+            {
+                if (char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
