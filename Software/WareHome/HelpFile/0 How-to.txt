@@ -1,5 +1,5 @@
 Za isprobavanje:
-1. Iz foldera \Software\WareHome\HelpFile skopirati novi helpfile.chm u folder gdje se nalazi .exe datoteka
+1. Iz foldera \Software\WareHome skopirati helpfile.chm u folder gdje se nalazi .exe datoteka (npr. \Software\WareHome\bin\Debug)
 2. Pritisnuti F1 u programu
 
 Za uređivanje:
