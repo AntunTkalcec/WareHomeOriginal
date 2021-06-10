@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome_Logic;
 using PredviđanjePotrošnje;
+using System.Reflection;
 
 namespace WareHome
 {
@@ -125,9 +126,9 @@ namespace WareHome
                         }
                         using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                         {
-                            Chunk c1 = new Chunk($"Predviđanje potrošnje namirnica: \n", FontFactory.GetFont("dax-black", 20, BaseColor.BLACK));
-                            Chunk c2 = new Chunk("  \n");
-                            Chunk c3 = new Chunk("  \n");
+                            Chunk c1 = new Chunk($"Predviđanje potrošnje namirnica: \\n", FontFactory.GetFont("dax-black", 20, BaseColor.BLACK));
+                            Chunk c2 = new Chunk("  \\n");
+                            Chunk c3 = new Chunk("  \\n");
                             Paragraph p = new Paragraph();
                             Phrase p1 = new Phrase(c1);
                             Phrase p2 = new Phrase
@@ -155,7 +156,7 @@ namespace WareHome
             }
             else
             {
-                MessageBox.Show($"Nema podataka u tablici koji bi se mogli spremiti u PDF! \n", "Greška!");
+                MessageBox.Show($"Nema podataka u tablici koji bi se mogli spremiti u PDF! \\n", "Greška!");
             }
         }
 
@@ -176,6 +177,14 @@ namespace WareHome
                 rezultat[i] = (float)widths[i] / total * 100;
             }
             return rezultat;
+        }
+
+        private void PredviđanjeForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
+            string helpfile = "File://" + helpLocation;
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "7.1. Pregled predvidene potrosnje");
         }
     }
 }
