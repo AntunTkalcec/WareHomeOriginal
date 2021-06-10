@@ -24,11 +24,16 @@ namespace WareHome
 
         private void PovratiLozinkuButton_Click(object sender, EventArgs e)
         {
+            PovratiLozinku();
+        }
+
+        private void PovratiLozinku()
+        {
             try
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                
+
                 Database.Instance.Connect();
                 string sql = "SELECT * FROM Korisnik";
                 IDataReader dataReader = Database.Instance.GetDataReader(sql);
