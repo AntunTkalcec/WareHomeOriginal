@@ -58,7 +58,7 @@ namespace WareHome
                 novaVrijednost = trenutnaNamirnica.DostupnaKolicina;
                 trenutnaNamirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
                 trenutnaNamirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
-                trenutnaNamirnica.Cijena = cijenaTextBox.Text;
+                trenutnaNamirnica.Cijena = ProvjeriDecimalnuCijenu();
                 trenutnaNamirnica.Ducan = ducanTextBox.Text;
                 trenutnaNamirnica.DatumZadnjePromjene = DateTime.Today;
                 Database.Instance.Connect();
@@ -72,9 +72,30 @@ namespace WareHome
             }
         }
 
+        private string ProvjeriDecimalnuCijenu()
+        {
+            string cijena = cijenaTextBox.Text;
+            if (cijena.Length > 0)
+            {
+                if (!cijena.Contains('.'))
+                {
+                    cijena = cijena + ".00";
+                }
+                else if (cijena.Contains('.') && ProvjeriBrojDecimala(cijena) == 0)
+                {
+                    cijena = cijena + "00";
+                }
+                else if (cijena.Contains('.') && ProvjeriBrojDecimala(cijena) == 1)
+                {
+                    cijena = cijena + "0";
+                }
+            }
+            return cijena;
+        }
+
         private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+"))
+            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(dostupnaKolicinaTextBox.Text) > 1 || ProvjeriBrojDecimala(dostupnaKolicinaTextBox.Text) > 1)
             {
                 dostupnaKolicinaTextBox.BackColor = Color.Red;
             }
@@ -86,7 +107,7 @@ namespace WareHome
 
         private void optimalnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+"))
+            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(optimalnaKolicinaTextBox.Text) > 1 || ProvjeriBrojDecimala(optimalnaKolicinaTextBox.Text) > 1)
             {
                 optimalnaKolicinaTextBox.BackColor = Color.Red;
             }
@@ -98,7 +119,7 @@ namespace WareHome
 
         private void cijenaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (cijenaTextBox.Text.Contains("-") || cijenaTextBox.Text.Contains(",") || cijenaTextBox.Text.Contains("+"))
+            if (cijenaTextBox.Text.Contains("-") || cijenaTextBox.Text.Contains(",") || cijenaTextBox.Text.Contains("+") || IzbrojiTocke(cijenaTextBox.Text) > 1 || ProvjeriBrojDecimala(cijenaTextBox.Text) > 2)
             {
                 cijenaTextBox.BackColor = Color.Red;
             }
@@ -106,6 +127,29 @@ namespace WareHome
             {
                 cijenaTextBox.BackColor = Color.White;
             }
+        }
+
+        private int ProvjeriBrojDecimala(string text)
+        {
+            int brojDecimala = 0;
+            if (IzbrojiTocke(text) > 0)
+            {
+                brojDecimala = text.Length - text.IndexOf(".") - 1;
+            }
+            return brojDecimala;
+        }
+
+        public int IzbrojiTocke(string text)
+        {
+            int count = 0;
+            foreach (char c in text)
+            {
+                if (c == '.')
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         private void exitAppButton_Click(object sender, EventArgs e)
@@ -118,7 +162,7 @@ namespace WareHome
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
             string helpfile = "File://" + helpLocation;
-            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "4.2.Uredivanje namirnice");
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "4.2. Uredivanje namirnice");
         }
     }
 }
