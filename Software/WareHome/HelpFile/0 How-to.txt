@@ -1,0 +1,13 @@
+Za isprobavanje:
+1. Iz foldera \Software\WareHome\HelpFile skopirati novi helpfile.chm u Software\WareHome\bin\Debug
+2. Pritisnuti F1 u programu
+
+Za uređivanje:
+0. Ručno urediti sve .htm datoteke
+-------------------------------------------------------------
+1. Otvoriti HTML Help Workshop
+2. Učitati helpfile.hhp
+3. Stisnuti Save & compile
+4. U folderu HelpFile generirati će se helpfile.chm
+5. Taj file je potrebno copy paste u root direktorij programa (tamo gdje je .exe)
+6. To je to, gl hf
