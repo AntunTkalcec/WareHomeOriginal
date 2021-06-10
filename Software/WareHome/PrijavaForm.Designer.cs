@@ -185,6 +185,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.PrijavaForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.PrijavaForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
