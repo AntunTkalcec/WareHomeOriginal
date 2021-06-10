@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -128,6 +130,14 @@ namespace WareHome
         private void regMailTextBox_TextChanged(object sender, EventArgs e)
         {
             regMailTextBox.BackColor = Color.White;
+        }
+
+        private void RegistracijaForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
+            string helpfile = "File://" + helpLocation;
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "2.1. Registracija novog korisnika");
         }
     }
 }
