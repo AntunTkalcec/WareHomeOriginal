@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PredviđanjePotrošnje")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Projekt koji se koristi za računanje predviđene potrošnje trenutne količine namirnica")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PredviđanjePotrošnje")]
+[assembly: AssemblyCompany("FOI")]
+[assembly: AssemblyProduct("WareHome - PredviđanjePotrošnje")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
