@@ -40,15 +40,15 @@ namespace WareHome
             // lozinkaTextBox
             // 
             this.lozinkaTextBox.Location = new System.Drawing.Point(9, 87);
-            this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
-            this.lozinkaTextBox.Size = new System.Drawing.Size(208, 22);
+            this.lozinkaTextBox.Size = new System.Drawing.Size(208, 20);
             this.lozinkaTextBox.TabIndex = 1;
             // 
             // prikažiButton
             // 
             this.prikažiButton.Location = new System.Drawing.Point(117, 136);
-            this.prikažiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(100, 28);
             this.prikažiButton.TabIndex = 2;
@@ -59,7 +59,7 @@ namespace WareHome
             // odustaniButton
             // 
             this.odustaniButton.Location = new System.Drawing.Point(9, 136);
-            this.odustaniButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(100, 28);
             this.odustaniButton.TabIndex = 3;
@@ -73,7 +73,7 @@ namespace WareHome
             this.label2.Location = new System.Drawing.Point(6, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Lozinka:";
             // 
@@ -83,7 +83,7 @@ namespace WareHome
             this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Naziv liste:";
             // 
@@ -91,9 +91,9 @@ namespace WareHome
             // 
             this.nazivTextBox.Enabled = false;
             this.nazivTextBox.Location = new System.Drawing.Point(9, 30);
-            this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(208, 22);
+            this.nazivTextBox.Size = new System.Drawing.Size(208, 20);
             this.nazivTextBox.TabIndex = 4;
             // 
             // LozinkaZaListuForm
@@ -112,6 +112,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autentikacija";
             this.Load += new System.EventHandler(this.LozinkaZaListuForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.LozinkaZaListuForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
