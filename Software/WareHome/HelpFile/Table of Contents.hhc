@@ -32,7 +32,7 @@
 			<param name="ImageNumber" value="11">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="2.2. Prijava postoje&aelig;eg korisnika">
+			<param name="Name" value="2.2. Prijava postojeceg korisnika">
 			<param name="Local" value="2.2. Prijava postojeceg korisnika.htm">
 			<param name="ImageNumber" value="11">
 			</OBJECT>
@@ -70,7 +70,7 @@
 			<param name="ImageNumber" value="11">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="4.2. Ure&eth;ivanje namirnice">
+			<param name="Name" value="4.2. Uredivanje namirnice">
 			<param name="Local" value="4.2. Uredivanje namirnice.htm">
 			<param name="ImageNumber" value="11">
 			</OBJECT>
@@ -166,7 +166,7 @@
 		<param name="ImageNumber" value="1">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="9. Odjava iz aplikacija">
+		<param name="Name" value="9. Odjava iz aplikacije">
 		<param name="Local" value="9. Odjava iz aplikacija.htm">
 		<param name="ImageNumber" value="1">
 		</OBJECT>
