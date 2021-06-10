@@ -433,6 +433,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Testiranje neimplementiranih funkcija";
             this.Load += new System.EventHandler(this.TestiranjeForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.TestiranjeForm_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ukućaniDataGridView)).EndInit();

@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PredviđanjePotrošnje;
 using WareHome_Logic;
+using System.IO;
+using System.Reflection;
 
 namespace WareHome
 {
@@ -277,6 +279,14 @@ namespace WareHome
             Environment.Exit(0);
 
             */
+        }
+
+        private void TestiranjeForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
+            string helpfile = "File://" + helpLocation;
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "Sadrzaj");
         }
     }
 }
