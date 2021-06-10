@@ -308,6 +308,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PromijeniNamirnicuForm";
             this.Load += new System.EventHandler(this.PromijeniNamirnicuForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.PromijeniNamirnicuForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
