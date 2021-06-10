@@ -120,7 +120,7 @@ namespace WareHome
             this.nisteDioDomacinstvaLabel.Location = new System.Drawing.Point(127, 160);
             this.nisteDioDomacinstvaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nisteDioDomacinstvaLabel.Name = "nisteDioDomacinstvaLabel";
-            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(393, 40);
+            this.nisteDioDomacinstvaLabel.Size = new System.Drawing.Size(313, 33);
             this.nisteDioDomacinstvaLabel.TabIndex = 25;
             this.nisteDioDomacinstvaLabel.Text = "Niste dio domaćinstva.";
             this.nisteDioDomacinstvaLabel.Visible = false;
@@ -145,6 +145,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste za kupovinu";
             this.Load += new System.EventHandler(this.ListeForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ListeForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.listeDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

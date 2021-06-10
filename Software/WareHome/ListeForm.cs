@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -159,6 +161,14 @@ namespace WareHome
                     obrišiButton.Enabled = true;
                 }
             }
+        }
+
+        private void ListeForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
+            string helpfile = "File://" + helpLocation;
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6.1. Pregledavanje izradenih lista");
         }
     }
 }
