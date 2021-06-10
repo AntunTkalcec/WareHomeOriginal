@@ -118,7 +118,7 @@ namespace WareHome
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
             string helpfile = "File://" + helpLocation;
-            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "4.2.Uredivanje namirnice");
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "4.2. Uredivanje namirnice");
         }
     }
 }
