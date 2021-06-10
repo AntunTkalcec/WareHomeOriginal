@@ -1,0 +1,13 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=helpfile.chm
+Contents file=Table of Contents.hhc
+Default Font=Calibri,12,238
+Display compile progress=No
+Index file=Index.hhk
+Language=0x41a Croatian (Croatia)
+Title=WareHome Help
+
+
+[INFOTYPES]
+

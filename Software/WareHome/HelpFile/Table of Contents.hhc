@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800025">
+	<param name="ImageType" value="Folder">
+<param name="Font" value="Calibri,12,238">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sadržaj">
+		<param name="Local" value="0 Sadržaj.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1. Uvod">
+		<param name="Local" value="1. Uvod.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2. Prijava u aplikaciju">
+		<param name="Local" value="2. Prijava u aplikaciju.htm">
+		<param name="ImageNumber" value="2">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.1. Registracija novog korisnika">
+			<param name="Local" value="2.1. Registracija novog korisnika.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.2. Prijava postoje&aelig;eg korisnika">
+			<param name="Local" value="2.2. Prijava postojeceg korisnika.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.3. Povrat zaboravljene lozinke">
+			<param name="Local" value="2.3. Povrat zaboravljene lozinke.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3. Rad s doma&aelig;instvima">
+		<param name="Local" value="3. Rad s domacinstvima.htm">
+		<param name="ImageNumber" value="2">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.1. Prijava u postoje&aelig;e doma&aelig;instvo">
+			<param name="Local" value="3.1. Prijava u postojece domacinstvo.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.2. Izrada novog doma&aelig;instva">
+			<param name="Local" value="3.2. Izrada novog domacinstva.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4. Upravljanje namirnicama">
+		<param name="Local" value="4. Upravljanje namirnicama.htm">
+		<param name="ImageNumber" value="2">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.1. Dodavanje namirnice">
+			<param name="Local" value="4.1. Dodavanje namirnice.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.2. Ure&eth;ivanje namirnice">
+			<param name="Local" value="4.2. Uredivanje namirnice.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.3. Brisanje namirnice">
+			<param name="Local" value="4.3. Brisanje namirnice.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.4. Spremanje stanja u PDF">
+			<param name="Local" value="4.4. Spremanje stanja u PDF.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5. Korištenje email podsjetnika za kupovinu">
+		<param name="Local" value="5. Koristenje email podsjetnika.htm">
+		<param name="ImageNumber" value="2">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="5.1. Postavljanje email podsjetnika">
+			<param name="Local" value="5.1. Postavljanje email podsjetnika.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="5.2. Isklju&egrave;ivanje email podsjetnika">
+			<param name="Local" value="5.2. Iskljucivanje email podsjetnika.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6. Korištenje lista za kupovinu">
+		<param name="Local" value="6. Koristenje lista za kupovinu.htm">
+		<param name="ImageNumber" value="2">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.1. Pregledavanje izra&eth;enih lista">
+			<param name="Local" value="6.1. Pregledavanje izradenih lista.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.2. Izrada nove liste">
+			<param name="Local" value="6.2. Izrada nove liste.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.3. Brisanje postoje&aelig;e liste">
+			<param name="Local" value="6.3. Brisanje postojece liste.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.4. Promjena naziva i postavki postoje&aelig;e liste">
+			<param name="Local" value="6.4. Promjena naziva i postavki postojece liste.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.5. Dodavanje namirnice na listu za kupovinu">
+			<param name="Local" value="6.5. Dodavanje namirnice na listu za kupovinu.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.6. Uklanjanje namirnice s liste za kupovinu">
+			<param name="Local" value="6.6. Uklanjanje namirnice s liste za kupovinu.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="6.7. Ispis liste za kupovinu">
+			<param name="Local" value="6.7. Ispis liste za kupovinu.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="7. Predvi&eth;anje potrošnje">
+		<param name="Local" value="7. Predvidanje potrosnje.htm">
+		<param name="ImageNumber" value="2">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="7.1. Pregled predvi&eth;ene potrošnje">
+			<param name="Local" value="7.1. Pregled predvidene potrošnje.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="7.2. Ispis predvi&eth;ene potrošnje">
+			<param name="Local" value="7.2. Ispis predvidene potrosnje.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="8. Prijava problema">
+		<param name="Local" value="8. Prijava problema.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="9. Odjava iz aplikacija">
+		<param name="Local" value="9. Odjava iz aplikacija.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+</UL>
+</BODY></HTML>
