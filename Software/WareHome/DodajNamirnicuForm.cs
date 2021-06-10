@@ -55,7 +55,7 @@ namespace WareHome
                     namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
                     namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
                     namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
-                    namirnica.Cijena = cijenaTextBox.Text;
+                    namirnica.Cijena = ProvjeriDecimalnuCijenu();
                     namirnica.Ducan = ducanTextBox.Text;
                     namirnica.DatumZadnjePromjene = DateTime.Today;
                     namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
@@ -69,6 +69,27 @@ namespace WareHome
                     MessageBox.Show("Krivo upisan format dostupne/optimalne količine!", "Greška");
                 }
             }
+        }
+
+        private string ProvjeriDecimalnuCijenu()
+        {
+            string cijena = cijenaTextBox.Text;
+            if (cijena.Length > 0)
+            {
+                if (!cijena.Contains('.'))
+                {
+                    cijena = cijena + ".00";
+                }
+                else if (cijena.Contains('.') && ProvjeriBrojDecimala(cijena) == 0)
+                {
+                    cijena = cijena + "00";
+                }
+                else if (cijena.Contains('.') && ProvjeriBrojDecimala(cijena) == 1)
+                {
+                    cijena = cijena + "0";
+                }
+            }
+            return cijena;
         }
 
         private bool ProvjeriFormat()
@@ -92,7 +113,7 @@ namespace WareHome
 
         private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+"))
+            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(dostupnaKolicinaTextBox.Text) > 1 || ProvjeriBrojDecimala(dostupnaKolicinaTextBox.Text) > 1)
             {
                 dostupnaKolicinaTextBox.BackColor = Color.Red;
             }
@@ -104,7 +125,7 @@ namespace WareHome
 
         private void optimalnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+"))
+            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(optimalnaKolicinaTextBox.Text) > 1 || ProvjeriBrojDecimala(optimalnaKolicinaTextBox.Text) > 1)
             {
                 optimalnaKolicinaTextBox.BackColor = Color.Red;
             }
@@ -116,7 +137,7 @@ namespace WareHome
 
         private void cijenaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (cijenaTextBox.Text.Contains("-") || cijenaTextBox.Text.Contains(",") || cijenaTextBox.Text.Contains("+"))
+            if (cijenaTextBox.Text.Contains("-") || cijenaTextBox.Text.Contains(",") || cijenaTextBox.Text.Contains("+") || IzbrojiTocke(cijenaTextBox.Text) > 1 || ProvjeriBrojDecimala(cijenaTextBox.Text) > 2)
             {
                 cijenaTextBox.BackColor = Color.Red;
             }
@@ -124,6 +145,29 @@ namespace WareHome
             {
                 cijenaTextBox.BackColor = Color.White;
             }
+        }
+
+        private int ProvjeriBrojDecimala(string text)
+        {
+            int brojDecimala = 0;
+            if (IzbrojiTocke(text) > 0)
+            {
+                brojDecimala = text.Length - text.IndexOf(".") - 1;
+            }
+            return brojDecimala;
+        }
+
+        public int IzbrojiTocke(string text)
+        {
+            int count = 0;
+            foreach (char c in text)
+            {
+                if (c == '.')
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         private void DodajNamirnicuForm_HelpRequested(object sender, HelpEventArgs hlpevent)
