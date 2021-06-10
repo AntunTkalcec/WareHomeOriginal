@@ -190,7 +190,14 @@ namespace WareHome
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
             string helpfile = "File://" + helpLocation;
-            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6.6. Uklanjanje namirnice s liste za kupovinu");
+            if (odabranaLista.NazivListe == "[WH] Potrošene namirnice")
+            {
+                Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6.1. Pregledavanje izradenih lista");
+            }
+            else
+            {
+                Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6.6. Uklanjanje namirnice s liste za kupovinu");
+            }
         }
     }
 }
