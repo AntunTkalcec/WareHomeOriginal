@@ -170,6 +170,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ispis liste";
             this.Load += new System.EventHandler(this.OdabirNacinaIspisaListeForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OdabirNacinaIspisaListeForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.namirniceDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHome.Models.ListaZaKupovinu;
 using WareHome_Logic;
+using System.Reflection;
 
 namespace WareHome
 {
@@ -182,6 +183,14 @@ namespace WareHome
         {
             OdabirNacinaIspisaListeForm form = new OdabirNacinaIspisaListeForm(odabranaLista, namirniceNaListi, trenutniKorisnik);
             form.ShowDialog();
+        }
+
+        private void ListaForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
+            string helpfile = "File://" + helpLocation;
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6.6. Uklanjanje namirnice s liste za kupovinu");
         }
     }
 }

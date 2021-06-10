@@ -468,6 +468,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.GlavnaForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.GlavnaForm_HelpRequested);
             this.glavnaFormPanelLeft.ResumeLayout(false);
             this.glavnaFormPanelLeftTop.ResumeLayout(false);
             this.glavnaFormPanelLeftTop.PerformLayout();

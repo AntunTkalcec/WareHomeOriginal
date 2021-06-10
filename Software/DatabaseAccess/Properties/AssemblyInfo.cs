@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DatabaseAccess")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Project needed to access the database")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DatabaseAccess")]
+[assembly: AssemblyCompany("FOI")]
+[assembly: AssemblyProduct("WareHome - DatabaseAccess")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -114,6 +114,7 @@ namespace WareHome
             this.Name = "ZaboravljenaLozinkaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ZaboravljenaLozinka";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ZaboravljenaLozinkaForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

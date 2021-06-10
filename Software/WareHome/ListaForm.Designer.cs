@@ -190,6 +190,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WareHome";
             this.Load += new System.EventHandler(this.ListaForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ListaForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.namirniceDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

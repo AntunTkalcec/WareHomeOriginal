@@ -167,6 +167,7 @@ namespace WareHome
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dodaj namirnicu";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DodajNaListuForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

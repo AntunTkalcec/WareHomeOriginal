@@ -130,6 +130,7 @@ namespace WareHome
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pridruživanje domaćinstvu";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.PridruziDomacinstvuForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

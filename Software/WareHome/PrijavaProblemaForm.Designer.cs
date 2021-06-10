@@ -109,6 +109,7 @@ namespace WareHome
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrijavaProblemaForm";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.PrijavaProblemaForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
