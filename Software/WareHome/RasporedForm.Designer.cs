@@ -219,6 +219,7 @@ namespace WareHome
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Raspored kupovine";
             this.Load += new System.EventHandler(this.RasporedForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.RasporedForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
