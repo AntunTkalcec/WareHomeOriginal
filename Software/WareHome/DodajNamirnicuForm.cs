@@ -37,8 +37,13 @@ namespace WareHome
 
         private void spremiNamirnicuButton_Click(object sender, EventArgs e)
         {
-            if (nazivNamirniceTextBox.Text == null || nazivNamirniceTextBox.Text == "" || dostupnaKolicinaTextBox.Text == null || 
-                dostupnaKolicinaTextBox.Text == "" || optimalnaKolicinaTextBox.Text == null || optimalnaKolicinaTextBox.Text == "" || mjernaJedinicaComboBox.SelectedItem == null)
+            SpremiNamirnicu();
+        }
+
+        private void SpremiNamirnicu()
+        {
+            if (nazivNamirniceTextBox.Text == null || nazivNamirniceTextBox.Text == "" || dostupnaKolicinaTextBox.Text == null ||
+                            dostupnaKolicinaTextBox.Text == "" || optimalnaKolicinaTextBox.Text == null || optimalnaKolicinaTextBox.Text == "" || mjernaJedinicaComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Nisu popunjena sva obavezna polja.", "Greška!");
             }

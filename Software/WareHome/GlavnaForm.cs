@@ -102,7 +102,7 @@ namespace WareHome
 
                 if (trenutniKorisnik.Domacinstvo.Naziv.Length > 15)
                 {
-                    trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv.Substring(0,15) + "...";
+                    trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;//.Substring(0,15) + "..."; (zakomentirano jer je loše radilo)
                 }
                 else
                 {

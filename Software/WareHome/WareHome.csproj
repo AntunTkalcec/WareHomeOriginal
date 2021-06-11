@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Karlo\OneDrive\Škola\6. semestar\Programsko inženjerstvo\Projekt\WareHome\Installation\</PublishUrl>
+    <PublishUrl>C:\Users\Karlo\OneDrive\Škola\6. semestar\Programsko inženjerstvo\Projekt\WareHome\0 Installation\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ErrorReportUrl>https://github.com/foivz/pi21-atkalcec-khabdija-kstrucic/wiki/Korisni%25C4%258Dka-dokumentacija-za-aplikaciju-%2522WareHome%2522</ErrorReportUrl>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
