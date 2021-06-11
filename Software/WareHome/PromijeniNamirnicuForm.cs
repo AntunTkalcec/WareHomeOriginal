@@ -95,7 +95,7 @@ namespace WareHome
 
         private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(dostupnaKolicinaTextBox.Text) > 1 || ProvjeriBrojDecimala(dostupnaKolicinaTextBox.Text) > 1)
+            if (dostupnaKolicinaTextBox.Text.Contains("-") || dostupnaKolicinaTextBox.Text.Contains(",") || dostupnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(dostupnaKolicinaTextBox.Text) > 0 || ProvjeriBrojDecimala(dostupnaKolicinaTextBox.Text) > 1)
             {
                 dostupnaKolicinaTextBox.BackColor = Color.Red;
             }
@@ -107,7 +107,7 @@ namespace WareHome
 
         private void optimalnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(optimalnaKolicinaTextBox.Text) > 1 || ProvjeriBrojDecimala(optimalnaKolicinaTextBox.Text) > 1)
+            if (optimalnaKolicinaTextBox.Text.Contains("-") || optimalnaKolicinaTextBox.Text.Contains(",") || optimalnaKolicinaTextBox.Text.Contains("+") || IzbrojiTocke(optimalnaKolicinaTextBox.Text) > 0 || ProvjeriBrojDecimala(optimalnaKolicinaTextBox.Text) > 1)
             {
                 optimalnaKolicinaTextBox.BackColor = Color.Red;
             }
