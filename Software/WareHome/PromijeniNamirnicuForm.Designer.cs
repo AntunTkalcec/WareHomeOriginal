@@ -112,9 +112,9 @@ namespace WareHome
             this.dostupnaKolicinaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dostupnaKolicinaLabel2.Location = new System.Drawing.Point(250, 122);
             this.dostupnaKolicinaLabel2.Name = "dostupnaKolicinaLabel2";
-            this.dostupnaKolicinaLabel2.Size = new System.Drawing.Size(149, 17);
+            this.dostupnaKolicinaLabel2.Size = new System.Drawing.Size(212, 17);
             this.dostupnaKolicinaLabel2.TabIndex = 29;
-            this.dostupnaKolicinaLabel2.Text = "*obavezno,    format 4.5";
+            this.dostupnaKolicinaLabel2.Text = "*obavezno,    format 99 (cijeli broj)";
             // 
             // optimalnaKolicinaLabel
             // 
@@ -139,9 +139,9 @@ namespace WareHome
             this.optimalnaKolicinaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optimalnaKolicinaLabel2.Location = new System.Drawing.Point(250, 176);
             this.optimalnaKolicinaLabel2.Name = "optimalnaKolicinaLabel2";
-            this.optimalnaKolicinaLabel2.Size = new System.Drawing.Size(149, 17);
+            this.optimalnaKolicinaLabel2.Size = new System.Drawing.Size(212, 17);
             this.optimalnaKolicinaLabel2.TabIndex = 32;
-            this.optimalnaKolicinaLabel2.Text = "*obavezno,    format 4.5";
+            this.optimalnaKolicinaLabel2.Text = "*obavezno,    format 99 (cijeli broj)";
             // 
             // mjernaJedinicaLabel
             // 
