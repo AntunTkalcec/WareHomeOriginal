@@ -23,7 +23,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>https://github.com/foivz/pi21-atkalcec-khabdija-kstrucic/wiki/Korisni%25C4%258Dka-dokumentacija-za-aplikaciju-%2522WareHome%2522</SupportUrl>
     <ErrorReportUrl>https://github.com/foivz/pi21-atkalcec-khabdija-kstrucic/wiki/Korisni%25C4%258Dka-dokumentacija-za-aplikaciju-%2522WareHome%2522</ErrorReportUrl>
+    <ProductName>WareHome</ProductName>
+    <PublisherName>PI21-26</PublisherName>
+    <SuiteName>WareHome</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
