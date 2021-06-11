@@ -66,7 +66,9 @@ namespace WareHome_Logic
 
         public static int Obrisi(Namirnica namirnica)
         {
-            string sql = $"DELETE FROM Namirnica WHERE namirnica_id = {namirnica.Identifikator}";
+            string sql = $"DELETE FROM Dogadaj WHERE id_namirnice = {namirnica.Identifikator}";
+            Database.Instance.ExecuteCommand(sql);
+            sql = $"DELETE FROM Namirnica WHERE namirnica_id = {namirnica.Identifikator}";
             return Database.Instance.ExecuteCommand(sql);
         }
     }
