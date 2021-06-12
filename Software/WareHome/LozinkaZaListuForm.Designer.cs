@@ -39,18 +39,18 @@ namespace WareHome
             // 
             // lozinkaTextBox
             // 
-            this.lozinkaTextBox.Location = new System.Drawing.Point(9, 87);
+            this.lozinkaTextBox.Location = new System.Drawing.Point(16, 84);
             this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
-            this.lozinkaTextBox.Size = new System.Drawing.Size(208, 20);
+            this.lozinkaTextBox.Size = new System.Drawing.Size(175, 20);
             this.lozinkaTextBox.TabIndex = 1;
             // 
             // prikažiButton
             // 
-            this.prikažiButton.Location = new System.Drawing.Point(117, 136);
+            this.prikažiButton.Location = new System.Drawing.Point(104, 130);
             this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
-            this.prikažiButton.Size = new System.Drawing.Size(100, 28);
+            this.prikažiButton.Size = new System.Drawing.Size(87, 28);
             this.prikažiButton.TabIndex = 2;
             this.prikažiButton.Text = "Prikaži";
             this.prikažiButton.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@ namespace WareHome
             // 
             // odustaniButton
             // 
-            this.odustaniButton.Location = new System.Drawing.Point(9, 136);
+            this.odustaniButton.Location = new System.Drawing.Point(16, 130);
             this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
-            this.odustaniButton.Size = new System.Drawing.Size(100, 28);
+            this.odustaniButton.Size = new System.Drawing.Size(80, 28);
             this.odustaniButton.TabIndex = 3;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@ namespace WareHome
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 66);
+            this.label2.Location = new System.Drawing.Point(13, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
@@ -80,7 +80,7 @@ namespace WareHome
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
@@ -90,16 +90,18 @@ namespace WareHome
             // nazivTextBox
             // 
             this.nazivTextBox.Enabled = false;
-            this.nazivTextBox.Location = new System.Drawing.Point(9, 30);
+            this.nazivTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nazivTextBox.Location = new System.Drawing.Point(16, 27);
             this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(208, 20);
+            this.nazivTextBox.Size = new System.Drawing.Size(175, 20);
             this.nazivTextBox.TabIndex = 4;
             // 
             // LozinkaZaListuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(232, 187);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(209, 177);
             this.Controls.Add(this.nazivTextBox);
             this.Controls.Add(this.lozinkaTextBox);
             this.Controls.Add(this.label2);
