@@ -23,6 +23,7 @@ namespace WareHome
             trenutniKorisnik = korisnik;
             CancelButton = exitAppButton;
             AcceptButton = spremiNamirnicuButton;
+            mjernaJedinicaComboBox.SelectedIndex = 0;
         }
 
         private void exitAppButton_Click(object sender, EventArgs e)
@@ -53,26 +54,19 @@ namespace WareHome
             }
             else
             {
-                if (ProvjeriFormat())
-                {
-                    Namirnica namirnica = new Namirnica();
-                    namirnica.NazivNamirnice = ProvjeriUnos(nazivNamirniceTextBox.Text);
-                    namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
-                    namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
-                    namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
-                    namirnica.Cijena = ProvjeriDecimalnuCijenu();
-                    namirnica.Ducan = ProvjeriUnos(ducanTextBox.Text);
-                    namirnica.DatumZadnjePromjene = DateTime.Today;
-                    namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
-                    Database.Instance.Connect();
-                    NamirnicaRepository.Spremi(namirnica);
-                    Database.Instance.Disconnect();
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Krivo upisan format dostupne/optimalne količine!", "Greška");
-                }
+                Namirnica namirnica = new Namirnica();
+                namirnica.NazivNamirnice = ProvjeriUnos(nazivNamirniceTextBox.Text);
+                namirnica.DostupnaKolicina = ProvjeriFormat(dostupnaKolicinaTextBox.Text);
+                namirnica.OptimalnaKolicina = ProvjeriFormat(optimalnaKolicinaTextBox.Text);
+                namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
+                namirnica.Cijena = ProvjeriDecimalnuCijenu();
+                namirnica.Ducan = ProvjeriUnos(ducanTextBox.Text);
+                namirnica.DatumZadnjePromjene = DateTime.Today;
+                namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
+                Database.Instance.Connect();
+                NamirnicaRepository.Spremi(namirnica);
+                Database.Instance.Disconnect();
+                Close();
             }
         }
 
@@ -93,6 +87,28 @@ namespace WareHome
         private string ProvjeriDecimalnuCijenu()
         {
             string cijena = cijenaTextBox.Text;
+            int brojTocka = 0;
+            string unos = "";
+            foreach (char c in cijena)
+            {
+                if (!char.IsNumber(c))
+                {
+                    if (c == '.')
+                    {
+                        if (brojTocka == 0)
+                        {
+                            unos += c;
+                        }
+                    }
+                }
+                else
+                {
+                    unos += c;
+                }
+            }
+
+            cijena = unos;
+
             if (cijena.Length > 0)
             {
                 if (!cijena.Contains('.'))
@@ -108,26 +124,27 @@ namespace WareHome
                     cijena = cijena + "0";
                 }
             }
+
             return cijena;
         }
 
-        private bool ProvjeriFormat()
+        private float ProvjeriFormat(string format)
         {
-            foreach (char c in dostupnaKolicinaTextBox.Text)
+            string unos = "";
+            foreach (char c in format)
             {
-                if (char.IsLetter(c))
+                if (char.IsNumber(c))
                 {
-                    return false;
+                    unos += c;
                 }
             }
-            foreach(char c in optimalnaKolicinaTextBox.Text)
+
+            if (unos == "")
             {
-                if (char.IsLetter(c))
-                {
-                    return false;
-                }
+                unos = "0";
             }
-            return true;
+
+            return float.Parse(unos);
         }
 
         private void dostupnaKolicinaTextBox_TextChanged(object sender, EventArgs e)
