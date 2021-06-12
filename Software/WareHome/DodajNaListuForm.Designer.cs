@@ -116,24 +116,26 @@ namespace WareHome
             // 
             // dodajButton
             // 
+            this.dodajButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.dodajButton.Location = new System.Drawing.Point(151, 156);
             this.dodajButton.Margin = new System.Windows.Forms.Padding(4);
             this.dodajButton.Name = "dodajButton";
             this.dodajButton.Size = new System.Drawing.Size(100, 28);
             this.dodajButton.TabIndex = 5;
             this.dodajButton.Text = "Dodaj";
-            this.dodajButton.UseVisualStyleBackColor = true;
+            this.dodajButton.UseVisualStyleBackColor = false;
             this.dodajButton.Click += new System.EventHandler(this.dodajButton_Click);
             // 
             // odustaniButton
             // 
+            this.odustaniButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.odustaniButton.Location = new System.Drawing.Point(19, 156);
             this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(100, 28);
             this.odustaniButton.TabIndex = 6;
             this.odustaniButton.Text = "Odustani";
-            this.odustaniButton.UseVisualStyleBackColor = true;
+            this.odustaniButton.UseVisualStyleBackColor = false;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
             // label5
