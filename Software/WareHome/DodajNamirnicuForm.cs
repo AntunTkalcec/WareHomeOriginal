@@ -56,12 +56,12 @@ namespace WareHome
                 if (ProvjeriFormat())
                 {
                     Namirnica namirnica = new Namirnica();
-                    namirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
+                    namirnica.NazivNamirnice = ProvjeriUnos(nazivNamirniceTextBox.Text);
                     namirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
                     namirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
                     namirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
                     namirnica.Cijena = ProvjeriDecimalnuCijenu();
-                    namirnica.Ducan = ducanTextBox.Text;
+                    namirnica.Ducan = ProvjeriUnos(ducanTextBox.Text);
                     namirnica.DatumZadnjePromjene = DateTime.Today;
                     namirnica.Domacinstvo = trenutniKorisnik.Domacinstvo;
                     Database.Instance.Connect();
@@ -74,6 +74,20 @@ namespace WareHome
                     MessageBox.Show("Krivo upisan format dostupne/optimalne količine!", "Greška");
                 }
             }
+        }
+
+        private string ProvjeriUnos(string text)
+        {
+            string unos = "";
+            foreach (char c in text)
+            {
+                string slovo = "" + c;
+                if (slovo != "'")
+                {
+                    unos += slovo;
+                }
+            }
+            return unos;
         }
 
         private string ProvjeriDecimalnuCijenu()
