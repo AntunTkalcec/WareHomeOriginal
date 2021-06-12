@@ -53,7 +53,7 @@ namespace WareHome
             // 
             this.odustaniButton.Location = new System.Drawing.Point(18, 125);
             this.odustaniButton.Name = "odustaniButton";
-            this.odustaniButton.Size = new System.Drawing.Size(75, 23);
+            this.odustaniButton.Size = new System.Drawing.Size(88, 30);
             this.odustaniButton.TabIndex = 5;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@ namespace WareHome
             // 
             // završiButton
             // 
-            this.završiButton.Location = new System.Drawing.Point(134, 125);
+            this.završiButton.Location = new System.Drawing.Point(123, 125);
             this.završiButton.Name = "završiButton";
-            this.završiButton.Size = new System.Drawing.Size(75, 23);
+            this.završiButton.Size = new System.Drawing.Size(87, 30);
             this.završiButton.TabIndex = 4;
             this.završiButton.Text = "Završi";
             this.završiButton.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@ namespace WareHome
             // 
             this.privatnaCheckBox.AutoSize = true;
             this.privatnaCheckBox.Location = new System.Drawing.Point(91, 56);
-            this.privatnaCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.privatnaCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.privatnaCheckBox.Name = "privatnaCheckBox";
             this.privatnaCheckBox.Size = new System.Drawing.Size(15, 14);
             this.privatnaCheckBox.TabIndex = 2;
@@ -116,7 +116,7 @@ namespace WareHome
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(16, 158);
+            this.label5.Location = new System.Drawing.Point(16, 160);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
@@ -127,6 +127,7 @@ namespace WareHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(229, 180);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
