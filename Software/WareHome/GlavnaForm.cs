@@ -84,7 +84,7 @@ namespace WareHome
             else
             {
                 testiranjeButton.Visible = false; 
-                if (trenutniKorisnik.KorisnickoIme == "admin" || trenutniKorisnik.Identifikator == 2) //user: admin | pass: admin\\
+                if (trenutniKorisnik.KorisnickoIme == "admin" || trenutniKorisnik.Identifikator == 1) //user: admin | pass: admin\\
                 {
                     testiranjeButton.Visible = true;
                 } 

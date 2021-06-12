@@ -66,22 +66,26 @@ namespace WareHome
             // 
             // spremiButton
             // 
-            this.spremiButton.Location = new System.Drawing.Point(137, 140);
+            this.spremiButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.spremiButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.spremiButton.Location = new System.Drawing.Point(128, 140);
             this.spremiButton.Name = "spremiButton";
-            this.spremiButton.Size = new System.Drawing.Size(87, 34);
+            this.spremiButton.Size = new System.Drawing.Size(96, 34);
             this.spremiButton.TabIndex = 1;
             this.spremiButton.Text = "Spremi";
-            this.spremiButton.UseVisualStyleBackColor = true;
+            this.spremiButton.UseVisualStyleBackColor = false;
             this.spremiButton.Click += new System.EventHandler(this.spremiButton_Click);
             // 
             // odustaniButton
             // 
+            this.odustaniButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.odustaniButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.odustaniButton.Location = new System.Drawing.Point(23, 140);
             this.odustaniButton.Name = "odustaniButton";
-            this.odustaniButton.Size = new System.Drawing.Size(88, 34);
+            this.odustaniButton.Size = new System.Drawing.Size(96, 34);
             this.odustaniButton.TabIndex = 6;
             this.odustaniButton.Text = "Odustani";
-            this.odustaniButton.UseVisualStyleBackColor = true;
+            this.odustaniButton.UseVisualStyleBackColor = false;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
             // label2

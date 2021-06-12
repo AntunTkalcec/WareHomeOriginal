@@ -51,12 +51,13 @@ namespace WareHome
             // 
             // odustaniButton
             // 
+            this.odustaniButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.odustaniButton.Location = new System.Drawing.Point(18, 125);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(88, 30);
             this.odustaniButton.TabIndex = 5;
             this.odustaniButton.Text = "Odustani";
-            this.odustaniButton.UseVisualStyleBackColor = true;
+            this.odustaniButton.UseVisualStyleBackColor = false;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
             // nazivTextBox
@@ -68,12 +69,13 @@ namespace WareHome
             // 
             // završiButton
             // 
+            this.završiButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.završiButton.Location = new System.Drawing.Point(123, 125);
             this.završiButton.Name = "završiButton";
             this.završiButton.Size = new System.Drawing.Size(87, 30);
             this.završiButton.TabIndex = 4;
             this.završiButton.Text = "Završi";
-            this.završiButton.UseVisualStyleBackColor = true;
+            this.završiButton.UseVisualStyleBackColor = false;
             this.završiButton.Click += new System.EventHandler(this.završiButton_Click);
             // 
             // lozinkaTextBox

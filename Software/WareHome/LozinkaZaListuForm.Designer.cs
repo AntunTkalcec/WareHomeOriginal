@@ -47,24 +47,26 @@ namespace WareHome
             // 
             // prikažiButton
             // 
+            this.prikažiButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.prikažiButton.Location = new System.Drawing.Point(104, 130);
             this.prikažiButton.Margin = new System.Windows.Forms.Padding(4);
             this.prikažiButton.Name = "prikažiButton";
             this.prikažiButton.Size = new System.Drawing.Size(87, 28);
             this.prikažiButton.TabIndex = 2;
             this.prikažiButton.Text = "Prikaži";
-            this.prikažiButton.UseVisualStyleBackColor = true;
+            this.prikažiButton.UseVisualStyleBackColor = false;
             this.prikažiButton.Click += new System.EventHandler(this.prikažiButton_Click);
             // 
             // odustaniButton
             // 
+            this.odustaniButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.odustaniButton.Location = new System.Drawing.Point(16, 130);
             this.odustaniButton.Margin = new System.Windows.Forms.Padding(4);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(80, 28);
             this.odustaniButton.TabIndex = 3;
             this.odustaniButton.Text = "Odustani";
-            this.odustaniButton.UseVisualStyleBackColor = true;
+            this.odustaniButton.UseVisualStyleBackColor = false;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
             // label2
@@ -80,7 +82,7 @@ namespace WareHome
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(13, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
@@ -91,7 +93,7 @@ namespace WareHome
             // 
             this.nazivTextBox.Enabled = false;
             this.nazivTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazivTextBox.Location = new System.Drawing.Point(16, 27);
+            this.nazivTextBox.Location = new System.Drawing.Point(16, 36);
             this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
             this.nazivTextBox.Size = new System.Drawing.Size(175, 20);
