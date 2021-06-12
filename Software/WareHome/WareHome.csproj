@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Karlo\OneDrive\Škola\6. semestar\Programsko inženjerstvo\Projekt\WareHome\0 Installation\</PublishUrl>
+    <PublishUrl>C:\Users\Karlo\OneDrive\Škola\6. semestar\Programsko inženjerstvo\Projekt\WareHome\0 Installation\VS Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,12 +25,13 @@
     <MapFileExtensions>true</MapFileExtensions>
     <SupportUrl>https://github.com/foivz/pi21-atkalcec-khabdija-kstrucic/wiki/Korisni%25C4%258Dka-dokumentacija-za-aplikaciju-%2522WareHome%2522</SupportUrl>
     <ErrorReportUrl>https://github.com/foivz/pi21-atkalcec-khabdija-kstrucic/wiki/Korisni%25C4%258Dka-dokumentacija-za-aplikaciju-%2522WareHome%2522</ErrorReportUrl>
+    <TargetCulture>hr</TargetCulture>
     <ProductName>WareHome</ProductName>
     <PublisherName>PI21-26</PublisherName>
     <SuiteName>WareHome</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
