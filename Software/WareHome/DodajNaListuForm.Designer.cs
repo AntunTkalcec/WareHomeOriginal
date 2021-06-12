@@ -87,7 +87,7 @@ namespace WareHome
             this.nazivTextBox.Location = new System.Drawing.Point(92, 16);
             this.nazivTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(177, 20);
+            this.nazivTextBox.Size = new System.Drawing.Size(159, 20);
             this.nazivTextBox.TabIndex = 1;
             // 
             // cijenaTextBox
@@ -111,12 +111,12 @@ namespace WareHome
             this.trgovinaTextBox.Location = new System.Drawing.Point(92, 112);
             this.trgovinaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.trgovinaTextBox.Name = "trgovinaTextBox";
-            this.trgovinaTextBox.Size = new System.Drawing.Size(177, 20);
+            this.trgovinaTextBox.Size = new System.Drawing.Size(159, 20);
             this.trgovinaTextBox.TabIndex = 4;
             // 
             // dodajButton
             // 
-            this.dodajButton.Location = new System.Drawing.Point(171, 156);
+            this.dodajButton.Location = new System.Drawing.Point(151, 156);
             this.dodajButton.Margin = new System.Windows.Forms.Padding(4);
             this.dodajButton.Name = "dodajButton";
             this.dodajButton.Size = new System.Drawing.Size(100, 28);
@@ -149,7 +149,8 @@ namespace WareHome
             // DodajNaListuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(296, 215);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(274, 215);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.odustaniButton);
             this.Controls.Add(this.dodajButton);

@@ -64,7 +64,7 @@ namespace WareHome
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string helpLocation = Path.Combine(executableLocation, "helpfile.chm");
             string helpfile = "File://" + helpLocation;
-            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6. Koristenje lista za kupovinu");
+            Help.ShowHelp(this, helpfile, HelpNavigator.KeywordIndex, "6.1. Pregledavanje izradenih lista");
         }
     }
 }

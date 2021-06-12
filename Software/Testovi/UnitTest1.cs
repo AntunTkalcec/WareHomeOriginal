@@ -1,4 +1,7 @@
-﻿using DatabaseAccess;
+﻿/*
+ * ZAKOMENTIRANO ZATO ŠTO SE APP NIJE HTJELA IZBUILDATI ZBOG VERZIJE .NET FRAMEWORKA KORIŠTENE KOD IZRADE OVOG 
+ 
+using DatabaseAccess;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data;
@@ -59,3 +62,4 @@ namespace Testovi
         }
     }
 }
+*/
