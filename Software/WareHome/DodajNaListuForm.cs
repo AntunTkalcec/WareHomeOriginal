@@ -32,10 +32,10 @@ namespace WareHome
 
         private void dodajButton_Click(object sender, EventArgs e)
         {
-            string nazivArtikla = nazivTextBox.Text;
-            string cijena = cijenaTextBox.Text;
-            string količina = kolicinaTextBox.Text;
-            string trgovina = trgovinaTextBox.Text;
+            string nazivArtikla = ProvjeriUnos(nazivTextBox.Text);
+            string cijena = ProvjeriUnos(cijenaTextBox.Text);
+            string količina = ProvjeriUnos(kolicinaTextBox.Text);
+            string trgovina = ProvjeriUnos(trgovinaTextBox.Text);
             if (nazivArtikla.Length <= 30 && nazivArtikla.Length >= 1 && cijena.Length <= 10 && količina.Length <= 10 && trgovina.Length <= 30)
             {
                 NamirnicaNaListiRepository.DodajNamirnicu(new NamirnicaNaListi(0, odabranaLista.IdListe, nazivArtikla, cijena, količina, trgovina));
@@ -45,6 +45,20 @@ namespace WareHome
             {
                 MessageBox.Show("Neispravan unos!\nProvjerite naziv (max. 30 znakova), količina (max. 10 znakova), cijena (max. 10 znakova) i trgovina (max. 30 znakova).", "Greška!");
             }
+        }
+
+        private string ProvjeriUnos(string text)
+        {
+            string unos = "";
+            foreach (char c in text)
+            {
+                string slovo = "" + c;
+                if (slovo != "'")
+                {
+                    unos += slovo;
+                }
+            }
+            return unos;
         }
 
         private void DodajNaListuForm_HelpRequested(object sender, HelpEventArgs hlpevent)
