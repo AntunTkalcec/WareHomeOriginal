@@ -53,13 +53,13 @@ namespace WareHome
             }
             else
             {
-                trenutnaNamirnica.NazivNamirnice = nazivNamirniceTextBox.Text;
+                trenutnaNamirnica.NazivNamirnice = ProvjeriUnos(nazivNamirniceTextBox.Text);
                 trenutnaNamirnica.DostupnaKolicina = float.Parse(dostupnaKolicinaTextBox.Text);
                 novaVrijednost = trenutnaNamirnica.DostupnaKolicina;
                 trenutnaNamirnica.OptimalnaKolicina = float.Parse(optimalnaKolicinaTextBox.Text);
                 trenutnaNamirnica.MjernaJedinica = mjernaJedinicaComboBox.SelectedItem.ToString();
                 trenutnaNamirnica.Cijena = ProvjeriDecimalnuCijenu();
-                trenutnaNamirnica.Ducan = ducanTextBox.Text;
+                trenutnaNamirnica.Ducan = ProvjeriUnos(ducanTextBox.Text);
                 trenutnaNamirnica.DatumZadnjePromjene = DateTime.Today;
                 Database.Instance.Connect();
                 NamirnicaRepository.Spremi(trenutnaNamirnica);
@@ -70,6 +70,20 @@ namespace WareHome
                 Database.Instance.Disconnect();
                 Close();
             }
+        }
+
+        private string ProvjeriUnos(string text)
+        {
+            string unos = "";
+            foreach (char c in text)
+            {
+                string slovo = "" + c;
+                if (slovo != "'")
+                {
+                    unos += slovo;
+                }
+            }
+            return unos;
         }
 
         private string ProvjeriDecimalnuCijenu()
