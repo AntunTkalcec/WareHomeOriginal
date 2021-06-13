@@ -44,12 +44,12 @@ namespace WareHome
         {
             bool Uspjeh = false;
             string sql;
-            string Ime = regImeTextBox.Text;
-            string Prezime = regPrezimeTextBox.Text;
-            string Mail = regMailTextBox.Text;
-            string KorisnickoIme = regKorImeTextBox.Text;
-            string Lozinka = regLozinkaTextBox.Text;
-            string PotvrdaLozinke = regPotvrdiLozinkuTextBox.Text;
+            string Ime = ProvjeriUnos(regImeTextBox.Text);
+            string Prezime = ProvjeriUnos(regPrezimeTextBox.Text);
+            string Mail = ProvjeriUnos(regMailTextBox.Text);
+            string KorisnickoIme = ProvjeriUnos(regKorImeTextBox.Text);
+            string Lozinka = ProvjeriUnos(regLozinkaTextBox.Text);
+            string PotvrdaLozinke = ProvjeriUnos(regPotvrdiLozinkuTextBox.Text);
             DateTime DatumRegistracije = DateTime.UtcNow;
 
             if (!Validate(Mail))
@@ -79,7 +79,7 @@ namespace WareHome
                         $"VALUES ('{Ime}', '{Prezime}', '{Mail}', '{Lozinka}', '{KorisnickoIme}', '{DatumRegistracije:yyyyMMdd}')";
                     Database.Instance.ExecuteCommand(sql);
                     Uspjeh = true;
-                    MessageBox.Show("Korisnik registriran.", "Obavijest");
+                    MessageBox.Show("Korisnik uspješno registriran.", "Obavijest");
                     Database.Instance.Disconnect();
                 }
                 else
@@ -89,6 +89,20 @@ namespace WareHome
                 }
             }
             return Uspjeh;
+        }
+
+        private string ProvjeriUnos(string text)
+        {
+            string unos = "";
+            foreach (char c in text)
+            {
+                string slovo = "" + c;
+                if (slovo != "'")
+                {
+                    unos += slovo;
+                }
+            }
+            return unos;
         }
 
         private bool ProvjeriKorisnickoIme(string korisnickoIme, string email)
