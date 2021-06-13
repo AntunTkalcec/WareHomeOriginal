@@ -25,7 +25,8 @@ namespace WareHome
             InitializeComponent();
             odabranaLista = odabrana;
             trenutniKorisnik = korisnik;
-            this.AcceptButton = prikažiButton;
+            AcceptButton = prikažiButton;
+            CancelButton = odustaniButton;
             prikažiButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
 
