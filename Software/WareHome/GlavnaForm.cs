@@ -100,15 +100,7 @@ namespace WareHome
                 rasporedButton.Enabled = true;
                 predviđanjeButton.Enabled = true;
 
-                if (trenutniKorisnik.Domacinstvo.Naziv.Length > 15)
-                {
-                    trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;//.Substring(0,15) + "..."; (zakomentirano jer je loše radilo)
-                }
-                else
-                {
-                    trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;
-                }
-                
+                trenutnoDomacinstvoLabel2.Text = trenutniKorisnik.Domacinstvo.Naziv;                
                 
                 OsvjeziNamirnice();
             }
