@@ -32,4 +32,4 @@ F13 | Prijava problema | Korisnik putem aplikacije može developerima prijaviti 
 
 
 ## Tehnologije i oprema
-[GitHub](https://guides.github.com/features/mastering-markdown/), GitHub Classroom, .NET (Visual Studio), SourceTree, MSSQL, SSMS, MS Office 365, Draw.io, Visual Paradigm
+[GitHub](https://guides.github.com/features/mastering-markdown/), GitHub Classroom, .NET (Visual Studio), SourceTree, MSSQL, SSMS, HTML Help Workshop, Draw.io, Visual Paradigm
